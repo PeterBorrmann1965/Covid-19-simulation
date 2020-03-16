@@ -6,8 +6,8 @@ The first version of this simulation project is intended to simulate the effects
 The current model has the following inputs: 
 
 Population: 
-- Number of individuals by age an gender for Germany  (Source: Statistsiches Bundesamt)
-- Mortality rate of each individual (Source: Statistsiches Bundesamt)
+- Number of individuals by age an gender for Germany  (Source: Statistisches Bundesamt)
+- Mortality rate of each individual (Source: Statistisches Bundesamt)
 - Average daily contact rate (Source: https://journals.plos.org/plosmedicine/article/file?id=10.1371/journal.pmed.0050074&type=printable)
 
 The model simulates the daily changes of each individual in the population with the following states: 
