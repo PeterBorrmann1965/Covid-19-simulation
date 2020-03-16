@@ -19,13 +19,13 @@ The model simulates the daily changes of each individual in the population with 
 
 The infection profile is simulated with a gamma distribution. For Covid 19 we currently use a mean of 7.0 and a standard deviation of 3.4. 
 
-The paramter R (number of people infected by an infected person) is used in the following fashion: 
+The parameter R (number of people infected by an infected person) is used in the following fashion: 
 - all contacts in the population are normalized to one 
-- the suzeptibility of individual is R times the individual normalized contact rate 
+- the suceptibility of individual is R times the individual normalized contact rate 
 
 The indivual R can be tweaked, e.g.:
-- individual cut their contacts by a factor 10 
-- closing of schools an kindergartens reduced the contacts by a factor of 4 
+- individuals cut their contacts by a factor 10 
+- closing of schools and kindergartens reduces the contacts by a factor of 4 
 - special protectment of elderly people reduces the contact rate by a factor of 4 
 
 The results contain the state of each individual, which can be analysed for peaks regarding the healthcare system, duration and general social impacts. 
