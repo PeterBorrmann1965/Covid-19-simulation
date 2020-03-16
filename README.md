@@ -29,3 +29,9 @@ The indivual R can be tweaked, e.g.:
 - special protectment of elderly people reduces the contact rate by a factor of 4 
 
 The results contain the state of each individual, which can be analysed for peaks regarding the healthcare system, duration and general social impacts. 
+
+Next steps:
+- Include conditional mortality, hospitalization and intensive care in to the model
+- Use contact matrix between age groups 
+- Improve anlysis of outputs (infections peals, duration, ...)
+
