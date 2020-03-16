@@ -14,14 +14,14 @@ The model simulates the daily changes of each individual in the population with 
 0 - not infected 
 1 - immun or dead (due to infection)
 2 - infected 
-3 - infected and identified (not uses currently)
-4 - dead (right now only based on general mortality rater)
+3 - infected and identified (currently not used)
+4 - dead (right now only based on general mortality rate)
 
 The infection profile is simulated with a gamma distribution. For Covid 19 we currently use a mean of 7.0 and a standard deviation of 3.4. 
 
 The parameter R (number of people infected by an infected person) is used in the following fashion: 
 - all contacts in the population are normalized to one 
-- the suceptibility of individual is R times the individual normalized contact rate 
+- the suceptibility of an individual is R times the individual normalized contact rate 
 
 The indivual R can be tweaked, e.g.:
 - individuals cut their contacts by a factor 10 
@@ -29,5 +29,3 @@ The indivual R can be tweaked, e.g.:
 - special protectment of elderly people reduces the contact rate by a factor of 4 
 
 The results contain the state of each individual, which can be analysed for peaks regarding the healthcare system, duration and general social impacts. 
-
-
