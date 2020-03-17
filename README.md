@@ -54,3 +54,6 @@ The hospital index should be a quite good indicator for the impact on the health
 - Use contact matrix between age groups 
 - Improve anlysis of outputs (infections peaks, duration, ...)
 
+## Links
+* Covid-19 cases in Italy. Deatailed numbers down to regions with number of identified cases, tests, death, hospital an intesive care. (daily update) https://github.com/pcm-dpc/COVID-19
+* Collection of articels and data on Covid-19, overview on parameter estimates https://github.com/midas-network/COVID-19
