@@ -1,0 +1,3477 @@
+Kennung;Bezeichnung;Alter_von;Insgesamt;männlich;weiblich
+10;Schleswig-Holstein;0;25260;12928;12332
+10;Schleswig-Holstein;1;25807;13275;12532
+10;Schleswig-Holstein;2;26219;13388;12831
+10;Schleswig-Holstein;3;25546;13125;12421
+10;Schleswig-Holstein;4;25522;12993;12529
+10;Schleswig-Holstein;5;24845;12733;12112
+10;Schleswig-Holstein;6;25287;13029;12258
+10;Schleswig-Holstein;7;24628;12561;12067
+10;Schleswig-Holstein;8;25784;13241;12543
+10;Schleswig-Holstein;9;25362;13162;12200
+10;Schleswig-Holstein;10;26181;13274;12907
+10;Schleswig-Holstein;11;26433;13633;12800
+10;Schleswig-Holstein;12;26025;13411;12614
+10;Schleswig-Holstein;13;26138;13435;12703
+10;Schleswig-Holstein;14;27290;14052;13238
+10;Schleswig-Holstein;15;27533;14111;13422
+10;Schleswig-Holstein;16;28280;14563;13717
+10;Schleswig-Holstein;17;29223;15052;14171
+10;Schleswig-Holstein;18;31304;16151;15153
+10;Schleswig-Holstein;19;32115;16917;15198
+10;Schleswig-Holstein;20;31512;16357;15155
+10;Schleswig-Holstein;21;32391;17195;15196
+10;Schleswig-Holstein;22;31838;16610;15228
+10;Schleswig-Holstein;23;30618;16045;14573
+10;Schleswig-Holstein;24;31284;16479;14805
+10;Schleswig-Holstein;25;31601;16527;15074
+10;Schleswig-Holstein;26;31834;16599;15235
+10;Schleswig-Holstein;27;32408;16836;15572
+10;Schleswig-Holstein;28;34173;17792;16381
+10;Schleswig-Holstein;29;33227;17210;16017
+10;Schleswig-Holstein;30;34201;17847;16354
+10;Schleswig-Holstein;31;33536;17388;16148
+10;Schleswig-Holstein;32;32667;16608;16059
+10;Schleswig-Holstein;33;31826;16004;15822
+10;Schleswig-Holstein;34;31788;15943;15845
+10;Schleswig-Holstein;35;32436;16185;16251
+10;Schleswig-Holstein;36;33553;16497;17056
+10;Schleswig-Holstein;37;33635;16533;17102
+10;Schleswig-Holstein;38;34503;16830;17673
+10;Schleswig-Holstein;39;32785;16031;16754
+10;Schleswig-Holstein;40;33015;16388;16627
+10;Schleswig-Holstein;41;32806;16108;16698
+10;Schleswig-Holstein;42;33060;16163;16897
+10;Schleswig-Holstein;43;32419;15975;16444
+10;Schleswig-Holstein;44;32497;16012;16485
+10;Schleswig-Holstein;45;33609;16545;17064
+10;Schleswig-Holstein;46;36492;17935;18557
+10;Schleswig-Holstein;47;40969;20227;20742
+10;Schleswig-Holstein;48;42764;21256;21508
+10;Schleswig-Holstein;49;47414;23596;23818
+10;Schleswig-Holstein;50;50451;25026;25425
+10;Schleswig-Holstein;51;52203;26002;26201
+10;Schleswig-Holstein;52;52492;26058;26434
+10;Schleswig-Holstein;53;51553;25436;26117
+10;Schleswig-Holstein;54;52016;26002;26014
+10;Schleswig-Holstein;55;50428;24921;25507
+10;Schleswig-Holstein;56;47964;23717;24247
+10;Schleswig-Holstein;57;46717;22998;23719
+10;Schleswig-Holstein;58;44438;21862;22576
+10;Schleswig-Holstein;59;43046;21153;21893
+10;Schleswig-Holstein;60;40379;19917;20462
+10;Schleswig-Holstein;61;39255;18967;20288
+10;Schleswig-Holstein;62;36916;17911;19005
+10;Schleswig-Holstein;63;35895;17334;18561
+10;Schleswig-Holstein;64;35628;17034;18594
+10;Schleswig-Holstein;65;33990;16422;17568
+10;Schleswig-Holstein;66;33733;16186;17547
+10;Schleswig-Holstein;67;33705;16226;17479
+10;Schleswig-Holstein;68;33826;16137;17689
+10;Schleswig-Holstein;69;33428;16088;17340
+10;Schleswig-Holstein;70;32532;15444;17088
+10;Schleswig-Holstein;71;29875;14192;15683
+10;Schleswig-Holstein;72;27822;13081;14741
+10;Schleswig-Holstein;73;22709;10443;12266
+10;Schleswig-Holstein;74;29706;13825;15881
+10;Schleswig-Holstein;75;159771;73055;86716
+10;Schleswig-Holstein;80;117312;50150;67162
+10;Schleswig-Holstein;85;49105;17734;31371
+10;Schleswig-Holstein;90;28174;7381;20793
+20;Hamburg;0;20610;10640;9970
+20;Hamburg;1;20472;10579;9893
+20;Hamburg;2;20445;10363;10082
+20;Hamburg;3;19032;9734;9298
+20;Hamburg;4;18516;9424;9092
+20;Hamburg;5;17562;8977;8585
+20;Hamburg;6;17005;8764;8241
+20;Hamburg;7;16014;8181;7833
+20;Hamburg;8;16252;8349;7903
+20;Hamburg;9;15986;8318;7668
+20;Hamburg;10;16289;8398;7891
+20;Hamburg;11;15896;8272;7624
+20;Hamburg;12;15617;8169;7448
+20;Hamburg;13;15553;8038;7515
+20;Hamburg;14;15374;7955;7419
+20;Hamburg;15;15158;7884;7274
+20;Hamburg;16;15103;7737;7366
+20;Hamburg;17;15578;8021;7557
+20;Hamburg;18;16784;8814;7970
+20;Hamburg;19;17750;9224;8526
+20;Hamburg;20;19462;10023;9439
+20;Hamburg;21;21876;11229;10647
+20;Hamburg;22;22706;11441;11265
+20;Hamburg;23;23395;11724;11671
+20;Hamburg;24;25047;12440;12607
+20;Hamburg;25;26508;13013;13495
+20;Hamburg;26;27671;13609;14062
+20;Hamburg;27;29732;14615;15117
+20;Hamburg;28;32191;15863;16328
+20;Hamburg;29;31910;15734;16176
+20;Hamburg;30;32677;16160;16517
+20;Hamburg;31;31550;15752;15798
+20;Hamburg;32;30789;15438;15351
+20;Hamburg;33;29664;14726;14938
+20;Hamburg;34;29295;14655;14640
+20;Hamburg;35;28798;14386;14412
+20;Hamburg;36;28834;14409;14425
+20;Hamburg;37;28724;14135;14589
+20;Hamburg;38;28391;14149;14242
+20;Hamburg;39;26497;13259;13238
+20;Hamburg;40;25787;13016;12771
+20;Hamburg;41;25216;12786;12430
+20;Hamburg;42;24899;12397;12502
+20;Hamburg;43;23627;11925;11702
+20;Hamburg;44;23676;12080;11596
+20;Hamburg;45;22977;11450;11527
+20;Hamburg;46;23944;12093;11851
+20;Hamburg;47;25307;12836;12471
+20;Hamburg;48;25957;13192;12765
+20;Hamburg;49;26897;13700;13197
+20;Hamburg;50;28792;14737;14055
+20;Hamburg;51;28967;14775;14192
+20;Hamburg;52;29133;14778;14355
+20;Hamburg;53;28069;14230;13839
+20;Hamburg;54;28433;14379;14054
+20;Hamburg;55;27107;13617;13490
+20;Hamburg;56;25267;12628;12639
+20;Hamburg;57;24105;11943;12162
+20;Hamburg;58;23302;11628;11674
+20;Hamburg;59;22024;10899;11125
+20;Hamburg;60;20929;10263;10666
+20;Hamburg;61;19864;9694;10170
+20;Hamburg;62;18904;9147;9757
+20;Hamburg;63;17805;8656;9149
+20;Hamburg;64;17223;8213;9010
+20;Hamburg;65;16350;7644;8706
+20;Hamburg;66;16429;7679;8750
+20;Hamburg;67;16031;7377;8654
+20;Hamburg;68;16498;7567;8931
+20;Hamburg;69;16388;7551;8837
+20;Hamburg;70;15880;7411;8469
+20;Hamburg;71;15216;7140;8076
+20;Hamburg;72;13868;6411;7457
+20;Hamburg;73;12369;5612;6757
+20;Hamburg;74;15371;7010;8361
+20;Hamburg;75;78876;34941;43935
+20;Hamburg;80;59081;24117;34964
+20;Hamburg;85;27004;9462;17542
+20;Hamburg;90;16894;4463;12431
+31;Braunschweig, Stat. Region;0;14579;7469;7110
+31;Braunschweig, Stat. Region;1;14429;7345;7084
+31;Braunschweig, Stat. Region;2;14928;7643;7285
+31;Braunschweig, Stat. Region;3;14165;7229;6936
+31;Braunschweig, Stat. Region;4;14066;7233;6833
+31;Braunschweig, Stat. Region;5;13364;6807;6557
+31;Braunschweig, Stat. Region;6;13497;6960;6537
+31;Braunschweig, Stat. Region;7;13019;6627;6392
+31;Braunschweig, Stat. Region;8;13501;6997;6504
+31;Braunschweig, Stat. Region;9;13210;6760;6450
+31;Braunschweig, Stat. Region;10;13822;7122;6700
+31;Braunschweig, Stat. Region;11;13846;7236;6610
+31;Braunschweig, Stat. Region;12;13512;7026;6486
+31;Braunschweig, Stat. Region;13;13738;7050;6688
+31;Braunschweig, Stat. Region;14;14178;7269;6909
+31;Braunschweig, Stat. Region;15;14104;7262;6842
+31;Braunschweig, Stat. Region;16;14837;7676;7161
+31;Braunschweig, Stat. Region;17;15443;7966;7477
+31;Braunschweig, Stat. Region;18;16686;8749;7937
+31;Braunschweig, Stat. Region;19;17309;9301;8008
+31;Braunschweig, Stat. Region;20;18127;9620;8507
+31;Braunschweig, Stat. Region;21;18807;10091;8716
+31;Braunschweig, Stat. Region;22;18940;10195;8745
+31;Braunschweig, Stat. Region;23;18808;9982;8826
+31;Braunschweig, Stat. Region;24;19028;10033;8995
+31;Braunschweig, Stat. Region;25;19510;10420;9090
+31;Braunschweig, Stat. Region;26;19498;10516;8982
+31;Braunschweig, Stat. Region;27;19955;10629;9326
+31;Braunschweig, Stat. Region;28;20974;11106;9868
+31;Braunschweig, Stat. Region;29;20110;10603;9507
+31;Braunschweig, Stat. Region;30;20654;10906;9748
+31;Braunschweig, Stat. Region;31;19868;10360;9508
+31;Braunschweig, Stat. Region;32;19450;10169;9281
+31;Braunschweig, Stat. Region;33;18984;9747;9237
+31;Braunschweig, Stat. Region;34;18584;9724;8860
+31;Braunschweig, Stat. Region;35;18843;9656;9187
+31;Braunschweig, Stat. Region;36;18773;9609;9164
+31;Braunschweig, Stat. Region;37;18775;9413;9362
+31;Braunschweig, Stat. Region;38;19023;9454;9569
+31;Braunschweig, Stat. Region;39;17858;8912;8946
+31;Braunschweig, Stat. Region;40;17979;9135;8844
+31;Braunschweig, Stat. Region;41;17559;8735;8824
+31;Braunschweig, Stat. Region;42;17634;8728;8906
+31;Braunschweig, Stat. Region;43;17046;8508;8538
+31;Braunschweig, Stat. Region;44;17350;8692;8658
+31;Braunschweig, Stat. Region;45;17933;8834;9099
+31;Braunschweig, Stat. Region;46;19631;9870;9761
+31;Braunschweig, Stat. Region;47;21549;10706;10843
+31;Braunschweig, Stat. Region;48;22803;11313;11490
+31;Braunschweig, Stat. Region;49;24408;12285;12123
+31;Braunschweig, Stat. Region;50;25881;13032;12849
+31;Braunschweig, Stat. Region;51;26773;13421;13352
+31;Braunschweig, Stat. Region;52;27164;13706;13458
+31;Braunschweig, Stat. Region;53;26643;13544;13099
+31;Braunschweig, Stat. Region;54;27280;13613;13667
+31;Braunschweig, Stat. Region;55;26869;13439;13430
+31;Braunschweig, Stat. Region;56;26370;13230;13140
+31;Braunschweig, Stat. Region;57;26097;13063;13034
+31;Braunschweig, Stat. Region;58;24806;12347;12459
+31;Braunschweig, Stat. Region;59;24226;12152;12074
+31;Braunschweig, Stat. Region;60;22874;11470;11404
+31;Braunschweig, Stat. Region;61;22335;11031;11304
+31;Braunschweig, Stat. Region;62;21433;10600;10833
+31;Braunschweig, Stat. Region;63;20732;10359;10373
+31;Braunschweig, Stat. Region;64;20028;9719;10309
+31;Braunschweig, Stat. Region;65;19202;9222;9980
+31;Braunschweig, Stat. Region;66;19271;9357;9914
+31;Braunschweig, Stat. Region;67;19104;9263;9841
+31;Braunschweig, Stat. Region;68;18760;9156;9604
+31;Braunschweig, Stat. Region;69;18365;8808;9557
+31;Braunschweig, Stat. Region;70;17026;8189;8837
+31;Braunschweig, Stat. Region;71;15466;7367;8099
+31;Braunschweig, Stat. Region;72;13624;6484;7140
+31;Braunschweig, Stat. Region;73;11301;5358;5943
+31;Braunschweig, Stat. Region;74;14987;6869;8118
+31;Braunschweig, Stat. Region;75;82815;37549;45266
+31;Braunschweig, Stat. Region;80;64473;26962;37511
+31;Braunschweig, Stat. Region;85;30454;10843;19611
+31;Braunschweig, Stat. Region;90;17343;4574;12769
+32;Hannover, Stat. Region;0;19648;10137;9511
+32;Hannover, Stat. Region;1;19842;10125;9717
+32;Hannover, Stat. Region;2;20329;10300;10029
+32;Hannover, Stat. Region;3;19662;10082;9580
+32;Hannover, Stat. Region;4;19459;10007;9452
+32;Hannover, Stat. Region;5;18740;9608;9132
+32;Hannover, Stat. Region;6;18289;9379;8910
+32;Hannover, Stat. Region;7;18403;9423;8980
+32;Hannover, Stat. Region;8;18927;9793;9134
+32;Hannover, Stat. Region;9;18527;9447;9080
+32;Hannover, Stat. Region;10;19195;9861;9334
+32;Hannover, Stat. Region;11;19344;9848;9496
+32;Hannover, Stat. Region;12;19026;9689;9337
+32;Hannover, Stat. Region;13;19121;9831;9290
+32;Hannover, Stat. Region;14;19760;10136;9624
+32;Hannover, Stat. Region;15;19873;10243;9630
+32;Hannover, Stat. Region;16;20474;10643;9831
+32;Hannover, Stat. Region;17;21070;10879;10191
+32;Hannover, Stat. Region;18;22461;11697;10764
+32;Hannover, Stat. Region;19;22925;12008;10917
+32;Hannover, Stat. Region;20;24095;12500;11595
+32;Hannover, Stat. Region;21;25032;12910;12122
+32;Hannover, Stat. Region;22;25041;13059;11982
+32;Hannover, Stat. Region;23;24953;13023;11930
+32;Hannover, Stat. Region;24;25146;13217;11929
+32;Hannover, Stat. Region;25;25839;13460;12379
+32;Hannover, Stat. Region;26;25724;13263;12461
+32;Hannover, Stat. Region;27;26200;13570;12630
+32;Hannover, Stat. Region;28;27124;14014;13110
+32;Hannover, Stat. Region;29;26734;13858;12876
+32;Hannover, Stat. Region;30;27327;14166;13161
+32;Hannover, Stat. Region;31;26234;13424;12810
+32;Hannover, Stat. Region;32;25886;13151;12735
+32;Hannover, Stat. Region;33;25316;12778;12538
+32;Hannover, Stat. Region;34;25140;12649;12491
+32;Hannover, Stat. Region;35;25230;12686;12544
+32;Hannover, Stat. Region;36;26123;13013;13110
+32;Hannover, Stat. Region;37;25878;12777;13101
+32;Hannover, Stat. Region;38;25916;12824;13092
+32;Hannover, Stat. Region;39;24805;12311;12494
+32;Hannover, Stat. Region;40;24838;12279;12559
+32;Hannover, Stat. Region;41;24506;12170;12336
+32;Hannover, Stat. Region;42;24477;12138;12339
+32;Hannover, Stat. Region;43;24131;12045;12086
+32;Hannover, Stat. Region;44;24567;12190;12377
+32;Hannover, Stat. Region;45;24815;12324;12491
+32;Hannover, Stat. Region;46;27029;13616;13413
+32;Hannover, Stat. Region;47;29232;14509;14723
+32;Hannover, Stat. Region;48;30835;15289;15546
+32;Hannover, Stat. Region;49;33989;17146;16843
+32;Hannover, Stat. Region;50;35795;17938;17857
+32;Hannover, Stat. Region;51;36243;18079;18164
+32;Hannover, Stat. Region;52;37501;18868;18633
+32;Hannover, Stat. Region;53;36742;18580;18162
+32;Hannover, Stat. Region;54;36881;18551;18330
+32;Hannover, Stat. Region;55;36254;18322;17932
+32;Hannover, Stat. Region;56;34995;17461;17534
+32;Hannover, Stat. Region;57;34308;17232;17076
+32;Hannover, Stat. Region;58;32899;16464;16435
+32;Hannover, Stat. Region;59;31733;15726;16007
+32;Hannover, Stat. Region;60;29846;14830;15016
+32;Hannover, Stat. Region;61;29359;14582;14777
+32;Hannover, Stat. Region;62;28259;13907;14352
+32;Hannover, Stat. Region;63;26818;13125;13693
+32;Hannover, Stat. Region;64;26088;12602;13486
+32;Hannover, Stat. Region;65;24922;12001;12921
+32;Hannover, Stat. Region;66;25003;11879;13124
+32;Hannover, Stat. Region;67;24488;11733;12755
+32;Hannover, Stat. Region;68;24474;11790;12684
+32;Hannover, Stat. Region;69;24096;11411;12685
+32;Hannover, Stat. Region;70;22249;10655;11594
+32;Hannover, Stat. Region;71;20233;9459;10774
+32;Hannover, Stat. Region;72;18491;8618;9873
+32;Hannover, Stat. Region;73;15002;6975;8027
+32;Hannover, Stat. Region;74;19975;9009;10966
+32;Hannover, Stat. Region;75;110005;48989;61016
+32;Hannover, Stat. Region;80;86659;35981;50678
+32;Hannover, Stat. Region;85;40195;14350;25845
+32;Hannover, Stat. Region;90;23055;5955;17100
+33;Lüneburg, Stat. Region;0;15310;7879;7431
+33;Lüneburg, Stat. Region;1;15811;8054;7757
+33;Lüneburg, Stat. Region;2;15864;8191;7673
+33;Lüneburg, Stat. Region;3;15797;8197;7600
+33;Lüneburg, Stat. Region;4;15860;8173;7687
+33;Lüneburg, Stat. Region;5;15472;7937;7535
+33;Lüneburg, Stat. Region;6;15094;7732;7362
+33;Lüneburg, Stat. Region;7;14955;7780;7175
+33;Lüneburg, Stat. Region;8;15787;8137;7650
+33;Lüneburg, Stat. Region;9;15659;8111;7548
+33;Lüneburg, Stat. Region;10;15930;8188;7742
+33;Lüneburg, Stat. Region;11;16014;8251;7763
+33;Lüneburg, Stat. Region;12;15904;8245;7659
+33;Lüneburg, Stat. Region;13;16244;8316;7928
+33;Lüneburg, Stat. Region;14;16929;8806;8123
+33;Lüneburg, Stat. Region;15;17228;8738;8490
+33;Lüneburg, Stat. Region;16;17574;8958;8616
+33;Lüneburg, Stat. Region;17;18378;9419;8959
+33;Lüneburg, Stat. Region;18;19089;10004;9085
+33;Lüneburg, Stat. Region;19;18656;9913;8743
+33;Lüneburg, Stat. Region;20;18302;9723;8579
+33;Lüneburg, Stat. Region;21;18734;10034;8700
+33;Lüneburg, Stat. Region;22;17772;9544;8228
+33;Lüneburg, Stat. Region;23;17034;9244;7790
+33;Lüneburg, Stat. Region;24;17135;9278;7857
+33;Lüneburg, Stat. Region;25;17273;9279;7994
+33;Lüneburg, Stat. Region;26;17210;9180;8030
+33;Lüneburg, Stat. Region;27;17421;9159;8262
+33;Lüneburg, Stat. Region;28;18709;9978;8731
+33;Lüneburg, Stat. Region;29;18406;9709;8697
+33;Lüneburg, Stat. Region;30;19196;9945;9251
+33;Lüneburg, Stat. Region;31;19057;9824;9233
+33;Lüneburg, Stat. Region;32;18962;9697;9265
+33;Lüneburg, Stat. Region;33;18624;9429;9195
+33;Lüneburg, Stat. Region;34;18478;9283;9195
+33;Lüneburg, Stat. Region;35;18772;9375;9397
+33;Lüneburg, Stat. Region;36;19525;9691;9834
+33;Lüneburg, Stat. Region;37;19798;9677;10121
+33;Lüneburg, Stat. Region;38;20102;9814;10288
+33;Lüneburg, Stat. Region;39;19390;9597;9793
+33;Lüneburg, Stat. Region;40;19388;9573;9815
+33;Lüneburg, Stat. Region;41;19403;9587;9816
+33;Lüneburg, Stat. Region;42;19153;9515;9638
+33;Lüneburg, Stat. Region;43;18680;9316;9364
+33;Lüneburg, Stat. Region;44;19766;9747;10019
+33;Lüneburg, Stat. Region;45;20103;9769;10334
+33;Lüneburg, Stat. Region;46;21927;10821;11106
+33;Lüneburg, Stat. Region;47;24723;12252;12471
+33;Lüneburg, Stat. Region;48;25399;12624;12775
+33;Lüneburg, Stat. Region;49;27974;13752;14222
+33;Lüneburg, Stat. Region;50;29341;14549;14792
+33;Lüneburg, Stat. Region;51;30775;15374;15401
+33;Lüneburg, Stat. Region;52;30879;15287;15592
+33;Lüneburg, Stat. Region;53;30642;15250;15392
+33;Lüneburg, Stat. Region;54;30775;15404;15371
+33;Lüneburg, Stat. Region;55;30290;15115;15175
+33;Lüneburg, Stat. Region;56;28973;14391;14582
+33;Lüneburg, Stat. Region;57;28533;14243;14290
+33;Lüneburg, Stat. Region;58;27175;13413;13762
+33;Lüneburg, Stat. Region;59;26434;13021;13413
+33;Lüneburg, Stat. Region;60;24313;12018;12295
+33;Lüneburg, Stat. Region;61;24016;11768;12248
+33;Lüneburg, Stat. Region;62;22880;11314;11566
+33;Lüneburg, Stat. Region;63;21869;10691;11178
+33;Lüneburg, Stat. Region;64;21710;10465;11245
+33;Lüneburg, Stat. Region;65;21164;10184;10980
+33;Lüneburg, Stat. Region;66;21118;10218;10900
+33;Lüneburg, Stat. Region;67;20966;10139;10827
+33;Lüneburg, Stat. Region;68;21025;10141;10884
+33;Lüneburg, Stat. Region;69;20490;9992;10498
+33;Lüneburg, Stat. Region;70;19141;9361;9780
+33;Lüneburg, Stat. Region;71;17131;8203;8928
+33;Lüneburg, Stat. Region;72;15973;7594;8379
+33;Lüneburg, Stat. Region;73;12622;5912;6710
+33;Lüneburg, Stat. Region;74;16588;7918;8670
+33;Lüneburg, Stat. Region;75;89687;41456;48231
+33;Lüneburg, Stat. Region;80;66125;28342;37783
+33;Lüneburg, Stat. Region;85;29764;10556;19208
+33;Lüneburg, Stat. Region;90;16544;4322;12222
+34;Weser-Ems, Stat. Region;0;24077;12414;11663
+34;Weser-Ems, Stat. Region;1;24742;12598;12144
+34;Weser-Ems, Stat. Region;2;24663;12597;12066
+34;Weser-Ems, Stat. Region;3;23413;12136;11277
+34;Weser-Ems, Stat. Region;4;23748;12270;11478
+34;Weser-Ems, Stat. Region;5;22540;11572;10968
+34;Weser-Ems, Stat. Region;6;22944;11799;11145
+34;Weser-Ems, Stat. Region;7;22424;11507;10917
+34;Weser-Ems, Stat. Region;8;23072;11811;11261
+34;Weser-Ems, Stat. Region;9;23168;12055;11113
+34;Weser-Ems, Stat. Region;10;23757;12125;11632
+34;Weser-Ems, Stat. Region;11;23708;12365;11343
+34;Weser-Ems, Stat. Region;12;23820;12320;11500
+34;Weser-Ems, Stat. Region;13;24681;12766;11915
+34;Weser-Ems, Stat. Region;14;25595;13013;12582
+34;Weser-Ems, Stat. Region;15;25781;13207;12574
+34;Weser-Ems, Stat. Region;16;26876;13848;13028
+34;Weser-Ems, Stat. Region;17;28073;14543;13530
+34;Weser-Ems, Stat. Region;18;29536;15426;14110
+34;Weser-Ems, Stat. Region;19;30248;15998;14250
+34;Weser-Ems, Stat. Region;20;30696;16050;14646
+34;Weser-Ems, Stat. Region;21;32055;16715;15340
+34;Weser-Ems, Stat. Region;22;31388;16304;15084
+34;Weser-Ems, Stat. Region;23;30405;15897;14508
+34;Weser-Ems, Stat. Region;24;30730;16161;14569
+34;Weser-Ems, Stat. Region;25;31596;16813;14783
+34;Weser-Ems, Stat. Region;26;31505;16517;14988
+34;Weser-Ems, Stat. Region;27;31423;16508;14915
+34;Weser-Ems, Stat. Region;28;32429;17141;15288
+34;Weser-Ems, Stat. Region;29;31671;16570;15101
+34;Weser-Ems, Stat. Region;30;32070;16801;15269
+34;Weser-Ems, Stat. Region;31;31759;16663;15096
+34;Weser-Ems, Stat. Region;32;30880;16046;14834
+34;Weser-Ems, Stat. Region;33;28916;14694;14222
+34;Weser-Ems, Stat. Region;34;28534;14763;13771
+34;Weser-Ems, Stat. Region;35;29046;14749;14297
+34;Weser-Ems, Stat. Region;36;29145;14786;14359
+34;Weser-Ems, Stat. Region;37;29393;15004;14389
+34;Weser-Ems, Stat. Region;38;29554;14921;14633
+34;Weser-Ems, Stat. Region;39;28376;14276;14100
+34;Weser-Ems, Stat. Region;40;28055;14085;13970
+34;Weser-Ems, Stat. Region;41;28192;14289;13903
+34;Weser-Ems, Stat. Region;42;28741;14441;14300
+34;Weser-Ems, Stat. Region;43;28204;14243;13961
+34;Weser-Ems, Stat. Region;44;29215;14500;14715
+34;Weser-Ems, Stat. Region;45;29931;14999;14932
+34;Weser-Ems, Stat. Region;46;32689;16281;16408
+34;Weser-Ems, Stat. Region;47;35830;17859;17971
+34;Weser-Ems, Stat. Region;48;37533;18728;18805
+34;Weser-Ems, Stat. Region;49;40002;20155;19847
+34;Weser-Ems, Stat. Region;50;41645;21102;20543
+34;Weser-Ems, Stat. Region;51;42829;21424;21405
+34;Weser-Ems, Stat. Region;52;43423;21985;21438
+34;Weser-Ems, Stat. Region;53;43395;22012;21383
+34;Weser-Ems, Stat. Region;54;43157;21574;21583
+34;Weser-Ems, Stat. Region;55;42491;21321;21170
+34;Weser-Ems, Stat. Region;56;40717;20312;20405
+34;Weser-Ems, Stat. Region;57;40508;20197;20311
+34;Weser-Ems, Stat. Region;58;38521;19193;19328
+34;Weser-Ems, Stat. Region;59;37132;18464;18668
+34;Weser-Ems, Stat. Region;60;35251;17399;17852
+34;Weser-Ems, Stat. Region;61;34114;16755;17359
+34;Weser-Ems, Stat. Region;62;32520;16028;16492
+34;Weser-Ems, Stat. Region;63;31474;15446;16028
+34;Weser-Ems, Stat. Region;64;30732;14974;15758
+34;Weser-Ems, Stat. Region;65;29519;14397;15122
+34;Weser-Ems, Stat. Region;66;29865;14613;15252
+34;Weser-Ems, Stat. Region;67;28766;13992;14774
+34;Weser-Ems, Stat. Region;68;28738;13985;14753
+34;Weser-Ems, Stat. Region;69;28411;14025;14386
+34;Weser-Ems, Stat. Region;70;25538;12495;13043
+34;Weser-Ems, Stat. Region;71;23245;11248;11997
+34;Weser-Ems, Stat. Region;72;21964;10441;11523
+34;Weser-Ems, Stat. Region;73;15929;7653;8276
+34;Weser-Ems, Stat. Region;74;21224;9913;11311
+34;Weser-Ems, Stat. Region;75;115706;52656;63050
+34;Weser-Ems, Stat. Region;80;88093;36739;51354
+34;Weser-Ems, Stat. Region;85;41801;14862;26939
+34;Weser-Ems, Stat. Region;90;21796;5651;16145
+40;Bremen;0;6959;3551;3408
+40;Bremen;1;6838;3548;3290
+40;Bremen;2;6791;3516;3275
+40;Bremen;3;6614;3438;3176
+40;Bremen;4;6380;3327;3053
+40;Bremen;5;5987;3045;2942
+40;Bremen;6;5844;2986;2858
+40;Bremen;7;5519;2874;2645
+40;Bremen;8;5833;2975;2858
+40;Bremen;9;5881;3063;2818
+40;Bremen;10;5868;2976;2892
+40;Bremen;11;6075;3114;2961
+40;Bremen;12;5896;3051;2845
+40;Bremen;13;5793;3115;2678
+40;Bremen;14;5799;2996;2803
+40;Bremen;15;5869;2969;2900
+40;Bremen;16;5789;3043;2746
+40;Bremen;17;6330;3326;3004
+40;Bremen;18;6886;3634;3252
+40;Bremen;19;7832;4092;3740
+40;Bremen;20;8621;4759;3862
+40;Bremen;21;8930;4648;4282
+40;Bremen;22;9034;4756;4278
+40;Bremen;23;9073;4609;4464
+40;Bremen;24;9224;4808;4416
+40;Bremen;25;9669;5044;4625
+40;Bremen;26;9733;5057;4676
+40;Bremen;27;10026;5247;4779
+40;Bremen;28;10403;5554;4849
+40;Bremen;29;10272;5335;4937
+40;Bremen;30;10447;5412;5035
+40;Bremen;31;9954;5173;4781
+40;Bremen;32;9658;5029;4629
+40;Bremen;33;9256;4831;4425
+40;Bremen;34;8923;4613;4310
+40;Bremen;35;9130;4657;4473
+40;Bremen;36;9223;4676;4547
+40;Bremen;37;8713;4559;4154
+40;Bremen;38;8637;4450;4187
+40;Bremen;39;8196;4312;3884
+40;Bremen;40;8039;4171;3868
+40;Bremen;41;7981;4013;3968
+40;Bremen;42;8041;4112;3929
+40;Bremen;43;7898;4005;3893
+40;Bremen;44;7766;4021;3745
+40;Bremen;45;7823;3950;3873
+40;Bremen;46;8282;4208;4074
+40;Bremen;47;8871;4477;4394
+40;Bremen;48;9167;4704;4463
+40;Bremen;49;9812;5032;4780
+40;Bremen;50;10408;5320;5088
+40;Bremen;51;10435;5348;5087
+40;Bremen;52;10755;5533;5222
+40;Bremen;53;10776;5497;5279
+40;Bremen;54;10682;5462;5220
+40;Bremen;55;10395;5151;5244
+40;Bremen;56;10194;5076;5118
+40;Bremen;57;9691;4814;4877
+40;Bremen;58;9452;4684;4768
+40;Bremen;59;9156;4442;4714
+40;Bremen;60;8769;4284;4485
+40;Bremen;61;8765;4245;4520
+40;Bremen;62;8229;3979;4250
+40;Bremen;63;7981;3809;4172
+40;Bremen;64;7738;3642;4096
+40;Bremen;65;7393;3491;3902
+40;Bremen;66;7320;3402;3918
+40;Bremen;67;7353;3421;3932
+40;Bremen;68;7323;3427;3896
+40;Bremen;69;7330;3439;3891
+40;Bremen;70;6762;3170;3592
+40;Bremen;71;6443;2941;3502
+40;Bremen;72;6266;2972;3294
+40;Bremen;73;4950;2266;2684
+40;Bremen;74;6113;2821;3292
+40;Bremen;75;32879;14632;18247
+40;Bremen;80;25234;10152;15082
+40;Bremen;85;11550;3934;7616
+40;Bremen;90;7059;1820;5239
+51;Düsseldorf, Regierungsbezirk;0;49775;25759;24016
+51;Düsseldorf, Regierungsbezirk;1;50886;26314;24572
+51;Düsseldorf, Regierungsbezirk;2;51542;26454;25088
+51;Düsseldorf, Regierungsbezirk;3;49171;25272;23899
+51;Düsseldorf, Regierungsbezirk;4;48308;24814;23494
+51;Düsseldorf, Regierungsbezirk;5;46108;23917;22191
+51;Düsseldorf, Regierungsbezirk;6;46292;23823;22469
+51;Düsseldorf, Regierungsbezirk;7;44895;23050;21845
+51;Düsseldorf, Regierungsbezirk;8;46152;23677;22475
+51;Düsseldorf, Regierungsbezirk;9;45662;23356;22306
+51;Düsseldorf, Regierungsbezirk;10;46956;24157;22799
+51;Düsseldorf, Regierungsbezirk;11;46535;23836;22699
+51;Düsseldorf, Regierungsbezirk;12;46315;23754;22561
+51;Düsseldorf, Regierungsbezirk;13;46494;23925;22569
+51;Düsseldorf, Regierungsbezirk;14;47348;24453;22895
+51;Düsseldorf, Regierungsbezirk;15;47218;24435;22783
+51;Düsseldorf, Regierungsbezirk;16;48548;24966;23582
+51;Düsseldorf, Regierungsbezirk;17;49558;25570;23988
+51;Düsseldorf, Regierungsbezirk;18;51819;27004;24815
+51;Düsseldorf, Regierungsbezirk;19;51804;27083;24721
+51;Düsseldorf, Regierungsbezirk;20;53783;28258;25525
+51;Düsseldorf, Regierungsbezirk;21;57007;29622;27385
+51;Düsseldorf, Regierungsbezirk;22;57755;29812;27943
+51;Düsseldorf, Regierungsbezirk;23;57184;29533;27651
+51;Düsseldorf, Regierungsbezirk;24;59532;30711;28821
+51;Düsseldorf, Regierungsbezirk;25;62205;31810;30395
+51;Düsseldorf, Regierungsbezirk;26;64478;33042;31436
+51;Düsseldorf, Regierungsbezirk;27;66409;33603;32806
+51;Düsseldorf, Regierungsbezirk;28;69314;34961;34353
+51;Düsseldorf, Regierungsbezirk;29;67854;34270;33584
+51;Düsseldorf, Regierungsbezirk;30;69599;35332;34267
+51;Düsseldorf, Regierungsbezirk;31;67813;34364;33449
+51;Düsseldorf, Regierungsbezirk;32;66902;33790;33112
+51;Düsseldorf, Regierungsbezirk;33;63774;32040;31734
+51;Düsseldorf, Regierungsbezirk;34;63573;31552;32021
+51;Düsseldorf, Regierungsbezirk;35;63743;31884;31859
+51;Düsseldorf, Regierungsbezirk;36;65300;32685;32615
+51;Düsseldorf, Regierungsbezirk;37;64553;32240;32313
+51;Düsseldorf, Regierungsbezirk;38;65085;32666;32419
+51;Düsseldorf, Regierungsbezirk;39;61600;30493;31107
+51;Düsseldorf, Regierungsbezirk;40;60291;29679;30612
+51;Düsseldorf, Regierungsbezirk;41;60966;30147;30819
+51;Düsseldorf, Regierungsbezirk;42;60130;29798;30332
+51;Düsseldorf, Regierungsbezirk;43;58966;29139;29827
+51;Düsseldorf, Regierungsbezirk;44;59937;29679;30258
+51;Düsseldorf, Regierungsbezirk;45;60467;29958;30509
+51;Düsseldorf, Regierungsbezirk;46;65107;32341;32766
+51;Düsseldorf, Regierungsbezirk;47;71672;35697;35975
+51;Düsseldorf, Regierungsbezirk;48;74512;37041;37471
+51;Düsseldorf, Regierungsbezirk;49;81710;40882;40828
+51;Düsseldorf, Regierungsbezirk;50;85422;42603;42819
+51;Düsseldorf, Regierungsbezirk;51;87520;43893;43627
+51;Düsseldorf, Regierungsbezirk;52;89565;44877;44688
+51;Düsseldorf, Regierungsbezirk;53;89158;44896;44262
+51;Düsseldorf, Regierungsbezirk;54;89679;45119;44560
+51;Düsseldorf, Regierungsbezirk;55;88160;44277;43883
+51;Düsseldorf, Regierungsbezirk;56;84189;42184;42005
+51;Düsseldorf, Regierungsbezirk;57;82062;40724;41338
+51;Düsseldorf, Regierungsbezirk;58;80354;39761;40593
+51;Düsseldorf, Regierungsbezirk;59;77316;37882;39434
+51;Düsseldorf, Regierungsbezirk;60;73693;36367;37326
+51;Düsseldorf, Regierungsbezirk;61;71904;35305;36599
+51;Düsseldorf, Regierungsbezirk;62;68748;33714;35034
+51;Düsseldorf, Regierungsbezirk;63;65873;31730;34143
+51;Düsseldorf, Regierungsbezirk;64;63830;30667;33163
+51;Düsseldorf, Regierungsbezirk;65;60548;28498;32050
+51;Düsseldorf, Regierungsbezirk;66;60005;28187;31818
+51;Düsseldorf, Regierungsbezirk;67;57301;26638;30663
+51;Düsseldorf, Regierungsbezirk;68;57496;26915;30581
+51;Düsseldorf, Regierungsbezirk;69;57037;26795;30242
+51;Düsseldorf, Regierungsbezirk;70;52530;24424;28106
+51;Düsseldorf, Regierungsbezirk;71;48236;22177;26059
+51;Düsseldorf, Regierungsbezirk;72;44055;20178;23877
+51;Düsseldorf, Regierungsbezirk;73;37621;16878;20743
+51;Düsseldorf, Regierungsbezirk;74;47826;21497;26329
+51;Düsseldorf, Regierungsbezirk;75;251566;109921;141645
+51;Düsseldorf, Regierungsbezirk;80;201151;82221;118930
+51;Düsseldorf, Regierungsbezirk;85;96130;34556;61574
+51;Düsseldorf, Regierungsbezirk;90;50739;13194;37545
+53;Köln, Regierungsbezirk;0;43819;22397;21422
+53;Köln, Regierungsbezirk;1;43377;22387;20990
+53;Köln, Regierungsbezirk;2;44141;22630;21511
+53;Köln, Regierungsbezirk;3;42695;21966;20729
+53;Köln, Regierungsbezirk;4;42014;21683;20331
+53;Köln, Regierungsbezirk;5;40197;20771;19426
+53;Köln, Regierungsbezirk;6;40191;20657;19534
+53;Köln, Regierungsbezirk;7;39391;20364;19027
+53;Köln, Regierungsbezirk;8;40468;20851;19617
+53;Köln, Regierungsbezirk;9;39579;20444;19135
+53;Köln, Regierungsbezirk;10;41163;21240;19923
+53;Köln, Regierungsbezirk;11;40693;20948;19745
+53;Köln, Regierungsbezirk;12;40032;20743;19289
+53;Köln, Regierungsbezirk;13;40487;20913;19574
+53;Köln, Regierungsbezirk;14;41082;20947;20135
+53;Köln, Regierungsbezirk;15;41734;21838;19896
+53;Köln, Regierungsbezirk;16;42424;21938;20486
+53;Köln, Regierungsbezirk;17;43461;22565;20896
+53;Köln, Regierungsbezirk;18;46906;24479;22427
+53;Köln, Regierungsbezirk;19;49820;26194;23626
+53;Köln, Regierungsbezirk;20;52564;27562;25002
+53;Köln, Regierungsbezirk;21;55716;29059;26657
+53;Köln, Regierungsbezirk;22;55656;29125;26531
+53;Köln, Regierungsbezirk;23;55696;29198;26498
+53;Köln, Regierungsbezirk;24;57416;29789;27627
+53;Köln, Regierungsbezirk;25;59022;30300;28722
+53;Köln, Regierungsbezirk;26;59397;30543;28854
+53;Köln, Regierungsbezirk;27;60465;30917;29548
+53;Köln, Regierungsbezirk;28;62540;31968;30572
+53;Köln, Regierungsbezirk;29;60967;30877;30090
+53;Köln, Regierungsbezirk;30;61582;31188;30394
+53;Köln, Regierungsbezirk;31;59928;30390;29538
+53;Köln, Regierungsbezirk;32;58329;29351;28978
+53;Köln, Regierungsbezirk;33;56673;28308;28365
+53;Köln, Regierungsbezirk;34;56267;28258;28009
+53;Köln, Regierungsbezirk;35;56282;28054;28228
+53;Köln, Regierungsbezirk;36;57524;28505;29019
+53;Köln, Regierungsbezirk;37;57579;28400;29179
+53;Köln, Regierungsbezirk;38;57483;28003;29480
+53;Köln, Regierungsbezirk;39;54072;26386;27686
+53;Köln, Regierungsbezirk;40;53499;26243;27256
+53;Köln, Regierungsbezirk;41;53562;26425;27137
+53;Köln, Regierungsbezirk;42;53416;26148;27268
+53;Köln, Regierungsbezirk;43;51949;25618;26331
+53;Köln, Regierungsbezirk;44;52263;25732;26531
+53;Köln, Regierungsbezirk;45;52518;25743;26775
+53;Köln, Regierungsbezirk;46;56389;27721;28668
+53;Köln, Regierungsbezirk;47;61179;30182;30997
+53;Köln, Regierungsbezirk;48;63914;31931;31983
+53;Köln, Regierungsbezirk;49;69741;34714;35027
+53;Köln, Regierungsbezirk;50;73328;36553;36775
+53;Köln, Regierungsbezirk;51;74959;37377;37582
+53;Köln, Regierungsbezirk;52;76196;38208;37988
+53;Köln, Regierungsbezirk;53;75330;37661;37669
+53;Köln, Regierungsbezirk;54;76002;38038;37964
+53;Köln, Regierungsbezirk;55;74247;37024;37223
+53;Köln, Regierungsbezirk;56;70726;35303;35423
+53;Köln, Regierungsbezirk;57;69027;34259;34768
+53;Köln, Regierungsbezirk;58;66935;33285;33650
+53;Köln, Regierungsbezirk;59;64719;32061;32658
+53;Köln, Regierungsbezirk;60;60669;30021;30648
+53;Köln, Regierungsbezirk;61;58897;28954;29943
+53;Köln, Regierungsbezirk;62;56583;27605;28978
+53;Köln, Regierungsbezirk;63;53632;26070;27562
+53;Köln, Regierungsbezirk;64;52439;24957;27482
+53;Köln, Regierungsbezirk;65;49263;23331;25932
+53;Köln, Regierungsbezirk;66;48507;22766;25741
+53;Köln, Regierungsbezirk;67;47168;22196;24972
+53;Köln, Regierungsbezirk;68;47309;22072;25237
+53;Köln, Regierungsbezirk;69;46784;21993;24791
+53;Köln, Regierungsbezirk;70;42430;19855;22575
+53;Köln, Regierungsbezirk;71;39234;18322;20912
+53;Köln, Regierungsbezirk;72;35234;16163;19071
+53;Köln, Regierungsbezirk;73;30464;13807;16657
+53;Köln, Regierungsbezirk;74;38371;17334;21037
+53;Köln, Regierungsbezirk;75;202831;90910;111921
+53;Köln, Regierungsbezirk;80;157482;66715;90767
+53;Köln, Regierungsbezirk;85;73976;27457;46519
+53;Köln, Regierungsbezirk;90;38900;10285;28615
+55;Münster, Regierungsbezirk;0;25614;13186;12428
+55;Münster, Regierungsbezirk;1;25433;13024;12409
+55;Münster, Regierungsbezirk;2;25741;13222;12519
+55;Münster, Regierungsbezirk;3;24945;12892;12053
+55;Münster, Regierungsbezirk;4;24353;12608;11745
+55;Münster, Regierungsbezirk;5;23419;12104;11315
+55;Münster, Regierungsbezirk;6;23407;12070;11337
+55;Münster, Regierungsbezirk;7;23097;11853;11244
+55;Münster, Regierungsbezirk;8;23826;12332;11494
+55;Münster, Regierungsbezirk;9;23608;12231;11377
+55;Münster, Regierungsbezirk;10;24314;12555;11759
+55;Münster, Regierungsbezirk;11;24358;12542;11816
+55;Münster, Regierungsbezirk;12;24194;12482;11712
+55;Münster, Regierungsbezirk;13;24522;12769;11753
+55;Münster, Regierungsbezirk;14;25652;13161;12491
+55;Münster, Regierungsbezirk;15;26015;13411;12604
+55;Münster, Regierungsbezirk;16;26812;13832;12980
+55;Münster, Regierungsbezirk;17;27973;14574;13399
+55;Münster, Regierungsbezirk;18;29511;15289;14222
+55;Münster, Regierungsbezirk;19;30541;15944;14597
+55;Münster, Regierungsbezirk;20;31511;16257;15254
+55;Münster, Regierungsbezirk;21;32698;17123;15575
+55;Münster, Regierungsbezirk;22;32126;16617;15509
+55;Münster, Regierungsbezirk;23;31333;16192;15141
+55;Münster, Regierungsbezirk;24;31683;16624;15059
+55;Münster, Regierungsbezirk;25;32639;16926;15713
+55;Münster, Regierungsbezirk;26;32366;16752;15614
+55;Münster, Regierungsbezirk;27;32561;16794;15767
+55;Münster, Regierungsbezirk;28;33683;17511;16172
+55;Münster, Regierungsbezirk;29;32203;16766;15437
+55;Münster, Regierungsbezirk;30;32870;16826;16044
+55;Münster, Regierungsbezirk;31;32121;16595;15526
+55;Münster, Regierungsbezirk;32;31797;16184;15613
+55;Münster, Regierungsbezirk;33;30910;15753;15157
+55;Münster, Regierungsbezirk;34;30555;15604;14951
+55;Münster, Regierungsbezirk;35;30766;15637;15129
+55;Münster, Regierungsbezirk;36;31186;15635;15551
+55;Münster, Regierungsbezirk;37;30919;15575;15344
+55;Münster, Regierungsbezirk;38;31482;15715;15767
+55;Münster, Regierungsbezirk;39;29926;14933;14993
+55;Münster, Regierungsbezirk;40;30034;14946;15088
+55;Münster, Regierungsbezirk;41;29359;14759;14600
+55;Münster, Regierungsbezirk;42;30123;15079;15044
+55;Münster, Regierungsbezirk;43;29733;14937;14796
+55;Münster, Regierungsbezirk;44;30282;15034;15248
+55;Münster, Regierungsbezirk;45;30454;15153;15301
+55;Münster, Regierungsbezirk;46;33336;16734;16602
+55;Münster, Regierungsbezirk;47;36393;17977;18416
+55;Münster, Regierungsbezirk;48;37827;18793;19034
+55;Münster, Regierungsbezirk;49;41751;20831;20920
+55;Münster, Regierungsbezirk;50;43418;21842;21576
+55;Münster, Regierungsbezirk;51;45075;22719;22356
+55;Münster, Regierungsbezirk;52;45392;22804;22588
+55;Münster, Regierungsbezirk;53;45328;22777;22551
+55;Münster, Regierungsbezirk;54;46044;23088;22956
+55;Münster, Regierungsbezirk;55;44731;22339;22392
+55;Münster, Regierungsbezirk;56;42889;21292;21597
+55;Münster, Regierungsbezirk;57;42281;20951;21330
+55;Münster, Regierungsbezirk;58;41301;20531;20770
+55;Münster, Regierungsbezirk;59;40480;20015;20465
+55;Münster, Regierungsbezirk;60;38007;18631;19376
+55;Münster, Regierungsbezirk;61;36903;18281;18622
+55;Münster, Regierungsbezirk;62;35661;17608;18053
+55;Münster, Regierungsbezirk;63;34083;16517;17566
+55;Münster, Regierungsbezirk;64;33251;16163;17088
+55;Münster, Regierungsbezirk;65;31683;15271;16412
+55;Münster, Regierungsbezirk;66;30671;14663;16008
+55;Münster, Regierungsbezirk;67;29336;14105;15231
+55;Münster, Regierungsbezirk;68;28709;13691;15018
+55;Münster, Regierungsbezirk;69;28288;13556;14732
+55;Münster, Regierungsbezirk;70;25465;12278;13187
+55;Münster, Regierungsbezirk;71;23038;11026;12012
+55;Münster, Regierungsbezirk;72;21248;10105;11143
+55;Münster, Regierungsbezirk;73;16638;7770;8868
+55;Münster, Regierungsbezirk;74;21337;9928;11409
+55;Münster, Regierungsbezirk;75;115138;51150;63988
+55;Münster, Regierungsbezirk;80;92535;37170;55365
+55;Münster, Regierungsbezirk;85;47489;16422;31067
+55;Münster, Regierungsbezirk;90;25238;6388;18850
+57;Detmold, Regierungsbezirk;0;19813;10067;9746
+57;Detmold, Regierungsbezirk;1;20169;10484;9685
+57;Detmold, Regierungsbezirk;2;20481;10443;10038
+57;Detmold, Regierungsbezirk;3;19836;10308;9528
+57;Detmold, Regierungsbezirk;4;19605;10055;9550
+57;Detmold, Regierungsbezirk;5;18958;9763;9195
+57;Detmold, Regierungsbezirk;6;18932;9585;9347
+57;Detmold, Regierungsbezirk;7;18785;9666;9119
+57;Detmold, Regierungsbezirk;8;19348;9928;9420
+57;Detmold, Regierungsbezirk;9;19083;9827;9256
+57;Detmold, Regierungsbezirk;10;19752;10228;9524
+57;Detmold, Regierungsbezirk;11;19987;10289;9698
+57;Detmold, Regierungsbezirk;12;19638;10077;9561
+57;Detmold, Regierungsbezirk;13;20340;10422;9918
+57;Detmold, Regierungsbezirk;14;20622;10730;9892
+57;Detmold, Regierungsbezirk;15;21030;10863;10167
+57;Detmold, Regierungsbezirk;16;21329;11108;10221
+57;Detmold, Regierungsbezirk;17;22141;11398;10743
+57;Detmold, Regierungsbezirk;18;23449;12217;11232
+57;Detmold, Regierungsbezirk;19;23666;12472;11194
+57;Detmold, Regierungsbezirk;20;24077;12539;11538
+57;Detmold, Regierungsbezirk;21;25125;13241;11884
+57;Detmold, Regierungsbezirk;22;24871;13038;11833
+57;Detmold, Regierungsbezirk;23;24218;12876;11342
+57;Detmold, Regierungsbezirk;24;24346;12786;11560
+57;Detmold, Regierungsbezirk;25;25010;13104;11906
+57;Detmold, Regierungsbezirk;26;24725;13034;11691
+57;Detmold, Regierungsbezirk;27;25379;13365;12014
+57;Detmold, Regierungsbezirk;28;26265;13912;12353
+57;Detmold, Regierungsbezirk;29;25622;13294;12328
+57;Detmold, Regierungsbezirk;30;26063;13820;12243
+57;Detmold, Regierungsbezirk;31;25695;13428;12267
+57;Detmold, Regierungsbezirk;32;25263;13002;12261
+57;Detmold, Regierungsbezirk;33;24384;12477;11907
+57;Detmold, Regierungsbezirk;34;24339;12511;11828
+57;Detmold, Regierungsbezirk;35;24149;12318;11831
+57;Detmold, Regierungsbezirk;36;24703;12580;12123
+57;Detmold, Regierungsbezirk;37;24127;12100;12027
+57;Detmold, Regierungsbezirk;38;24270;12044;12226
+57;Detmold, Regierungsbezirk;39;23289;11534;11755
+57;Detmold, Regierungsbezirk;40;23003;11444;11559
+57;Detmold, Regierungsbezirk;41;23198;11813;11385
+57;Detmold, Regierungsbezirk;42;23468;11577;11891
+57;Detmold, Regierungsbezirk;43;23066;11343;11723
+57;Detmold, Regierungsbezirk;44;23446;11427;12019
+57;Detmold, Regierungsbezirk;45;23808;11650;12158
+57;Detmold, Regierungsbezirk;46;25746;12790;12956
+57;Detmold, Regierungsbezirk;47;28309;13999;14310
+57;Detmold, Regierungsbezirk;48;29195;14649;14546
+57;Detmold, Regierungsbezirk;49;31554;15844;15710
+57;Detmold, Regierungsbezirk;50;33101;16688;16413
+57;Detmold, Regierungsbezirk;51;34006;17120;16886
+57;Detmold, Regierungsbezirk;52;34840;17579;17261
+57;Detmold, Regierungsbezirk;53;34256;17186;17070
+57;Detmold, Regierungsbezirk;54;34890;17566;17324
+57;Detmold, Regierungsbezirk;55;34340;17306;17034
+57;Detmold, Regierungsbezirk;56;33368;16608;16760
+57;Detmold, Regierungsbezirk;57;32834;16337;16497
+57;Detmold, Regierungsbezirk;58;32108;15748;16360
+57;Detmold, Regierungsbezirk;59;31480;15617;15863
+57;Detmold, Regierungsbezirk;60;29164;14556;14608
+57;Detmold, Regierungsbezirk;61;28316;14062;14254
+57;Detmold, Regierungsbezirk;62;27191;13444;13747
+57;Detmold, Regierungsbezirk;63;26270;12865;13405
+57;Detmold, Regierungsbezirk;64;24987;12036;12951
+57;Detmold, Regierungsbezirk;65;23742;11401;12341
+57;Detmold, Regierungsbezirk;66;23149;11259;11890
+57;Detmold, Regierungsbezirk;67;22416;10763;11653
+57;Detmold, Regierungsbezirk;68;22155;10716;11439
+57;Detmold, Regierungsbezirk;69;21614;10425;11189
+57;Detmold, Regierungsbezirk;70;19355;9187;10168
+57;Detmold, Regierungsbezirk;71;17449;8194;9255
+57;Detmold, Regierungsbezirk;72;15792;7390;8402
+57;Detmold, Regierungsbezirk;73;12289;5603;6686
+57;Detmold, Regierungsbezirk;74;16707;7764;8943
+57;Detmold, Regierungsbezirk;75;93904;41680;52224
+57;Detmold, Regierungsbezirk;80;77332;31688;45644
+57;Detmold, Regierungsbezirk;85;38890;13846;25044
+57;Detmold, Regierungsbezirk;90;21688;5729;15959
+59;Arnsberg, Regierungsbezirk;0;33039;16919;16120
+59;Arnsberg, Regierungsbezirk;1;34121;17455;16666
+59;Arnsberg, Regierungsbezirk;2;33589;17104;16485
+59;Arnsberg, Regierungsbezirk;3;32546;16724;15822
+59;Arnsberg, Regierungsbezirk;4;32279;16541;15738
+59;Arnsberg, Regierungsbezirk;5;30842;15936;14906
+59;Arnsberg, Regierungsbezirk;6;30961;15939;15022
+59;Arnsberg, Regierungsbezirk;7;29950;15262;14688
+59;Arnsberg, Regierungsbezirk;8;30743;15950;14793
+59;Arnsberg, Regierungsbezirk;9;30502;15749;14753
+59;Arnsberg, Regierungsbezirk;10;31808;16382;15426
+59;Arnsberg, Regierungsbezirk;11;31708;16415;15293
+59;Arnsberg, Regierungsbezirk;12;31609;16320;15289
+59;Arnsberg, Regierungsbezirk;13;32256;16702;15554
+59;Arnsberg, Regierungsbezirk;14;33204;17156;16048
+59;Arnsberg, Regierungsbezirk;15;33593;17177;16416
+59;Arnsberg, Regierungsbezirk;16;34744;18016;16728
+59;Arnsberg, Regierungsbezirk;17;35959;18821;17138
+59;Arnsberg, Regierungsbezirk;18;37871;19927;17944
+59;Arnsberg, Regierungsbezirk;19;38563;20426;18137
+59;Arnsberg, Regierungsbezirk;20;39972;21121;18851
+59;Arnsberg, Regierungsbezirk;21;42428;22322;20106
+59;Arnsberg, Regierungsbezirk;22;42522;22646;19876
+59;Arnsberg, Regierungsbezirk;23;41790;22093;19697
+59;Arnsberg, Regierungsbezirk;24;42679;22674;20005
+59;Arnsberg, Regierungsbezirk;25;44024;23306;20718
+59;Arnsberg, Regierungsbezirk;26;44622;23367;21255
+59;Arnsberg, Regierungsbezirk;27;45430;23871;21559
+59;Arnsberg, Regierungsbezirk;28;47112;24927;22185
+59;Arnsberg, Regierungsbezirk;29;45167;23499;21668
+59;Arnsberg, Regierungsbezirk;30;45716;23817;21899
+59;Arnsberg, Regierungsbezirk;31;44593;23080;21513
+59;Arnsberg, Regierungsbezirk;32;43776;22505;21271
+59;Arnsberg, Regierungsbezirk;33;41818;21414;20404
+59;Arnsberg, Regierungsbezirk;34;41625;21395;20230
+59;Arnsberg, Regierungsbezirk;35;42072;21409;20663
+59;Arnsberg, Regierungsbezirk;36;43175;21979;21196
+59;Arnsberg, Regierungsbezirk;37;42812;21516;21296
+59;Arnsberg, Regierungsbezirk;38;42663;21324;21339
+59;Arnsberg, Regierungsbezirk;39;40596;20153;20443
+59;Arnsberg, Regierungsbezirk;40;40234;20148;20086
+59;Arnsberg, Regierungsbezirk;41;40411;20141;20270
+59;Arnsberg, Regierungsbezirk;42;40991;20253;20738
+59;Arnsberg, Regierungsbezirk;43;39505;19682;19823
+59;Arnsberg, Regierungsbezirk;44;40010;19770;20240
+59;Arnsberg, Regierungsbezirk;45;41287;20524;20763
+59;Arnsberg, Regierungsbezirk;46;44605;22207;22398
+59;Arnsberg, Regierungsbezirk;47;48651;24316;24335
+59;Arnsberg, Regierungsbezirk;48;51522;25827;25695
+59;Arnsberg, Regierungsbezirk;49;56392;28295;28097
+59;Arnsberg, Regierungsbezirk;50;58711;29418;29293
+59;Arnsberg, Regierungsbezirk;51;59082;29735;29347
+59;Arnsberg, Regierungsbezirk;52;61301;30849;30452
+59;Arnsberg, Regierungsbezirk;53;61259;30850;30409
+59;Arnsberg, Regierungsbezirk;54;62236;31460;30776
+59;Arnsberg, Regierungsbezirk;55;61009;30739;30270
+59;Arnsberg, Regierungsbezirk;56;58447;29363;29084
+59;Arnsberg, Regierungsbezirk;57;57129;28351;28778
+59;Arnsberg, Regierungsbezirk;58;55674;27544;28130
+59;Arnsberg, Regierungsbezirk;59;54408;27049;27359
+59;Arnsberg, Regierungsbezirk;60;52244;25698;26546
+59;Arnsberg, Regierungsbezirk;61;50966;25295;25671
+59;Arnsberg, Regierungsbezirk;62;48993;23937;25056
+59;Arnsberg, Regierungsbezirk;63;46804;22576;24228
+59;Arnsberg, Regierungsbezirk;64;46319;22220;24099
+59;Arnsberg, Regierungsbezirk;65;43593;20847;22746
+59;Arnsberg, Regierungsbezirk;66;43037;20393;22644
+59;Arnsberg, Regierungsbezirk;67;41118;19367;21751
+59;Arnsberg, Regierungsbezirk;68;40341;19130;21211
+59;Arnsberg, Regierungsbezirk;69;40632;19201;21431
+59;Arnsberg, Regierungsbezirk;70;36435;17173;19262
+59;Arnsberg, Regierungsbezirk;71;33132;15667;17465
+59;Arnsberg, Regierungsbezirk;72;29735;13728;16007
+59;Arnsberg, Regierungsbezirk;73;24902;11264;13638
+59;Arnsberg, Regierungsbezirk;74;32051;14608;17443
+59;Arnsberg, Regierungsbezirk;75;172909;75836;97073
+59;Arnsberg, Regierungsbezirk;80;138719;56175;82544
+59;Arnsberg, Regierungsbezirk;85;67318;23413;43905
+59;Arnsberg, Regierungsbezirk;90;35906;9086;26820
+64;Darmstadt, Regierungsbezirk;0;40766;20958;19808
+64;Darmstadt, Regierungsbezirk;1;40689;20665;20024
+64;Darmstadt, Regierungsbezirk;2;41058;20905;20153
+64;Darmstadt, Regierungsbezirk;3;39782;20489;19293
+64;Darmstadt, Regierungsbezirk;4;38775;19804;18971
+64;Darmstadt, Regierungsbezirk;5;37320;19143;18177
+64;Darmstadt, Regierungsbezirk;6;37134;19103;18031
+64;Darmstadt, Regierungsbezirk;7;36834;18928;17906
+64;Darmstadt, Regierungsbezirk;8;37435;19018;18417
+64;Darmstadt, Regierungsbezirk;9;36887;18994;17893
+64;Darmstadt, Regierungsbezirk;10;37582;19222;18360
+64;Darmstadt, Regierungsbezirk;11;37498;19355;18143
+64;Darmstadt, Regierungsbezirk;12;36246;18467;17779
+64;Darmstadt, Regierungsbezirk;13;37000;19079;17921
+64;Darmstadt, Regierungsbezirk;14;37279;19241;18038
+64;Darmstadt, Regierungsbezirk;15;36957;19070;17887
+64;Darmstadt, Regierungsbezirk;16;37249;19408;17841
+64;Darmstadt, Regierungsbezirk;17;37889;19840;18049
+64;Darmstadt, Regierungsbezirk;18;39823;20742;19081
+64;Darmstadt, Regierungsbezirk;19;41019;21749;19270
+64;Darmstadt, Regierungsbezirk;20;42689;22791;19898
+64;Darmstadt, Regierungsbezirk;21;45335;24264;21071
+64;Darmstadt, Regierungsbezirk;22;45122;23696;21426
+64;Darmstadt, Regierungsbezirk;23;44906;23526;21380
+64;Darmstadt, Regierungsbezirk;24;46488;24279;22209
+64;Darmstadt, Regierungsbezirk;25;48101;24705;23396
+64;Darmstadt, Regierungsbezirk;26;49093;25043;24050
+64;Darmstadt, Regierungsbezirk;27;51671;26140;25531
+64;Darmstadt, Regierungsbezirk;28;54991;27841;27150
+64;Darmstadt, Regierungsbezirk;29;54938;27903;27035
+64;Darmstadt, Regierungsbezirk;30;55688;28403;27285
+64;Darmstadt, Regierungsbezirk;31;54189;27314;26875
+64;Darmstadt, Regierungsbezirk;32;53901;27029;26872
+64;Darmstadt, Regierungsbezirk;33;52037;26338;25699
+64;Darmstadt, Regierungsbezirk;34;52691;26230;26461
+64;Darmstadt, Regierungsbezirk;35;52570;26077;26493
+64;Darmstadt, Regierungsbezirk;36;54699;27089;27610
+64;Darmstadt, Regierungsbezirk;37;54526;26598;27928
+64;Darmstadt, Regierungsbezirk;38;54676;26961;27715
+64;Darmstadt, Regierungsbezirk;39;52880;26019;26861
+64;Darmstadt, Regierungsbezirk;40;52161;25753;26408
+64;Darmstadt, Regierungsbezirk;41;51362;25246;26116
+64;Darmstadt, Regierungsbezirk;42;51007;25166;25841
+64;Darmstadt, Regierungsbezirk;43;50094;24971;25123
+64;Darmstadt, Regierungsbezirk;44;50323;25180;25143
+64;Darmstadt, Regierungsbezirk;45;50372;25138;25234
+64;Darmstadt, Regierungsbezirk;46;53044;26446;26598
+64;Darmstadt, Regierungsbezirk;47;57052;28598;28454
+64;Darmstadt, Regierungsbezirk;48;59240;29810;29430
+64;Darmstadt, Regierungsbezirk;49;63169;32134;31035
+64;Darmstadt, Regierungsbezirk;50;66468;33672;32796
+64;Darmstadt, Regierungsbezirk;51;67053;33811;33242
+64;Darmstadt, Regierungsbezirk;52;68239;34651;33588
+64;Darmstadt, Regierungsbezirk;53;67552;33994;33558
+64;Darmstadt, Regierungsbezirk;54;67205;34036;33169
+64;Darmstadt, Regierungsbezirk;55;65418;33119;32299
+64;Darmstadt, Regierungsbezirk;56;62063;31111;30952
+64;Darmstadt, Regierungsbezirk;57;59683;29735;29948
+64;Darmstadt, Regierungsbezirk;58;57644;28819;28825
+64;Darmstadt, Regierungsbezirk;59;55437;27576;27861
+64;Darmstadt, Regierungsbezirk;60;51922;25740;26182
+64;Darmstadt, Regierungsbezirk;61;50621;24975;25646
+64;Darmstadt, Regierungsbezirk;62;48523;23767;24756
+64;Darmstadt, Regierungsbezirk;63;46292;22428;23864
+64;Darmstadt, Regierungsbezirk;64;44803;21399;23404
+64;Darmstadt, Regierungsbezirk;65;42296;19989;22307
+64;Darmstadt, Regierungsbezirk;66;42627;20051;22576
+64;Darmstadt, Regierungsbezirk;67;41469;19312;22157
+64;Darmstadt, Regierungsbezirk;68;42888;20267;22621
+64;Darmstadt, Regierungsbezirk;69;42760;20058;22702
+64;Darmstadt, Regierungsbezirk;70;40009;18898;21111
+64;Darmstadt, Regierungsbezirk;71;37217;17386;19831
+64;Darmstadt, Regierungsbezirk;72;31775;14906;16869
+64;Darmstadt, Regierungsbezirk;73;27438;12749;14689
+64;Darmstadt, Regierungsbezirk;74;35588;16408;19180
+64;Darmstadt, Regierungsbezirk;75;179462;81500;97962
+64;Darmstadt, Regierungsbezirk;80;132470;56248;76222
+64;Darmstadt, Regierungsbezirk;85;63034;23706;39328
+64;Darmstadt, Regierungsbezirk;90;36531;10075;26456
+65;Gießen, Regierungsbezirk;0;9350;4765;4585
+65;Gießen, Regierungsbezirk;1;9540;4900;4640
+65;Gießen, Regierungsbezirk;2;9641;4969;4672
+65;Gießen, Regierungsbezirk;3;9346;4771;4575
+65;Gießen, Regierungsbezirk;4;9017;4598;4419
+65;Gießen, Regierungsbezirk;5;8801;4527;4274
+65;Gießen, Regierungsbezirk;6;8781;4481;4300
+65;Gießen, Regierungsbezirk;7;8910;4559;4351
+65;Gießen, Regierungsbezirk;8;9071;4637;4434
+65;Gießen, Regierungsbezirk;9;8958;4596;4362
+65;Gießen, Regierungsbezirk;10;9420;4862;4558
+65;Gießen, Regierungsbezirk;11;9162;4748;4414
+65;Gießen, Regierungsbezirk;12;9244;4723;4521
+65;Gießen, Regierungsbezirk;13;9435;4930;4505
+65;Gießen, Regierungsbezirk;14;9573;4940;4633
+65;Gießen, Regierungsbezirk;15;9732;5022;4710
+65;Gießen, Regierungsbezirk;16;10041;5172;4869
+65;Gießen, Regierungsbezirk;17;10351;5348;5003
+65;Gießen, Regierungsbezirk;18;11409;5822;5587
+65;Gießen, Regierungsbezirk;19;12317;6313;6004
+65;Gießen, Regierungsbezirk;20;13858;6913;6945
+65;Gießen, Regierungsbezirk;21;15047;7474;7573
+65;Gießen, Regierungsbezirk;22;14902;7611;7291
+65;Gießen, Regierungsbezirk;23;14250;7259;6991
+65;Gießen, Regierungsbezirk;24;14250;7190;7060
+65;Gießen, Regierungsbezirk;25;14326;7311;7015
+65;Gießen, Regierungsbezirk;26;14035;7409;6626
+65;Gießen, Regierungsbezirk;27;13980;7221;6759
+65;Gießen, Regierungsbezirk;28;14169;7507;6662
+65;Gießen, Regierungsbezirk;29;14071;7423;6648
+65;Gießen, Regierungsbezirk;30;13830;7245;6585
+65;Gießen, Regierungsbezirk;31;13138;6908;6230
+65;Gießen, Regierungsbezirk;32;12691;6544;6147
+65;Gießen, Regierungsbezirk;33;12386;6440;5946
+65;Gießen, Regierungsbezirk;34;12188;6276;5912
+65;Gießen, Regierungsbezirk;35;12023;6190;5833
+65;Gießen, Regierungsbezirk;36;12297;6324;5973
+65;Gießen, Regierungsbezirk;37;12379;6258;6121
+65;Gießen, Regierungsbezirk;38;12653;6424;6229
+65;Gießen, Regierungsbezirk;39;11907;6030;5877
+65;Gießen, Regierungsbezirk;40;11866;6009;5857
+65;Gießen, Regierungsbezirk;41;11637;5723;5914
+65;Gießen, Regierungsbezirk;42;11740;5846;5894
+65;Gießen, Regierungsbezirk;43;11387;5663;5724
+65;Gießen, Regierungsbezirk;44;11723;5843;5880
+65;Gießen, Regierungsbezirk;45;11578;5686;5892
+65;Gießen, Regierungsbezirk;46;12851;6294;6557
+65;Gießen, Regierungsbezirk;47;13783;6816;6967
+65;Gießen, Regierungsbezirk;48;14595;7240;7355
+65;Gießen, Regierungsbezirk;49;15683;7718;7965
+65;Gießen, Regierungsbezirk;50;16199;8176;8023
+65;Gießen, Regierungsbezirk;51;16884;8353;8531
+65;Gießen, Regierungsbezirk;52;17053;8514;8539
+65;Gießen, Regierungsbezirk;53;17510;8908;8602
+65;Gießen, Regierungsbezirk;54;17924;8907;9017
+65;Gießen, Regierungsbezirk;55;17817;8889;8928
+65;Gießen, Regierungsbezirk;56;17056;8691;8365
+65;Gießen, Regierungsbezirk;57;17284;8631;8653
+65;Gießen, Regierungsbezirk;58;16391;8085;8306
+65;Gießen, Regierungsbezirk;59;15871;7940;7931
+65;Gießen, Regierungsbezirk;60;15313;7641;7672
+65;Gießen, Regierungsbezirk;61;14707;7302;7405
+65;Gießen, Regierungsbezirk;62;14171;7005;7166
+65;Gießen, Regierungsbezirk;63;13412;6602;6810
+65;Gießen, Regierungsbezirk;64;13151;6497;6654
+65;Gießen, Regierungsbezirk;65;12573;6101;6472
+65;Gießen, Regierungsbezirk;66;12474;6068;6406
+65;Gießen, Regierungsbezirk;67;12369;6022;6347
+65;Gießen, Regierungsbezirk;68;12385;6065;6320
+65;Gießen, Regierungsbezirk;69;11819;5702;6117
+65;Gießen, Regierungsbezirk;70;10797;5244;5553
+65;Gießen, Regierungsbezirk;71;10080;4770;5310
+65;Gießen, Regierungsbezirk;72;8294;3909;4385
+65;Gießen, Regierungsbezirk;73;6349;2976;3373
+65;Gießen, Regierungsbezirk;74;8484;4025;4459
+65;Gießen, Regierungsbezirk;75;47163;21359;25804
+65;Gießen, Regierungsbezirk;80;37670;15806;21864
+65;Gießen, Regierungsbezirk;85;18483;6656;11827
+65;Gießen, Regierungsbezirk;90;10257;2880;7377
+66;Kassel, Regierungsbezirk;0;10675;5487;5188
+66;Kassel, Regierungsbezirk;1;11168;5821;5347
+66;Kassel, Regierungsbezirk;2;11249;5778;5471
+66;Kassel, Regierungsbezirk;3;10754;5562;5192
+66;Kassel, Regierungsbezirk;4;10643;5411;5232
+66;Kassel, Regierungsbezirk;5;10400;5316;5084
+66;Kassel, Regierungsbezirk;6;10304;5355;4949
+66;Kassel, Regierungsbezirk;7;10244;5319;4925
+66;Kassel, Regierungsbezirk;8;10462;5482;4980
+66;Kassel, Regierungsbezirk;9;10290;5322;4968
+66;Kassel, Regierungsbezirk;10;10393;5265;5128
+66;Kassel, Regierungsbezirk;11;10702;5555;5147
+66;Kassel, Regierungsbezirk;12;10697;5548;5149
+66;Kassel, Regierungsbezirk;13;10868;5514;5354
+66;Kassel, Regierungsbezirk;14;11265;5737;5528
+66;Kassel, Regierungsbezirk;15;11123;5686;5437
+66;Kassel, Regierungsbezirk;16;11518;5985;5533
+66;Kassel, Regierungsbezirk;17;12157;6327;5830
+66;Kassel, Regierungsbezirk;18;12809;6693;6116
+66;Kassel, Regierungsbezirk;19;12926;6940;5986
+66;Kassel, Regierungsbezirk;20;13336;7056;6280
+66;Kassel, Regierungsbezirk;21;14475;7797;6678
+66;Kassel, Regierungsbezirk;22;13988;7479;6509
+66;Kassel, Regierungsbezirk;23;14094;7529;6565
+66;Kassel, Regierungsbezirk;24;14108;7468;6640
+66;Kassel, Regierungsbezirk;25;14451;7757;6694
+66;Kassel, Regierungsbezirk;26;14434;7683;6751
+66;Kassel, Regierungsbezirk;27;14701;7931;6770
+66;Kassel, Regierungsbezirk;28;15559;8209;7350
+66;Kassel, Regierungsbezirk;29;14839;7868;6971
+66;Kassel, Regierungsbezirk;30;15170;8098;7072
+66;Kassel, Regierungsbezirk;31;14917;7829;7088
+66;Kassel, Regierungsbezirk;32;14369;7653;6716
+66;Kassel, Regierungsbezirk;33;13661;7208;6453
+66;Kassel, Regierungsbezirk;34;14109;7323;6786
+66;Kassel, Regierungsbezirk;35;13823;7153;6670
+66;Kassel, Regierungsbezirk;36;13897;7166;6731
+66;Kassel, Regierungsbezirk;37;13825;7081;6744
+66;Kassel, Regierungsbezirk;38;14012;7138;6874
+66;Kassel, Regierungsbezirk;39;13338;6682;6656
+66;Kassel, Regierungsbezirk;40;13216;6544;6672
+66;Kassel, Regierungsbezirk;41;13366;6650;6716
+66;Kassel, Regierungsbezirk;42;13541;6672;6869
+66;Kassel, Regierungsbezirk;43;13022;6490;6532
+66;Kassel, Regierungsbezirk;44;13675;6788;6887
+66;Kassel, Regierungsbezirk;45;14048;6902;7146
+66;Kassel, Regierungsbezirk;46;15227;7596;7631
+66;Kassel, Regierungsbezirk;47;16708;8222;8486
+66;Kassel, Regierungsbezirk;48;17610;8648;8962
+66;Kassel, Regierungsbezirk;49;19001;9462;9539
+66;Kassel, Regierungsbezirk;50;19765;9966;9799
+66;Kassel, Regierungsbezirk;51;20050;10206;9844
+66;Kassel, Regierungsbezirk;52;20537;10270;10267
+66;Kassel, Regierungsbezirk;53;20845;10398;10447
+66;Kassel, Regierungsbezirk;54;21217;10830;10387
+66;Kassel, Regierungsbezirk;55;20931;10526;10405
+66;Kassel, Regierungsbezirk;56;20624;10260;10364
+66;Kassel, Regierungsbezirk;57;19965;9955;10010
+66;Kassel, Regierungsbezirk;58;19416;9695;9721
+66;Kassel, Regierungsbezirk;59;18926;9392;9534
+66;Kassel, Regierungsbezirk;60;18011;8947;9064
+66;Kassel, Regierungsbezirk;61;17528;8725;8803
+66;Kassel, Regierungsbezirk;62;16840;8343;8497
+66;Kassel, Regierungsbezirk;63;16154;7983;8171
+66;Kassel, Regierungsbezirk;64;15862;7796;8066
+66;Kassel, Regierungsbezirk;65;15070;7300;7770
+66;Kassel, Regierungsbezirk;66;15190;7314;7876
+66;Kassel, Regierungsbezirk;67;14856;7194;7662
+66;Kassel, Regierungsbezirk;68;14766;7019;7747
+66;Kassel, Regierungsbezirk;69;14597;7073;7524
+66;Kassel, Regierungsbezirk;70;13697;6576;7121
+66;Kassel, Regierungsbezirk;71;12696;6088;6608
+66;Kassel, Regierungsbezirk;72;10752;5189;5563
+66;Kassel, Regierungsbezirk;73;8161;3877;4284
+66;Kassel, Regierungsbezirk;74;11265;5358;5907
+66;Kassel, Regierungsbezirk;75;61643;27870;33773
+66;Kassel, Regierungsbezirk;80;48282;20280;28002
+66;Kassel, Regierungsbezirk;85;23642;8431;15211
+66;Kassel, Regierungsbezirk;90;13368;3542;9826
+71;Koblenz, Stat. Region;0;13400;6886;6514
+71;Koblenz, Stat. Region;1;13699;7104;6595
+71;Koblenz, Stat. Region;2;13986;7119;6867
+71;Koblenz, Stat. Region;3;13417;6885;6532
+71;Koblenz, Stat. Region;4;13177;6700;6477
+71;Koblenz, Stat. Region;5;12747;6521;6226
+71;Koblenz, Stat. Region;6;12714;6642;6072
+71;Koblenz, Stat. Region;7;12651;6385;6266
+71;Koblenz, Stat. Region;8;12792;6536;6256
+71;Koblenz, Stat. Region;9;12651;6542;6109
+71;Koblenz, Stat. Region;10;13387;6841;6546
+71;Koblenz, Stat. Region;11;13106;6779;6327
+71;Koblenz, Stat. Region;12;12950;6618;6332
+71;Koblenz, Stat. Region;13;13183;6796;6387
+71;Koblenz, Stat. Region;14;13687;7107;6580
+71;Koblenz, Stat. Region;15;13985;7156;6829
+71;Koblenz, Stat. Region;16;14291;7276;7015
+71;Koblenz, Stat. Region;17;14945;7754;7191
+71;Koblenz, Stat. Region;18;15882;8296;7586
+71;Koblenz, Stat. Region;19;15866;8301;7565
+71;Koblenz, Stat. Region;20;15852;8329;7523
+71;Koblenz, Stat. Region;21;16146;8531;7615
+71;Koblenz, Stat. Region;22;16073;8606;7467
+71;Koblenz, Stat. Region;23;15390;8198;7192
+71;Koblenz, Stat. Region;24;16185;8549;7636
+71;Koblenz, Stat. Region;25;16508;8738;7770
+71;Koblenz, Stat. Region;26;17071;8962;8109
+71;Koblenz, Stat. Region;27;17294;9130;8164
+71;Koblenz, Stat. Region;28;17939;9579;8360
+71;Koblenz, Stat. Region;29;17591;9149;8442
+71;Koblenz, Stat. Region;30;18036;9507;8529
+71;Koblenz, Stat. Region;31;17738;9155;8583
+71;Koblenz, Stat. Region;32;17417;8941;8476
+71;Koblenz, Stat. Region;33;16800;8634;8166
+71;Koblenz, Stat. Region;34;16894;8601;8293
+71;Koblenz, Stat. Region;35;16723;8475;8248
+71;Koblenz, Stat. Region;36;17425;8907;8518
+71;Koblenz, Stat. Region;37;17743;8841;8902
+71;Koblenz, Stat. Region;38;17275;8597;8678
+71;Koblenz, Stat. Region;39;16737;8342;8395
+71;Koblenz, Stat. Region;40;16322;8089;8233
+71;Koblenz, Stat. Region;41;16288;8047;8241
+71;Koblenz, Stat. Region;42;16235;8119;8116
+71;Koblenz, Stat. Region;43;16006;7930;8076
+71;Koblenz, Stat. Region;44;16322;8011;8311
+71;Koblenz, Stat. Region;45;16596;8186;8410
+71;Koblenz, Stat. Region;46;18344;9019;9325
+71;Koblenz, Stat. Region;47;20165;10014;10151
+71;Koblenz, Stat. Region;48;21231;10518;10713
+71;Koblenz, Stat. Region;49;23017;11522;11495
+71;Koblenz, Stat. Region;50;24624;12304;12320
+71;Koblenz, Stat. Region;51;25254;12488;12766
+71;Koblenz, Stat. Region;52;26486;13343;13143
+71;Koblenz, Stat. Region;53;26264;13142;13122
+71;Koblenz, Stat. Region;54;27065;13577;13488
+71;Koblenz, Stat. Region;55;26844;13653;13191
+71;Koblenz, Stat. Region;56;26082;12931;13151
+71;Koblenz, Stat. Region;57;25887;12925;12962
+71;Koblenz, Stat. Region;58;24993;12399;12594
+71;Koblenz, Stat. Region;59;24109;12088;12021
+71;Koblenz, Stat. Region;60;22891;11433;11458
+71;Koblenz, Stat. Region;61;22438;11219;11219
+71;Koblenz, Stat. Region;62;21404;10535;10869
+71;Koblenz, Stat. Region;63;20811;10271;10540
+71;Koblenz, Stat. Region;64;20341;10008;10333
+71;Koblenz, Stat. Region;65;19827;9586;10241
+71;Koblenz, Stat. Region;66;19528;9487;10041
+71;Koblenz, Stat. Region;67;19164;9388;9776
+71;Koblenz, Stat. Region;68;19195;9408;9787
+71;Koblenz, Stat. Region;69;18650;9146;9504
+71;Koblenz, Stat. Region;70;15878;7689;8189
+71;Koblenz, Stat. Region;71;14120;6837;7283
+71;Koblenz, Stat. Region;72;12580;5994;6586
+71;Koblenz, Stat. Region;73;10180;4732;5448
+71;Koblenz, Stat. Region;74;13086;6076;7010
+71;Koblenz, Stat. Region;75;72889;32948;39941
+71;Koblenz, Stat. Region;80;59173;24911;34262
+71;Koblenz, Stat. Region;85;28226;10238;17988
+71;Koblenz, Stat. Region;90;16017;4246;11771
+72;Trier, Stat. Region;0;4662;2430;2232
+72;Trier, Stat. Region;1;4889;2516;2373
+72;Trier, Stat. Region;2;4905;2528;2377
+72;Trier, Stat. Region;3;4893;2552;2341
+72;Trier, Stat. Region;4;4801;2477;2324
+72;Trier, Stat. Region;5;4584;2355;2229
+72;Trier, Stat. Region;6;4450;2283;2167
+72;Trier, Stat. Region;7;4439;2250;2189
+72;Trier, Stat. Region;8;4684;2451;2233
+72;Trier, Stat. Region;9;4591;2360;2231
+72;Trier, Stat. Region;10;4600;2378;2222
+72;Trier, Stat. Region;11;4674;2409;2265
+72;Trier, Stat. Region;12;4578;2480;2098
+72;Trier, Stat. Region;13;4693;2377;2316
+72;Trier, Stat. Region;14;4765;2467;2298
+72;Trier, Stat. Region;15;4860;2482;2378
+72;Trier, Stat. Region;16;4856;2478;2378
+72;Trier, Stat. Region;17;5064;2650;2414
+72;Trier, Stat. Region;18;5652;2941;2711
+72;Trier, Stat. Region;19;5747;2969;2778
+72;Trier, Stat. Region;20;5975;3053;2922
+72;Trier, Stat. Region;21;6537;3441;3096
+72;Trier, Stat. Region;22;6409;3369;3040
+72;Trier, Stat. Region;23;6270;3211;3059
+72;Trier, Stat. Region;24;6349;3291;3058
+72;Trier, Stat. Region;25;6819;3563;3256
+72;Trier, Stat. Region;26;6754;3569;3185
+72;Trier, Stat. Region;27;6927;3671;3256
+72;Trier, Stat. Region;28;7104;3692;3412
+72;Trier, Stat. Region;29;6908;3635;3273
+72;Trier, Stat. Region;30;6978;3638;3340
+72;Trier, Stat. Region;31;6763;3484;3279
+72;Trier, Stat. Region;32;6558;3334;3224
+72;Trier, Stat. Region;33;6467;3355;3112
+72;Trier, Stat. Region;34;6476;3290;3186
+72;Trier, Stat. Region;35;6424;3286;3138
+72;Trier, Stat. Region;36;6674;3410;3264
+72;Trier, Stat. Region;37;6686;3447;3239
+72;Trier, Stat. Region;38;6404;3180;3224
+72;Trier, Stat. Region;39;6225;3179;3046
+72;Trier, Stat. Region;40;6098;3112;2986
+72;Trier, Stat. Region;41;6150;3077;3073
+72;Trier, Stat. Region;42;5891;2951;2940
+72;Trier, Stat. Region;43;6016;3021;2995
+72;Trier, Stat. Region;44;5864;2937;2927
+72;Trier, Stat. Region;45;6178;3162;3016
+72;Trier, Stat. Region;46;6647;3348;3299
+72;Trier, Stat. Region;47;7025;3498;3527
+72;Trier, Stat. Region;48;7516;3720;3796
+72;Trier, Stat. Region;49;8061;4039;4022
+72;Trier, Stat. Region;50;8502;4413;4089
+72;Trier, Stat. Region;51;8596;4411;4185
+72;Trier, Stat. Region;52;9176;4708;4468
+72;Trier, Stat. Region;53;9278;4656;4622
+72;Trier, Stat. Region;54;9360;4740;4620
+72;Trier, Stat. Region;55;9390;4692;4698
+72;Trier, Stat. Region;56;9053;4632;4421
+72;Trier, Stat. Region;57;8995;4544;4451
+72;Trier, Stat. Region;58;8345;4143;4202
+72;Trier, Stat. Region;59;8154;4146;4008
+72;Trier, Stat. Region;60;7895;3929;3966
+72;Trier, Stat. Region;61;7709;3959;3750
+72;Trier, Stat. Region;62;7427;3687;3740
+72;Trier, Stat. Region;63;7263;3533;3730
+72;Trier, Stat. Region;64;7302;3647;3655
+72;Trier, Stat. Region;65;6799;3402;3397
+72;Trier, Stat. Region;66;6750;3366;3384
+72;Trier, Stat. Region;67;6351;3240;3111
+72;Trier, Stat. Region;68;6359;3142;3217
+72;Trier, Stat. Region;69;6030;2952;3078
+72;Trier, Stat. Region;70;5234;2603;2631
+72;Trier, Stat. Region;71;4459;2209;2250
+72;Trier, Stat. Region;72;3777;1914;1863
+72;Trier, Stat. Region;73;3188;1512;1676
+72;Trier, Stat. Region;74;4026;1916;2110
+72;Trier, Stat. Region;75;23351;10442;12909
+72;Trier, Stat. Region;80;19308;7988;11320
+72;Trier, Stat. Region;85;9777;3467;6310
+72;Trier, Stat. Region;90;5613;1455;4158
+73;Rheinhessen-Pfalz, Stat. Region;0;19460;9947;9513
+73;Rheinhessen-Pfalz, Stat. Region;1;19983;10364;9619
+73;Rheinhessen-Pfalz, Stat. Region;2;19888;10326;9562
+73;Rheinhessen-Pfalz, Stat. Region;3;19192;9772;9420
+73;Rheinhessen-Pfalz, Stat. Region;4;18983;9748;9235
+73;Rheinhessen-Pfalz, Stat. Region;5;18250;9295;8955
+73;Rheinhessen-Pfalz, Stat. Region;6;17939;9242;8697
+73;Rheinhessen-Pfalz, Stat. Region;7;17822;9323;8499
+73;Rheinhessen-Pfalz, Stat. Region;8;18039;9306;8733
+73;Rheinhessen-Pfalz, Stat. Region;9;17534;9017;8517
+73;Rheinhessen-Pfalz, Stat. Region;10;18161;9468;8693
+73;Rheinhessen-Pfalz, Stat. Region;11;18191;9450;8741
+73;Rheinhessen-Pfalz, Stat. Region;12;17627;9133;8494
+73;Rheinhessen-Pfalz, Stat. Region;13;17986;9232;8754
+73;Rheinhessen-Pfalz, Stat. Region;14;18258;9554;8704
+73;Rheinhessen-Pfalz, Stat. Region;15;18517;9552;8965
+73;Rheinhessen-Pfalz, Stat. Region;16;19023;9921;9102
+73;Rheinhessen-Pfalz, Stat. Region;17;19557;10162;9395
+73;Rheinhessen-Pfalz, Stat. Region;18;21024;10864;10160
+73;Rheinhessen-Pfalz, Stat. Region;19;22081;11481;10600
+73;Rheinhessen-Pfalz, Stat. Region;20;23074;11770;11304
+73;Rheinhessen-Pfalz, Stat. Region;21;24649;12737;11912
+73;Rheinhessen-Pfalz, Stat. Region;22;24188;12569;11619
+73;Rheinhessen-Pfalz, Stat. Region;23;23949;12450;11499
+73;Rheinhessen-Pfalz, Stat. Region;24;24505;12644;11861
+73;Rheinhessen-Pfalz, Stat. Region;25;25333;13194;12139
+73;Rheinhessen-Pfalz, Stat. Region;26;25543;13080;12463
+73;Rheinhessen-Pfalz, Stat. Region;27;26076;13562;12514
+73;Rheinhessen-Pfalz, Stat. Region;28;26968;14023;12945
+73;Rheinhessen-Pfalz, Stat. Region;29;26355;13721;12634
+73;Rheinhessen-Pfalz, Stat. Region;30;27003;13986;13017
+73;Rheinhessen-Pfalz, Stat. Region;31;26043;13365;12678
+73;Rheinhessen-Pfalz, Stat. Region;32;25874;13308;12566
+73;Rheinhessen-Pfalz, Stat. Region;33;24649;12599;12050
+73;Rheinhessen-Pfalz, Stat. Region;34;24575;12525;12050
+73;Rheinhessen-Pfalz, Stat. Region;35;25009;12742;12267
+73;Rheinhessen-Pfalz, Stat. Region;36;25481;12874;12607
+73;Rheinhessen-Pfalz, Stat. Region;37;25255;12659;12596
+73;Rheinhessen-Pfalz, Stat. Region;38;25151;12532;12619
+73;Rheinhessen-Pfalz, Stat. Region;39;24041;12041;12000
+73;Rheinhessen-Pfalz, Stat. Region;40;23935;12081;11854
+73;Rheinhessen-Pfalz, Stat. Region;41;23568;11695;11873
+73;Rheinhessen-Pfalz, Stat. Region;42;23347;11685;11662
+73;Rheinhessen-Pfalz, Stat. Region;43;22780;11325;11455
+73;Rheinhessen-Pfalz, Stat. Region;44;23076;11358;11718
+73;Rheinhessen-Pfalz, Stat. Region;45;23475;11612;11863
+73;Rheinhessen-Pfalz, Stat. Region;46;25336;12485;12851
+73;Rheinhessen-Pfalz, Stat. Region;47;27844;13854;13990
+73;Rheinhessen-Pfalz, Stat. Region;48;28881;14466;14415
+73;Rheinhessen-Pfalz, Stat. Region;49;31355;15632;15723
+73;Rheinhessen-Pfalz, Stat. Region;50;33000;16468;16532
+73;Rheinhessen-Pfalz, Stat. Region;51;33937;16893;17044
+73;Rheinhessen-Pfalz, Stat. Region;52;34783;17522;17261
+73;Rheinhessen-Pfalz, Stat. Region;53;34846;17557;17289
+73;Rheinhessen-Pfalz, Stat. Region;54;35486;17804;17682
+73;Rheinhessen-Pfalz, Stat. Region;55;35493;17812;17681
+73;Rheinhessen-Pfalz, Stat. Region;56;34722;17387;17335
+73;Rheinhessen-Pfalz, Stat. Region;57;34462;17142;17320
+73;Rheinhessen-Pfalz, Stat. Region;58;33579;16538;17041
+73;Rheinhessen-Pfalz, Stat. Region;59;32233;15954;16279
+73;Rheinhessen-Pfalz, Stat. Region;60;30210;14931;15279
+73;Rheinhessen-Pfalz, Stat. Region;61;29929;14765;15164
+73;Rheinhessen-Pfalz, Stat. Region;62;28732;14208;14524
+73;Rheinhessen-Pfalz, Stat. Region;63;27293;13412;13881
+73;Rheinhessen-Pfalz, Stat. Region;64;26437;12795;13642
+73;Rheinhessen-Pfalz, Stat. Region;65;25771;12429;13342
+73;Rheinhessen-Pfalz, Stat. Region;66;25480;12413;13067
+73;Rheinhessen-Pfalz, Stat. Region;67;24923;11974;12949
+73;Rheinhessen-Pfalz, Stat. Region;68;25133;12124;13009
+73;Rheinhessen-Pfalz, Stat. Region;69;23935;11414;12521
+73;Rheinhessen-Pfalz, Stat. Region;70;20437;9810;10627
+73;Rheinhessen-Pfalz, Stat. Region;71;17979;8489;9490
+73;Rheinhessen-Pfalz, Stat. Region;72;16034;7555;8479
+73;Rheinhessen-Pfalz, Stat. Region;73;13481;6274;7207
+73;Rheinhessen-Pfalz, Stat. Region;74;17765;8198;9567
+73;Rheinhessen-Pfalz, Stat. Region;75;95674;43032;52642
+73;Rheinhessen-Pfalz, Stat. Region;80;74651;31423;43228
+73;Rheinhessen-Pfalz, Stat. Region;85;36900;13352;23548
+73;Rheinhessen-Pfalz, Stat. Region;90;19814;5454;14360
+81;Stuttgart, Regierungsbezirk;0;41389;21209;20180
+81;Stuttgart, Regierungsbezirk;1;41681;21350;20331
+81;Stuttgart, Regierungsbezirk;2;41548;21462;20086
+81;Stuttgart, Regierungsbezirk;3;40138;20353;19785
+81;Stuttgart, Regierungsbezirk;4;39075;20215;18860
+81;Stuttgart, Regierungsbezirk;5;37753;19354;18399
+81;Stuttgart, Regierungsbezirk;6;36952;18803;18149
+81;Stuttgart, Regierungsbezirk;7;36511;18682;17829
+81;Stuttgart, Regierungsbezirk;8;37964;19373;18591
+81;Stuttgart, Regierungsbezirk;9;37211;19082;18129
+81;Stuttgart, Regierungsbezirk;10;38309;19517;18792
+81;Stuttgart, Regierungsbezirk;11;38502;19569;18933
+81;Stuttgart, Regierungsbezirk;12;38078;19615;18463
+81;Stuttgart, Regierungsbezirk;13;38625;19751;18874
+81;Stuttgart, Regierungsbezirk;14;39547;20338;19209
+81;Stuttgart, Regierungsbezirk;15;39586;20426;19160
+81;Stuttgart, Regierungsbezirk;16;40395;20811;19584
+81;Stuttgart, Regierungsbezirk;17;41337;21483;19854
+81;Stuttgart, Regierungsbezirk;18;43460;22687;20773
+81;Stuttgart, Regierungsbezirk;19;44562;23771;20791
+81;Stuttgart, Regierungsbezirk;20;45768;24336;21432
+81;Stuttgart, Regierungsbezirk;21;48119;25772;22347
+81;Stuttgart, Regierungsbezirk;22;48332;25712;22620
+81;Stuttgart, Regierungsbezirk;23;48639;25987;22652
+81;Stuttgart, Regierungsbezirk;24;50045;26381;23664
+81;Stuttgart, Regierungsbezirk;25;52353;27689;24664
+81;Stuttgart, Regierungsbezirk;26;53719;28636;25083
+81;Stuttgart, Regierungsbezirk;27;55846;29347;26499
+81;Stuttgart, Regierungsbezirk;28;59422;30961;28461
+81;Stuttgart, Regierungsbezirk;29;57872;30359;27513
+81;Stuttgart, Regierungsbezirk;30;59663;31424;28239
+81;Stuttgart, Regierungsbezirk;31;57405;30045;27360
+81;Stuttgart, Regierungsbezirk;32;57066;29816;27250
+81;Stuttgart, Regierungsbezirk;33;55137;28711;26426
+81;Stuttgart, Regierungsbezirk;34;54608;28353;26255
+81;Stuttgart, Regierungsbezirk;35;53939;27655;26284
+81;Stuttgart, Regierungsbezirk;36;55008;28253;26755
+81;Stuttgart, Regierungsbezirk;37;54732;27988;26744
+81;Stuttgart, Regierungsbezirk;38;55791;28399;27392
+81;Stuttgart, Regierungsbezirk;39;52416;26514;25902
+81;Stuttgart, Regierungsbezirk;40;51310;26174;25136
+81;Stuttgart, Regierungsbezirk;41;51354;25966;25388
+81;Stuttgart, Regierungsbezirk;42;50999;25830;25169
+81;Stuttgart, Regierungsbezirk;43;50127;25408;24719
+81;Stuttgart, Regierungsbezirk;44;51168;25886;25282
+81;Stuttgart, Regierungsbezirk;45;50917;25778;25139
+81;Stuttgart, Regierungsbezirk;46;54489;27524;26965
+81;Stuttgart, Regierungsbezirk;47;58186;29603;28583
+81;Stuttgart, Regierungsbezirk;48;60240;30364;29876
+81;Stuttgart, Regierungsbezirk;49;63741;32583;31158
+81;Stuttgart, Regierungsbezirk;50;66417;33832;32585
+81;Stuttgart, Regierungsbezirk;51;67027;34103;32924
+81;Stuttgart, Regierungsbezirk;52;68477;34806;33671
+81;Stuttgart, Regierungsbezirk;53;67789;34761;33028
+81;Stuttgart, Regierungsbezirk;54;68370;35084;33286
+81;Stuttgart, Regierungsbezirk;55;67115;34478;32637
+81;Stuttgart, Regierungsbezirk;56;64696;33012;31684
+81;Stuttgart, Regierungsbezirk;57;63088;31860;31228
+81;Stuttgart, Regierungsbezirk;58;60800;30435;30365
+81;Stuttgart, Regierungsbezirk;59;58103;29307;28796
+81;Stuttgart, Regierungsbezirk;60;54940;27674;27266
+81;Stuttgart, Regierungsbezirk;61;52876;26354;26522
+81;Stuttgart, Regierungsbezirk;62;51698;25571;26127
+81;Stuttgart, Regierungsbezirk;63;48507;23650;24857
+81;Stuttgart, Regierungsbezirk;64;46388;22224;24164
+81;Stuttgart, Regierungsbezirk;65;44043;21079;22964
+81;Stuttgart, Regierungsbezirk;66;43893;20781;23112
+81;Stuttgart, Regierungsbezirk;67;42143;19961;22182
+81;Stuttgart, Regierungsbezirk;68;42471;19827;22644
+81;Stuttgart, Regierungsbezirk;69;41252;19373;21879
+81;Stuttgart, Regierungsbezirk;70;38774;18622;20152
+81;Stuttgart, Regierungsbezirk;71;36698;17281;19417
+81;Stuttgart, Regierungsbezirk;72;31281;14671;16610
+81;Stuttgart, Regierungsbezirk;73;27116;12478;14638
+81;Stuttgart, Regierungsbezirk;74;34751;16161;18590
+81;Stuttgart, Regierungsbezirk;75;189955;85409;104546
+81;Stuttgart, Regierungsbezirk;80;145011;61608;83403
+81;Stuttgart, Regierungsbezirk;85;71616;26915;44701
+81;Stuttgart, Regierungsbezirk;90;37089;10472;26617
+82;Karlsruhe, Regierungsbezirk;0;26621;13539;13082
+82;Karlsruhe, Regierungsbezirk;1;26661;13661;13000
+82;Karlsruhe, Regierungsbezirk;2;26895;13781;13114
+82;Karlsruhe, Regierungsbezirk;3;25850;13149;12701
+82;Karlsruhe, Regierungsbezirk;4;25377;13157;12220
+82;Karlsruhe, Regierungsbezirk;5;24572;12684;11888
+82;Karlsruhe, Regierungsbezirk;6;24344;12691;11653
+82;Karlsruhe, Regierungsbezirk;7;23845;12260;11585
+82;Karlsruhe, Regierungsbezirk;8;24140;12535;11605
+82;Karlsruhe, Regierungsbezirk;9;24149;12455;11694
+82;Karlsruhe, Regierungsbezirk;10;24665;12702;11963
+82;Karlsruhe, Regierungsbezirk;11;24623;12734;11889
+82;Karlsruhe, Regierungsbezirk;12;24491;12654;11837
+82;Karlsruhe, Regierungsbezirk;13;24786;12810;11976
+82;Karlsruhe, Regierungsbezirk;14;25543;13137;12406
+82;Karlsruhe, Regierungsbezirk;15;25344;13150;12194
+82;Karlsruhe, Regierungsbezirk;16;25948;13548;12400
+82;Karlsruhe, Regierungsbezirk;17;26644;13888;12756
+82;Karlsruhe, Regierungsbezirk;18;29290;15440;13850
+82;Karlsruhe, Regierungsbezirk;19;31993;17156;14837
+82;Karlsruhe, Regierungsbezirk;20;33903;18213;15690
+82;Karlsruhe, Regierungsbezirk;21;36244;19361;16883
+82;Karlsruhe, Regierungsbezirk;22;36248;19212;17036
+82;Karlsruhe, Regierungsbezirk;23;36178;19266;16912
+82;Karlsruhe, Regierungsbezirk;24;36730;19525;17205
+82;Karlsruhe, Regierungsbezirk;25;37584;20045;17539
+82;Karlsruhe, Regierungsbezirk;26;37769;20068;17701
+82;Karlsruhe, Regierungsbezirk;27;38356;20278;18078
+82;Karlsruhe, Regierungsbezirk;28;39781;21180;18601
+82;Karlsruhe, Regierungsbezirk;29;39052;20606;18446
+82;Karlsruhe, Regierungsbezirk;30;39068;20730;18338
+82;Karlsruhe, Regierungsbezirk;31;37695;19753;17942
+82;Karlsruhe, Regierungsbezirk;32;37205;19282;17923
+82;Karlsruhe, Regierungsbezirk;33;36288;18811;17477
+82;Karlsruhe, Regierungsbezirk;34;36022;18670;17352
+82;Karlsruhe, Regierungsbezirk;35;35827;18369;17458
+82;Karlsruhe, Regierungsbezirk;36;36749;18843;17906
+82;Karlsruhe, Regierungsbezirk;37;36572;18470;18102
+82;Karlsruhe, Regierungsbezirk;38;36400;18506;17894
+82;Karlsruhe, Regierungsbezirk;39;34053;16982;17071
+82;Karlsruhe, Regierungsbezirk;40;33252;16654;16598
+82;Karlsruhe, Regierungsbezirk;41;32633;16483;16150
+82;Karlsruhe, Regierungsbezirk;42;33162;16712;16450
+82;Karlsruhe, Regierungsbezirk;43;32032;15990;16042
+82;Karlsruhe, Regierungsbezirk;44;32816;16382;16434
+82;Karlsruhe, Regierungsbezirk;45;32695;16306;16389
+82;Karlsruhe, Regierungsbezirk;46;35410;17680;17730
+82;Karlsruhe, Regierungsbezirk;47;38358;19392;18966
+82;Karlsruhe, Regierungsbezirk;48;39578;19900;19678
+82;Karlsruhe, Regierungsbezirk;49;42673;21454;21219
+82;Karlsruhe, Regierungsbezirk;50;44925;22806;22119
+82;Karlsruhe, Regierungsbezirk;51;45916;23303;22613
+82;Karlsruhe, Regierungsbezirk;52;46303;23489;22814
+82;Karlsruhe, Regierungsbezirk;53;46165;23469;22696
+82;Karlsruhe, Regierungsbezirk;54;47045;23806;23239
+82;Karlsruhe, Regierungsbezirk;55;46473;23441;23032
+82;Karlsruhe, Regierungsbezirk;56;45004;22635;22369
+82;Karlsruhe, Regierungsbezirk;57;44039;21969;22070
+82;Karlsruhe, Regierungsbezirk;58;42612;21277;21335
+82;Karlsruhe, Regierungsbezirk;59;40263;19848;20415
+82;Karlsruhe, Regierungsbezirk;60;38344;18999;19345
+82;Karlsruhe, Regierungsbezirk;61;37431;18573;18858
+82;Karlsruhe, Regierungsbezirk;62;36065;17748;18317
+82;Karlsruhe, Regierungsbezirk;63;34041;16723;17318
+82;Karlsruhe, Regierungsbezirk;64;32715;15818;16897
+82;Karlsruhe, Regierungsbezirk;65;31464;14988;16476
+82;Karlsruhe, Regierungsbezirk;66;31096;14678;16418
+82;Karlsruhe, Regierungsbezirk;67;30651;14548;16103
+82;Karlsruhe, Regierungsbezirk;68;30178;14112;16066
+82;Karlsruhe, Regierungsbezirk;69;30271;14250;16021
+82;Karlsruhe, Regierungsbezirk;70;27705;13114;14591
+82;Karlsruhe, Regierungsbezirk;71;25208;11864;13344
+82;Karlsruhe, Regierungsbezirk;72;21413;9938;11475
+82;Karlsruhe, Regierungsbezirk;73;18161;8365;9796
+82;Karlsruhe, Regierungsbezirk;74;23767;11102;12665
+82;Karlsruhe, Regierungsbezirk;75;127263;56921;70342
+82;Karlsruhe, Regierungsbezirk;80;99551;41741;57810
+82;Karlsruhe, Regierungsbezirk;85;48452;17704;30748
+82;Karlsruhe, Regierungsbezirk;90;26494;7138;19356
+83;Freiburg, Regierungsbezirk;0;22204;11316;10888
+83;Freiburg, Regierungsbezirk;1;22241;11345;10896
+83;Freiburg, Regierungsbezirk;2;22458;11442;11016
+83;Freiburg, Regierungsbezirk;3;21982;11192;10790
+83;Freiburg, Regierungsbezirk;4;21378;10938;10440
+83;Freiburg, Regierungsbezirk;5;20861;10803;10058
+83;Freiburg, Regierungsbezirk;6;20735;10713;10022
+83;Freiburg, Regierungsbezirk;7;20162;10334;9828
+83;Freiburg, Regierungsbezirk;8;20794;10717;10077
+83;Freiburg, Regierungsbezirk;9;20699;10522;10177
+83;Freiburg, Regierungsbezirk;10;21218;10850;10368
+83;Freiburg, Regierungsbezirk;11;21468;10933;10535
+83;Freiburg, Regierungsbezirk;12;20974;10557;10417
+83;Freiburg, Regierungsbezirk;13;21714;11049;10665
+83;Freiburg, Regierungsbezirk;14;21793;11307;10486
+83;Freiburg, Regierungsbezirk;15;21994;11401;10593
+83;Freiburg, Regierungsbezirk;16;22417;11601;10816
+83;Freiburg, Regierungsbezirk;17;22985;11828;11157
+83;Freiburg, Regierungsbezirk;18;24845;12750;12095
+83;Freiburg, Regierungsbezirk;19;25859;13595;12264
+83;Freiburg, Regierungsbezirk;20;27087;14220;12867
+83;Freiburg, Regierungsbezirk;21;28289;14654;13635
+83;Freiburg, Regierungsbezirk;22;28097;14649;13448
+83;Freiburg, Regierungsbezirk;23;27693;14306;13387
+83;Freiburg, Regierungsbezirk;24;28014;14620;13394
+83;Freiburg, Regierungsbezirk;25;28756;14865;13891
+83;Freiburg, Regierungsbezirk;26;28497;14710;13787
+83;Freiburg, Regierungsbezirk;27;29126;14994;14132
+83;Freiburg, Regierungsbezirk;28;30328;15731;14597
+83;Freiburg, Regierungsbezirk;29;29721;15469;14252
+83;Freiburg, Regierungsbezirk;30;30022;15497;14525
+83;Freiburg, Regierungsbezirk;31;29239;15092;14147
+83;Freiburg, Regierungsbezirk;32;28912;14724;14188
+83;Freiburg, Regierungsbezirk;33;28059;14379;13680
+83;Freiburg, Regierungsbezirk;34;27753;14189;13564
+83;Freiburg, Regierungsbezirk;35;27719;14058;13661
+83;Freiburg, Regierungsbezirk;36;28255;14243;14012
+83;Freiburg, Regierungsbezirk;37;27946;14046;13900
+83;Freiburg, Regierungsbezirk;38;27942;13857;14085
+83;Freiburg, Regierungsbezirk;39;26351;13161;13190
+83;Freiburg, Regierungsbezirk;40;25746;12789;12957
+83;Freiburg, Regierungsbezirk;41;25793;12930;12863
+83;Freiburg, Regierungsbezirk;42;25871;13003;12868
+83;Freiburg, Regierungsbezirk;43;25360;12681;12679
+83;Freiburg, Regierungsbezirk;44;26051;12730;13321
+83;Freiburg, Regierungsbezirk;45;25784;12664;13120
+83;Freiburg, Regierungsbezirk;46;27999;13856;14143
+83;Freiburg, Regierungsbezirk;47;30057;14921;15136
+83;Freiburg, Regierungsbezirk;48;31695;15960;15735
+83;Freiburg, Regierungsbezirk;49;34548;17194;17354
+83;Freiburg, Regierungsbezirk;50;35817;17706;18111
+83;Freiburg, Regierungsbezirk;51;37022;18562;18460
+83;Freiburg, Regierungsbezirk;52;37788;18968;18820
+83;Freiburg, Regierungsbezirk;53;37778;19035;18743
+83;Freiburg, Regierungsbezirk;54;38373;19322;19051
+83;Freiburg, Regierungsbezirk;55;37634;18915;18719
+83;Freiburg, Regierungsbezirk;56;36692;18433;18259
+83;Freiburg, Regierungsbezirk;57;36075;17917;18158
+83;Freiburg, Regierungsbezirk;58;34943;17287;17656
+83;Freiburg, Regierungsbezirk;59;33772;16869;16903
+83;Freiburg, Regierungsbezirk;60;31810;15716;16094
+83;Freiburg, Regierungsbezirk;61;30751;15321;15430
+83;Freiburg, Regierungsbezirk;62;29739;14613;15126
+83;Freiburg, Regierungsbezirk;63;28370;13963;14407
+83;Freiburg, Regierungsbezirk;64;27254;13037;14217
+83;Freiburg, Regierungsbezirk;65;26420;12599;13821
+83;Freiburg, Regierungsbezirk;66;26148;12584;13564
+83;Freiburg, Regierungsbezirk;67;25228;12179;13049
+83;Freiburg, Regierungsbezirk;68;24959;11958;13001
+83;Freiburg, Regierungsbezirk;69;24255;11681;12574
+83;Freiburg, Regierungsbezirk;70;21347;10282;11065
+83;Freiburg, Regierungsbezirk;71;19164;9171;9993
+83;Freiburg, Regierungsbezirk;72;16980;8015;8965
+83;Freiburg, Regierungsbezirk;73;14605;6768;7837
+83;Freiburg, Regierungsbezirk;74;19026;8743;10283
+83;Freiburg, Regierungsbezirk;75;103360;46228;57132
+83;Freiburg, Regierungsbezirk;80;81568;34356;47212
+83;Freiburg, Regierungsbezirk;85;40304;15203;25101
+83;Freiburg, Regierungsbezirk;90;21796;6022;15774
+84;Tübingen, Regierungsbezirk;0;18387;9415;8972
+84;Tübingen, Regierungsbezirk;1;18739;9644;9095
+84;Tübingen, Regierungsbezirk;2;18453;9534;8919
+84;Tübingen, Regierungsbezirk;3;17886;9112;8774
+84;Tübingen, Regierungsbezirk;4;17593;9068;8525
+84;Tübingen, Regierungsbezirk;5;17067;8798;8269
+84;Tübingen, Regierungsbezirk;6;16763;8574;8189
+84;Tübingen, Regierungsbezirk;7;16743;8540;8203
+84;Tübingen, Regierungsbezirk;8;17142;8837;8305
+84;Tübingen, Regierungsbezirk;9;17039;8736;8303
+84;Tübingen, Regierungsbezirk;10;17513;8996;8517
+84;Tübingen, Regierungsbezirk;11;17505;8871;8634
+84;Tübingen, Regierungsbezirk;12;17379;8967;8412
+84;Tübingen, Regierungsbezirk;13;17869;9155;8714
+84;Tübingen, Regierungsbezirk;14;18161;9382;8779
+84;Tübingen, Regierungsbezirk;15;18480;9644;8836
+84;Tübingen, Regierungsbezirk;16;18940;9780;9160
+84;Tübingen, Regierungsbezirk;17;19407;10048;9359
+84;Tübingen, Regierungsbezirk;18;20846;10838;10008
+84;Tübingen, Regierungsbezirk;19;22045;11448;10597
+84;Tübingen, Regierungsbezirk;20;23274;11957;11317
+84;Tübingen, Regierungsbezirk;21;23857;12429;11428
+84;Tübingen, Regierungsbezirk;22;23705;12467;11238
+84;Tübingen, Regierungsbezirk;23;23314;12209;11105
+84;Tübingen, Regierungsbezirk;24;23402;12376;11026
+84;Tübingen, Regierungsbezirk;25;23959;12527;11432
+84;Tübingen, Regierungsbezirk;26;23934;12690;11244
+84;Tübingen, Regierungsbezirk;27;24450;12779;11671
+84;Tübingen, Regierungsbezirk;28;25360;13301;12059
+84;Tübingen, Regierungsbezirk;29;24718;12932;11786
+84;Tübingen, Regierungsbezirk;30;25258;13218;12040
+84;Tübingen, Regierungsbezirk;31;24009;12597;11412
+84;Tübingen, Regierungsbezirk;32;23921;12432;11489
+84;Tübingen, Regierungsbezirk;33;22678;11785;10893
+84;Tübingen, Regierungsbezirk;34;22929;11747;11182
+84;Tübingen, Regierungsbezirk;35;22795;11546;11249
+84;Tübingen, Regierungsbezirk;36;23405;11868;11537
+84;Tübingen, Regierungsbezirk;37;23221;11810;11411
+84;Tübingen, Regierungsbezirk;38;23117;11699;11418
+84;Tübingen, Regierungsbezirk;39;21976;11045;10931
+84;Tübingen, Regierungsbezirk;40;21392;10839;10553
+84;Tübingen, Regierungsbezirk;41;21273;10759;10514
+84;Tübingen, Regierungsbezirk;42;21367;10898;10469
+84;Tübingen, Regierungsbezirk;43;21571;10826;10745
+84;Tübingen, Regierungsbezirk;44;21946;10984;10962
+84;Tübingen, Regierungsbezirk;45;21819;10926;10893
+84;Tübingen, Regierungsbezirk;46;23790;11963;11827
+84;Tübingen, Regierungsbezirk;47;25566;12759;12807
+84;Tübingen, Regierungsbezirk;48;26538;13280;13258
+84;Tübingen, Regierungsbezirk;49;28163;14284;13879
+84;Tübingen, Regierungsbezirk;50;29466;14809;14657
+84;Tübingen, Regierungsbezirk;51;30132;15328;14804
+84;Tübingen, Regierungsbezirk;52;31060;15697;15363
+84;Tübingen, Regierungsbezirk;53;30799;15512;15287
+84;Tübingen, Regierungsbezirk;54;31021;15685;15336
+84;Tübingen, Regierungsbezirk;55;30930;15585;15345
+84;Tübingen, Regierungsbezirk;56;29406;14835;14571
+84;Tübingen, Regierungsbezirk;57;28959;14487;14472
+84;Tübingen, Regierungsbezirk;58;28238;13980;14258
+84;Tübingen, Regierungsbezirk;59;27262;13548;13714
+84;Tübingen, Regierungsbezirk;60;25796;12848;12948
+84;Tübingen, Regierungsbezirk;61;24804;12292;12512
+84;Tübingen, Regierungsbezirk;62;24101;11814;12287
+84;Tübingen, Regierungsbezirk;63;22636;11044;11592
+84;Tübingen, Regierungsbezirk;64;21959;10673;11286
+84;Tübingen, Regierungsbezirk;65;20812;9930;10882
+84;Tübingen, Regierungsbezirk;66;20688;10004;10684
+84;Tübingen, Regierungsbezirk;67;19611;9407;10204
+84;Tübingen, Regierungsbezirk;68;19942;9613;10329
+84;Tübingen, Regierungsbezirk;69;18999;9243;9756
+84;Tübingen, Regierungsbezirk;70;17247;8298;8949
+84;Tübingen, Regierungsbezirk;71;15984;7726;8258
+84;Tübingen, Regierungsbezirk;72;14396;6931;7465
+84;Tübingen, Regierungsbezirk;73;11567;5571;5996
+84;Tübingen, Regierungsbezirk;74;14822;6875;7947
+84;Tübingen, Regierungsbezirk;75;83066;37685;45381
+84;Tübingen, Regierungsbezirk;80;63918;27023;36895
+84;Tübingen, Regierungsbezirk;85;31479;11669;19810
+84;Tübingen, Regierungsbezirk;90;16753;4709;12044
+91;Oberbayern, Regierungsbezirk;0;48901;25076;23825
+91;Oberbayern, Regierungsbezirk;1;48536;24627;23909
+91;Oberbayern, Regierungsbezirk;2;48137;24611;23526
+91;Oberbayern, Regierungsbezirk;3;46355;23737;22618
+91;Oberbayern, Regierungsbezirk;4;45508;23457;22051
+91;Oberbayern, Regierungsbezirk;5;44506;22568;21938
+91;Oberbayern, Regierungsbezirk;6;43681;22516;21165
+91;Oberbayern, Regierungsbezirk;7;41978;21539;20439
+91;Oberbayern, Regierungsbezirk;8;42365;21762;20603
+91;Oberbayern, Regierungsbezirk;9;41839;21551;20288
+91;Oberbayern, Regierungsbezirk;10;42496;21713;20783
+91;Oberbayern, Regierungsbezirk;11;42481;21787;20694
+91;Oberbayern, Regierungsbezirk;12;41397;21438;19959
+91;Oberbayern, Regierungsbezirk;13;41512;21289;20223
+91;Oberbayern, Regierungsbezirk;14;42543;21769;20774
+91;Oberbayern, Regierungsbezirk;15;42012;21498;20514
+91;Oberbayern, Regierungsbezirk;16;42457;21752;20705
+91;Oberbayern, Regierungsbezirk;17;43020;22432;20588
+91;Oberbayern, Regierungsbezirk;18;45739;23642;22097
+91;Oberbayern, Regierungsbezirk;19;48005;25384;22621
+91;Oberbayern, Regierungsbezirk;20;52088;27717;24371
+91;Oberbayern, Regierungsbezirk;21;55504;29951;25553
+91;Oberbayern, Regierungsbezirk;22;55260;29250;26010
+91;Oberbayern, Regierungsbezirk;23;56264;29593;26671
+91;Oberbayern, Regierungsbezirk;24;57768;30029;27739
+91;Oberbayern, Regierungsbezirk;25;61148;31492;29656
+91;Oberbayern, Regierungsbezirk;26;63529;32479;31050
+91;Oberbayern, Regierungsbezirk;27;65476;33740;31736
+91;Oberbayern, Regierungsbezirk;28;69850;36051;33799
+91;Oberbayern, Regierungsbezirk;29;68859;34945;33914
+91;Oberbayern, Regierungsbezirk;30;70459;36152;34307
+91;Oberbayern, Regierungsbezirk;31;68575;35201;33374
+91;Oberbayern, Regierungsbezirk;32;67708;34807;32901
+91;Oberbayern, Regierungsbezirk;33;65812;33625;32187
+91;Oberbayern, Regierungsbezirk;34;65155;33041;32114
+91;Oberbayern, Regierungsbezirk;35;64648;32620;32028
+91;Oberbayern, Regierungsbezirk;36;66608;33435;33173
+91;Oberbayern, Regierungsbezirk;37;65634;32857;32777
+91;Oberbayern, Regierungsbezirk;38;65593;32632;32961
+91;Oberbayern, Regierungsbezirk;39;63370;31728;31642
+91;Oberbayern, Regierungsbezirk;40;61553;30573;30980
+91;Oberbayern, Regierungsbezirk;41;61310;30963;30347
+91;Oberbayern, Regierungsbezirk;42;60334;30424;29910
+91;Oberbayern, Regierungsbezirk;43;59133;29575;29558
+91;Oberbayern, Regierungsbezirk;44;59535;29785;29750
+91;Oberbayern, Regierungsbezirk;45;58426;29373;29053
+91;Oberbayern, Regierungsbezirk;46;61937;30950;30987
+91;Oberbayern, Regierungsbezirk;47;66650;33720;32930
+91;Oberbayern, Regierungsbezirk;48;68721;34660;34061
+91;Oberbayern, Regierungsbezirk;49;73760;37648;36112
+91;Oberbayern, Regierungsbezirk;50;76956;39248;37708
+91;Oberbayern, Regierungsbezirk;51;78439;39775;38664
+91;Oberbayern, Regierungsbezirk;52;78012;39596;38416
+91;Oberbayern, Regierungsbezirk;53;76384;38611;37773
+91;Oberbayern, Regierungsbezirk;54;76370;38176;38194
+91;Oberbayern, Regierungsbezirk;55;73922;37058;36864
+91;Oberbayern, Regierungsbezirk;56;70355;35195;35160
+91;Oberbayern, Regierungsbezirk;57;68416;34163;34253
+91;Oberbayern, Regierungsbezirk;58;64529;32144;32385
+91;Oberbayern, Regierungsbezirk;59;61829;30791;31038
+91;Oberbayern, Regierungsbezirk;60;58670;29126;29544
+91;Oberbayern, Regierungsbezirk;61;56272;27795;28477
+91;Oberbayern, Regierungsbezirk;62;53139;26233;26906
+91;Oberbayern, Regierungsbezirk;63;50053;24180;25873
+91;Oberbayern, Regierungsbezirk;64;47830;22708;25122
+91;Oberbayern, Regierungsbezirk;65;45975;21430;24545
+91;Oberbayern, Regierungsbezirk;66;46157;21514;24643
+91;Oberbayern, Regierungsbezirk;67;44430;20649;23781
+91;Oberbayern, Regierungsbezirk;68;45795;21234;24561
+91;Oberbayern, Regierungsbezirk;69;45344;20839;24505
+91;Oberbayern, Regierungsbezirk;70;43735;20297;23438
+91;Oberbayern, Regierungsbezirk;71;43825;20491;23334
+91;Oberbayern, Regierungsbezirk;72;39165;17916;21249
+91;Oberbayern, Regierungsbezirk;73;33123;15322;17801
+91;Oberbayern, Regierungsbezirk;74;41788;19348;22440
+91;Oberbayern, Regierungsbezirk;75;217645;98390;119255
+91;Oberbayern, Regierungsbezirk;80;151543;64614;86929
+91;Oberbayern, Regierungsbezirk;85;72586;27465;45121
+91;Oberbayern, Regierungsbezirk;90;39741;11305;28436
+92;Niederbayern, Regierungsbezirk;0;11035;5689;5346
+92;Niederbayern, Regierungsbezirk;1;11365;5785;5580
+92;Niederbayern, Regierungsbezirk;2;11371;5823;5548
+92;Niederbayern, Regierungsbezirk;3;11180;5714;5466
+92;Niederbayern, Regierungsbezirk;4;10924;5640;5284
+92;Niederbayern, Regierungsbezirk;5;10710;5469;5241
+92;Niederbayern, Regierungsbezirk;6;10815;5654;5161
+92;Niederbayern, Regierungsbezirk;7;10371;5327;5044
+92;Niederbayern, Regierungsbezirk;8;10701;5487;5214
+92;Niederbayern, Regierungsbezirk;9;10479;5365;5114
+92;Niederbayern, Regierungsbezirk;10;10968;5647;5321
+92;Niederbayern, Regierungsbezirk;11;10789;5548;5241
+92;Niederbayern, Regierungsbezirk;12;10753;5549;5204
+92;Niederbayern, Regierungsbezirk;13;11226;5708;5518
+92;Niederbayern, Regierungsbezirk;14;11440;5836;5604
+92;Niederbayern, Regierungsbezirk;15;11722;5998;5724
+92;Niederbayern, Regierungsbezirk;16;12062;6279;5783
+92;Niederbayern, Regierungsbezirk;17;12236;6363;5873
+92;Niederbayern, Regierungsbezirk;18;13375;6941;6434
+92;Niederbayern, Regierungsbezirk;19;13974;7465;6509
+92;Niederbayern, Regierungsbezirk;20;14368;7678;6690
+92;Niederbayern, Regierungsbezirk;21;14993;7936;7057
+92;Niederbayern, Regierungsbezirk;22;15003;7964;7039
+92;Niederbayern, Regierungsbezirk;23;14725;7916;6809
+92;Niederbayern, Regierungsbezirk;24;14589;7868;6721
+92;Niederbayern, Regierungsbezirk;25;15416;8190;7226
+92;Niederbayern, Regierungsbezirk;26;15546;8276;7270
+92;Niederbayern, Regierungsbezirk;27;15750;8559;7191
+92;Niederbayern, Regierungsbezirk;28;16330;8825;7505
+92;Niederbayern, Regierungsbezirk;29;15567;8376;7191
+92;Niederbayern, Regierungsbezirk;30;15587;8291;7296
+92;Niederbayern, Regierungsbezirk;31;15437;8236;7201
+92;Niederbayern, Regierungsbezirk;32;15450;8056;7394
+92;Niederbayern, Regierungsbezirk;33;14710;7743;6967
+92;Niederbayern, Regierungsbezirk;34;14930;7882;7048
+92;Niederbayern, Regierungsbezirk;35;15150;7842;7308
+92;Niederbayern, Regierungsbezirk;36;15498;8015;7483
+92;Niederbayern, Regierungsbezirk;37;15572;8006;7566
+92;Niederbayern, Regierungsbezirk;38;15548;7995;7553
+92;Niederbayern, Regierungsbezirk;39;14834;7624;7210
+92;Niederbayern, Regierungsbezirk;40;14806;7620;7186
+92;Niederbayern, Regierungsbezirk;41;14851;7592;7259
+92;Niederbayern, Regierungsbezirk;42;15014;7770;7244
+92;Niederbayern, Regierungsbezirk;43;14614;7396;7218
+92;Niederbayern, Regierungsbezirk;44;15295;7808;7487
+92;Niederbayern, Regierungsbezirk;45;15181;7744;7437
+92;Niederbayern, Regierungsbezirk;46;16529;8496;8033
+92;Niederbayern, Regierungsbezirk;47;17815;9171;8644
+92;Niederbayern, Regierungsbezirk;48;18440;9356;9084
+92;Niederbayern, Regierungsbezirk;49;19790;10128;9662
+92;Niederbayern, Regierungsbezirk;50;20209;10385;9824
+92;Niederbayern, Regierungsbezirk;51;20600;10510;10090
+92;Niederbayern, Regierungsbezirk;52;20714;10621;10093
+92;Niederbayern, Regierungsbezirk;53;20658;10600;10058
+92;Niederbayern, Regierungsbezirk;54;21151;10811;10340
+92;Niederbayern, Regierungsbezirk;55;21360;10694;10666
+92;Niederbayern, Regierungsbezirk;56;20765;10333;10432
+92;Niederbayern, Regierungsbezirk;57;20671;10412;10259
+92;Niederbayern, Regierungsbezirk;58;19960;10013;9947
+92;Niederbayern, Regierungsbezirk;59;19656;9961;9695
+92;Niederbayern, Regierungsbezirk;60;18336;9073;9263
+92;Niederbayern, Regierungsbezirk;61;17852;8896;8956
+92;Niederbayern, Regierungsbezirk;62;17066;8621;8445
+92;Niederbayern, Regierungsbezirk;63;15965;7897;8068
+92;Niederbayern, Regierungsbezirk;64;15826;7782;8044
+92;Niederbayern, Regierungsbezirk;65;14871;7230;7641
+92;Niederbayern, Regierungsbezirk;66;14992;7194;7798
+92;Niederbayern, Regierungsbezirk;67;14500;7119;7381
+92;Niederbayern, Regierungsbezirk;68;14424;7050;7374
+92;Niederbayern, Regierungsbezirk;69;13650;6669;6981
+92;Niederbayern, Regierungsbezirk;70;12669;6171;6498
+92;Niederbayern, Regierungsbezirk;71;12330;5982;6348
+92;Niederbayern, Regierungsbezirk;72;10660;5118;5542
+92;Niederbayern, Regierungsbezirk;73;7918;3696;4222
+92;Niederbayern, Regierungsbezirk;74;9907;4711;5196
+92;Niederbayern, Regierungsbezirk;75;54913;25026;29887
+92;Niederbayern, Regierungsbezirk;80;41075;16795;24280
+92;Niederbayern, Regierungsbezirk;85;20767;7194;13573
+92;Niederbayern, Regierungsbezirk;90;10229;2599;7630
+93;Oberpfalz, Regierungsbezirk;0;10551;5322;5229
+93;Oberpfalz, Regierungsbezirk;1;10145;5209;4936
+93;Oberpfalz, Regierungsbezirk;2;10132;5202;4930
+93;Oberpfalz, Regierungsbezirk;3;9931;5111;4820
+93;Oberpfalz, Regierungsbezirk;4;9748;5044;4704
+93;Oberpfalz, Regierungsbezirk;5;9532;4832;4700
+93;Oberpfalz, Regierungsbezirk;6;9440;4789;4651
+93;Oberpfalz, Regierungsbezirk;7;9141;4702;4439
+93;Oberpfalz, Regierungsbezirk;8;9469;4870;4599
+93;Oberpfalz, Regierungsbezirk;9;9272;4722;4550
+93;Oberpfalz, Regierungsbezirk;10;9496;4884;4612
+93;Oberpfalz, Regierungsbezirk;11;9483;4879;4604
+93;Oberpfalz, Regierungsbezirk;12;9508;4880;4628
+93;Oberpfalz, Regierungsbezirk;13;9659;5026;4633
+93;Oberpfalz, Regierungsbezirk;14;9885;5059;4826
+93;Oberpfalz, Regierungsbezirk;15;10069;5080;4989
+93;Oberpfalz, Regierungsbezirk;16;10245;5254;4991
+93;Oberpfalz, Regierungsbezirk;17;11060;5714;5346
+93;Oberpfalz, Regierungsbezirk;18;11468;5910;5558
+93;Oberpfalz, Regierungsbezirk;19;12306;6625;5681
+93;Oberpfalz, Regierungsbezirk;20;12962;6761;6201
+93;Oberpfalz, Regierungsbezirk;21;13435;7057;6378
+93;Oberpfalz, Regierungsbezirk;22;13539;6984;6555
+93;Oberpfalz, Regierungsbezirk;23;13338;6996;6342
+93;Oberpfalz, Regierungsbezirk;24;13631;7166;6465
+93;Oberpfalz, Regierungsbezirk;25;14139;7458;6681
+93;Oberpfalz, Regierungsbezirk;26;14441;7595;6846
+93;Oberpfalz, Regierungsbezirk;27;14649;7704;6945
+93;Oberpfalz, Regierungsbezirk;28;15609;8363;7246
+93;Oberpfalz, Regierungsbezirk;29;14708;7703;7005
+93;Oberpfalz, Regierungsbezirk;30;15092;7930;7162
+93;Oberpfalz, Regierungsbezirk;31;14364;7557;6807
+93;Oberpfalz, Regierungsbezirk;32;14407;7574;6833
+93;Oberpfalz, Regierungsbezirk;33;13760;7200;6560
+93;Oberpfalz, Regierungsbezirk;34;13662;7078;6584
+93;Oberpfalz, Regierungsbezirk;35;13808;7229;6579
+93;Oberpfalz, Regierungsbezirk;36;14086;7170;6916
+93;Oberpfalz, Regierungsbezirk;37;14053;7222;6831
+93;Oberpfalz, Regierungsbezirk;38;13983;7062;6921
+93;Oberpfalz, Regierungsbezirk;39;13412;6788;6624
+93;Oberpfalz, Regierungsbezirk;40;13180;6750;6430
+93;Oberpfalz, Regierungsbezirk;41;13296;6751;6545
+93;Oberpfalz, Regierungsbezirk;42;12798;6466;6332
+93;Oberpfalz, Regierungsbezirk;43;12929;6635;6294
+93;Oberpfalz, Regierungsbezirk;44;13193;6571;6622
+93;Oberpfalz, Regierungsbezirk;45;13369;6768;6601
+93;Oberpfalz, Regierungsbezirk;46;14620;7383;7237
+93;Oberpfalz, Regierungsbezirk;47;15779;7964;7815
+93;Oberpfalz, Regierungsbezirk;48;16345;8236;8109
+93;Oberpfalz, Regierungsbezirk;49;17601;8952;8649
+93;Oberpfalz, Regierungsbezirk;50;18016;9213;8803
+93;Oberpfalz, Regierungsbezirk;51;18398;9358;9040
+93;Oberpfalz, Regierungsbezirk;52;18974;9624;9350
+93;Oberpfalz, Regierungsbezirk;53;18769;9597;9172
+93;Oberpfalz, Regierungsbezirk;54;19487;9864;9623
+93;Oberpfalz, Regierungsbezirk;55;19182;9577;9605
+93;Oberpfalz, Regierungsbezirk;56;18766;9456;9310
+93;Oberpfalz, Regierungsbezirk;57;18400;9379;9021
+93;Oberpfalz, Regierungsbezirk;58;17832;9070;8762
+93;Oberpfalz, Regierungsbezirk;59;17240;8688;8552
+93;Oberpfalz, Regierungsbezirk;60;16346;8282;8064
+93;Oberpfalz, Regierungsbezirk;61;15937;8036;7901
+93;Oberpfalz, Regierungsbezirk;62;15074;7463;7611
+93;Oberpfalz, Regierungsbezirk;63;14244;7064;7180
+93;Oberpfalz, Regierungsbezirk;64;14047;6991;7056
+93;Oberpfalz, Regierungsbezirk;65;13491;6622;6869
+93;Oberpfalz, Regierungsbezirk;66;13357;6602;6755
+93;Oberpfalz, Regierungsbezirk;67;12861;6304;6557
+93;Oberpfalz, Regierungsbezirk;68;12606;6258;6348
+93;Oberpfalz, Regierungsbezirk;69;11728;5764;5964
+93;Oberpfalz, Regierungsbezirk;70;10913;5412;5501
+93;Oberpfalz, Regierungsbezirk;71;10088;4872;5216
+93;Oberpfalz, Regierungsbezirk;72;8933;4160;4773
+93;Oberpfalz, Regierungsbezirk;73;6688;3141;3547
+93;Oberpfalz, Regierungsbezirk;74;8598;4033;4565
+93;Oberpfalz, Regierungsbezirk;75;48382;21673;26709
+93;Oberpfalz, Regierungsbezirk;80;37452;15226;22226
+93;Oberpfalz, Regierungsbezirk;85;19082;6529;12553
+93;Oberpfalz, Regierungsbezirk;90;9650;2516;7134
+94;Oberfranken, Regierungsbezirk;0;9117;4659;4458
+94;Oberfranken, Regierungsbezirk;1;9401;4700;4701
+94;Oberfranken, Regierungsbezirk;2;9346;4839;4507
+94;Oberfranken, Regierungsbezirk;3;8954;4502;4452
+94;Oberfranken, Regierungsbezirk;4;8938;4629;4309
+94;Oberfranken, Regierungsbezirk;5;8561;4347;4214
+94;Oberfranken, Regierungsbezirk;6;8777;4494;4283
+94;Oberfranken, Regierungsbezirk;7;8534;4439;4095
+94;Oberfranken, Regierungsbezirk;8;8646;4327;4319
+94;Oberfranken, Regierungsbezirk;9;8503;4347;4156
+94;Oberfranken, Regierungsbezirk;10;8900;4586;4314
+94;Oberfranken, Regierungsbezirk;11;8769;4472;4297
+94;Oberfranken, Regierungsbezirk;12;8779;4441;4338
+94;Oberfranken, Regierungsbezirk;13;8922;4545;4377
+94;Oberfranken, Regierungsbezirk;14;9060;4519;4541
+94;Oberfranken, Regierungsbezirk;15;9474;4812;4662
+94;Oberfranken, Regierungsbezirk;16;9940;5112;4828
+94;Oberfranken, Regierungsbezirk;17;10202;5417;4785
+94;Oberfranken, Regierungsbezirk;18;11038;5884;5154
+94;Oberfranken, Regierungsbezirk;19;11586;6156;5430
+94;Oberfranken, Regierungsbezirk;20;12311;6583;5728
+94;Oberfranken, Regierungsbezirk;21;12668;6624;6044
+94;Oberfranken, Regierungsbezirk;22;12210;6409;5801
+94;Oberfranken, Regierungsbezirk;23;12032;6283;5749
+94;Oberfranken, Regierungsbezirk;24;12507;6547;5960
+94;Oberfranken, Regierungsbezirk;25;12872;6822;6050
+94;Oberfranken, Regierungsbezirk;26;12812;6737;6075
+94;Oberfranken, Regierungsbezirk;27;13012;6913;6099
+94;Oberfranken, Regierungsbezirk;28;13390;7017;6373
+94;Oberfranken, Regierungsbezirk;29;12914;6745;6169
+94;Oberfranken, Regierungsbezirk;30;13228;6954;6274
+94;Oberfranken, Regierungsbezirk;31;12754;6672;6082
+94;Oberfranken, Regierungsbezirk;32;12715;6528;6187
+94;Oberfranken, Regierungsbezirk;33;12252;6282;5970
+94;Oberfranken, Regierungsbezirk;34;12108;6191;5917
+94;Oberfranken, Regierungsbezirk;35;12330;6343;5987
+94;Oberfranken, Regierungsbezirk;36;12851;6588;6263
+94;Oberfranken, Regierungsbezirk;37;12553;6383;6170
+94;Oberfranken, Regierungsbezirk;38;12546;6208;6338
+94;Oberfranken, Regierungsbezirk;39;12130;6130;6000
+94;Oberfranken, Regierungsbezirk;40;11900;6018;5882
+94;Oberfranken, Regierungsbezirk;41;11806;5963;5843
+94;Oberfranken, Regierungsbezirk;42;11814;5863;5951
+94;Oberfranken, Regierungsbezirk;43;11664;5904;5760
+94;Oberfranken, Regierungsbezirk;44;11873;5897;5976
+94;Oberfranken, Regierungsbezirk;45;12430;6093;6337
+94;Oberfranken, Regierungsbezirk;46;13601;6630;6971
+94;Oberfranken, Regierungsbezirk;47;14987;7412;7575
+94;Oberfranken, Regierungsbezirk;48;15749;7780;7969
+94;Oberfranken, Regierungsbezirk;49;16903;8458;8445
+94;Oberfranken, Regierungsbezirk;50;17815;8910;8905
+94;Oberfranken, Regierungsbezirk;51;17961;9092;8869
+94;Oberfranken, Regierungsbezirk;52;18201;9149;9052
+94;Oberfranken, Regierungsbezirk;53;18458;9298;9160
+94;Oberfranken, Regierungsbezirk;54;19040;9596;9444
+94;Oberfranken, Regierungsbezirk;55;18891;9606;9285
+94;Oberfranken, Regierungsbezirk;56;18373;9288;9085
+94;Oberfranken, Regierungsbezirk;57;18626;9331;9295
+94;Oberfranken, Regierungsbezirk;58;17859;9006;8853
+94;Oberfranken, Regierungsbezirk;59;17374;8726;8648
+94;Oberfranken, Regierungsbezirk;60;16390;8165;8225
+94;Oberfranken, Regierungsbezirk;61;15918;7902;8016
+94;Oberfranken, Regierungsbezirk;62;15242;7579;7663
+94;Oberfranken, Regierungsbezirk;63;14361;7070;7291
+94;Oberfranken, Regierungsbezirk;64;13948;6813;7135
+94;Oberfranken, Regierungsbezirk;65;13416;6542;6874
+94;Oberfranken, Regierungsbezirk;66;13433;6503;6930
+94;Oberfranken, Regierungsbezirk;67;13063;6267;6796
+94;Oberfranken, Regierungsbezirk;68;12772;6180;6592
+94;Oberfranken, Regierungsbezirk;69;12337;5981;6356
+94;Oberfranken, Regierungsbezirk;70;11769;5601;6168
+94;Oberfranken, Regierungsbezirk;71;11183;5361;5822
+94;Oberfranken, Regierungsbezirk;72;9300;4409;4891
+94;Oberfranken, Regierungsbezirk;73;7060;3392;3668
+94;Oberfranken, Regierungsbezirk;74;9377;4402;4975
+94;Oberfranken, Regierungsbezirk;75;51820;23071;28749
+94;Oberfranken, Regierungsbezirk;80;41572;16494;25078
+94;Oberfranken, Regierungsbezirk;85;20710;7007;13703
+94;Oberfranken, Regierungsbezirk;90;10844;2818;8026
+95;Mittelfranken, Regierungsbezirk;0;17500;8873;8627
+95;Mittelfranken, Regierungsbezirk;1;17756;9063;8693
+95;Mittelfranken, Regierungsbezirk;2;17733;9175;8558
+95;Mittelfranken, Regierungsbezirk;3;17034;8790;8244
+95;Mittelfranken, Regierungsbezirk;4;16521;8413;8108
+95;Mittelfranken, Regierungsbezirk;5;16071;8293;7778
+95;Mittelfranken, Regierungsbezirk;6;15660;8022;7638
+95;Mittelfranken, Regierungsbezirk;7;15125;7833;7292
+95;Mittelfranken, Regierungsbezirk;8;15478;8105;7373
+95;Mittelfranken, Regierungsbezirk;9;15146;7864;7282
+95;Mittelfranken, Regierungsbezirk;10;15628;8105;7523
+95;Mittelfranken, Regierungsbezirk;11;15850;8159;7691
+95;Mittelfranken, Regierungsbezirk;12;15181;7784;7397
+95;Mittelfranken, Regierungsbezirk;13;15429;8031;7398
+95;Mittelfranken, Regierungsbezirk;14;15746;8045;7701
+95;Mittelfranken, Regierungsbezirk;15;15894;8260;7634
+95;Mittelfranken, Regierungsbezirk;16;16263;8367;7896
+95;Mittelfranken, Regierungsbezirk;17;16802;8798;8004
+95;Mittelfranken, Regierungsbezirk;18;17607;9182;8425
+95;Mittelfranken, Regierungsbezirk;19;18717;9871;8846
+95;Mittelfranken, Regierungsbezirk;20;19686;10340;9346
+95;Mittelfranken, Regierungsbezirk;21;20617;10647;9970
+95;Mittelfranken, Regierungsbezirk;22;21072;11028;10044
+95;Mittelfranken, Regierungsbezirk;23;20831;10810;10021
+95;Mittelfranken, Regierungsbezirk;24;21692;11346;10346
+95;Mittelfranken, Regierungsbezirk;25;22520;11748;10772
+95;Mittelfranken, Regierungsbezirk;26;22836;11824;11012
+95;Mittelfranken, Regierungsbezirk;27;23665;12313;11352
+95;Mittelfranken, Regierungsbezirk;28;24695;12579;12116
+95;Mittelfranken, Regierungsbezirk;29;24379;12632;11747
+95;Mittelfranken, Regierungsbezirk;30;24780;12846;11934
+95;Mittelfranken, Regierungsbezirk;31;24121;12480;11641
+95;Mittelfranken, Regierungsbezirk;32;23552;11937;11615
+95;Mittelfranken, Regierungsbezirk;33;22797;11498;11299
+95;Mittelfranken, Regierungsbezirk;34;23049;11589;11460
+95;Mittelfranken, Regierungsbezirk;35;23041;11919;11122
+95;Mittelfranken, Regierungsbezirk;36;23678;11863;11815
+95;Mittelfranken, Regierungsbezirk;37;23880;11909;11971
+95;Mittelfranken, Regierungsbezirk;38;23432;11833;11599
+95;Mittelfranken, Regierungsbezirk;39;22226;11086;11140
+95;Mittelfranken, Regierungsbezirk;40;22090;11012;11078
+95;Mittelfranken, Regierungsbezirk;41;21499;10786;10713
+95;Mittelfranken, Regierungsbezirk;42;21689;10880;10809
+95;Mittelfranken, Regierungsbezirk;43;20733;10282;10451
+95;Mittelfranken, Regierungsbezirk;44;20952;10422;10530
+95;Mittelfranken, Regierungsbezirk;45;20923;10399;10524
+95;Mittelfranken, Regierungsbezirk;46;22625;11236;11389
+95;Mittelfranken, Regierungsbezirk;47;24252;12090;12162
+95;Mittelfranken, Regierungsbezirk;48;25465;12613;12852
+95;Mittelfranken, Regierungsbezirk;49;27502;13852;13650
+95;Mittelfranken, Regierungsbezirk;50;28680;14463;14217
+95;Mittelfranken, Regierungsbezirk;51;29629;14914;14715
+95;Mittelfranken, Regierungsbezirk;52;29250;14733;14517
+95;Mittelfranken, Regierungsbezirk;53;29104;14736;14368
+95;Mittelfranken, Regierungsbezirk;54;29531;15034;14497
+95;Mittelfranken, Regierungsbezirk;55;29250;14766;14484
+95;Mittelfranken, Regierungsbezirk;56;28318;14130;14188
+95;Mittelfranken, Regierungsbezirk;57;27619;13781;13838
+95;Mittelfranken, Regierungsbezirk;58;26600;13219;13381
+95;Mittelfranken, Regierungsbezirk;59;25515;12777;12738
+95;Mittelfranken, Regierungsbezirk;60;24473;12134;12339
+95;Mittelfranken, Regierungsbezirk;61;23627;11603;12024
+95;Mittelfranken, Regierungsbezirk;62;22782;11318;11464
+95;Mittelfranken, Regierungsbezirk;63;21627;10532;11095
+95;Mittelfranken, Regierungsbezirk;64;20797;10029;10768
+95;Mittelfranken, Regierungsbezirk;65;19744;9557;10187
+95;Mittelfranken, Regierungsbezirk;66;19986;9387;10599
+95;Mittelfranken, Regierungsbezirk;67;19045;8895;10150
+95;Mittelfranken, Regierungsbezirk;68;18767;8798;9969
+95;Mittelfranken, Regierungsbezirk;69;18440;8705;9735
+95;Mittelfranken, Regierungsbezirk;70;17647;8399;9248
+95;Mittelfranken, Regierungsbezirk;71;17107;8165;8942
+95;Mittelfranken, Regierungsbezirk;72;14648;6832;7816
+95;Mittelfranken, Regierungsbezirk;73;11709;5515;6194
+95;Mittelfranken, Regierungsbezirk;74;15332;7155;8177
+95;Mittelfranken, Regierungsbezirk;75;81867;36308;45559
+95;Mittelfranken, Regierungsbezirk;80;61589;25247;36342
+95;Mittelfranken, Regierungsbezirk;85;30306;10758;19548
+95;Mittelfranken, Regierungsbezirk;90;15992;4348;11644
+96;Unterfranken, Regierungsbezirk;0;11920;6156;5764
+96;Unterfranken, Regierungsbezirk;1;12308;6354;5954
+96;Unterfranken, Regierungsbezirk;2;12136;6236;5900
+96;Unterfranken, Regierungsbezirk;3;11895;6078;5817
+96;Unterfranken, Regierungsbezirk;4;11488;5955;5533
+96;Unterfranken, Regierungsbezirk;5;11209;5750;5459
+96;Unterfranken, Regierungsbezirk;6;11026;5661;5365
+96;Unterfranken, Regierungsbezirk;7;10845;5525;5320
+96;Unterfranken, Regierungsbezirk;8;10822;5468;5354
+96;Unterfranken, Regierungsbezirk;9;10829;5563;5266
+96;Unterfranken, Regierungsbezirk;10;11154;5752;5402
+96;Unterfranken, Regierungsbezirk;11;11060;5578;5482
+96;Unterfranken, Regierungsbezirk;12;11119;5756;5363
+96;Unterfranken, Regierungsbezirk;13;11372;5841;5531
+96;Unterfranken, Regierungsbezirk;14;11817;6073;5744
+96;Unterfranken, Regierungsbezirk;15;12074;6142;5932
+96;Unterfranken, Regierungsbezirk;16;12276;6243;6033
+96;Unterfranken, Regierungsbezirk;17;12761;6581;6180
+96;Unterfranken, Regierungsbezirk;18;13479;7008;6471
+96;Unterfranken, Regierungsbezirk;19;14203;7438;6765
+96;Unterfranken, Regierungsbezirk;20;15043;7953;7090
+96;Unterfranken, Regierungsbezirk;21;15515;8038;7477
+96;Unterfranken, Regierungsbezirk;22;15629;8152;7477
+96;Unterfranken, Regierungsbezirk;23;15347;7968;7379
+96;Unterfranken, Regierungsbezirk;24;15618;8045;7573
+96;Unterfranken, Regierungsbezirk;25;16280;8615;7665
+96;Unterfranken, Regierungsbezirk;26;16202;8399;7803
+96;Unterfranken, Regierungsbezirk;27;16354;8521;7833
+96;Unterfranken, Regierungsbezirk;28;17097;8929;8168
+96;Unterfranken, Regierungsbezirk;29;16504;8623;7881
+96;Unterfranken, Regierungsbezirk;30;17140;9061;8079
+96;Unterfranken, Regierungsbezirk;31;16536;8678;7858
+96;Unterfranken, Regierungsbezirk;32;16358;8623;7735
+96;Unterfranken, Regierungsbezirk;33;15486;7938;7548
+96;Unterfranken, Regierungsbezirk;34;15657;8155;7502
+96;Unterfranken, Regierungsbezirk;35;16050;8273;7777
+96;Unterfranken, Regierungsbezirk;36;16314;8369;7945
+96;Unterfranken, Regierungsbezirk;37;16124;8144;7980
+96;Unterfranken, Regierungsbezirk;38;15679;7985;7694
+96;Unterfranken, Regierungsbezirk;39;14982;7642;7340
+96;Unterfranken, Regierungsbezirk;40;15009;7443;7566
+96;Unterfranken, Regierungsbezirk;41;14824;7429;7395
+96;Unterfranken, Regierungsbezirk;42;14664;7238;7426
+96;Unterfranken, Regierungsbezirk;43;14434;7150;7284
+96;Unterfranken, Regierungsbezirk;44;14754;7379;7375
+96;Unterfranken, Regierungsbezirk;45;14786;7321;7465
+96;Unterfranken, Regierungsbezirk;46;16349;8128;8221
+96;Unterfranken, Regierungsbezirk;47;17736;8722;9014
+96;Unterfranken, Regierungsbezirk;48;18287;9287;9000
+96;Unterfranken, Regierungsbezirk;49;20146;9998;10148
+96;Unterfranken, Regierungsbezirk;50;20955;10525;10430
+96;Unterfranken, Regierungsbezirk;51;22041;10955;11086
+96;Unterfranken, Regierungsbezirk;52;22626;11343;11283
+96;Unterfranken, Regierungsbezirk;53;22494;11498;10996
+96;Unterfranken, Regierungsbezirk;54;23095;11665;11430
+96;Unterfranken, Regierungsbezirk;55;23117;11496;11621
+96;Unterfranken, Regierungsbezirk;56;22723;11469;11254
+96;Unterfranken, Regierungsbezirk;57;22600;11246;11354
+96;Unterfranken, Regierungsbezirk;58;21827;10946;10881
+96;Unterfranken, Regierungsbezirk;59;20936;10374;10562
+96;Unterfranken, Regierungsbezirk;60;19895;10001;9894
+96;Unterfranken, Regierungsbezirk;61;19052;9438;9614
+96;Unterfranken, Regierungsbezirk;62;18856;9300;9556
+96;Unterfranken, Regierungsbezirk;63;17585;8771;8814
+96;Unterfranken, Regierungsbezirk;64;17559;8670;8889
+96;Unterfranken, Regierungsbezirk;65;16810;8162;8648
+96;Unterfranken, Regierungsbezirk;66;16583;8148;8435
+96;Unterfranken, Regierungsbezirk;67;15836;7733;8103
+96;Unterfranken, Regierungsbezirk;68;15972;7812;8160
+96;Unterfranken, Regierungsbezirk;69;15170;7403;7767
+96;Unterfranken, Regierungsbezirk;70;13898;6879;7019
+96;Unterfranken, Regierungsbezirk;71;12775;6201;6574
+96;Unterfranken, Regierungsbezirk;72;10804;5244;5560
+96;Unterfranken, Regierungsbezirk;73;8025;3694;4331
+96;Unterfranken, Regierungsbezirk;74;10972;5223;5749
+96;Unterfranken, Regierungsbezirk;75;61196;27831;33365
+96;Unterfranken, Regierungsbezirk;80;50055;21177;28878
+96;Unterfranken, Regierungsbezirk;85;24073;8807;15266
+96;Unterfranken, Regierungsbezirk;90;12897;3521;9376
+97;Schwaben, Regierungsbezirk;0;18486;9451;9035
+97;Schwaben, Regierungsbezirk;1;18984;9778;9206
+97;Schwaben, Regierungsbezirk;2;19004;9715;9289
+97;Schwaben, Regierungsbezirk;3;17995;9225;8770
+97;Schwaben, Regierungsbezirk;4;17672;8991;8681
+97;Schwaben, Regierungsbezirk;5;17088;8756;8332
+97;Schwaben, Regierungsbezirk;6;16970;8798;8172
+97;Schwaben, Regierungsbezirk;7;16338;8434;7904
+97;Schwaben, Regierungsbezirk;8;16532;8402;8130
+97;Schwaben, Regierungsbezirk;9;16438;8402;8036
+97;Schwaben, Regierungsbezirk;10;17035;8705;8330
+97;Schwaben, Regierungsbezirk;11;17114;8749;8365
+97;Schwaben, Regierungsbezirk;12;16673;8580;8093
+97;Schwaben, Regierungsbezirk;13;17244;8856;8388
+97;Schwaben, Regierungsbezirk;14;17715;8979;8736
+97;Schwaben, Regierungsbezirk;15;18189;9339;8850
+97;Schwaben, Regierungsbezirk;16;18421;9507;8914
+97;Schwaben, Regierungsbezirk;17;19174;9848;9326
+97;Schwaben, Regierungsbezirk;18;20184;10498;9686
+97;Schwaben, Regierungsbezirk;19;21296;11370;9926
+97;Schwaben, Regierungsbezirk;20;21840;11569;10271
+97;Schwaben, Regierungsbezirk;21;22360;11788;10572
+97;Schwaben, Regierungsbezirk;22;22236;11652;10584
+97;Schwaben, Regierungsbezirk;23;22105;11685;10420
+97;Schwaben, Regierungsbezirk;24;22131;11755;10376
+97;Schwaben, Regierungsbezirk;25;23457;12355;11102
+97;Schwaben, Regierungsbezirk;26;23781;12402;11379
+97;Schwaben, Regierungsbezirk;27;24318;12757;11561
+97;Schwaben, Regierungsbezirk;28;25204;13320;11884
+97;Schwaben, Regierungsbezirk;29;24731;12951;11780
+97;Schwaben, Regierungsbezirk;30;25224;13200;12024
+97;Schwaben, Regierungsbezirk;31;24575;13042;11533
+97;Schwaben, Regierungsbezirk;32;24743;12989;11754
+97;Schwaben, Regierungsbezirk;33;23323;12168;11155
+97;Schwaben, Regierungsbezirk;34;23366;12080;11286
+97;Schwaben, Regierungsbezirk;35;23821;12261;11560
+97;Schwaben, Regierungsbezirk;36;24038;12408;11630
+97;Schwaben, Regierungsbezirk;37;24400;12403;11997
+97;Schwaben, Regierungsbezirk;38;24217;12464;11753
+97;Schwaben, Regierungsbezirk;39;22965;11603;11362
+97;Schwaben, Regierungsbezirk;40;22690;11485;11205
+97;Schwaben, Regierungsbezirk;41;22811;11541;11270
+97;Schwaben, Regierungsbezirk;42;22557;11381;11176
+97;Schwaben, Regierungsbezirk;43;22426;11411;11015
+97;Schwaben, Regierungsbezirk;44;22795;11576;11219
+97;Schwaben, Regierungsbezirk;45;22522;11364;11158
+97;Schwaben, Regierungsbezirk;46;24201;12249;11952
+97;Schwaben, Regierungsbezirk;47;26216;13080;13136
+97;Schwaben, Regierungsbezirk;48;27202;13760;13442
+97;Schwaben, Regierungsbezirk;49;29535;14932;14603
+97;Schwaben, Regierungsbezirk;50;30831;15628;15203
+97;Schwaben, Regierungsbezirk;51;31162;15934;15228
+97;Schwaben, Regierungsbezirk;52;31579;15916;15663
+97;Schwaben, Regierungsbezirk;53;31580;16218;15362
+97;Schwaben, Regierungsbezirk;54;31835;16221;15614
+97;Schwaben, Regierungsbezirk;55;31202;15711;15491
+97;Schwaben, Regierungsbezirk;56;30299;15082;15217
+97;Schwaben, Regierungsbezirk;57;29680;14896;14784
+97;Schwaben, Regierungsbezirk;58;28501;14239;14262
+97;Schwaben, Regierungsbezirk;59;27513;13739;13774
+97;Schwaben, Regierungsbezirk;60;25940;12894;13046
+97;Schwaben, Regierungsbezirk;61;25141;12425;12716
+97;Schwaben, Regierungsbezirk;62;24277;12031;12246
+97;Schwaben, Regierungsbezirk;63;22742;11103;11639
+97;Schwaben, Regierungsbezirk;64;22053;10548;11505
+97;Schwaben, Regierungsbezirk;65;21078;10300;10778
+97;Schwaben, Regierungsbezirk;66;20807;9913;10894
+97;Schwaben, Regierungsbezirk;67;20096;9616;10480
+97;Schwaben, Regierungsbezirk;68;20331;9717;10614
+97;Schwaben, Regierungsbezirk;69;19908;9530;10378
+97;Schwaben, Regierungsbezirk;70;18621;8799;9822
+97;Schwaben, Regierungsbezirk;71;18061;8635;9426
+97;Schwaben, Regierungsbezirk;72;16011;7583;8428
+97;Schwaben, Regierungsbezirk;73;12946;5997;6949
+97;Schwaben, Regierungsbezirk;74;16522;7731;8791
+97;Schwaben, Regierungsbezirk;75;90223;41291;48932
+97;Schwaben, Regierungsbezirk;80;64277;27189;37088
+97;Schwaben, Regierungsbezirk;85;32542;11791;20751
+97;Schwaben, Regierungsbezirk;90;17654;4826;12828
+100;Saarland;0;8133;4218;3915
+100;Saarland;1;8324;4266;4058
+100;Saarland;2;8343;4166;4177
+100;Saarland;3;8016;4231;3785
+100;Saarland;4;8049;4127;3922
+100;Saarland;5;7544;3969;3575
+100;Saarland;6;7719;3996;3723
+100;Saarland;7;7865;4098;3767
+100;Saarland;8;7871;3988;3883
+100;Saarland;9;7776;3963;3813
+100;Saarland;10;8073;4157;3916
+100;Saarland;11;7913;4094;3819
+100;Saarland;12;7874;4163;3711
+100;Saarland;13;8128;4199;3929
+100;Saarland;14;8247;4282;3965
+100;Saarland;15;8244;4285;3959
+100;Saarland;16;8573;4477;4096
+100;Saarland;17;8944;4645;4299
+100;Saarland;18;9476;4958;4518
+100;Saarland;19;9828;5162;4666
+100;Saarland;20;9981;5331;4650
+100;Saarland;21;10617;5588;5029
+100;Saarland;22;10704;5641;5063
+100;Saarland;23;10568;5569;4999
+100;Saarland;24;10989;5656;5333
+100;Saarland;25;11366;5978;5388
+100;Saarland;26;11694;6083;5611
+100;Saarland;27;11939;6293;5646
+100;Saarland;28;12342;6471;5871
+100;Saarland;29;12016;6331;5685
+100;Saarland;30;12275;6392;5883
+100;Saarland;31;12143;6326;5817
+100;Saarland;32;11981;6228;5753
+100;Saarland;33;11345;5881;5464
+100;Saarland;34;11269;5764;5505
+100;Saarland;35;11398;5864;5534
+100;Saarland;36;11624;5961;5663
+100;Saarland;37;11554;6003;5551
+100;Saarland;38;11564;5932;5632
+100;Saarland;39;10988;5416;5572
+100;Saarland;40;10608;5199;5409
+100;Saarland;41;10774;5307;5467
+100;Saarland;42;10322;5176;5146
+100;Saarland;43;10096;5087;5009
+100;Saarland;44;10321;5106;5215
+100;Saarland;45;10361;5117;5244
+100;Saarland;46;11449;5649;5800
+100;Saarland;47;12688;6202;6486
+100;Saarland;48;13081;6500;6581
+100;Saarland;49;14628;7254;7374
+100;Saarland;50;15680;7745;7935
+100;Saarland;51;16222;8092;8130
+100;Saarland;52;16887;8448;8439
+100;Saarland;53;17195;8397;8798
+100;Saarland;54;17703;8690;9013
+100;Saarland;55;17725;8791;8934
+100;Saarland;56;17590;8724;8866
+100;Saarland;57;17751;8926;8825
+100;Saarland;58;17087;8429;8658
+100;Saarland;59;17258;8700;8558
+100;Saarland;60;16551;8230;8321
+100;Saarland;61;15900;7929;7971
+100;Saarland;62;15186;7478;7708
+100;Saarland;63;14396;7047;7349
+100;Saarland;64;14519;7043;7476
+100;Saarland;65;14123;6861;7262
+100;Saarland;66;13762;6736;7026
+100;Saarland;67;13222;6385;6837
+100;Saarland;68;13314;6481;6833
+100;Saarland;69;13582;6619;6963
+100;Saarland;70;11510;5547;5963
+100;Saarland;71;9351;4472;4879
+100;Saarland;72;7484;3490;3994
+100;Saarland;73;6847;3184;3663
+100;Saarland;74;9179;4186;4993
+100;Saarland;75;50164;21865;28299
+100;Saarland;80;41920;16962;24958
+100;Saarland;85;20439;7324;13115
+100;Saarland;90;10337;2629;7708
+110;Berlin;0;39362;20228;19134
+110;Berlin;1;39548;20391;19157
+110;Berlin;2;39696;20274;19422
+110;Berlin;3;37560;19400;18160
+110;Berlin;4;36922;18805;18117
+110;Berlin;5;34902;17951;16951
+110;Berlin;6;34535;17784;16751
+110;Berlin;7;32599;16769;15830
+110;Berlin;8;32945;16867;16078
+110;Berlin;9;32423;16565;15858
+110;Berlin;10;32275;16712;15563
+110;Berlin;11;31268;16228;15040
+110;Berlin;12;29865;15198;14667
+110;Berlin;13;29073;14994;14079
+110;Berlin;14;29195;14991;14204
+110;Berlin;15;28031;14381;13650
+110;Berlin;16;28264;14645;13619
+110;Berlin;17;28510;14639;13871
+110;Berlin;18;30466;15783;14683
+110;Berlin;19;32155;16504;15651
+110;Berlin;20;34738;17418;17320
+110;Berlin;21;38011;19265;18746
+110;Berlin;22;40163;19945;20218
+110;Berlin;23;42031;20857;21174
+110;Berlin;24;45109;22363;22746
+110;Berlin;25;48371;23925;24446
+110;Berlin;26;51441;25372;26069
+110;Berlin;27;55822;27799;28023
+110;Berlin;28;65611;32760;32851
+110;Berlin;29;67210;33458;33752
+110;Berlin;30;68546;34365;34181
+110;Berlin;31;67507;34100;33407
+110;Berlin;32;65339;33166;32173
+110;Berlin;33;63536;32467;31069
+110;Berlin;34;61231;31401;29830
+110;Berlin;35;59901;30544;29357
+110;Berlin;36;59415;30450;28965
+110;Berlin;37;57849;29366;28483
+110;Berlin;38;56415;29088;27327
+110;Berlin;39;52114;26653;25461
+110;Berlin;40;49817;25686;24131
+110;Berlin;41;48337;24731;23606
+110;Berlin;42;45986;23389;22597
+110;Berlin;43;43920;22534;21386
+110;Berlin;44;42822;21916;20906
+110;Berlin;45;41447;21041;20406
+110;Berlin;46;42928;21952;20976
+110;Berlin;47;47153;24156;22997
+110;Berlin;48;47689;24381;23308
+110;Berlin;49;49738;25534;24204
+110;Berlin;50;52091;26584;25507
+110;Berlin;51;52335;26732;25603
+110;Berlin;52;54372;27394;26978
+110;Berlin;53;55949;28458;27491
+110;Berlin;54;56679;28619;28060
+110;Berlin;55;56330;28423;27907
+110;Berlin;56;53412;26930;26482
+110;Berlin;57;50593;25215;25378
+110;Berlin;58;48210;24400;23810
+110;Berlin;59;46175;23136;23039
+110;Berlin;60;42287;21051;21236
+110;Berlin;61;40421;19934;20487
+110;Berlin;62;39535;19355;20180
+110;Berlin;63;38918;18773;20145
+110;Berlin;64;38164;18114;20050
+110;Berlin;65;37149;17420;19729
+110;Berlin;66;36371;16757;19614
+110;Berlin;67;36690;16842;19848
+110;Berlin;68;38033;17246;20787
+110;Berlin;69;35335;16154;19181
+110;Berlin;70;32191;14820;17371
+110;Berlin;71;30017;13640;16377
+110;Berlin;72;23193;10828;12365
+110;Berlin;73;25935;11754;14181
+110;Berlin;74;33755;15321;18434
+110;Berlin;75;172368;76042;96326
+110;Berlin;80;119171;48467;70704
+110;Berlin;85;50639;18014;32625
+110;Berlin;90;28717;7187;21530
+120;Brandenburg;0;20116;10371;9745
+120;Brandenburg;1;21600;11037;10563
+120;Brandenburg;2;22515;11530;10985
+120;Brandenburg;3;21929;11331;10598
+120;Brandenburg;4;22632;11578;11054
+120;Brandenburg;5;21807;11232;10575
+120;Brandenburg;6;22563;11496;11067
+120;Brandenburg;7;22284;11378;10906
+120;Brandenburg;8;23060;11973;11087
+120;Brandenburg;9;22352;11469;10883
+120;Brandenburg;10;22939;11783;11156
+120;Brandenburg;11;22347;11478;10869
+120;Brandenburg;12;21303;11023;10280
+120;Brandenburg;13;21014;10781;10233
+120;Brandenburg;14;21249;11001;10248
+120;Brandenburg;15;21188;11015;10173
+120;Brandenburg;16;20917;10755;10162
+120;Brandenburg;17;20761;10829;9932
+120;Brandenburg;18;21363;11151;10212
+120;Brandenburg;19;20182;10854;9328
+120;Brandenburg;20;19184;10417;8767
+120;Brandenburg;21;18345;9983;8362
+120;Brandenburg;22;17342;9505;7837
+120;Brandenburg;23;15684;8479;7205
+120;Brandenburg;24;15026;8061;6965
+120;Brandenburg;25;14818;7829;6989
+120;Brandenburg;26;15904;8532;7372
+120;Brandenburg;27;17995;9365;8630
+120;Brandenburg;28;26435;13641;12794
+120;Brandenburg;29;28286;14532;13754
+120;Brandenburg;30;29800;15348;14452
+120;Brandenburg;31;30769;15687;15082
+120;Brandenburg;32;30358;15419;14939
+120;Brandenburg;33;31079;15996;15083
+120;Brandenburg;34;30708;15681;15027
+120;Brandenburg;35;31188;15960;15228
+120;Brandenburg;36;31868;16429;15439
+120;Brandenburg;37;31684;16204;15480
+120;Brandenburg;38;32917;16935;15982
+120;Brandenburg;39;31687;16335;15352
+120;Brandenburg;40;31801;16238;15563
+120;Brandenburg;41;30644;15672;14972
+120;Brandenburg;42;28084;14471;13613
+120;Brandenburg;43;26750;13862;12888
+120;Brandenburg;44;26193;13380;12813
+120;Brandenburg;45;26804;13630;13174
+120;Brandenburg;46;29715;15396;14319
+120;Brandenburg;47;34866;17980;16886
+120;Brandenburg;48;35454;18030;17424
+120;Brandenburg;49;36893;18673;18220
+120;Brandenburg;50;38951;19646;19305
+120;Brandenburg;51;41181;20820;20361
+120;Brandenburg;52;44107;22186;21921
+120;Brandenburg;53;45998;23360;22638
+120;Brandenburg;54;47828;24338;23490
+120;Brandenburg;55;49290;24937;24353
+120;Brandenburg;56;48870;24717;24153
+120;Brandenburg;57;48120;24230;23890
+120;Brandenburg;58;46124;23025;23099
+120;Brandenburg;59;44963;22660;22303
+120;Brandenburg;60;41145;20618;20527
+120;Brandenburg;61;40002;20059;19943
+120;Brandenburg;62;39628;19774;19854
+120;Brandenburg;63;39598;19665;19933
+120;Brandenburg;64;38841;18997;19844
+120;Brandenburg;65;38027;18555;19472
+120;Brandenburg;66;37007;17927;19080
+120;Brandenburg;67;35798;17505;18293
+120;Brandenburg;68;33395;16019;17376
+120;Brandenburg;69;28228;13531;14697
+120;Brandenburg;70;24187;11623;12564
+120;Brandenburg;71;22913;10768;12145
+120;Brandenburg;72;15329;7154;8175
+120;Brandenburg;73;18019;8179;9840
+120;Brandenburg;74;26634;12057;14577
+120;Brandenburg;75;150852;66674;84178
+120;Brandenburg;80;111107;45344;65763
+120;Brandenburg;85;49971;17663;32308
+120;Brandenburg;90;23402;5694;17708
+130;Mecklenburg-Vorpommern;0;13020;6658;6362
+130;Mecklenburg-Vorpommern;1;13338;6797;6541
+130;Mecklenburg-Vorpommern;2;13770;6967;6803
+130;Mecklenburg-Vorpommern;3;14127;7207;6920
+130;Mecklenburg-Vorpommern;4;13889;7083;6806
+130;Mecklenburg-Vorpommern;5;13726;6999;6727
+130;Mecklenburg-Vorpommern;6;13836;7128;6708
+130;Mecklenburg-Vorpommern;7;13781;7106;6675
+130;Mecklenburg-Vorpommern;8;14357;7322;7035
+130;Mecklenburg-Vorpommern;9;14035;7117;6918
+130;Mecklenburg-Vorpommern;10;14136;7216;6920
+130;Mecklenburg-Vorpommern;11;13550;6925;6625
+130;Mecklenburg-Vorpommern;12;13161;6803;6358
+130;Mecklenburg-Vorpommern;13;12812;6449;6363
+130;Mecklenburg-Vorpommern;14;13347;6846;6501
+130;Mecklenburg-Vorpommern;15;13104;6745;6359
+130;Mecklenburg-Vorpommern;16;12850;6710;6140
+130;Mecklenburg-Vorpommern;17;13184;6859;6325
+130;Mecklenburg-Vorpommern;18;13721;7245;6476
+130;Mecklenburg-Vorpommern;19;13171;6962;6209
+130;Mecklenburg-Vorpommern;20;12893;6713;6180
+130;Mecklenburg-Vorpommern;21;13068;6826;6242
+130;Mecklenburg-Vorpommern;22;12426;6586;5840
+130;Mecklenburg-Vorpommern;23;11258;5895;5363
+130;Mecklenburg-Vorpommern;24;10702;5649;5053
+130;Mecklenburg-Vorpommern;25;10920;5813;5107
+130;Mecklenburg-Vorpommern;26;12001;6298;5703
+130;Mecklenburg-Vorpommern;27;13387;7006;6381
+130;Mecklenburg-Vorpommern;28;19521;10092;9429
+130;Mecklenburg-Vorpommern;29;20404;10681;9723
+130;Mecklenburg-Vorpommern;30;21318;11197;10121
+130;Mecklenburg-Vorpommern;31;21697;11367;10330
+130;Mecklenburg-Vorpommern;32;20979;10881;10098
+130;Mecklenburg-Vorpommern;33;20730;10745;9985
+130;Mecklenburg-Vorpommern;34;20338;10576;9762
+130;Mecklenburg-Vorpommern;35;20452;10686;9766
+130;Mecklenburg-Vorpommern;36;20784;10928;9856
+130;Mecklenburg-Vorpommern;37;20096;10595;9501
+130;Mecklenburg-Vorpommern;38;20537;10662;9875
+130;Mecklenburg-Vorpommern;39;20048;10659;9389
+130;Mecklenburg-Vorpommern;40;19878;10518;9360
+130;Mecklenburg-Vorpommern;41;19244;10294;8950
+130;Mecklenburg-Vorpommern;42;16850;8957;7893
+130;Mecklenburg-Vorpommern;43;15944;8480;7464
+130;Mecklenburg-Vorpommern;44;15665;8294;7371
+130;Mecklenburg-Vorpommern;45;16145;8474;7671
+130;Mecklenburg-Vorpommern;46;17630;9173;8457
+130;Mecklenburg-Vorpommern;47;20375;10680;9695
+130;Mecklenburg-Vorpommern;48;20835;10778;10057
+130;Mecklenburg-Vorpommern;49;21637;11120;10517
+130;Mecklenburg-Vorpommern;50;23089;11757;11332
+130;Mecklenburg-Vorpommern;51;24173;12156;12017
+130;Mecklenburg-Vorpommern;52;26136;13207;12929
+130;Mecklenburg-Vorpommern;53;27729;14055;13674
+130;Mecklenburg-Vorpommern;54;29125;14746;14379
+130;Mecklenburg-Vorpommern;55;30312;15251;15061
+130;Mecklenburg-Vorpommern;56;30218;15192;15026
+130;Mecklenburg-Vorpommern;57;30541;15351;15190
+130;Mecklenburg-Vorpommern;58;29803;14805;14998
+130;Mecklenburg-Vorpommern;59;28994;14386;14608
+130;Mecklenburg-Vorpommern;60;27306;13598;13708
+130;Mecklenburg-Vorpommern;61;26507;13177;13330
+130;Mecklenburg-Vorpommern;62;26526;12993;13533
+130;Mecklenburg-Vorpommern;63;26779;13079;13700
+130;Mecklenburg-Vorpommern;64;26654;13089;13565
+130;Mecklenburg-Vorpommern;65;26074;12655;13419
+130;Mecklenburg-Vorpommern;66;25196;12111;13085
+130;Mecklenburg-Vorpommern;67;24241;11645;12596
+130;Mecklenburg-Vorpommern;68;22382;10852;11530
+130;Mecklenburg-Vorpommern;69;19266;9229;10037
+130;Mecklenburg-Vorpommern;70;16468;7867;8601
+130;Mecklenburg-Vorpommern;71;15198;7177;8021
+130;Mecklenburg-Vorpommern;72;10017;4774;5243
+130;Mecklenburg-Vorpommern;73;10650;4888;5762
+130;Mecklenburg-Vorpommern;74;15738;7167;8571
+130;Mecklenburg-Vorpommern;75;92654;40051;52603
+130;Mecklenburg-Vorpommern;80;71291;28031;43260
+130;Mecklenburg-Vorpommern;85;33338;11287;22051
+130;Mecklenburg-Vorpommern;90;14593;3296;11297
+141;Chemnitz, Regierungsbezirk;0;-;-;-
+141;Chemnitz, Regierungsbezirk;1;-;-;-
+141;Chemnitz, Regierungsbezirk;2;-;-;-
+141;Chemnitz, Regierungsbezirk;3;-;-;-
+141;Chemnitz, Regierungsbezirk;4;-;-;-
+141;Chemnitz, Regierungsbezirk;5;-;-;-
+141;Chemnitz, Regierungsbezirk;6;-;-;-
+141;Chemnitz, Regierungsbezirk;7;-;-;-
+141;Chemnitz, Regierungsbezirk;8;-;-;-
+141;Chemnitz, Regierungsbezirk;9;-;-;-
+141;Chemnitz, Regierungsbezirk;10;-;-;-
+141;Chemnitz, Regierungsbezirk;11;-;-;-
+141;Chemnitz, Regierungsbezirk;12;-;-;-
+141;Chemnitz, Regierungsbezirk;13;-;-;-
+141;Chemnitz, Regierungsbezirk;14;-;-;-
+141;Chemnitz, Regierungsbezirk;15;-;-;-
+141;Chemnitz, Regierungsbezirk;16;-;-;-
+141;Chemnitz, Regierungsbezirk;17;-;-;-
+141;Chemnitz, Regierungsbezirk;18;-;-;-
+141;Chemnitz, Regierungsbezirk;19;-;-;-
+141;Chemnitz, Regierungsbezirk;20;-;-;-
+141;Chemnitz, Regierungsbezirk;21;-;-;-
+141;Chemnitz, Regierungsbezirk;22;-;-;-
+141;Chemnitz, Regierungsbezirk;23;-;-;-
+141;Chemnitz, Regierungsbezirk;24;-;-;-
+141;Chemnitz, Regierungsbezirk;25;-;-;-
+141;Chemnitz, Regierungsbezirk;26;-;-;-
+141;Chemnitz, Regierungsbezirk;27;-;-;-
+141;Chemnitz, Regierungsbezirk;28;-;-;-
+141;Chemnitz, Regierungsbezirk;29;-;-;-
+141;Chemnitz, Regierungsbezirk;30;-;-;-
+141;Chemnitz, Regierungsbezirk;31;-;-;-
+141;Chemnitz, Regierungsbezirk;32;-;-;-
+141;Chemnitz, Regierungsbezirk;33;-;-;-
+141;Chemnitz, Regierungsbezirk;34;-;-;-
+141;Chemnitz, Regierungsbezirk;35;-;-;-
+141;Chemnitz, Regierungsbezirk;36;-;-;-
+141;Chemnitz, Regierungsbezirk;37;-;-;-
+141;Chemnitz, Regierungsbezirk;38;-;-;-
+141;Chemnitz, Regierungsbezirk;39;-;-;-
+141;Chemnitz, Regierungsbezirk;40;-;-;-
+141;Chemnitz, Regierungsbezirk;41;-;-;-
+141;Chemnitz, Regierungsbezirk;42;-;-;-
+141;Chemnitz, Regierungsbezirk;43;-;-;-
+141;Chemnitz, Regierungsbezirk;44;-;-;-
+141;Chemnitz, Regierungsbezirk;45;-;-;-
+141;Chemnitz, Regierungsbezirk;46;-;-;-
+141;Chemnitz, Regierungsbezirk;47;-;-;-
+141;Chemnitz, Regierungsbezirk;48;-;-;-
+141;Chemnitz, Regierungsbezirk;49;-;-;-
+141;Chemnitz, Regierungsbezirk;50;-;-;-
+141;Chemnitz, Regierungsbezirk;51;-;-;-
+141;Chemnitz, Regierungsbezirk;52;-;-;-
+141;Chemnitz, Regierungsbezirk;53;-;-;-
+141;Chemnitz, Regierungsbezirk;54;-;-;-
+141;Chemnitz, Regierungsbezirk;55;-;-;-
+141;Chemnitz, Regierungsbezirk;56;-;-;-
+141;Chemnitz, Regierungsbezirk;57;-;-;-
+141;Chemnitz, Regierungsbezirk;58;-;-;-
+141;Chemnitz, Regierungsbezirk;59;-;-;-
+141;Chemnitz, Regierungsbezirk;60;-;-;-
+141;Chemnitz, Regierungsbezirk;61;-;-;-
+141;Chemnitz, Regierungsbezirk;62;-;-;-
+141;Chemnitz, Regierungsbezirk;63;-;-;-
+141;Chemnitz, Regierungsbezirk;64;-;-;-
+141;Chemnitz, Regierungsbezirk;65;-;-;-
+141;Chemnitz, Regierungsbezirk;66;-;-;-
+141;Chemnitz, Regierungsbezirk;67;-;-;-
+141;Chemnitz, Regierungsbezirk;68;-;-;-
+141;Chemnitz, Regierungsbezirk;69;-;-;-
+141;Chemnitz, Regierungsbezirk;70;-;-;-
+141;Chemnitz, Regierungsbezirk;71;-;-;-
+141;Chemnitz, Regierungsbezirk;72;-;-;-
+141;Chemnitz, Regierungsbezirk;73;-;-;-
+141;Chemnitz, Regierungsbezirk;74;-;-;-
+141;Chemnitz, Regierungsbezirk;75;-;-;-
+141;Chemnitz, Regierungsbezirk;80;-;-;-
+141;Chemnitz, Regierungsbezirk;85;-;-;-
+141;Chemnitz, Regierungsbezirk;90;-;-;-
+142;Dresden, Regierungsbezirk;0;-;-;-
+142;Dresden, Regierungsbezirk;1;-;-;-
+142;Dresden, Regierungsbezirk;2;-;-;-
+142;Dresden, Regierungsbezirk;3;-;-;-
+142;Dresden, Regierungsbezirk;4;-;-;-
+142;Dresden, Regierungsbezirk;5;-;-;-
+142;Dresden, Regierungsbezirk;6;-;-;-
+142;Dresden, Regierungsbezirk;7;-;-;-
+142;Dresden, Regierungsbezirk;8;-;-;-
+142;Dresden, Regierungsbezirk;9;-;-;-
+142;Dresden, Regierungsbezirk;10;-;-;-
+142;Dresden, Regierungsbezirk;11;-;-;-
+142;Dresden, Regierungsbezirk;12;-;-;-
+142;Dresden, Regierungsbezirk;13;-;-;-
+142;Dresden, Regierungsbezirk;14;-;-;-
+142;Dresden, Regierungsbezirk;15;-;-;-
+142;Dresden, Regierungsbezirk;16;-;-;-
+142;Dresden, Regierungsbezirk;17;-;-;-
+142;Dresden, Regierungsbezirk;18;-;-;-
+142;Dresden, Regierungsbezirk;19;-;-;-
+142;Dresden, Regierungsbezirk;20;-;-;-
+142;Dresden, Regierungsbezirk;21;-;-;-
+142;Dresden, Regierungsbezirk;22;-;-;-
+142;Dresden, Regierungsbezirk;23;-;-;-
+142;Dresden, Regierungsbezirk;24;-;-;-
+142;Dresden, Regierungsbezirk;25;-;-;-
+142;Dresden, Regierungsbezirk;26;-;-;-
+142;Dresden, Regierungsbezirk;27;-;-;-
+142;Dresden, Regierungsbezirk;28;-;-;-
+142;Dresden, Regierungsbezirk;29;-;-;-
+142;Dresden, Regierungsbezirk;30;-;-;-
+142;Dresden, Regierungsbezirk;31;-;-;-
+142;Dresden, Regierungsbezirk;32;-;-;-
+142;Dresden, Regierungsbezirk;33;-;-;-
+142;Dresden, Regierungsbezirk;34;-;-;-
+142;Dresden, Regierungsbezirk;35;-;-;-
+142;Dresden, Regierungsbezirk;36;-;-;-
+142;Dresden, Regierungsbezirk;37;-;-;-
+142;Dresden, Regierungsbezirk;38;-;-;-
+142;Dresden, Regierungsbezirk;39;-;-;-
+142;Dresden, Regierungsbezirk;40;-;-;-
+142;Dresden, Regierungsbezirk;41;-;-;-
+142;Dresden, Regierungsbezirk;42;-;-;-
+142;Dresden, Regierungsbezirk;43;-;-;-
+142;Dresden, Regierungsbezirk;44;-;-;-
+142;Dresden, Regierungsbezirk;45;-;-;-
+142;Dresden, Regierungsbezirk;46;-;-;-
+142;Dresden, Regierungsbezirk;47;-;-;-
+142;Dresden, Regierungsbezirk;48;-;-;-
+142;Dresden, Regierungsbezirk;49;-;-;-
+142;Dresden, Regierungsbezirk;50;-;-;-
+142;Dresden, Regierungsbezirk;51;-;-;-
+142;Dresden, Regierungsbezirk;52;-;-;-
+142;Dresden, Regierungsbezirk;53;-;-;-
+142;Dresden, Regierungsbezirk;54;-;-;-
+142;Dresden, Regierungsbezirk;55;-;-;-
+142;Dresden, Regierungsbezirk;56;-;-;-
+142;Dresden, Regierungsbezirk;57;-;-;-
+142;Dresden, Regierungsbezirk;58;-;-;-
+142;Dresden, Regierungsbezirk;59;-;-;-
+142;Dresden, Regierungsbezirk;60;-;-;-
+142;Dresden, Regierungsbezirk;61;-;-;-
+142;Dresden, Regierungsbezirk;62;-;-;-
+142;Dresden, Regierungsbezirk;63;-;-;-
+142;Dresden, Regierungsbezirk;64;-;-;-
+142;Dresden, Regierungsbezirk;65;-;-;-
+142;Dresden, Regierungsbezirk;66;-;-;-
+142;Dresden, Regierungsbezirk;67;-;-;-
+142;Dresden, Regierungsbezirk;68;-;-;-
+142;Dresden, Regierungsbezirk;69;-;-;-
+142;Dresden, Regierungsbezirk;70;-;-;-
+142;Dresden, Regierungsbezirk;71;-;-;-
+142;Dresden, Regierungsbezirk;72;-;-;-
+142;Dresden, Regierungsbezirk;73;-;-;-
+142;Dresden, Regierungsbezirk;74;-;-;-
+142;Dresden, Regierungsbezirk;75;-;-;-
+142;Dresden, Regierungsbezirk;80;-;-;-
+142;Dresden, Regierungsbezirk;85;-;-;-
+142;Dresden, Regierungsbezirk;90;-;-;-
+143;Leipzig, Regierungsbezirk;0;-;-;-
+143;Leipzig, Regierungsbezirk;1;-;-;-
+143;Leipzig, Regierungsbezirk;2;-;-;-
+143;Leipzig, Regierungsbezirk;3;-;-;-
+143;Leipzig, Regierungsbezirk;4;-;-;-
+143;Leipzig, Regierungsbezirk;5;-;-;-
+143;Leipzig, Regierungsbezirk;6;-;-;-
+143;Leipzig, Regierungsbezirk;7;-;-;-
+143;Leipzig, Regierungsbezirk;8;-;-;-
+143;Leipzig, Regierungsbezirk;9;-;-;-
+143;Leipzig, Regierungsbezirk;10;-;-;-
+143;Leipzig, Regierungsbezirk;11;-;-;-
+143;Leipzig, Regierungsbezirk;12;-;-;-
+143;Leipzig, Regierungsbezirk;13;-;-;-
+143;Leipzig, Regierungsbezirk;14;-;-;-
+143;Leipzig, Regierungsbezirk;15;-;-;-
+143;Leipzig, Regierungsbezirk;16;-;-;-
+143;Leipzig, Regierungsbezirk;17;-;-;-
+143;Leipzig, Regierungsbezirk;18;-;-;-
+143;Leipzig, Regierungsbezirk;19;-;-;-
+143;Leipzig, Regierungsbezirk;20;-;-;-
+143;Leipzig, Regierungsbezirk;21;-;-;-
+143;Leipzig, Regierungsbezirk;22;-;-;-
+143;Leipzig, Regierungsbezirk;23;-;-;-
+143;Leipzig, Regierungsbezirk;24;-;-;-
+143;Leipzig, Regierungsbezirk;25;-;-;-
+143;Leipzig, Regierungsbezirk;26;-;-;-
+143;Leipzig, Regierungsbezirk;27;-;-;-
+143;Leipzig, Regierungsbezirk;28;-;-;-
+143;Leipzig, Regierungsbezirk;29;-;-;-
+143;Leipzig, Regierungsbezirk;30;-;-;-
+143;Leipzig, Regierungsbezirk;31;-;-;-
+143;Leipzig, Regierungsbezirk;32;-;-;-
+143;Leipzig, Regierungsbezirk;33;-;-;-
+143;Leipzig, Regierungsbezirk;34;-;-;-
+143;Leipzig, Regierungsbezirk;35;-;-;-
+143;Leipzig, Regierungsbezirk;36;-;-;-
+143;Leipzig, Regierungsbezirk;37;-;-;-
+143;Leipzig, Regierungsbezirk;38;-;-;-
+143;Leipzig, Regierungsbezirk;39;-;-;-
+143;Leipzig, Regierungsbezirk;40;-;-;-
+143;Leipzig, Regierungsbezirk;41;-;-;-
+143;Leipzig, Regierungsbezirk;42;-;-;-
+143;Leipzig, Regierungsbezirk;43;-;-;-
+143;Leipzig, Regierungsbezirk;44;-;-;-
+143;Leipzig, Regierungsbezirk;45;-;-;-
+143;Leipzig, Regierungsbezirk;46;-;-;-
+143;Leipzig, Regierungsbezirk;47;-;-;-
+143;Leipzig, Regierungsbezirk;48;-;-;-
+143;Leipzig, Regierungsbezirk;49;-;-;-
+143;Leipzig, Regierungsbezirk;50;-;-;-
+143;Leipzig, Regierungsbezirk;51;-;-;-
+143;Leipzig, Regierungsbezirk;52;-;-;-
+143;Leipzig, Regierungsbezirk;53;-;-;-
+143;Leipzig, Regierungsbezirk;54;-;-;-
+143;Leipzig, Regierungsbezirk;55;-;-;-
+143;Leipzig, Regierungsbezirk;56;-;-;-
+143;Leipzig, Regierungsbezirk;57;-;-;-
+143;Leipzig, Regierungsbezirk;58;-;-;-
+143;Leipzig, Regierungsbezirk;59;-;-;-
+143;Leipzig, Regierungsbezirk;60;-;-;-
+143;Leipzig, Regierungsbezirk;61;-;-;-
+143;Leipzig, Regierungsbezirk;62;-;-;-
+143;Leipzig, Regierungsbezirk;63;-;-;-
+143;Leipzig, Regierungsbezirk;64;-;-;-
+143;Leipzig, Regierungsbezirk;65;-;-;-
+143;Leipzig, Regierungsbezirk;66;-;-;-
+143;Leipzig, Regierungsbezirk;67;-;-;-
+143;Leipzig, Regierungsbezirk;68;-;-;-
+143;Leipzig, Regierungsbezirk;69;-;-;-
+143;Leipzig, Regierungsbezirk;70;-;-;-
+143;Leipzig, Regierungsbezirk;71;-;-;-
+143;Leipzig, Regierungsbezirk;72;-;-;-
+143;Leipzig, Regierungsbezirk;73;-;-;-
+143;Leipzig, Regierungsbezirk;74;-;-;-
+143;Leipzig, Regierungsbezirk;75;-;-;-
+143;Leipzig, Regierungsbezirk;80;-;-;-
+143;Leipzig, Regierungsbezirk;85;-;-;-
+143;Leipzig, Regierungsbezirk;90;-;-;-
+145;Chemnitz, Stat. Region;0;11202;5771;5431
+145;Chemnitz, Stat. Region;1;11943;6041;5902
+145;Chemnitz, Stat. Region;2;12216;6306;5910
+145;Chemnitz, Stat. Region;3;12240;6234;6006
+145;Chemnitz, Stat. Region;4;12140;6187;5953
+145;Chemnitz, Stat. Region;5;11976;6233;5743
+145;Chemnitz, Stat. Region;6;12200;6261;5939
+145;Chemnitz, Stat. Region;7;11976;6179;5797
+145;Chemnitz, Stat. Region;8;12371;6308;6063
+145;Chemnitz, Stat. Region;9;12077;6283;5794
+145;Chemnitz, Stat. Region;10;12205;6259;5946
+145;Chemnitz, Stat. Region;11;11861;6181;5680
+145;Chemnitz, Stat. Region;12;11637;6045;5592
+145;Chemnitz, Stat. Region;13;11661;5981;5680
+145;Chemnitz, Stat. Region;14;11818;6029;5789
+145;Chemnitz, Stat. Region;15;11575;5810;5765
+145;Chemnitz, Stat. Region;16;11530;5935;5595
+145;Chemnitz, Stat. Region;17;11600;6062;5538
+145;Chemnitz, Stat. Region;18;11828;6298;5530
+145;Chemnitz, Stat. Region;19;11051;5983;5068
+145;Chemnitz, Stat. Region;20;10260;5603;4657
+145;Chemnitz, Stat. Region;21;10043;5497;4546
+145;Chemnitz, Stat. Region;22;9778;5342;4436
+145;Chemnitz, Stat. Region;23;9148;5136;4012
+145;Chemnitz, Stat. Region;24;8862;4947;3915
+145;Chemnitz, Stat. Region;25;9142;5070;4072
+145;Chemnitz, Stat. Region;26;9422;5060;4362
+145;Chemnitz, Stat. Region;27;10966;6000;4966
+145;Chemnitz, Stat. Region;28;15647;8577;7070
+145;Chemnitz, Stat. Region;29;16026;8666;7360
+145;Chemnitz, Stat. Region;30;16674;8915;7759
+145;Chemnitz, Stat. Region;31;17257;9118;8139
+145;Chemnitz, Stat. Region;32;16772;8852;7920
+145;Chemnitz, Stat. Region;33;16648;8985;7663
+145;Chemnitz, Stat. Region;34;16697;8870;7827
+145;Chemnitz, Stat. Region;35;17051;8896;8155
+145;Chemnitz, Stat. Region;36;17235;9251;7984
+145;Chemnitz, Stat. Region;37;17066;9160;7906
+145;Chemnitz, Stat. Region;38;17527;9375;8152
+145;Chemnitz, Stat. Region;39;16726;9035;7691
+145;Chemnitz, Stat. Region;40;16739;8966;7773
+145;Chemnitz, Stat. Region;41;16468;8811;7657
+145;Chemnitz, Stat. Region;42;14740;7790;6950
+145;Chemnitz, Stat. Region;43;14495;7675;6820
+145;Chemnitz, Stat. Region;44;14572;7803;6769
+145;Chemnitz, Stat. Region;45;14973;7998;6975
+145;Chemnitz, Stat. Region;46;16457;8814;7643
+145;Chemnitz, Stat. Region;47;19514;10300;9214
+145;Chemnitz, Stat. Region;48;19430;10231;9199
+145;Chemnitz, Stat. Region;49;19506;10201;9305
+145;Chemnitz, Stat. Region;50;19914;10210;9704
+145;Chemnitz, Stat. Region;51;20597;10549;10048
+145;Chemnitz, Stat. Region;52;21827;11021;10806
+145;Chemnitz, Stat. Region;53;22804;11621;11183
+145;Chemnitz, Stat. Region;54;23722;11773;11949
+145;Chemnitz, Stat. Region;55;23959;12100;11859
+145;Chemnitz, Stat. Region;56;23890;12093;11797
+145;Chemnitz, Stat. Region;57;24076;11865;12211
+145;Chemnitz, Stat. Region;58;23031;11450;11581
+145;Chemnitz, Stat. Region;59;23190;11496;11694
+145;Chemnitz, Stat. Region;60;21475;10496;10979
+145;Chemnitz, Stat. Region;61;21669;10539;11130
+145;Chemnitz, Stat. Region;62;22387;10869;11518
+145;Chemnitz, Stat. Region;63;23229;11127;12102
+145;Chemnitz, Stat. Region;64;22969;10957;12012
+145;Chemnitz, Stat. Region;65;23042;10914;12128
+145;Chemnitz, Stat. Region;66;23993;11473;12520
+145;Chemnitz, Stat. Region;67;25388;12049;13339
+145;Chemnitz, Stat. Region;68;24117;11302;12815
+145;Chemnitz, Stat. Region;69;20881;9865;11016
+145;Chemnitz, Stat. Region;70;16052;7494;8558
+145;Chemnitz, Stat. Region;71;15653;7170;8483
+145;Chemnitz, Stat. Region;72;11710;5421;6289
+145;Chemnitz, Stat. Region;73;13599;6185;7414
+145;Chemnitz, Stat. Region;74;19647;8924;10723
+145;Chemnitz, Stat. Region;75;94919;41113;53806
+145;Chemnitz, Stat. Region;80;71053;28097;42956
+145;Chemnitz, Stat. Region;85;35598;11833;23765
+145;Chemnitz, Stat. Region;90;19106;4473;14633
+146;Dresden, Stat. Region;0;14247;7328;6919
+146;Dresden, Stat. Region;1;14934;7670;7264
+146;Dresden, Stat. Region;2;15418;7759;7659
+146;Dresden, Stat. Region;3;15169;7869;7300
+146;Dresden, Stat. Region;4;15464;7939;7525
+146;Dresden, Stat. Region;5;15091;7813;7278
+146;Dresden, Stat. Region;6;15191;7780;7411
+146;Dresden, Stat. Region;7;14907;7663;7244
+146;Dresden, Stat. Region;8;14942;7562;7380
+146;Dresden, Stat. Region;9;14633;7621;7012
+146;Dresden, Stat. Region;10;14573;7476;7097
+146;Dresden, Stat. Region;11;14526;7436;7090
+146;Dresden, Stat. Region;12;13501;6835;6666
+146;Dresden, Stat. Region;13;13463;6892;6571
+146;Dresden, Stat. Region;14;13652;6966;6686
+146;Dresden, Stat. Region;15;13169;6700;6469
+146;Dresden, Stat. Region;16;12881;6601;6280
+146;Dresden, Stat. Region;17;12921;6761;6160
+146;Dresden, Stat. Region;18;13885;7301;6584
+146;Dresden, Stat. Region;19;13591;7293;6298
+146;Dresden, Stat. Region;20;13324;7063;6261
+146;Dresden, Stat. Region;21;13342;7106;6236
+146;Dresden, Stat. Region;22;12896;6866;6030
+146;Dresden, Stat. Region;23;12310;6636;5674
+146;Dresden, Stat. Region;24;11957;6473;5484
+146;Dresden, Stat. Region;25;12320;6658;5662
+146;Dresden, Stat. Region;26;12491;6697;5794
+146;Dresden, Stat. Region;27;14254;7571;6683
+146;Dresden, Stat. Region;28;20113;10591;9522
+146;Dresden, Stat. Region;29;20897;11059;9838
+146;Dresden, Stat. Region;30;21539;11325;10214
+146;Dresden, Stat. Region;31;21901;11517;10384
+146;Dresden, Stat. Region;32;20932;10992;9940
+146;Dresden, Stat. Region;33;21282;11243;10039
+146;Dresden, Stat. Region;34;20540;10747;9793
+146;Dresden, Stat. Region;35;20794;11040;9754
+146;Dresden, Stat. Region;36;21154;11159;9995
+146;Dresden, Stat. Region;37;20485;10801;9684
+146;Dresden, Stat. Region;38;20876;10931;9945
+146;Dresden, Stat. Region;39;20436;10889;9547
+146;Dresden, Stat. Region;40;20471;10766;9705
+146;Dresden, Stat. Region;41;20069;10544;9525
+146;Dresden, Stat. Region;42;17989;9431;8558
+146;Dresden, Stat. Region;43;17100;9131;7969
+146;Dresden, Stat. Region;44;16709;8861;7848
+146;Dresden, Stat. Region;45;16841;8992;7849
+146;Dresden, Stat. Region;46;18380;9707;8673
+146;Dresden, Stat. Region;47;20984;11166;9818
+146;Dresden, Stat. Region;48;20909;11083;9826
+146;Dresden, Stat. Region;49;21070;10995;10075
+146;Dresden, Stat. Region;50;21548;11265;10283
+146;Dresden, Stat. Region;51;22430;11658;10772
+146;Dresden, Stat. Region;52;23750;12157;11593
+146;Dresden, Stat. Region;53;24576;12586;11990
+146;Dresden, Stat. Region;54;25794;13062;12732
+146;Dresden, Stat. Region;55;26363;13333;13030
+146;Dresden, Stat. Region;56;25673;12913;12760
+146;Dresden, Stat. Region;57;25431;12759;12672
+146;Dresden, Stat. Region;58;24404;12269;12135
+146;Dresden, Stat. Region;59;24147;11949;12198
+146;Dresden, Stat. Region;60;22088;10927;11161
+146;Dresden, Stat. Region;61;21879;10829;11050
+146;Dresden, Stat. Region;62;21850;10697;11153
+146;Dresden, Stat. Region;63;22647;11102;11545
+146;Dresden, Stat. Region;64;22483;10780;11703
+146;Dresden, Stat. Region;65;22260;10717;11543
+146;Dresden, Stat. Region;66;22367;10738;11629
+146;Dresden, Stat. Region;67;22324;10473;11851
+146;Dresden, Stat. Region;68;21145;10046;11099
+146;Dresden, Stat. Region;69;18431;8656;9775
+146;Dresden, Stat. Region;70;15122;7043;8079
+146;Dresden, Stat. Region;71;15260;6915;8345
+146;Dresden, Stat. Region;72;10896;4991;5905
+146;Dresden, Stat. Region;73;13288;5894;7394
+146;Dresden, Stat. Region;74;19412;8711;10701
+146;Dresden, Stat. Region;75;101545;44422;57123
+146;Dresden, Stat. Region;80;75413;31108;44305
+146;Dresden, Stat. Region;85;35707;12649;23058
+146;Dresden, Stat. Region;90;19443;4705;14738
+147;Leipzig, Stat. Region;0;10302;5263;5039
+147;Leipzig, Stat. Region;1;10430;5346;5084
+147;Leipzig, Stat. Region;2;10634;5516;5118
+147;Leipzig, Stat. Region;3;10496;5486;5010
+147;Leipzig, Stat. Region;4;10214;5231;4983
+147;Leipzig, Stat. Region;5;9743;5027;4716
+147;Leipzig, Stat. Region;6;9603;4960;4643
+147;Leipzig, Stat. Region;7;9420;4859;4561
+147;Leipzig, Stat. Region;8;9437;4864;4573
+147;Leipzig, Stat. Region;9;8999;4591;4408
+147;Leipzig, Stat. Region;10;9268;4765;4503
+147;Leipzig, Stat. Region;11;8640;4387;4253
+147;Leipzig, Stat. Region;12;8234;4197;4037
+147;Leipzig, Stat. Region;13;8256;4200;4056
+147;Leipzig, Stat. Region;14;8253;4222;4031
+147;Leipzig, Stat. Region;15;7892;4132;3760
+147;Leipzig, Stat. Region;16;7774;3945;3829
+147;Leipzig, Stat. Region;17;7818;4081;3737
+147;Leipzig, Stat. Region;18;8778;4435;4343
+147;Leipzig, Stat. Region;19;9842;4837;5005
+147;Leipzig, Stat. Region;20;10257;4906;5351
+147;Leipzig, Stat. Region;21;10713;5117;5596
+147;Leipzig, Stat. Region;22;10544;5186;5358
+147;Leipzig, Stat. Region;23;10050;4867;5183
+147;Leipzig, Stat. Region;24;10169;4974;5195
+147;Leipzig, Stat. Region;25;10187;5086;5101
+147;Leipzig, Stat. Region;26;10928;5559;5369
+147;Leipzig, Stat. Region;27;12257;6154;6103
+147;Leipzig, Stat. Region;28;16884;8594;8290
+147;Leipzig, Stat. Region;29;17296;8975;8321
+147;Leipzig, Stat. Region;30;17407;8976;8431
+147;Leipzig, Stat. Region;31;17309;9077;8232
+147;Leipzig, Stat. Region;32;16298;8349;7949
+147;Leipzig, Stat. Region;33;16344;8476;7868
+147;Leipzig, Stat. Region;34;15847;8259;7588
+147;Leipzig, Stat. Region;35;15551;8166;7385
+147;Leipzig, Stat. Region;36;15445;8174;7271
+147;Leipzig, Stat. Region;37;14666;7708;6958
+147;Leipzig, Stat. Region;38;15038;7992;7046
+147;Leipzig, Stat. Region;39;14055;7435;6620
+147;Leipzig, Stat. Region;40;14044;7361;6683
+147;Leipzig, Stat. Region;41;13499;7215;6284
+147;Leipzig, Stat. Region;42;11902;6248;5654
+147;Leipzig, Stat. Region;43;10949;5781;5168
+147;Leipzig, Stat. Region;44;10754;5785;4969
+147;Leipzig, Stat. Region;45;10659;5621;5038
+147;Leipzig, Stat. Region;46;11622;6275;5347
+147;Leipzig, Stat. Region;47;13678;7316;6362
+147;Leipzig, Stat. Region;48;13784;7230;6554
+147;Leipzig, Stat. Region;49;13956;7250;6706
+147;Leipzig, Stat. Region;50;14019;7296;6723
+147;Leipzig, Stat. Region;51;14275;7424;6851
+147;Leipzig, Stat. Region;52;15092;7798;7294
+147;Leipzig, Stat. Region;53;15681;8086;7595
+147;Leipzig, Stat. Region;54;16072;8160;7912
+147;Leipzig, Stat. Region;55;16050;8230;7820
+147;Leipzig, Stat. Region;56;15681;8001;7680
+147;Leipzig, Stat. Region;57;15591;7847;7744
+147;Leipzig, Stat. Region;58;14966;7433;7533
+147;Leipzig, Stat. Region;59;14475;7172;7303
+147;Leipzig, Stat. Region;60;13441;6580;6861
+147;Leipzig, Stat. Region;61;13123;6387;6736
+147;Leipzig, Stat. Region;62;13173;6466;6707
+147;Leipzig, Stat. Region;63;13392;6455;6937
+147;Leipzig, Stat. Region;64;13196;6328;6868
+147;Leipzig, Stat. Region;65;13465;6392;7073
+147;Leipzig, Stat. Region;66;13193;6265;6928
+147;Leipzig, Stat. Region;67;12768;5981;6787
+147;Leipzig, Stat. Region;68;12501;5893;6608
+147;Leipzig, Stat. Region;69;10967;4997;5970
+147;Leipzig, Stat. Region;70;8922;4116;4806
+147;Leipzig, Stat. Region;71;8894;4026;4868
+147;Leipzig, Stat. Region;72;7009;3146;3863
+147;Leipzig, Stat. Region;73;7781;3398;4383
+147;Leipzig, Stat. Region;74;10913;4871;6042
+147;Leipzig, Stat. Region;75;58655;25190;33465
+147;Leipzig, Stat. Region;80;42607;17098;25509
+147;Leipzig, Stat. Region;85;20579;7083;13496
+147;Leipzig, Stat. Region;90;10687;2576;8111
+150;Sachsen-Anhalt;0;17259;8781;8478
+150;Sachsen-Anhalt;1;18269;9376;8893
+150;Sachsen-Anhalt;2;18597;9596;9001
+150;Sachsen-Anhalt;3;18423;9358;9065
+150;Sachsen-Anhalt;4;18598;9646;8952
+150;Sachsen-Anhalt;5;18180;9297;8883
+150;Sachsen-Anhalt;6;18280;9363;8917
+150;Sachsen-Anhalt;7;17940;9235;8705
+150;Sachsen-Anhalt;8;18334;9341;8993
+150;Sachsen-Anhalt;9;18016;9266;8750
+150;Sachsen-Anhalt;10;18582;9541;9041
+150;Sachsen-Anhalt;11;17938;9239;8699
+150;Sachsen-Anhalt;12;17199;9030;8169
+150;Sachsen-Anhalt;13;17366;8829;8537
+150;Sachsen-Anhalt;14;17298;8947;8351
+150;Sachsen-Anhalt;15;16800;8721;8079
+150;Sachsen-Anhalt;16;17386;9144;8242
+150;Sachsen-Anhalt;17;17587;9244;8343
+150;Sachsen-Anhalt;18;18286;9863;8423
+150;Sachsen-Anhalt;19;18091;9884;8207
+150;Sachsen-Anhalt;20;17730;9318;8412
+150;Sachsen-Anhalt;21;18030;9604;8426
+150;Sachsen-Anhalt;22;17229;9233;7996
+150;Sachsen-Anhalt;23;16172;8782;7390
+150;Sachsen-Anhalt;24;15643;8375;7268
+150;Sachsen-Anhalt;25;15683;8387;7296
+150;Sachsen-Anhalt;26;16594;8755;7839
+150;Sachsen-Anhalt;27;18262;9654;8608
+150;Sachsen-Anhalt;28;25961;13978;11983
+150;Sachsen-Anhalt;29;26710;14111;12599
+150;Sachsen-Anhalt;30;27827;14715;13112
+150;Sachsen-Anhalt;31;27681;14532;13149
+150;Sachsen-Anhalt;32;26857;14183;12674
+150;Sachsen-Anhalt;33;26653;14083;12570
+150;Sachsen-Anhalt;34;26717;14062;12655
+150;Sachsen-Anhalt;35;26908;14289;12619
+150;Sachsen-Anhalt;36;26580;14160;12420
+150;Sachsen-Anhalt;37;26348;14039;12309
+150;Sachsen-Anhalt;38;26924;14278;12646
+150;Sachsen-Anhalt;39;25757;13724;12033
+150;Sachsen-Anhalt;40;25633;13575;12058
+150;Sachsen-Anhalt;41;24642;13039;11603
+150;Sachsen-Anhalt;42;22045;11675;10370
+150;Sachsen-Anhalt;43;21096;11289;9807
+150;Sachsen-Anhalt;44;21672;11373;10299
+150;Sachsen-Anhalt;45;22556;11955;10601
+150;Sachsen-Anhalt;46;25957;13648;12309
+150;Sachsen-Anhalt;47;30730;16146;14584
+150;Sachsen-Anhalt;48;31044;16066;14978
+150;Sachsen-Anhalt;49;32070;16520;15550
+150;Sachsen-Anhalt;50;32912;16957;15955
+150;Sachsen-Anhalt;51;34391;17506;16885
+150;Sachsen-Anhalt;52;35795;18279;17516
+150;Sachsen-Anhalt;53;37448;18935;18513
+150;Sachsen-Anhalt;54;39032;19638;19394
+150;Sachsen-Anhalt;55;40327;20395;19932
+150;Sachsen-Anhalt;56;39846;19841;20005
+150;Sachsen-Anhalt;57;39726;19837;19889
+150;Sachsen-Anhalt;58;38531;19334;19197
+150;Sachsen-Anhalt;59;37633;18520;19113
+150;Sachsen-Anhalt;60;35217;17432;17785
+150;Sachsen-Anhalt;61;34685;16964;17721
+150;Sachsen-Anhalt;62;35039;16853;18186
+150;Sachsen-Anhalt;63;35819;17587;18232
+150;Sachsen-Anhalt;64;34862;17022;17840
+150;Sachsen-Anhalt;65;34940;16700;18240
+150;Sachsen-Anhalt;66;34413;16485;17928
+150;Sachsen-Anhalt;67;32768;15446;17322
+150;Sachsen-Anhalt;68;32034;15136;16898
+150;Sachsen-Anhalt;69;28272;13086;15186
+150;Sachsen-Anhalt;70;23677;10957;12720
+150;Sachsen-Anhalt;71;23031;10582;12449
+150;Sachsen-Anhalt;72;18366;8383;9983
+150;Sachsen-Anhalt;73;18531;8314;10217
+150;Sachsen-Anhalt;74;25631;11428;14203
+150;Sachsen-Anhalt;75;141236;61295;79941
+150;Sachsen-Anhalt;80;101811;39885;61926
+150;Sachsen-Anhalt;85;47286;15490;31796
+150;Sachsen-Anhalt;90;22922;5143;17779
+151;Dessau, Stat. Region;0;-;-;-
+151;Dessau, Stat. Region;1;-;-;-
+151;Dessau, Stat. Region;2;-;-;-
+151;Dessau, Stat. Region;3;-;-;-
+151;Dessau, Stat. Region;4;-;-;-
+151;Dessau, Stat. Region;5;-;-;-
+151;Dessau, Stat. Region;6;-;-;-
+151;Dessau, Stat. Region;7;-;-;-
+151;Dessau, Stat. Region;8;-;-;-
+151;Dessau, Stat. Region;9;-;-;-
+151;Dessau, Stat. Region;10;-;-;-
+151;Dessau, Stat. Region;11;-;-;-
+151;Dessau, Stat. Region;12;-;-;-
+151;Dessau, Stat. Region;13;-;-;-
+151;Dessau, Stat. Region;14;-;-;-
+151;Dessau, Stat. Region;15;-;-;-
+151;Dessau, Stat. Region;16;-;-;-
+151;Dessau, Stat. Region;17;-;-;-
+151;Dessau, Stat. Region;18;-;-;-
+151;Dessau, Stat. Region;19;-;-;-
+151;Dessau, Stat. Region;20;-;-;-
+151;Dessau, Stat. Region;21;-;-;-
+151;Dessau, Stat. Region;22;-;-;-
+151;Dessau, Stat. Region;23;-;-;-
+151;Dessau, Stat. Region;24;-;-;-
+151;Dessau, Stat. Region;25;-;-;-
+151;Dessau, Stat. Region;26;-;-;-
+151;Dessau, Stat. Region;27;-;-;-
+151;Dessau, Stat. Region;28;-;-;-
+151;Dessau, Stat. Region;29;-;-;-
+151;Dessau, Stat. Region;30;-;-;-
+151;Dessau, Stat. Region;31;-;-;-
+151;Dessau, Stat. Region;32;-;-;-
+151;Dessau, Stat. Region;33;-;-;-
+151;Dessau, Stat. Region;34;-;-;-
+151;Dessau, Stat. Region;35;-;-;-
+151;Dessau, Stat. Region;36;-;-;-
+151;Dessau, Stat. Region;37;-;-;-
+151;Dessau, Stat. Region;38;-;-;-
+151;Dessau, Stat. Region;39;-;-;-
+151;Dessau, Stat. Region;40;-;-;-
+151;Dessau, Stat. Region;41;-;-;-
+151;Dessau, Stat. Region;42;-;-;-
+151;Dessau, Stat. Region;43;-;-;-
+151;Dessau, Stat. Region;44;-;-;-
+151;Dessau, Stat. Region;45;-;-;-
+151;Dessau, Stat. Region;46;-;-;-
+151;Dessau, Stat. Region;47;-;-;-
+151;Dessau, Stat. Region;48;-;-;-
+151;Dessau, Stat. Region;49;-;-;-
+151;Dessau, Stat. Region;50;-;-;-
+151;Dessau, Stat. Region;51;-;-;-
+151;Dessau, Stat. Region;52;-;-;-
+151;Dessau, Stat. Region;53;-;-;-
+151;Dessau, Stat. Region;54;-;-;-
+151;Dessau, Stat. Region;55;-;-;-
+151;Dessau, Stat. Region;56;-;-;-
+151;Dessau, Stat. Region;57;-;-;-
+151;Dessau, Stat. Region;58;-;-;-
+151;Dessau, Stat. Region;59;-;-;-
+151;Dessau, Stat. Region;60;-;-;-
+151;Dessau, Stat. Region;61;-;-;-
+151;Dessau, Stat. Region;62;-;-;-
+151;Dessau, Stat. Region;63;-;-;-
+151;Dessau, Stat. Region;64;-;-;-
+151;Dessau, Stat. Region;65;-;-;-
+151;Dessau, Stat. Region;66;-;-;-
+151;Dessau, Stat. Region;67;-;-;-
+151;Dessau, Stat. Region;68;-;-;-
+151;Dessau, Stat. Region;69;-;-;-
+151;Dessau, Stat. Region;70;-;-;-
+151;Dessau, Stat. Region;71;-;-;-
+151;Dessau, Stat. Region;72;-;-;-
+151;Dessau, Stat. Region;73;-;-;-
+151;Dessau, Stat. Region;74;-;-;-
+151;Dessau, Stat. Region;75;-;-;-
+151;Dessau, Stat. Region;80;-;-;-
+151;Dessau, Stat. Region;85;-;-;-
+151;Dessau, Stat. Region;90;-;-;-
+152;Halle, Stat. Region;0;-;-;-
+152;Halle, Stat. Region;1;-;-;-
+152;Halle, Stat. Region;2;-;-;-
+152;Halle, Stat. Region;3;-;-;-
+152;Halle, Stat. Region;4;-;-;-
+152;Halle, Stat. Region;5;-;-;-
+152;Halle, Stat. Region;6;-;-;-
+152;Halle, Stat. Region;7;-;-;-
+152;Halle, Stat. Region;8;-;-;-
+152;Halle, Stat. Region;9;-;-;-
+152;Halle, Stat. Region;10;-;-;-
+152;Halle, Stat. Region;11;-;-;-
+152;Halle, Stat. Region;12;-;-;-
+152;Halle, Stat. Region;13;-;-;-
+152;Halle, Stat. Region;14;-;-;-
+152;Halle, Stat. Region;15;-;-;-
+152;Halle, Stat. Region;16;-;-;-
+152;Halle, Stat. Region;17;-;-;-
+152;Halle, Stat. Region;18;-;-;-
+152;Halle, Stat. Region;19;-;-;-
+152;Halle, Stat. Region;20;-;-;-
+152;Halle, Stat. Region;21;-;-;-
+152;Halle, Stat. Region;22;-;-;-
+152;Halle, Stat. Region;23;-;-;-
+152;Halle, Stat. Region;24;-;-;-
+152;Halle, Stat. Region;25;-;-;-
+152;Halle, Stat. Region;26;-;-;-
+152;Halle, Stat. Region;27;-;-;-
+152;Halle, Stat. Region;28;-;-;-
+152;Halle, Stat. Region;29;-;-;-
+152;Halle, Stat. Region;30;-;-;-
+152;Halle, Stat. Region;31;-;-;-
+152;Halle, Stat. Region;32;-;-;-
+152;Halle, Stat. Region;33;-;-;-
+152;Halle, Stat. Region;34;-;-;-
+152;Halle, Stat. Region;35;-;-;-
+152;Halle, Stat. Region;36;-;-;-
+152;Halle, Stat. Region;37;-;-;-
+152;Halle, Stat. Region;38;-;-;-
+152;Halle, Stat. Region;39;-;-;-
+152;Halle, Stat. Region;40;-;-;-
+152;Halle, Stat. Region;41;-;-;-
+152;Halle, Stat. Region;42;-;-;-
+152;Halle, Stat. Region;43;-;-;-
+152;Halle, Stat. Region;44;-;-;-
+152;Halle, Stat. Region;45;-;-;-
+152;Halle, Stat. Region;46;-;-;-
+152;Halle, Stat. Region;47;-;-;-
+152;Halle, Stat. Region;48;-;-;-
+152;Halle, Stat. Region;49;-;-;-
+152;Halle, Stat. Region;50;-;-;-
+152;Halle, Stat. Region;51;-;-;-
+152;Halle, Stat. Region;52;-;-;-
+152;Halle, Stat. Region;53;-;-;-
+152;Halle, Stat. Region;54;-;-;-
+152;Halle, Stat. Region;55;-;-;-
+152;Halle, Stat. Region;56;-;-;-
+152;Halle, Stat. Region;57;-;-;-
+152;Halle, Stat. Region;58;-;-;-
+152;Halle, Stat. Region;59;-;-;-
+152;Halle, Stat. Region;60;-;-;-
+152;Halle, Stat. Region;61;-;-;-
+152;Halle, Stat. Region;62;-;-;-
+152;Halle, Stat. Region;63;-;-;-
+152;Halle, Stat. Region;64;-;-;-
+152;Halle, Stat. Region;65;-;-;-
+152;Halle, Stat. Region;66;-;-;-
+152;Halle, Stat. Region;67;-;-;-
+152;Halle, Stat. Region;68;-;-;-
+152;Halle, Stat. Region;69;-;-;-
+152;Halle, Stat. Region;70;-;-;-
+152;Halle, Stat. Region;71;-;-;-
+152;Halle, Stat. Region;72;-;-;-
+152;Halle, Stat. Region;73;-;-;-
+152;Halle, Stat. Region;74;-;-;-
+152;Halle, Stat. Region;75;-;-;-
+152;Halle, Stat. Region;80;-;-;-
+152;Halle, Stat. Region;85;-;-;-
+152;Halle, Stat. Region;90;-;-;-
+153;Magdeburg, Stat. Region;0;-;-;-
+153;Magdeburg, Stat. Region;1;-;-;-
+153;Magdeburg, Stat. Region;2;-;-;-
+153;Magdeburg, Stat. Region;3;-;-;-
+153;Magdeburg, Stat. Region;4;-;-;-
+153;Magdeburg, Stat. Region;5;-;-;-
+153;Magdeburg, Stat. Region;6;-;-;-
+153;Magdeburg, Stat. Region;7;-;-;-
+153;Magdeburg, Stat. Region;8;-;-;-
+153;Magdeburg, Stat. Region;9;-;-;-
+153;Magdeburg, Stat. Region;10;-;-;-
+153;Magdeburg, Stat. Region;11;-;-;-
+153;Magdeburg, Stat. Region;12;-;-;-
+153;Magdeburg, Stat. Region;13;-;-;-
+153;Magdeburg, Stat. Region;14;-;-;-
+153;Magdeburg, Stat. Region;15;-;-;-
+153;Magdeburg, Stat. Region;16;-;-;-
+153;Magdeburg, Stat. Region;17;-;-;-
+153;Magdeburg, Stat. Region;18;-;-;-
+153;Magdeburg, Stat. Region;19;-;-;-
+153;Magdeburg, Stat. Region;20;-;-;-
+153;Magdeburg, Stat. Region;21;-;-;-
+153;Magdeburg, Stat. Region;22;-;-;-
+153;Magdeburg, Stat. Region;23;-;-;-
+153;Magdeburg, Stat. Region;24;-;-;-
+153;Magdeburg, Stat. Region;25;-;-;-
+153;Magdeburg, Stat. Region;26;-;-;-
+153;Magdeburg, Stat. Region;27;-;-;-
+153;Magdeburg, Stat. Region;28;-;-;-
+153;Magdeburg, Stat. Region;29;-;-;-
+153;Magdeburg, Stat. Region;30;-;-;-
+153;Magdeburg, Stat. Region;31;-;-;-
+153;Magdeburg, Stat. Region;32;-;-;-
+153;Magdeburg, Stat. Region;33;-;-;-
+153;Magdeburg, Stat. Region;34;-;-;-
+153;Magdeburg, Stat. Region;35;-;-;-
+153;Magdeburg, Stat. Region;36;-;-;-
+153;Magdeburg, Stat. Region;37;-;-;-
+153;Magdeburg, Stat. Region;38;-;-;-
+153;Magdeburg, Stat. Region;39;-;-;-
+153;Magdeburg, Stat. Region;40;-;-;-
+153;Magdeburg, Stat. Region;41;-;-;-
+153;Magdeburg, Stat. Region;42;-;-;-
+153;Magdeburg, Stat. Region;43;-;-;-
+153;Magdeburg, Stat. Region;44;-;-;-
+153;Magdeburg, Stat. Region;45;-;-;-
+153;Magdeburg, Stat. Region;46;-;-;-
+153;Magdeburg, Stat. Region;47;-;-;-
+153;Magdeburg, Stat. Region;48;-;-;-
+153;Magdeburg, Stat. Region;49;-;-;-
+153;Magdeburg, Stat. Region;50;-;-;-
+153;Magdeburg, Stat. Region;51;-;-;-
+153;Magdeburg, Stat. Region;52;-;-;-
+153;Magdeburg, Stat. Region;53;-;-;-
+153;Magdeburg, Stat. Region;54;-;-;-
+153;Magdeburg, Stat. Region;55;-;-;-
+153;Magdeburg, Stat. Region;56;-;-;-
+153;Magdeburg, Stat. Region;57;-;-;-
+153;Magdeburg, Stat. Region;58;-;-;-
+153;Magdeburg, Stat. Region;59;-;-;-
+153;Magdeburg, Stat. Region;60;-;-;-
+153;Magdeburg, Stat. Region;61;-;-;-
+153;Magdeburg, Stat. Region;62;-;-;-
+153;Magdeburg, Stat. Region;63;-;-;-
+153;Magdeburg, Stat. Region;64;-;-;-
+153;Magdeburg, Stat. Region;65;-;-;-
+153;Magdeburg, Stat. Region;66;-;-;-
+153;Magdeburg, Stat. Region;67;-;-;-
+153;Magdeburg, Stat. Region;68;-;-;-
+153;Magdeburg, Stat. Region;69;-;-;-
+153;Magdeburg, Stat. Region;70;-;-;-
+153;Magdeburg, Stat. Region;71;-;-;-
+153;Magdeburg, Stat. Region;72;-;-;-
+153;Magdeburg, Stat. Region;73;-;-;-
+153;Magdeburg, Stat. Region;74;-;-;-
+153;Magdeburg, Stat. Region;75;-;-;-
+153;Magdeburg, Stat. Region;80;-;-;-
+153;Magdeburg, Stat. Region;85;-;-;-
+153;Magdeburg, Stat. Region;90;-;-;-
+160;Thüringen;0;17410;8940;8470
+160;Thüringen;1;18276;9363;8913
+160;Thüringen;2;18789;9568;9221
+160;Thüringen;3;18797;9730;9067
+160;Thüringen;4;18995;9764;9231
+160;Thüringen;5;18694;9597;9097
+160;Thüringen;6;18594;9569;9025
+160;Thüringen;7;18268;9378;8890
+160;Thüringen;8;18692;9537;9155
+160;Thüringen;9;17856;9049;8807
+160;Thüringen;10;18334;9433;8901
+160;Thüringen;11;17913;9289;8624
+160;Thüringen;12;16887;8808;8079
+160;Thüringen;13;17097;8772;8325
+160;Thüringen;14;17653;9113;8540
+160;Thüringen;15;17200;8793;8407
+160;Thüringen;16;17210;8900;8310
+160;Thüringen;17;17642;9134;8508
+160;Thüringen;18;17727;9365;8362
+160;Thüringen;19;17460;9447;8013
+160;Thüringen;20;17456;9190;8266
+160;Thüringen;21;17760;9381;8379
+160;Thüringen;22;16779;8786;7993
+160;Thüringen;23;15871;8537;7334
+160;Thüringen;24;14929;7999;6930
+160;Thüringen;25;15367;8138;7229
+160;Thüringen;26;16130;8495;7635
+160;Thüringen;27;17977;9500;8477
+160;Thüringen;28;25232;13439;11793
+160;Thüringen;29;25786;13512;12274
+160;Thüringen;30;27575;14565;13010
+160;Thüringen;31;27765;14686;13079
+160;Thüringen;32;26935;14334;12601
+160;Thüringen;33;26729;14153;12576
+160;Thüringen;34;26735;14199;12536
+160;Thüringen;35;26974;14315;12659
+160;Thüringen;36;27543;14651;12892
+160;Thüringen;37;26761;14236;12525
+160;Thüringen;38;27443;14581;12862
+160;Thüringen;39;26228;13928;12300
+160;Thüringen;40;25391;13486;11905
+160;Thüringen;41;24984;13222;11762
+160;Thüringen;42;22432;11805;10627
+160;Thüringen;43;21531;11465;10066
+160;Thüringen;44;22237;11870;10367
+160;Thüringen;45;23058;12196;10862
+160;Thüringen;46;25955;13884;12071
+160;Thüringen;47;29167;15489;13678
+160;Thüringen;48;29751;15539;14212
+160;Thüringen;49;30035;15614;14421
+160;Thüringen;50;30555;15712;14843
+160;Thüringen;51;31648;16028;15620
+160;Thüringen;52;33901;17320;16581
+160;Thüringen;53;34990;17701;17289
+160;Thüringen;54;36866;18650;18216
+160;Thüringen;55;37720;18928;18792
+160;Thüringen;56;37313;18683;18630
+160;Thüringen;57;38367;19129;19238
+160;Thüringen;58;36505;18182;18323
+160;Thüringen;59;36449;18208;18241
+160;Thüringen;60;33812;16770;17042
+160;Thüringen;61;33618;16612;17006
+160;Thüringen;62;34216;16830;17386
+160;Thüringen;63;34275;16709;17566
+160;Thüringen;64;33610;16337;17273
+160;Thüringen;65;33391;16250;17141
+160;Thüringen;66;32974;15976;16998
+160;Thüringen;67;32626;15729;16897
+160;Thüringen;68;30796;14587;16209
+160;Thüringen;69;27167;12978;14189
+160;Thüringen;70;23342;11028;12314
+160;Thüringen;71;22091;10341;11750
+160;Thüringen;72;17965;8219;9746
+160;Thüringen;73;16832;7660;9172
+160;Thüringen;74;24196;10963;13233
+160;Thüringen;75;131032;57200;73832
+160;Thüringen;80;93863;37594;56269
+160;Thüringen;85;43354;14630;28724
+160;Thüringen;90;21661;5116;16545
