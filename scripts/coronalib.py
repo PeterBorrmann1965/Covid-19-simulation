@@ -5,6 +5,9 @@ from scipy.stats import gamma
 import plotly.graph_objects as go
 from plotly.offline import plot
 
+statdef = {0: "not infected", 1: "immun or dead", 2: "infected",
+           3: "identified", 4: "dead (other)", 5: 'hospital',
+           6: 'intensive'}
 
 def infection_profile(gmean=7.0, gsd=3.4, nday=21):
     """Calc the infections profile."""
