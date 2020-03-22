@@ -8,7 +8,8 @@ age, agegroup, gender, family, contacts, dr = cl.readpop(
     "../data/population_new.csv", n=1800000)
 
 results = []
-for r0 in [2.0, 2.5, 3.0, 3.5, 5.0]:
+#for r0 in [2.0, 2.5, 3.0, 3.5, 5.0]:
+for r0 in [3.0]:
     for f in [1.0, 0.7, 0.5]:
         r = contacts * r0
         r = r * r0 / np.mean(r)

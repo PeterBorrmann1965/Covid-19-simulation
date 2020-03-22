@@ -62,7 +62,8 @@ def makeprofile_plot():
 
 
 def sim(age, gender, dr, r, gmean=7.0, gsd=3.4, nday=140, burnin=1000,
-        cutdown=25000, cutr=None):
+        cutdown=25000, cutr=None, prob_icu=0.05, mean_days_to_icu=12,
+        std_days_to_icu=3, mean_duration_icu=10, std_duration_icu=3):
     """Simulate model.
 
     Parameters:
@@ -75,6 +76,11 @@ def sim(age, gender, dr, r, gmean=7.0, gsd=3.4, nday=140, burnin=1000,
     gstd : std of the gamma distribution for the infections profile
     nday : number of days to simulated
     burnin : number of infections ro be reached to stop burnin
+    probicu : mean probility, that an infected needs icu care
+    mean_days_to_icu : mean days from infection to icucare
+    std_days_to_icu : std deviation of days to icu
+    mean_duration_icu : mean days on icu
+    std_duration_icu : std deviation of days to icu
 
     Returns:
     --------
@@ -94,11 +100,11 @@ def sim(age, gender, dr, r, gmean=7.0, gsd=3.4, nday=140, burnin=1000,
     # set ni individuals to infected
     state[0, np.random.choice(n, 20)] = 2
 
-    nstate = 5
+    nstate = 7
     statesum = np.zeros(shape=(nstate, nday))
     statesum[:, 0] = np.bincount(state[0, :], minlength=nstate)
 
-    # Precalculate profile
+    # Precalculate profile infection
     p = gmean**2/gsd**2
     b = gsd**2/gmean
     x = np.linspace(0, 28, num=29, dtype=("int"))
@@ -106,10 +112,33 @@ def sim(age, gender, dr, r, gmean=7.0, gsd=3.4, nday=140, burnin=1000,
     delay = x[1:29] - x[0:28]
     delay = np.ascontiguousarray(delay[::-1])
 
+    # Precalculate time to icu
+    p = mean_days_to_icu**2/std_days_to_icu**2
+    b = std_days_to_icu**2/mean_days_to_icu
+    x = np.linspace(0, 28, num=29, dtype=("int"))
+    x = gamma.cdf(x, a=p, scale=b)
+    delay_icu = x[1:29] - x[0:28]
+    delay_icu = np.ascontiguousarray(delay_icu[::-1])
+
+    # individual prob icu
+    ind_prob_icu = dr/np.mean(dr) * prob_icu
+    print("Mean prob icu:" + str(np.mean(ind_prob_icu)))
+
+    # Precalculate time to icu
+    p = mean_duration_icu**2/std_duration_icu**2
+    b = std_duration_icu**2/mean_duration_icu
+    x = np.linspace(0, 28, num=29, dtype=("int"))
+    x = gamma.cdf(x, a=p, scale=b)
+    duration_icu = x[1:29] - x[0:28]
+    duration_icu = np.ascontiguousarray(duration_icu[::-1])
+
+    # initialize arrays
     infections = np.zeros(shape=nday)
     infections[0] = np.sum(state[0, :] == 2)
     firstdayinfected = np.full(shape=n, fill_value=1000, dtype="int")
     firstdayinfected[state[0, :] == 2] = 0
+
+    firstdayicu = np.full(shape=n, fill_value=1000, dtype="int")
 
     # save the original r
     rstart = r
@@ -137,17 +166,42 @@ def sim(age, gender, dr, r, gmean=7.0, gsd=3.4, nday=140, burnin=1000,
 
         # Calculate the number of days infected
         days_infected = i - firstdayinfected
+
         # set all non dead cases with more than 27 days to status "immun"
         state[i, (days_infected > 27) & (state[i, :] != 4)] = 1
 
+        # for infected cases calcualate the probality of icu admission
+        days_infected_lim = np.clip(days_infected, 0, 27)
+        picu = delay_icu[days_infected_lim] * ind_prob_icu
+        rans = np.random.random(size=n)
+
+        # only those in state infected can go to icu
+        filt = (rans < picu) & (state[i, ] == 2)
+        state[i, filt] = 6
+
+        # calculate the number of days on icu
+        days_icu = np.clip(i - firstdayicu, 0, 27)
+
+        # Now we calculate the probability to move from icu out
+        rans = np.random.random(size=n)
+        prelease = duration_icu[days_icu]
+        filt = (rans < prelease) & (state[i, ] == 6)
+        state[i, filt] = 1
+        # release all people with more than 27 days on icu
+        state[i, days_icu == 27] = 1
+
         # infection probabilties by case
         pinf = r * newinf / n
+
         # only not infected people can be infected
         rans = np.random.random(size=n)
         filt = (rans < pinf) & (state[i, ] == 0)
         state[i, filt] = 2
+
+        # store first infections day
         firstdayinfected[filt] = i
-        # new infections
+
+        # number of new infections new infections
         infections[i] = np.sum(filt)
 
         statesum[:, i] = np.bincount(state[i, :], minlength=nstate)
@@ -163,8 +217,6 @@ def sim(age, gender, dr, r, gmean=7.0, gsd=3.4, nday=140, burnin=1000,
         else:
             r = rstart
 
-    #print("Expected infections:" + str(np.sum(expinf)))
-    #print("Realized infections:" + str(np.sum(infections)))
     return state, statesum, infections, day0
 
 
