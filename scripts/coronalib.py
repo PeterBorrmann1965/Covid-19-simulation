@@ -7,15 +7,21 @@ from plotly.offline import plot
 from plotly.subplots import make_subplots
 
 
-statdef = {0: "not infected", 1: "immun or dead", 2: "infected",
-           3: "identified", 4: "dead (other)", 5: 'hospital',
-           6: 'intensive'}
+statdef_en = {0: "not infected", 1: "immun or dead", 2: "infected",
+              3: "identified", 4: "dead (other)", 5: 'hospital',
+              6: 'intensive', 7: 'Covid-19 dead'}
+
+statdef_de = {0: "nicht infiziert", 1: "immun", 2: "infiziert",
+               3: "identifiziert", 4: "tod (andere Ursachen)",
+               5: 'hospitalisiert', 6: 'ICU', 7: 'tod durch Covid-19'}
+
+statdef = statdef_de
 
 
-def infection_profile(gmean=7.0, gsd=3.4, nday=21):
+def infection_profile(mean_serial=7.0, std_serial=3.4, nday=21):
     """Calc the infections profile."""
-    p = gmean**2/gsd**2
-    b = gsd**2/gmean
+    p = mean_serial**2/std_serial**2
+    b = std_serial**2/mean_serial
     x = np.linspace(0, nday, num=nday+1, dtype=("int"))
     y = gamma.cdf(x, a=p, scale=b)
     delay = np.zeros(nday+1)
@@ -61,9 +67,10 @@ def makeprofile_plot():
     inf2.write_image("pdf.png")
 
 
-def sim(age, gender, dr, r, gmean=7.0, gsd=3.4, nday=140, burnin=1000,
-        cutdown=25000, cutr=None, prob_icu=0.05, mean_days_to_icu=12,
-        std_days_to_icu=3, mean_duration_icu=10, std_duration_icu=3):
+def sim(age, gender, dr, r, mean_serial=7.0, std_serial=3.4, nday=140, burnin=20,
+        cutdown=25000, cutr=None, prob_icu=0.005, mean_days_to_icu=12,
+        std_days_to_icu=3, mean_duration_icu=10, std_duration_icu=3,
+        immunt0=0.0, icu_fatality=0.5):
     """Simulate model.
 
     Parameters:
@@ -72,7 +79,7 @@ def sim(age, gender, dr, r, gmean=7.0, gsd=3.4, nday=140, burnin=1000,
     gender :  array of length n with the gender of each individual
     dr :  array of length n with the daily mortality rate of each individual
     r : array of lenght n with the averay indivial r
-    gmean : mean of the gamma distribution for the infections profile
+    mean_serial : mean of the gamma distribution for the infections profile
     gstd : std of the gamma distribution for the infections profile
     nday : number of days to simulated
     burnin : number of infections ro be reached to stop burnin
@@ -81,6 +88,8 @@ def sim(age, gender, dr, r, gmean=7.0, gsd=3.4, nday=140, burnin=1000,
     std_days_to_icu : std deviation of days to icu
     mean_duration_icu : mean days on icu
     std_duration_icu : std deviation of days to icu
+    immunt0 : percentage immun at t0
+    icu_fataliy : percentage with fatal outcome
 
     Returns:
     --------
@@ -98,15 +107,17 @@ def sim(age, gender, dr, r, gmean=7.0, gsd=3.4, nday=140, burnin=1000,
     n = len(age)
     state = np.zeros(shape=(nday, n), dtype="uint8")
     # set ni individuals to infected
+    nimmun = int(immunt0*n)
+    state[0, np.random.choice(n, nimmun)] = 1
     state[0, np.random.choice(n, 20)] = 2
 
-    nstate = 7
+    nstate = 8
     statesum = np.zeros(shape=(nstate, nday))
     statesum[:, 0] = np.bincount(state[0, :], minlength=nstate)
 
     # Precalculate profile infection
-    p = gmean**2/gsd**2
-    b = gsd**2/gmean
+    p = mean_serial**2/std_serial**2
+    b = std_serial**2/mean_serial
     x = np.linspace(0, 28, num=29, dtype=("int"))
     x = gamma.cdf(x, a=p, scale=b)
     delay = x[1:29] - x[0:28]
@@ -148,6 +159,7 @@ def sim(age, gender, dr, r, gmean=7.0, gsd=3.4, nday=140, burnin=1000,
     day0 = -1
 
     expinf = []
+    rnow = []
     for i in range(1, nday):
         # set state to state day before
         state[i, :] = state[i-1, :]
@@ -187,6 +199,10 @@ def sim(age, gender, dr, r, gmean=7.0, gsd=3.4, nday=140, burnin=1000,
         prelease = duration_icu[days_icu]
         filt = (rans < prelease) & (state[i, ] == 6)
         state[i, filt] = 1
+        rans = np.random.random(size=n)
+        filt = np.where(filt & (rans < icu_fatality), True, False)
+        state[i, filt] = 7
+
         # release all people with more than 27 days on icu
         state[i, days_icu == 27] = 1
 
@@ -206,18 +222,19 @@ def sim(age, gender, dr, r, gmean=7.0, gsd=3.4, nday=140, burnin=1000,
 
         statesum[:, i] = np.bincount(state[i, :], minlength=nstate)
 
+        rnow.append(np.mean(r))
         # if the number of infections exceeds
-        if (np.sum(infections) > burnin) and (day0 == -1):
+        if (np.sum(statesum[6, i]) > burnin) and (day0 == -1):
             r = rstart
             day0 = i
 
         # if the number of infection exceeds cutdown r is devided by cutr
-        if (cutr is not None) and (statesum[2, i] > cutdown):
+        if (cutr is not None) and (statesum[6, i] > cutdown):
             r = cutr
         else:
             r = rstart
 
-    return state, statesum, infections, day0
+    return state, statesum, infections, day0, np.array(rnow, dtype="double")
 
 
 def readpop(filename, n=1000000):
@@ -253,7 +270,8 @@ def analysestate(state, title="Scenario", group=None, day0=0):
               '#e377c2', '#7f7f7f', '#bcbd22', '#17becf']
     # Create figure
     fig1 = make_subplots(rows=2, cols=2, row_heights=[0.3, 0.7],
-                         subplot_titles=("Ergebnisse", "Zustand", "Änderung"),
+                         subplot_titles=("Ergebnisse", "Zustand",
+                                         "Änderung zum Vortag (Delta)"),
                          specs=[[{"type": "table", "colspan": 2}, None],
                                 [{"type": "scatter"}, {"type": "scatter"}]])
 
@@ -271,11 +289,12 @@ def analysestate(state, title="Scenario", group=None, day0=0):
             if (nmax < nmaxnow) and (key == 2):
                 nmax = nmaxnow
             resnow = {}
-            resnow["Peaktag"] = np.argmax(statesumday[value]) -day0
+            resnow["Peaktag"] = np.argmax(statesumday[value]) - day0
             resnow["Peakwert"] = np.max(statesumday[value])
             resnow["Peakwert %"] = resnow["Peakwert"] / n * 100
             resnow["Endwert"] = statesumday[value][lastday]
-            resnow["Endwert %"] = resnow["Endwert"] / n * 100
+            resnow["Endwert %"] = resnow["Endwert"] / n * 10
+            resnow["Mittelwert Tage/EW"] = np.sum(statesumday[value]) / n
             results[value] = resnow
 
     for key, value in statdef.items():
@@ -299,6 +318,8 @@ def analysestate(state, title="Scenario", group=None, day0=0):
     results = pd.DataFrame.from_dict(results, orient="index")
     results['Peakwert %'] = results['Peakwert %'].map('{:,.1f}%'.format)
     results['Endwert %'] = results['Endwert %'].map('{:,.1f}%'.format)
+    results['Mittelwert Tage/EW'] =\
+        results['Mittelwert Tage/EW'].map('{:,.5f}'.format)
     results.reset_index(inplace=True)
     results.rename(columns={"index": "Zustand"})
     fig1.add_trace(go.Table(
@@ -314,6 +335,7 @@ def analysestate(state, title="Scenario", group=None, day0=0):
     fig1.update_yaxes(title_text="Anzahl", row=2, col=1)
     fig1.update_xaxes(title_text="Tag", row=2, col=2)
     fig1.update_yaxes(title_text="Anzahl", row=2, col=2)
+    fig1.update_yaxes(type="log", row=2, col=1)
 
     plot(fig1, filename="../figures/" + title + ".html")
     fig1.write_image("../figures/" + title + ".png")
