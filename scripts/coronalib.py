@@ -4,10 +4,13 @@ import numpy as np
 from scipy.stats import gamma
 import plotly.graph_objects as go
 from plotly.offline import plot
+from plotly.subplots import make_subplots
+
 
 statdef = {0: "not infected", 1: "immun or dead", 2: "infected",
            3: "identified", 4: "dead (other)", 5: 'hospital',
            6: 'intensive'}
+
 
 def infection_profile(gmean=7.0, gsd=3.4, nday=21):
     """Calc the infections profile."""
@@ -58,8 +61,8 @@ def makeprofile_plot():
     inf2.write_image("pdf.png")
 
 
-def sim(age, gender, dr, r, gmean=7.0, gsd=3.4, nday=140, ni=500,
-        cutdown=25000, cutr=0.7):
+def sim(age, gender, dr, r, gmean=7.0, gsd=3.4, nday=140, burnin=1000,
+        cutdown=25000, cutr=None):
     """Simulate model.
 
     Parameters:
@@ -71,7 +74,7 @@ def sim(age, gender, dr, r, gmean=7.0, gsd=3.4, nday=140, ni=500,
     gmean : mean of the gamma distribution for the infections profile
     gstd : std of the gamma distribution for the infections profile
     nday : number of days to simulated
-    ni : number of infections to be assigned in the initial population
+    burnin : number of infections ro be reached to stop burnin
 
     Returns:
     --------
@@ -87,9 +90,9 @@ def sim(age, gender, dr, r, gmean=7.0, gsd=3.4, nday=140, ni=500,
     """
     # start configuation
     n = len(age)
-    state = np.zeros(shape=(nday, n), dtype="int")
+    state = np.zeros(shape=(nday, n), dtype="uint8")
     # set ni individuals to infected
-    state[0, np.random.choice(n, ni)] = 2
+    state[0, np.random.choice(n, 20)] = 2
 
     nstate = 5
     statesum = np.zeros(shape=(nstate, nday))
@@ -108,6 +111,14 @@ def sim(age, gender, dr, r, gmean=7.0, gsd=3.4, nday=140, ni=500,
     firstdayinfected = np.full(shape=n, fill_value=1000, dtype="int")
     firstdayinfected[state[0, :] == 2] = 0
 
+    # save the original r
+    rstart = r
+    # start with a high r0 in the burn in phase
+    burn = 3.0 * r / np.mean(r)
+    r = burn
+    day0 = -1
+
+    expinf = []
     for i in range(1, nday):
         # set state to state day before
         state[i, :] = state[i-1, :]
@@ -116,6 +127,7 @@ def sim(age, gender, dr, r, gmean=7.0, gsd=3.4, nday=140, ni=500,
         imin = max(0, i-28)
         h = infections[imin: i]
         newinf = np.sum(h*delay[-len(h):])
+        expinf.append(newinf)
 
         # Generate randoms
         rans = np.random.random(size=n)
@@ -131,6 +143,7 @@ def sim(age, gender, dr, r, gmean=7.0, gsd=3.4, nday=140, ni=500,
         # infection probabilties by case
         pinf = r * newinf / n
         # only not infected people can be infected
+        rans = np.random.random(size=n)
         filt = (rans < pinf) & (state[i, ] == 0)
         state[i, filt] = 2
         firstdayinfected[filt] = i
@@ -138,10 +151,139 @@ def sim(age, gender, dr, r, gmean=7.0, gsd=3.4, nday=140, ni=500,
         infections[i] = np.sum(filt)
 
         statesum[:, i] = np.bincount(state[i, :], minlength=nstate)
-        # if the number of infection exceeds cutdown r is devided by cutr
-        if statesum[2, i] > cutdown:
-            r = r / np.mean(r) * cutr
-        else:
-            pass
 
-    return state, statesum, infections
+        # if the number of infections exceeds
+        if (np.sum(infections) > burnin) and (day0 == -1):
+            r = rstart
+            day0 = i
+
+        # if the number of infection exceeds cutdown r is devided by cutr
+        if (cutr is not None) and (statesum[2, i] > cutdown):
+            r = cutr
+        else:
+            r = rstart
+
+    #print("Expected infections:" + str(np.sum(expinf)))
+    #print("Realized infections:" + str(np.sum(infections)))
+    return state, statesum, infections, day0
+
+
+def readpop(filename, n=1000000):
+    """Read population data."""
+    popi = pd.read_csv(filename)
+    popi["N1M"] = np.around(popi.portion * n)
+    dn = n - np.sum(popi["N1M"])
+    nmax = np.argmax(popi.N1M)
+    popi.iloc[nmax, popi.columns.get_loc('N1M')] = dn +\
+        popi.iloc[nmax, popi.columns.get_loc('N1M')]
+    np.sum(popi["N1M"])
+
+    # Generate individuals by repeating the groups
+    age = np.repeat(popi.age, popi.N1M)
+    agegroup = np.repeat(popi.agegroup, popi.N1M)
+    gender = np.repeat(popi.gender, popi.N1M)
+    contacts = np.repeat(popi.contacts_mean, popi.N1M)
+    family = np.repeat(popi.family_factor, popi.N1M)
+
+    # normalize contacts to a mean of one
+    contacts = contacts / np.sum(contacts)*len(contacts)
+    dr = np.repeat(popi.deathrate, popi.N1M)
+
+    # Calculate daily mortality per case
+    dr = 1 - (1-dr)**(1/365)
+
+    return age, agegroup, gender, family, contacts, dr
+
+
+def analysestate(state, title="Scenario", group=None, day0=0):
+    """Visualize and explore simulation results."""
+    colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b',
+              '#e377c2', '#7f7f7f', '#bcbd22', '#17becf']
+    # Create figure
+    fig1 = make_subplots(rows=2, cols=2, row_heights=[0.3, 0.7],
+                         subplot_titles=("Ergebnisse", "Zustand", "Änderung"),
+                         specs=[[{"type": "table", "colspan": 2}, None],
+                                [{"type": "scatter"}, {"type": "scatter"}]])
+
+    statesumday = {}
+    nmax = 0
+    results = {}
+    lastday = state.shape[0]-1
+    n = state.shape[1]
+    for key, value in statdef.items():
+        statesumday[value] = np.array([np.sum((state[i, :] == key))
+                                       for i in range(0, state.shape[0])])
+        if max(statesumday[value]) > 0:
+            nmaxnow = np.max(np.where(statesumday[value] > 0))
+            # print(value + " " + str(nmaxnow))
+            if (nmax < nmaxnow) and (key == 2):
+                nmax = nmaxnow
+            resnow = {}
+            resnow["Peaktag"] = np.argmax(statesumday[value]) -day0
+            resnow["Peakwert"] = np.max(statesumday[value])
+            resnow["Peakwert %"] = resnow["Peakwert"] / n * 100
+            resnow["Endwert"] = statesumday[value][lastday]
+            resnow["Endwert %"] = resnow["Endwert"] / n * 100
+            results[value] = resnow
+
+    for key, value in statdef.items():
+        if max(statesumday[value]) > 0:
+            fig1.add_trace(go.Scatter(x=[dw-day0 for dw in range(0, nmax)],
+                                      y=statesumday[value][:nmax],
+                                      mode='lines', name=value,
+                                      legendgroup=value,
+                                      line_color=colors[key]),
+                           row=2, col=1)
+            deltastatesum = np.diff(statesumday[value][:nmax],
+                                    prepend=statesumday[value][0])
+            fig1.add_trace(go.Scatter(x=[dw-day0 for dw in range(0, nmax)],
+                                      y=deltastatesum,
+                                      mode='lines', name=value,
+                                      legendgroup=value,
+                                      showlegend=False,
+                                      line_color=colors[key]),
+                           row=2, col=2)
+
+    results = pd.DataFrame.from_dict(results, orient="index")
+    results['Peakwert %'] = results['Peakwert %'].map('{:,.1f}%'.format)
+    results['Endwert %'] = results['Endwert %'].map('{:,.1f}%'.format)
+    results.reset_index(inplace=True)
+    results.rename(columns={"index": "Zustand"})
+    fig1.add_trace(go.Table(
+        header=dict(values=list(results.columns),
+                    align='center'),
+        cells=dict(values=[results[c] for c in results.columns],
+                   align='right')
+        ), row=1, col=1)
+
+    fig1.update_layout(showlegend=True, title=title, legend_orientation="h",
+                       font=dict(family="Courier New, monospace", size=14))
+    fig1.update_xaxes(title_text="Tag", row=2, col=1)
+    fig1.update_yaxes(title_text="Anzahl", row=2, col=1)
+    fig1.update_xaxes(title_text="Tag", row=2, col=2)
+    fig1.update_yaxes(title_text="Anzahl", row=2, col=2)
+
+    plot(fig1, filename="../figures/" + title + ".html")
+    fig1.write_image("../figures/" + title + ".png")
+
+    nday = state.shape[0]
+
+    groupresults = []
+    if group is not None:
+        df = pd.DataFrame(group)
+        for i in range(1, nday):
+            df["state"] = state[i, :]
+            a = df.groupby(["group", "state"]).agg(n=("state", "count"))
+            a.reset_index(inplace=True)
+            a = a.pivot_table(values="n", columns="state",
+                              index=["group"], margins=True,
+                              aggfunc="sum", fill_value=0)
+            a.reset_index(inplace=True)
+            a.rename(columns=statdef, inplace=True)
+            a["not infected %"] = a["not infected"] / a["All"]*100
+            a["scenario"] = key
+            a["day"] = i
+            groupresults.append(a)
+
+        groupresults = pd.concat(groupresults)
+    return results, groupresults
