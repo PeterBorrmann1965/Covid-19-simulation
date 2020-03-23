@@ -6,7 +6,7 @@ The first version of this simulation project is intended to simulate the effects
 The current model has the following inputs: 
 
 Population: 
-- Number of individuals by age an gender for Germany  (Source: Statistisches Bundesamt)
+- Number of individuals by age, gender, and family status for Germany  (Source: Statistisches Bundesamt)
 - Mortality rate of each individual (Source: Statistisches Bundesamt)
 - Average daily contact rate (Source: https://journals.plos.org/plosmedicine/article/file?id=10.1371/journal.pmed.0050074&type=printable)
 
@@ -14,8 +14,11 @@ The model simulates the daily changes of each individual in the population with 
 0 - not infected 
 1 - immun or dead (due to infection)
 2 - infected 
-3 - infected and identified (currently not used)
-4 - dead (right now only based on general mortality rate)
+3 - infected and identified (not used)
+4 - dead (due to other reasons)
+5 - hospialized (not used)
+6 - ICU
+7 - dead ( Covid-19 )
 
 The infection profile is simulated with a gamma distribution. For Covid 19 we currently use a mean of 7.0 and a standard deviation of 3.4. 
 
