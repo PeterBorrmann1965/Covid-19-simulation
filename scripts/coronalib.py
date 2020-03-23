@@ -12,8 +12,8 @@ statdef_en = {0: "not infected", 1: "immun or dead", 2: "infected",
               6: 'intensive', 7: 'Covid-19 dead'}
 
 statdef_de = {0: "nicht infiziert", 1: "immun", 2: "infiziert",
-               3: "identifiziert", 4: "tod (andere Ursachen)",
-               5: 'hospitalisiert', 6: 'ICU', 7: 'tod durch Covid-19'}
+               3: "identifiziert", 4: "tod (Sonstige)",
+               5: 'hospitalisiert', 6: 'ICU', 7: 'tod (Covid-19)'}
 
 statdef = statdef_de
 
@@ -124,24 +124,33 @@ def sim(age, gender, dr, r, mean_serial=7.0, std_serial=3.4, nday=140, burnin=20
     delay = np.ascontiguousarray(delay[::-1])
 
     # Precalculate time to icu
-    p = mean_days_to_icu**2/std_days_to_icu**2
-    b = std_days_to_icu**2/mean_days_to_icu
-    x = np.linspace(0, 28, num=29, dtype=("int"))
-    x = gamma.cdf(x, a=p, scale=b)
-    delay_icu = x[1:29] - x[0:28]
-    delay_icu = np.ascontiguousarray(delay_icu[::-1])
+# =============================================================================
+#     p = mean_days_to_icu**2/std_days_to_icu**2
+#     b = std_days_to_icu**2/mean_days_to_icu
+#     x = np.linspace(0, 28, num=29, dtype=("int"))
+#     x = gamma.cdf(x, a=p, scale=b)
+#     delay_icu = x[1:29] - x[0:28]
+#     delay_icu = np.ascontiguousarray(delay_icu[::-1])
+# =============================================================================
+    time_to_icu = np.random.poisson(lam=mean_days_to_icu, size=n)
 
     # individual prob icu
     ind_prob_icu = dr/np.mean(dr) * prob_icu
+    # ind_prob_icu = prob_icu
     print("Mean prob icu:" + str(np.mean(ind_prob_icu)))
 
     # Precalculate time to icu
-    p = mean_duration_icu**2/std_duration_icu**2
-    b = std_duration_icu**2/mean_duration_icu
-    x = np.linspace(0, 28, num=29, dtype=("int"))
-    x = gamma.cdf(x, a=p, scale=b)
-    duration_icu = x[1:29] - x[0:28]
-    duration_icu = np.ascontiguousarray(duration_icu[::-1])
+# =============================================================================
+#     p = mean_duration_icu**2/std_duration_icu**2
+#     b = std_duration_icu**2/mean_duration_icu
+#     x = np.linspace(0, 28, num=29, dtype=("int"))
+#     y = gamma.cdf(x, a=p, scale=b)
+#     duration_icu = np.diff(y, prepend=0)
+#     #duration_icu = np.ascontiguousarray(duration_icu[::-1])
+#     duration_icu = np.ascontiguousarray(duration_icu)
+#     #print(np.sum(duration_icu))
+# =============================================================================
+    time_on_icu = np.random.poisson(lam=mean_duration_icu, size=n)
 
     # initialize arrays
     infections = np.zeros(shape=nday)
@@ -160,6 +169,7 @@ def sim(age, gender, dr, r, mean_serial=7.0, std_serial=3.4, nday=140, burnin=20
 
     expinf = []
     rnow = []
+    toticu = 0
     for i in range(1, nday):
         # set state to state day before
         state[i, :] = state[i-1, :]
@@ -174,37 +184,27 @@ def sim(age, gender, dr, r, mean_serial=7.0, std_serial=3.4, nday=140, burnin=20
         rans = np.random.random(size=n)
 
         # unconditional deaths
-        state[i, rans < dr] = 4
+        state[i, (rans < dr) & (state[i, :] != 7)] = 4
 
         # Calculate the number of days infected
         days_infected = i - firstdayinfected
 
         # set all non dead cases with more than 27 days to status "immun"
-        state[i, (days_infected > 27) & (state[i, :] != 4)] = 1
+        state[i, (days_infected > 30) & (state[i, :] != 4) &
+              (state[i, :] != 7) & (state[i, :] != 6)] = 1
 
-        # for infected cases calcualate the probality of icu admission
-        days_infected_lim = np.clip(days_infected, 0, 27)
-        picu = delay_icu[days_infected_lim] * ind_prob_icu
+        # for infected cases calculate the probability of icu admission
         rans = np.random.random(size=n)
-
-        # only those in state infected can go to icu
-        filt = (rans < picu) & (state[i, ] == 2)
+        filt = (time_to_icu == days_infected) & \
+            (rans < ind_prob_icu) &\
+            (state[i, :] == 2)
+        toticu = toticu + np.sum(filt)
         state[i, filt] = 6
+        firstdayicu[filt] = i
 
-        # calculate the number of days on icu
-        days_icu = np.clip(i - firstdayicu, 0, 27)
-
-        # Now we calculate the probability to move from icu out
-        rans = np.random.random(size=n)
-        prelease = duration_icu[days_icu]
-        filt = (rans < prelease) & (state[i, ] == 6)
-        state[i, filt] = 1
-        rans = np.random.random(size=n)
-        filt = np.where(filt & (rans < icu_fatality), True, False)
-        state[i, filt] = 7
-
-        # release all people with more than 27 days on icu
-        state[i, days_icu == 27] = 1
+        # Use the precalculated days to move out from ICU
+        state[i, time_on_icu == i - firstdayicu] = 1
+        state[i, (time_on_icu == i - firstdayicu) & (rans < icu_fatality)] = 7
 
         # infection probabilties by case
         pinf = r * newinf / n
@@ -234,13 +234,14 @@ def sim(age, gender, dr, r, mean_serial=7.0, std_serial=3.4, nday=140, burnin=20
         else:
             r = rstart
 
+    print("toticu:" + str(toticu))
     return state, statesum, infections, day0, np.array(rnow, dtype="double")
 
 
 def readpop(filename, n=1000000):
     """Read population data."""
     popi = pd.read_csv(filename)
-    popi["N1M"] = np.around(popi.portion * n)
+    popi["N1M"] = np.around(popi.portion * n).astype("int")
     dn = n - np.sum(popi["N1M"])
     nmax = np.argmax(popi.N1M)
     popi.iloc[nmax, popi.columns.get_loc('N1M')] = dn +\
@@ -269,7 +270,7 @@ def analysestate(state, title="Scenario", group=None, day0=0):
     colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b',
               '#e377c2', '#7f7f7f', '#bcbd22', '#17becf']
     # Create figure
-    fig1 = make_subplots(rows=2, cols=2, row_heights=[0.3, 0.7],
+    fig1 = make_subplots(rows=2, cols=2, row_heights=[0.4, 0.6],
                          subplot_titles=("Ergebnisse", "Zustand",
                                          "Änderung zum Vortag (Delta)"),
                          specs=[[{"type": "table", "colspan": 2}, None],
@@ -293,8 +294,9 @@ def analysestate(state, title="Scenario", group=None, day0=0):
             resnow["Peakwert"] = np.max(statesumday[value])
             resnow["Peakwert %"] = resnow["Peakwert"] / n * 100
             resnow["Endwert"] = statesumday[value][lastday]
-            resnow["Endwert %"] = resnow["Endwert"] / n * 10
-            resnow["Mittelwert Tage/EW"] = np.sum(statesumday[value]) / n
+            resnow["Endwert %"] = resnow["Endwert"] / n * 100
+            #resnow["Mind. 1 Tag"] = np.sum(np.max(state == key, axis=0))
+            #resnow["Mittelwert Tage/EW"] = np.sum(statesumday[value]) / n
             results[value] = resnow
 
     for key, value in statdef.items():
@@ -316,10 +318,10 @@ def analysestate(state, title="Scenario", group=None, day0=0):
                            row=2, col=2)
 
     results = pd.DataFrame.from_dict(results, orient="index")
-    results['Peakwert %'] = results['Peakwert %'].map('{:,.1f}%'.format)
-    results['Endwert %'] = results['Endwert %'].map('{:,.1f}%'.format)
-    results['Mittelwert Tage/EW'] =\
-        results['Mittelwert Tage/EW'].map('{:,.5f}'.format)
+    results['Peakwert %'] = results['Peakwert %'].map('{:,.3f}%'.format)
+    results['Endwert %'] = results['Endwert %'].map('{:,.3f}%'.format)
+    #results['Mittelwert Tage/EW'] =\
+    #    results['Mittelwert Tage/EW'].map('{:,.5f}'.format)
     results.reset_index(inplace=True)
     results.rename(columns={"index": "Zustand"})
     fig1.add_trace(go.Table(
@@ -338,7 +340,7 @@ def analysestate(state, title="Scenario", group=None, day0=0):
     fig1.update_yaxes(type="log", row=2, col=1)
 
     plot(fig1, filename="../figures/" + title + ".html")
-    fig1.write_image("../figures/" + title + ".png")
+    fig1.write_image("../figures/" + title + ".png", width=1500, height=1000)
 
     nday = state.shape[0]
 
