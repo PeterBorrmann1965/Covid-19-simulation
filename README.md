@@ -62,7 +62,7 @@ The hospital index should be a quite good indicator for the impact on the health
 * Collection of articels and data on Covid-19, overview on parameter estimates https://github.com/midas-network/COVID-19
 
 ## Contributors (direct and indirect)
-Dr. Tobias Sproll
-Simon Hommel
-Priv.-Doz. Dr. Peter Borrmann
+* Dr. Tobias Sproll
+* Simon Hommel
+* Priv.-Doz. Dr. Peter Borrmann
 
