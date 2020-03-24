@@ -70,7 +70,7 @@ def makeprofile_plot():
 def sim(age, gender, dr, r, mean_serial=7.0, std_serial=3.4, nday=140, burnin=20,
         cutdown=25000, cutr=None, prob_icu=0.005, mean_days_to_icu=12,
         std_days_to_icu=3, mean_duration_icu=10, std_duration_icu=3,
-        immunt0=0.0, icu_fatality=0.5):
+        immunt0=0.0, icu_fatality=0.5, long_term_death=False):
     """Simulate model.
 
     Parameters:
@@ -167,7 +167,6 @@ def sim(age, gender, dr, r, mean_serial=7.0, std_serial=3.4, nday=140, burnin=20
     r = burn
     day0 = -1
 
-    expinf = []
     rnow = []
     toticu = 0
     for i in range(1, nday):
@@ -178,20 +177,18 @@ def sim(age, gender, dr, r, mean_serial=7.0, std_serial=3.4, nday=140, burnin=20
         imin = max(0, i-28)
         h = infections[imin: i]
         newinf = np.sum(h*delay[-len(h):])
-        expinf.append(newinf)
 
-        # Generate randoms
-        rans = np.random.random(size=n)
 
         # unconditional deaths
-        state[i, (rans < dr) & (state[i, :] != 7)] = 4
+        if long_term_death:
+            rans = np.random.random(size=n)
+            state[i, (rans < dr) & (state[i, :] != 7)] = 4
 
         # Calculate the number of days infected
         days_infected = i - firstdayinfected
 
-        # set all non dead cases with more than 27 days to status "immun"
-        state[i, (days_infected > 30) & (state[i, :] != 4) &
-              (state[i, :] != 7) & (state[i, :] != 6)] = 1
+        # set all infected and identified case with more than 30 days to immun
+        state[i, (days_infected > 30) & (state[i, :] < 4)] = 1
 
         # for infected cases calculate the probability of icu admission
         rans = np.random.random(size=n)
@@ -203,14 +200,17 @@ def sim(age, gender, dr, r, mean_serial=7.0, std_serial=3.4, nday=140, burnin=20
         firstdayicu[filt] = i
 
         # Use the precalculated days to move out from ICU
-        state[i, time_on_icu == i - firstdayicu] = 1
-        state[i, (time_on_icu == i - firstdayicu) & (rans < icu_fatality)] = 7
+        # rans = np.random.random(size=n)
+        filt = time_on_icu == i - firstdayicu
+        state[i, filt] = 1
+        state[i, filt & (rans < icu_fatality)] = 7
 
         # infection probabilties by case
         pinf = r * newinf / n
 
         # only not infected people can be infected
-        rans = np.random.random(size=n)
+        # We can reuse the last random number
+        # rans = np.random.random(size=n)
         filt = (rans < pinf) & (state[i, ] == 0)
         state[i, filt] = 2
 
@@ -275,16 +275,18 @@ def analysestate(state, title="Scenario", group=None, day0=0):
                                          "Änderung zum Vortag (Delta)"),
                          specs=[[{"type": "table", "colspan": 2}, None],
                                 [{"type": "scatter"}, {"type": "scatter"}]])
-
+    
     statesumday = {}
     nmax = 0
     results = {}
     lastday = state.shape[0]-1
     n = state.shape[1]
+    ngraph = 0
     for key, value in statdef.items():
         statesumday[value] = np.array([np.sum((state[i, :] == key))
                                        for i in range(0, state.shape[0])])
         if max(statesumday[value]) > 0:
+            ngraph = ngraph + 1
             nmaxnow = np.max(np.where(statesumday[value] > 0))
             # print(value + " " + str(nmaxnow))
             if (nmax < nmaxnow) and (key == 2):
@@ -299,8 +301,15 @@ def analysestate(state, title="Scenario", group=None, day0=0):
             #resnow["Mittelwert Tage/EW"] = np.sum(statesumday[value]) / n
             results[value] = resnow
 
+
+    fig2 = make_subplots(rows=ngraph, cols=2, column_titles = 
+                         ("Zustand","Änderung zum Vortag (Delta)"),
+                         shared_xaxes=True)
+
+    k = 0 
     for key, value in statdef.items():
         if max(statesumday[value]) > 0:
+            k = k + 1
             fig1.add_trace(go.Scatter(x=[dw-day0 for dw in range(0, nmax)],
                                       y=statesumday[value][:nmax],
                                       mode='lines', name=value,
@@ -317,10 +326,25 @@ def analysestate(state, title="Scenario", group=None, day0=0):
                                       line_color=colors[key]),
                            row=2, col=2)
 
+            fig2.add_trace(go.Scatter(x=[dw-day0 for dw in range(0, nmax)],
+                                      y=statesumday[value][:nmax],
+                                      mode='lines', name=value,
+                                      legendgroup=value,
+                                      line_color=colors[key]),
+                           row=k, col=1)
+
+            fig2.add_trace(go.Scatter(x=[dw-day0 for dw in range(0, nmax)],
+                                      y=deltastatesum,
+                                      mode='lines', name=value,
+                                      legendgroup=value,
+                                      showlegend=False,
+                                      line_color=colors[key]),
+                           row=k, col=2)
+
     results = pd.DataFrame.from_dict(results, orient="index")
     results['Peakwert %'] = results['Peakwert %'].map('{:,.3f}%'.format)
     results['Endwert %'] = results['Endwert %'].map('{:,.3f}%'.format)
-    #results['Mittelwert Tage/EW'] =\
+    # results['Mittelwert Tage/EW'] =\
     #    results['Mittelwert Tage/EW'].map('{:,.5f}'.format)
     results.reset_index(inplace=True)
     results.rename(columns={"index": "Zustand"})
@@ -338,12 +362,19 @@ def analysestate(state, title="Scenario", group=None, day0=0):
     fig1.update_xaxes(title_text="Tag", row=2, col=2)
     fig1.update_yaxes(title_text="Anzahl", row=2, col=2)
     fig1.update_yaxes(type="log", row=2, col=1)
+    
+    fig2.update_layout(showlegend=True, title=title, legend_orientation="h",
+                       font=dict(family="Courier New, monospace", size=14))
+    fig2.update_xaxes(title_text="Tag", row=ngraph, col=1)
+    fig2.update_xaxes(title_text="Tag", row=ngraph, col=2)
+    for k in range(0, ngraph):
+        fig2.update_yaxes(title_text="Anzahl", row=k+1, col=1)
 
     plot(fig1, filename="../figures/" + title + ".html")
     fig1.write_image("../figures/" + title + ".png", width=1500, height=1000)
+    plot(fig2, filename="../figures/" + title + "_linear.html")
 
     nday = state.shape[0]
-
     groupresults = []
     if group is not None:
         df = pd.DataFrame(group)
@@ -363,3 +394,59 @@ def analysestate(state, title="Scenario", group=None, day0=0):
 
         groupresults = pd.concat(groupresults)
     return results, groupresults
+
+
+def analyse_cfr(statesum, delay, darkrate, cfr, timetodeath):
+    """Analyse the case fatality rates.
+
+    Parameters
+    ----------
+    statesum : resuls from covid-19 sim
+    delay : delay between infection and reporting
+    darkrate: percentage of infections indentified
+
+    """
+    # The cumalated infection are immun + infected + intensive + corona death +
+    # hospital
+    cuminfected = statesum[1]+statesum[2]+statesum[7]+statesum[6] + statesum[5]
+
+    # newinfections
+    newinfections = np.diff(cuminfected, prepend=0)
+
+    # reported
+    reported = np.empty_like(cuminfected)
+    reported[:delay] = 0
+    reported[delay:] = np.around(darkrate * cuminfected[:-delay]).astype(int)
+    # Constant line
+    cfr_real = cfr * np.ones(shape=len(reported))
+
+    # corrected
+    corrected = np.empty_like(cuminfected)
+    corrected[:timetodeath] = 0
+    corrected[timetodeath:] = cuminfected[:-timetodeath]
+    corrected = statesum[7] / corrected
+
+    crude_rate = statesum[7]/cuminfected
+    crude_reported = statesum[7]/reported
+    nmax = np.argmax(statesum[7])
+
+    fig1 = make_subplots(rows=2, cols=1, subplot_titles=
+                         ("Crude Case fatality Rate", "neue Infektionen"))
+    fig1.add_trace(go.Scatter(y=crude_rate[:nmax], mode='lines',
+                              name="crude"), row=1, col=1)
+    fig1.add_trace(go.Scatter(y=crude_reported[:nmax], mode='lines',
+                              name="crude reported"), row=1, col=1)
+    fig1.add_trace(go.Scatter(y=cfr_real[:nmax], mode='lines',
+                              name="real"), row=1, col=1)
+    fig1.add_trace(go.Scatter(y=corrected[:nmax], mode='lines',
+                              name="korrigiert"), row=1, col=1)
+    fig1.add_trace(go.Scatter(y=newinfections[:nmax], mode='lines',
+                              name="neue Infektionen"), row=2, col=1)
+    fig1.update_xaxes(title_text="Tag", row=1, col=1)
+    fig1.update_xaxes(title_text="Tag", row=2, col=1)
+    fig1.update_yaxes(title_text="CFR", row=1, col=1)
+    fig1.update_yaxes(title_text="Anzahl", row=2, col=1)
+    plot(fig1, filename="../figures/cfr2.html")
+    return
+
+

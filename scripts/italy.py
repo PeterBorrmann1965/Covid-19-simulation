@@ -201,8 +201,21 @@ for reg in regionen.denominazione_regione.unique():
     # Update title and height
     fig.update_layout(height=800, width=1200, showlegend=False, title=reg)
     fig.write_image("../figures/test_"+reg+".png")
-
-    plot(fig)
+    
+    fig = go.Figure()
+    fig.update_layout(height=800, width=1200, showlegend=True, title=reg,
+                      legend_orientation="h",
+                       font=dict(family="Courier New, monospace", size=16))
+    fig.add_trace(go.Scatter(x=region.data, y=region.Tote, name="Tote"))
+    fig.add_trace(go.Scatter(x=region.data, y=region.terapia_intensiva,
+                             name="ICU"))
+    fig.add_trace(go.Scatter(x=region.data, y=region.totale_ospedalizzati/4,
+                             name="Krankenhaus/4 (RKI Bedarf)"))
+    fig.update_xaxes(title_text="Datum")
+    fig.update_yaxes(title_text="Anzahl")
+    fig.write_image("../figures/ICU_Auslastung"+reg+".png")
+    # plot(fig)
+    # plot(fig)
     reglist.append(region)
 
 regionen_new = pd.concat(reglist)

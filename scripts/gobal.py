@@ -17,6 +17,7 @@ reported = reported.melt(value_name="cases", var_name="date", id_vars=[
 
 reported["date"] = pd.to_datetime(reported["date"], infer_datetime_format=True)
 
-germany = reported[reported["Country/Region"] == "Germany"]
+germany = reported[reported["Country/Region"] == "Germany"].copy()
 germany["newcases"] = np.diff(germany.cases, prepend=0)
-
+aux = np.array([0]+list(germany.cases[:-1]), copy=True)
+germany["yesterday"] = aux
