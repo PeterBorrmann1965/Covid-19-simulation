@@ -12,8 +12,8 @@ statdef_en = {0: "not infected", 1: "immun or dead", 2: "infected",
               6: 'intensive', 7: 'Covid-19 dead'}
 
 statdef_de = {0: "nicht infiziert", 1: "immun", 2: "infiziert",
-               3: "identifiziert", 4: "tod (andere Ursachen)",
-               5: 'hospitalisiert', 6: 'ICU', 7: 'tod durch Covid-19'}
+               3: "identifiziert", 4: "tod (Sonstige)",
+               5: 'hospitalisiert', 6: 'ICU', 7: 'tod (Covid-19)'}
 
 statdef = statdef_de
 
@@ -70,7 +70,7 @@ def makeprofile_plot():
 def sim(age, gender, dr, r, mean_serial=7.0, std_serial=3.4, nday=140, burnin=20,
         cutdown=25000, cutr=None, prob_icu=0.005, mean_days_to_icu=12,
         std_days_to_icu=3, mean_duration_icu=10, std_duration_icu=3,
-        immunt0=0.0, icu_fatality=0.5):
+        immunt0=0.0, icu_fatality=0.5, long_term_death=False):
     """Simulate model.
 
     Parameters:
@@ -124,24 +124,33 @@ def sim(age, gender, dr, r, mean_serial=7.0, std_serial=3.4, nday=140, burnin=20
     delay = np.ascontiguousarray(delay[::-1])
 
     # Precalculate time to icu
-    p = mean_days_to_icu**2/std_days_to_icu**2
-    b = std_days_to_icu**2/mean_days_to_icu
-    x = np.linspace(0, 28, num=29, dtype=("int"))
-    x = gamma.cdf(x, a=p, scale=b)
-    delay_icu = x[1:29] - x[0:28]
-    delay_icu = np.ascontiguousarray(delay_icu[::-1])
+# =============================================================================
+#     p = mean_days_to_icu**2/std_days_to_icu**2
+#     b = std_days_to_icu**2/mean_days_to_icu
+#     x = np.linspace(0, 28, num=29, dtype=("int"))
+#     x = gamma.cdf(x, a=p, scale=b)
+#     delay_icu = x[1:29] - x[0:28]
+#     delay_icu = np.ascontiguousarray(delay_icu[::-1])
+# =============================================================================
+    time_to_icu = np.random.poisson(lam=mean_days_to_icu, size=n)
 
     # individual prob icu
     ind_prob_icu = dr/np.mean(dr) * prob_icu
+    # ind_prob_icu = prob_icu
     print("Mean prob icu:" + str(np.mean(ind_prob_icu)))
 
     # Precalculate time to icu
-    p = mean_duration_icu**2/std_duration_icu**2
-    b = std_duration_icu**2/mean_duration_icu
-    x = np.linspace(0, 28, num=29, dtype=("int"))
-    x = gamma.cdf(x, a=p, scale=b)
-    duration_icu = x[1:29] - x[0:28]
-    duration_icu = np.ascontiguousarray(duration_icu[::-1])
+# =============================================================================
+#     p = mean_duration_icu**2/std_duration_icu**2
+#     b = std_duration_icu**2/mean_duration_icu
+#     x = np.linspace(0, 28, num=29, dtype=("int"))
+#     y = gamma.cdf(x, a=p, scale=b)
+#     duration_icu = np.diff(y, prepend=0)
+#     #duration_icu = np.ascontiguousarray(duration_icu[::-1])
+#     duration_icu = np.ascontiguousarray(duration_icu)
+#     #print(np.sum(duration_icu))
+# =============================================================================
+    time_on_icu = np.random.poisson(lam=mean_duration_icu, size=n)
 
     # initialize arrays
     infections = np.zeros(shape=nday)
@@ -158,8 +167,8 @@ def sim(age, gender, dr, r, mean_serial=7.0, std_serial=3.4, nday=140, burnin=20
     r = burn
     day0 = -1
 
-    expinf = []
     rnow = []
+    toticu = 0
     for i in range(1, nday):
         # set state to state day before
         state[i, :] = state[i-1, :]
@@ -168,49 +177,40 @@ def sim(age, gender, dr, r, mean_serial=7.0, std_serial=3.4, nday=140, burnin=20
         imin = max(0, i-28)
         h = infections[imin: i]
         newinf = np.sum(h*delay[-len(h):])
-        expinf.append(newinf)
 
-        # Generate randoms
-        rans = np.random.random(size=n)
 
         # unconditional deaths
-        state[i, rans < dr] = 4
+        if long_term_death:
+            rans = np.random.random(size=n)
+            state[i, (rans < dr) & (state[i, :] != 7)] = 4
 
         # Calculate the number of days infected
         days_infected = i - firstdayinfected
 
-        # set all non dead cases with more than 27 days to status "immun"
-        state[i, (days_infected > 27) & (state[i, :] != 4)] = 1
+        # set all infected and identified case with more than 30 days to immun
+        state[i, (days_infected > 30) & (state[i, :] < 4)] = 1
 
-        # for infected cases calcualate the probality of icu admission
-        days_infected_lim = np.clip(days_infected, 0, 27)
-        picu = delay_icu[days_infected_lim] * ind_prob_icu
+        # for infected cases calculate the probability of icu admission
         rans = np.random.random(size=n)
-
-        # only those in state infected can go to icu
-        filt = (rans < picu) & (state[i, ] == 2)
+        filt = (time_to_icu == days_infected) & \
+            (rans < ind_prob_icu) &\
+            (state[i, :] == 2)
+        toticu = toticu + np.sum(filt)
         state[i, filt] = 6
+        firstdayicu[filt] = i
 
-        # calculate the number of days on icu
-        days_icu = np.clip(i - firstdayicu, 0, 27)
-
-        # Now we calculate the probability to move from icu out
-        rans = np.random.random(size=n)
-        prelease = duration_icu[days_icu]
-        filt = (rans < prelease) & (state[i, ] == 6)
+        # Use the precalculated days to move out from ICU
+        # rans = np.random.random(size=n)
+        filt = time_on_icu == i - firstdayicu
         state[i, filt] = 1
-        rans = np.random.random(size=n)
-        filt = np.where(filt & (rans < icu_fatality), True, False)
-        state[i, filt] = 7
-
-        # release all people with more than 27 days on icu
-        state[i, days_icu == 27] = 1
+        state[i, filt & (rans < icu_fatality)] = 7
 
         # infection probabilties by case
         pinf = r * newinf / n
 
         # only not infected people can be infected
-        rans = np.random.random(size=n)
+        # We can reuse the last random number
+        # rans = np.random.random(size=n)
         filt = (rans < pinf) & (state[i, ] == 0)
         state[i, filt] = 2
 
@@ -234,13 +234,14 @@ def sim(age, gender, dr, r, mean_serial=7.0, std_serial=3.4, nday=140, burnin=20
         else:
             r = rstart
 
+    print("toticu:" + str(toticu))
     return state, statesum, infections, day0, np.array(rnow, dtype="double")
 
 
 def readpop(filename, n=1000000):
     """Read population data."""
     popi = pd.read_csv(filename)
-    popi["N1M"] = np.around(popi.portion * n)
+    popi["N1M"] = np.around(popi.portion * n).astype("int")
     dn = n - np.sum(popi["N1M"])
     nmax = np.argmax(popi.N1M)
     popi.iloc[nmax, popi.columns.get_loc('N1M')] = dn +\
@@ -269,21 +270,23 @@ def analysestate(state, title="Scenario", group=None, day0=0):
     colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b',
               '#e377c2', '#7f7f7f', '#bcbd22', '#17becf']
     # Create figure
-    fig1 = make_subplots(rows=2, cols=2, row_heights=[0.3, 0.7],
+    fig1 = make_subplots(rows=2, cols=2, row_heights=[0.4, 0.6],
                          subplot_titles=("Ergebnisse", "Zustand",
                                          "Änderung zum Vortag (Delta)"),
                          specs=[[{"type": "table", "colspan": 2}, None],
                                 [{"type": "scatter"}, {"type": "scatter"}]])
-
+    
     statesumday = {}
     nmax = 0
     results = {}
     lastday = state.shape[0]-1
     n = state.shape[1]
+    ngraph = 0
     for key, value in statdef.items():
         statesumday[value] = np.array([np.sum((state[i, :] == key))
                                        for i in range(0, state.shape[0])])
         if max(statesumday[value]) > 0:
+            ngraph = ngraph + 1
             nmaxnow = np.max(np.where(statesumday[value] > 0))
             # print(value + " " + str(nmaxnow))
             if (nmax < nmaxnow) and (key == 2):
@@ -293,12 +296,20 @@ def analysestate(state, title="Scenario", group=None, day0=0):
             resnow["Peakwert"] = np.max(statesumday[value])
             resnow["Peakwert %"] = resnow["Peakwert"] / n * 100
             resnow["Endwert"] = statesumday[value][lastday]
-            resnow["Endwert %"] = resnow["Endwert"] / n * 10
-            resnow["Mittelwert Tage/EW"] = np.sum(statesumday[value]) / n
+            resnow["Endwert %"] = resnow["Endwert"] / n * 100
+            #resnow["Mind. 1 Tag"] = np.sum(np.max(state == key, axis=0))
+            #resnow["Mittelwert Tage/EW"] = np.sum(statesumday[value]) / n
             results[value] = resnow
 
+
+    fig2 = make_subplots(rows=ngraph, cols=2, column_titles = 
+                         ("Zustand","Änderung zum Vortag (Delta)"),
+                         shared_xaxes=True)
+
+    k = 0 
     for key, value in statdef.items():
         if max(statesumday[value]) > 0:
+            k = k + 1
             fig1.add_trace(go.Scatter(x=[dw-day0 for dw in range(0, nmax)],
                                       y=statesumday[value][:nmax],
                                       mode='lines', name=value,
@@ -315,11 +326,26 @@ def analysestate(state, title="Scenario", group=None, day0=0):
                                       line_color=colors[key]),
                            row=2, col=2)
 
+            fig2.add_trace(go.Scatter(x=[dw-day0 for dw in range(0, nmax)],
+                                      y=statesumday[value][:nmax],
+                                      mode='lines', name=value,
+                                      legendgroup=value,
+                                      line_color=colors[key]),
+                           row=k, col=1)
+
+            fig2.add_trace(go.Scatter(x=[dw-day0 for dw in range(0, nmax)],
+                                      y=deltastatesum,
+                                      mode='lines', name=value,
+                                      legendgroup=value,
+                                      showlegend=False,
+                                      line_color=colors[key]),
+                           row=k, col=2)
+
     results = pd.DataFrame.from_dict(results, orient="index")
-    results['Peakwert %'] = results['Peakwert %'].map('{:,.1f}%'.format)
-    results['Endwert %'] = results['Endwert %'].map('{:,.1f}%'.format)
-    results['Mittelwert Tage/EW'] =\
-        results['Mittelwert Tage/EW'].map('{:,.5f}'.format)
+    results['Peakwert %'] = results['Peakwert %'].map('{:,.3f}%'.format)
+    results['Endwert %'] = results['Endwert %'].map('{:,.3f}%'.format)
+    # results['Mittelwert Tage/EW'] =\
+    #    results['Mittelwert Tage/EW'].map('{:,.5f}'.format)
     results.reset_index(inplace=True)
     results.rename(columns={"index": "Zustand"})
     fig1.add_trace(go.Table(
@@ -336,12 +362,19 @@ def analysestate(state, title="Scenario", group=None, day0=0):
     fig1.update_xaxes(title_text="Tag", row=2, col=2)
     fig1.update_yaxes(title_text="Anzahl", row=2, col=2)
     fig1.update_yaxes(type="log", row=2, col=1)
+    
+    fig2.update_layout(showlegend=True, title=title, legend_orientation="h",
+                       font=dict(family="Courier New, monospace", size=14))
+    fig2.update_xaxes(title_text="Tag", row=ngraph, col=1)
+    fig2.update_xaxes(title_text="Tag", row=ngraph, col=2)
+    for k in range(0, ngraph):
+        fig2.update_yaxes(title_text="Anzahl", row=k+1, col=1)
 
     plot(fig1, filename="../figures/" + title + ".html")
-    fig1.write_image("../figures/" + title + ".png")
+    fig1.write_image("../figures/" + title + ".png", width=1500, height=1000)
+    plot(fig2, filename="../figures/" + title + "_linear.html")
 
     nday = state.shape[0]
-
     groupresults = []
     if group is not None:
         df = pd.DataFrame(group)
@@ -361,3 +394,59 @@ def analysestate(state, title="Scenario", group=None, day0=0):
 
         groupresults = pd.concat(groupresults)
     return results, groupresults
+
+
+def analyse_cfr(statesum, delay, darkrate, cfr, timetodeath):
+    """Analyse the case fatality rates.
+
+    Parameters
+    ----------
+    statesum : resuls from covid-19 sim
+    delay : delay between infection and reporting
+    darkrate: percentage of infections indentified
+
+    """
+    # The cumalated infection are immun + infected + intensive + corona death +
+    # hospital
+    cuminfected = statesum[1]+statesum[2]+statesum[7]+statesum[6] + statesum[5]
+
+    # newinfections
+    newinfections = np.diff(cuminfected, prepend=0)
+
+    # reported
+    reported = np.empty_like(cuminfected)
+    reported[:delay] = 0
+    reported[delay:] = np.around(darkrate * cuminfected[:-delay]).astype(int)
+    # Constant line
+    cfr_real = cfr * np.ones(shape=len(reported))
+
+    # corrected
+    corrected = np.empty_like(cuminfected)
+    corrected[:timetodeath] = 0
+    corrected[timetodeath:] = cuminfected[:-timetodeath]
+    corrected = statesum[7] / corrected
+
+    crude_rate = statesum[7]/cuminfected
+    crude_reported = statesum[7]/reported
+    nmax = np.argmax(statesum[7])
+
+    fig1 = make_subplots(rows=2, cols=1, subplot_titles=
+                         ("Crude Case fatality Rate", "neue Infektionen"))
+    fig1.add_trace(go.Scatter(y=crude_rate[:nmax], mode='lines',
+                              name="crude"), row=1, col=1)
+    fig1.add_trace(go.Scatter(y=crude_reported[:nmax], mode='lines',
+                              name="crude reported"), row=1, col=1)
+    fig1.add_trace(go.Scatter(y=cfr_real[:nmax], mode='lines',
+                              name="real"), row=1, col=1)
+    fig1.add_trace(go.Scatter(y=corrected[:nmax], mode='lines',
+                              name="korrigiert"), row=1, col=1)
+    fig1.add_trace(go.Scatter(y=newinfections[:nmax], mode='lines',
+                              name="neue Infektionen"), row=2, col=1)
+    fig1.update_xaxes(title_text="Tag", row=1, col=1)
+    fig1.update_xaxes(title_text="Tag", row=2, col=1)
+    fig1.update_yaxes(title_text="CFR", row=1, col=1)
+    fig1.update_yaxes(title_text="Anzahl", row=2, col=1)
+    plot(fig1, filename="../figures/cfr2.html")
+    return
+
+
