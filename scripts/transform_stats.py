@@ -65,4 +65,12 @@ aux["family_factor"] = np.where(aux.family.isin(
 aux2 = pd.read_csv("../data/population_germany.csv")
 aux = aux.merge(aux2[["age", "gender", "agegroup", "contacts_mean"]],
                 on=["age", "gender"], how="left")
-aux.to_csv("../data/population_germany_v2.csv", index=False)
+aux.to_csv("../data/population_germany_v3.csv", index=False)
+aux["tote"] = aux["cnt"]*aux["deathrate"]
+aux["tote"] = aux["tote"]*100000 / np.sum(aux["tote"])
+aux["lost"] = aux["tote"] * aux["lebenserwartung"]
+np.sum(aux.lost)/100000
+
+
+
+

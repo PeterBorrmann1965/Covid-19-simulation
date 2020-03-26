@@ -5,6 +5,7 @@ from scipy.stats import gamma
 import plotly.graph_objects as go
 from plotly.offline import plot
 from plotly.subplots import make_subplots
+import scipy.stats
 
 
 statdef_en = {0: "not infected", 1: "immun or dead", 2: "infected",
@@ -70,7 +71,8 @@ def makeprofile_plot():
 def sim(age, gender, dr, r, mean_serial=7.0, std_serial=3.4, nday=140, burnin=20,
         cutdown=25000, cutr=None, prob_icu=0.005, mean_days_to_icu=12,
         std_days_to_icu=3, mean_duration_icu=10, std_duration_icu=3,
-        immunt0=0.0, icu_fatality=0.5, long_term_death=False):
+        immunt0=0.0, icu_fatality=0.5, long_term_death=False, hnr=None,
+        persons=None, com_attack_rate=0.6):
     """Simulate model.
 
     Parameters:
@@ -90,6 +92,9 @@ def sim(age, gender, dr, r, mean_serial=7.0, std_serial=3.4, nday=140, burnin=20
     std_duration_icu : std deviation of days to icu
     immunt0 : percentage immun at t0
     icu_fataliy : percentage with fatal outcome
+    long_term_death : Flag to simulate death from long term death rate
+    hnr : array of length n with a hausehold number
+    persons : number of additional persons in household/accomodation
 
     Returns:
     --------
@@ -114,6 +119,13 @@ def sim(age, gender, dr, r, mean_serial=7.0, std_serial=3.4, nday=140, burnin=20
     nstate = 8
     statesum = np.zeros(shape=(nstate, nday))
     statesum[:, 0] = np.bincount(state[0, :], minlength=nstate)
+
+    # If we use houseolds
+    if hnr is not None:
+        hnrinfected = np.zeros(shape=(max(hnr)+1, nday), dtype="uint8")
+        # Count per household if at least one persons is infected
+        hnrinfected[:, 0] = np.where(
+            np.bincount(hnr, weights=state[0, :] == 2) > 0, 1, 0)
 
     # Precalculate profile infection
     p = mean_serial**2/std_serial**2
@@ -178,7 +190,6 @@ def sim(age, gender, dr, r, mean_serial=7.0, std_serial=3.4, nday=140, burnin=20
         h = infections[imin: i]
         newinf = np.sum(h*delay[-len(h):])
 
-
         # unconditional deaths
         if long_term_death:
             rans = np.random.random(size=n)
@@ -214,6 +225,18 @@ def sim(age, gender, dr, r, mean_serial=7.0, std_serial=3.4, nday=140, burnin=20
         filt = (rans < pinf) & (state[i, ] == 0)
         state[i, filt] = 2
 
+        # The new infections are mapped to household
+        if hnr is not None:
+            hnrinfected[:, i] = np.where(
+                np.bincount(hnr, weights=filt) > 0, 1, 0)
+            # The infections risk depends on the time profile
+            hnr_risk = hnrinfected[:, imin:i].dot(delay[-len(h):])
+            # new infections due to community attack
+            rans = np.random.random(size=n)
+            hnr_risk = com_attack_rate * hnr_risk
+            filt = (rans < hnr_risk[hnr]) & (state[i, ] == 0)
+            state[i, filt] = 2
+
         # store first infections day
         firstdayinfected[filt] = i
 
@@ -236,6 +259,30 @@ def sim(age, gender, dr, r, mean_serial=7.0, std_serial=3.4, nday=140, burnin=20
 
     print("toticu:" + str(toticu))
     return state, statesum, infections, day0, np.array(rnow, dtype="double")
+
+def read_campus(filename, n=1000000):
+    """Generate popupulation from campus."""
+    campus = pd.read_csv(filename)
+    nrep = int(np.around(n/campus.shape[0]))
+    repid = np.array([x for x in range(0, nrep)], dtype="int")
+    replica = np.tile(repid, campus.shape[0])
+    age = np.repeat(np.array(campus.age), nrep)
+    gender = np.repeat(np.array(campus.gender), nrep)
+    persons = np.repeat(np.array(campus.Personenzahl - 1), nrep)
+    contacts = np.repeat(np.array(campus.contacts_mean), nrep)
+    agegroup = np.repeat(np.array(campus.agegroup), nrep)
+    dr_year = np.repeat(np.array(campus.deathrate), nrep)
+    hnr = np.repeat(np.array(campus.hnrnew), nrep)
+    nhnr = np.max(hnr)+1
+    hnr = hnr + replica * nhnr
+
+    # normalize contacts to a mean of one
+    contacts = contacts / np.sum(contacts)*len(contacts)
+
+    # Calculate daily mortality per case
+    dr_day = 1 - (1-dr_year)**(1/365)
+
+    return age, agegroup, gender, contacts, dr_day, hnr, persons
 
 
 def readpop(filename, n=1000000):
@@ -408,10 +455,11 @@ def analyse_cfr(statesum, delay, darkrate, cfr, timetodeath):
     """
     # The cumalated infection are immun + infected + intensive + corona death +
     # hospital
-    cuminfected = statesum[1]+statesum[2]+statesum[7]+statesum[6] + statesum[5]
+    cuminfected = statesum[1]+statesum[2]+statesum[7]+statesum[6]+statesum[5]
 
     # newinfections
     newinfections = np.diff(cuminfected, prepend=0)
+    newdeath = np.diff(statesum[7], prepend=0)
 
     # reported
     reported = np.empty_like(cuminfected)
@@ -425,6 +473,18 @@ def analyse_cfr(statesum, delay, darkrate, cfr, timetodeath):
     corrected[:timetodeath] = 0
     corrected[timetodeath:] = cuminfected[:-timetodeath]
     corrected = statesum[7] / corrected
+    
+    # corrected
+    pdf = [scipy.stats.poisson.pmf(i, timetodeath) for i in range(0,500)]
+    pdf = np.array(pdf)
+    corrected2 = np.empty_like(cuminfected)
+    corrected2[0] = 0
+    for t in range(1, len(newinfections)):
+        corrected2[t] = 0
+        for s in range(0, t):
+            corrected2[t] = corrected2[t] + newinfections[t-s] * pdf[s]
+    corrected2 = np.cumsum(corrected2)
+    corrected2 = statesum[7] / corrected2
 
     crude_rate = statesum[7]/cuminfected
     crude_reported = statesum[7]/reported
@@ -438,7 +498,7 @@ def analyse_cfr(statesum, delay, darkrate, cfr, timetodeath):
                               name="crude reported"), row=1, col=1)
     fig1.add_trace(go.Scatter(y=cfr_real[:nmax], mode='lines',
                               name="real"), row=1, col=1)
-    fig1.add_trace(go.Scatter(y=corrected[:nmax], mode='lines',
+    fig1.add_trace(go.Scatter(y=corrected2[:nmax], mode='lines',
                               name="korrigiert"), row=1, col=1)
     fig1.add_trace(go.Scatter(y=newinfections[:nmax], mode='lines',
                               name="neue Infektionen"), row=2, col=1)
@@ -447,6 +507,6 @@ def analyse_cfr(statesum, delay, darkrate, cfr, timetodeath):
     fig1.update_yaxes(title_text="CFR", row=1, col=1)
     fig1.update_yaxes(title_text="Anzahl", row=2, col=1)
     plot(fig1, filename="../figures/cfr2.html")
-    return
+    return newdeath, corrected2
 
 

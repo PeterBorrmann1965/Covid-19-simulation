@@ -7,14 +7,19 @@ import datetime
 
 
 # Einlesen und erstellen der Population
-age, agegroup, gender, family, contacts, dr = cl.readpop(
-    "../data/population_germany_v2.csv", n=17900000)
+#age, agegroup, gender, family, contacts, dr = cl.readpop(
+#    "../data/population_germany_v2.csv", n=10000000)
+
+age, agegroup, gender, contacts, dr, hnr, persons = cl.read_campus(
+    "../data/population_campus.csv", 1000000)
 
 all_results = []
 all_groupresults = []
-for r0 in [1.5, 2.0, 2.5]:
-    for prob_icu in [0.01125, 0.008, 0.004]:
+for r0 in [1.2]:
+    for prob_icu in [0.004]:
         r = contacts
+        r = 1
+        dr = 1
         r = r * r0 / np.mean(r)
         cutr = r
         infstart = 144
@@ -39,7 +44,9 @@ for r0 in [1.5, 2.0, 2.5]:
             cutdown=400, prob_icu=prob_icu, mean_days_to_icu=mean_days_to_icu,
             std_duration_icu=3, mean_duration_icu=mean_duration_icu,
             std_days_to_icu=3, mean_serial=7, std_serial=3.4, immunt0=0.0,
-            icu_fatality=icu_fatality, long_term_death=True)
+            icu_fatality=icu_fatality, long_term_death=False, hnr=hnr,
+            persons=persons, com_attack_rate=1.0)
+
         t2 = time.time()
         results, groupresults = cl.analysestate(state, title=name, day0=day0)
         t3 = time.time()
@@ -52,6 +59,6 @@ all_results = pd.concat(all_results)
 #all_groupresults = pd.concat(all_groupresults)
 all_results.to_csv("../results/results_nrw_age.csv")
 #all_groupresults.to_csv("../results/groupresults_nrw.csv")
-
+a, b = cl.analyse_cfr(statesum=statesum, cfr=0.002, darkrate=1, timetodeath=20, delay=5)
 
 
