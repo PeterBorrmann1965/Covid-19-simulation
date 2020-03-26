@@ -434,7 +434,7 @@ def analysestate(state, title="Scenario", group=None, day0=0):
     nday = state.shape[0]
     groupresults = []
     if group is not None:
-        df = pd.DataFrame(group)
+        df = pd.DataFrame({"group": group})
         for i in range(1, nday):
             df["state"] = state[i, :]
             a = df.groupby(["group", "state"]).agg(n=("state", "count"))
@@ -444,16 +444,16 @@ def analysestate(state, title="Scenario", group=None, day0=0):
                               aggfunc="sum", fill_value=0)
             a.reset_index(inplace=True)
             a.rename(columns=statdef, inplace=True)
-            a["not infected %"] = a["not infected"] / a["All"]*100
-            a["scenario"] = key
+            a[statdef[0]] = a[statdef[0]] / a["All"]*100
             a["day"] = i
+            a.fillna(0, inplace=True)
             groupresults.append(a)
 
         groupresults = pd.concat(groupresults)
     return results, groupresults
 
 
-def analyse_cfr(statesum, delay, darkrate, cfr, timetodeath):
+def analyse_cfr(statesum, reffektive, delay, darkrate, cfr, timetodeath, name):
     """Analyse the case fatality rates.
 
     Parameters
@@ -469,7 +469,6 @@ def analyse_cfr(statesum, delay, darkrate, cfr, timetodeath):
 
     # newinfections
     newinfections = np.diff(cuminfected, prepend=0)
-    newdeath = np.diff(statesum[7], prepend=0)
 
     # reported
     reported = np.empty_like(cuminfected)
@@ -485,7 +484,7 @@ def analyse_cfr(statesum, delay, darkrate, cfr, timetodeath):
     corrected = statesum[7] / corrected
 
     # corrected
-    pdf = [scipy.stats.poisson.pmf(i, timetodeath) for i in range(0,500)]
+    pdf = [scipy.stats.poisson.pmf(i, timetodeath) for i in range(0, 500)]
     pdf = np.array(pdf)
     corrected2 = np.empty_like(cuminfected)
     corrected2[0] = 0
@@ -497,26 +496,31 @@ def analyse_cfr(statesum, delay, darkrate, cfr, timetodeath):
     corrected2 = statesum[7] / corrected2
 
     crude_rate = statesum[7]/cuminfected
-    crude_reported = statesum[7]/reported
+    crude_reported = statesum[7] / reported
     nmax = np.argmax(statesum[7])
 
-    fig1 = make_subplots(rows=2, cols=1, subplot_titles=
-                         ("Crude Case fatality Rate", "neue Infektionen"))
+    fig1 = make_subplots(rows=3, cols=1, subplot_titles=
+                         ("neue Infektionen",
+                          "R effketiv", "Crude Case fatality Rate"))
     fig1.add_trace(go.Scatter(y=crude_rate[:nmax], mode='lines',
-                              name="crude"), row=1, col=1)
-    fig1.add_trace(go.Scatter(y=crude_reported[:nmax], mode='lines',
-                              name="crude reported"), row=1, col=1)
+                              name="crude"), row=3, col=1)
+    # fig1.add_trace(go.Scatter(y=crude_reported[:nmax], mode='lines',
+    #                          name="crude reported"), row=1, col=1)
     fig1.add_trace(go.Scatter(y=cfr_real[:nmax], mode='lines',
-                              name="real"), row=1, col=1)
+                              name="real"), row=3, col=1)
     fig1.add_trace(go.Scatter(y=corrected2[:nmax], mode='lines',
-                              name="korrigiert"), row=1, col=1)
+                              name="korrigiert"), row=3, col=1)
     fig1.add_trace(go.Scatter(y=newinfections[:nmax], mode='lines',
-                              name="neue Infektionen"), row=2, col=1)
+                              name="neue Infektionen"), row=1, col=1)
+    fig1.add_trace(go.Scatter(y=reffektive[:nmax], mode='lines',
+                              name="R effektiv"), row=2, col=1)
+
     fig1.update_xaxes(title_text="Tag", row=1, col=1)
     fig1.update_xaxes(title_text="Tag", row=2, col=1)
-    fig1.update_yaxes(title_text="CFR", row=1, col=1)
-    fig1.update_yaxes(title_text="Anzahl", row=2, col=1)
-    plot(fig1, filename="../figures/cfr2.html")
-    return newdeath, corrected2
+    fig1.update_yaxes(title_text="CFR", row=3, col=1)
+    fig1.update_yaxes(title_text="RE", row=3, col=1)
+    fig1.update_yaxes(title_text="Anzahl", row=1, col=1)
+    plot(fig1, filename="../figures/" + name + "_cfr.html")
+    return
 
 
