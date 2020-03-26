@@ -11,17 +11,17 @@ import datetime
 #    "../data/population_germany_v2.csv", n=10000000)
 
 age, agegroup, gender, contacts, dr, hnr, persons = cl.read_campus(
-    "../data/population_campus.csv", 1000000)
+    "../data/population_campus.csv", 1790000)
 
 all_results = []
 all_groupresults = []
-for r0 in [1.2]:
+for r0 in [2.5]:
     for prob_icu in [0.004]:
         r = contacts
         r = 1
         dr = 1
         r = r * r0 / np.mean(r)
-        cutr = r
+        cutr = r * 0.01
         infstart = 144
         icu_fatality = 0.5
         mean_duration_icu = 10
@@ -32,8 +32,9 @@ for r0 in [1.2]:
         name = "r0=" + str("{:2.2f}".format(r0)) +\
             " prob_ICU=" + str("{:2.5f}".format(prob_icu)) +\
             " days_to_ICU=" + str("{:2.1f}".format(mean_days_to_icu)) +\
-            " ICU_fatality=" + str("{:2.3f}".format(icu_fatality)) +\
-            " ICU_duration=" + str("{:2.1f}".format(mean_duration_icu)) +\
+            " ICU_fat=" + str("{:2.3f}".format(icu_fatality)) +\
+            " ICU_dur=" + str("{:2.1f}".format(mean_duration_icu)) +\
+            " ICU_dur=" + str("{:2.1f}".format(mean_duration_icu)) +\
             " (akt. Belegung ICU=" + str(infstart) +\
             "," + str(datetime.date.today()) + ")"
 
@@ -41,7 +42,7 @@ for r0 in [1.2]:
         print(name)
         state, statesum, infections, day0, rnow = cl.sim(
             age, gender, dr, r, nday=365, cutr=cutr, burnin=infstart,
-            cutdown=400, prob_icu=prob_icu, mean_days_to_icu=mean_days_to_icu,
+            cutdown=200, prob_icu=prob_icu, mean_days_to_icu=mean_days_to_icu,
             std_duration_icu=3, mean_duration_icu=mean_duration_icu,
             std_days_to_icu=3, mean_serial=7, std_serial=3.4, immunt0=0.0,
             icu_fatality=icu_fatality, long_term_death=False, hnr=hnr,
