@@ -95,6 +95,7 @@ def sim(age, gender, dr, r, mean_serial=7.0, std_serial=3.4, nday=140, burnin=20
     long_term_death : Flag to simulate death from long term death rate
     hnr : array of length n with a hausehold number
     persons : number of additional persons in household/accomodation
+    com_attack_rate : infection probabilty within a community
 
     Returns:
     --------
@@ -181,6 +182,7 @@ def sim(age, gender, dr, r, mean_serial=7.0, std_serial=3.4, nday=140, burnin=20
 
     rnow = []
     toticu = 0
+    re = np.zeros(shape=nday)
     for i in range(1, nday):
         # set state to state day before
         state[i, :] = state[i-1, :]
@@ -216,25 +218,32 @@ def sim(age, gender, dr, r, mean_serial=7.0, std_serial=3.4, nday=140, burnin=20
         state[i, filt] = 1
         state[i, filt & (rans < icu_fatality)] = 7
 
-        # infection probabilties by case
-        pinf = r * newinf / n
-
-        # only not infected people can be infected
-        # We can reuse the last random number
-        # rans = np.random.random(size=n)
-        filt = (rans < pinf) & (state[i, ] == 0)
-        state[i, filt] = 2
-
         # The new infections are mapped to household
         if hnr is not None:
-            hnrinfected[:, i] = np.where(
-                np.bincount(hnr, weights=filt) > 0, 1, 0)
             # The infections risk depends on the time profile
             hnr_risk = hnrinfected[:, imin:i].dot(delay[-len(h):])
             # new infections due to community attack
             rans = np.random.random(size=n)
             hnr_risk = com_attack_rate * hnr_risk
-            filt = (rans < hnr_risk[hnr]) & (state[i, ] == 0)
+            filt2 = (rans < hnr_risk[hnr]) & (state[i, ] == 0)
+            state[i, filt2] = 2
+
+            # We reduce the new infected by those infected throught community
+            # attack
+            addinf = np.mean(r) * newinf - np.sum(filt2)
+            addinf = np.max([0.0, addinf])/np.mean(r)
+            pinf = r * addinf / n
+            filt = (rans < pinf) & (state[i, ] == 0)
+            state[i, filt] = 2
+
+            # Store the new infections in each hosusehold
+            filt = filt | filt2
+            hnrinfected[:, i] = np.where(
+                np.bincount(hnr, weights=filt) > 0, 1, 0)
+        else:
+            # infection probabilties by case
+            pinf = r * newinf / n
+            filt = (rans < pinf) & (state[i, ] == 0)
             state[i, filt] = 2
 
         # store first infections day
@@ -242,6 +251,7 @@ def sim(age, gender, dr, r, mean_serial=7.0, std_serial=3.4, nday=140, burnin=20
 
         # number of new infections new infections
         infections[i] = np.sum(filt)
+        re[i] = infections[i] / newinf
 
         statesum[:, i] = np.bincount(state[i, :], minlength=nstate)
 
@@ -258,7 +268,7 @@ def sim(age, gender, dr, r, mean_serial=7.0, std_serial=3.4, nday=140, burnin=20
             r = rstart
 
     print("toticu:" + str(toticu))
-    return state, statesum, infections, day0, np.array(rnow, dtype="double")
+    return state, statesum, infections, day0, re
 
 def read_campus(filename, n=1000000):
     """Generate popupulation from campus."""
@@ -473,7 +483,7 @@ def analyse_cfr(statesum, delay, darkrate, cfr, timetodeath):
     corrected[:timetodeath] = 0
     corrected[timetodeath:] = cuminfected[:-timetodeath]
     corrected = statesum[7] / corrected
-    
+
     # corrected
     pdf = [scipy.stats.poisson.pmf(i, timetodeath) for i in range(0,500)]
     pdf = np.array(pdf)
