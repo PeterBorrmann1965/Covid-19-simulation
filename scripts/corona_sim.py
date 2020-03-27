@@ -11,17 +11,17 @@ import datetime
 #    "../data/population_germany_v2.csv", n=10000000)
 
 age, agegroup, gender, contacts, dr, hnr, persons = cl.read_campus(
-    "../data/population_campus.csv", 1790000)
+    "../data/population_campus.csv", 17900000)
 
 
-for r0 in [2.5]:
-    for prob_icu in [0.004]:
+for r0 in [1.5, 2.0, 2.5]:
+    for prob_icu in [0.01125]:
         r = contacts
         #r = 1
         #dr = 1
         r = r * r0 / np.mean(r)
-        cutr = r * 0.01
-        infstart = 144
+        cutr = r * 1
+        infstart = 213
         icu_fatality = 0.5
         mean_duration_icu = 10
         mean_days_to_icu = 10
@@ -45,7 +45,7 @@ for r0 in [2.5]:
             std_duration_icu=3, mean_duration_icu=mean_duration_icu,
             std_days_to_icu=3, mean_serial=7, std_serial=3.4, immunt0=0.0,
             icu_fatality=icu_fatality, long_term_death=False, hnr=hnr,
-            persons=persons, com_attack_rate=1.0)
+            persons=persons, com_attack_rate=0.8)
 
         t2 = time.time()
         results, groupresults = cl.analysestate(state, title=name, day0=day0,
