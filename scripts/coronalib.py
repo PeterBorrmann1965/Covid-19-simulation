@@ -6,6 +6,7 @@ import plotly.graph_objects as go
 from plotly.offline import plot
 from plotly.subplots import make_subplots
 import scipy.stats
+from scipy.optimize import minimize
 
 
 statdef_en = {0: "not infected", 1: "immun or dead", 2: "infected",
@@ -453,6 +454,37 @@ def analysestate(state, title="Scenario", group=None, day0=0):
     return results, groupresults
 
 
+def cfr_from_ts(date, cum_reported, cum_deaths, timetodeath, name):
+    """Calculate an estimated cfr from timeseries."""
+    # date = np.array(date)
+    cum_reported = np.array(cum_reported)
+    cum_deaths = np.array(cum_deaths)
+    imin = np.argmax(cum_deaths > 50)
+    fig = go.Figure(layout={"title": name})
+    crude = cum_deaths / cum_reported
+    fig.add_traces(go.Scatter(x=date[imin:], y=crude[imin:], name="crude"))
+    res = {}
+    res["crude"] = crude[-1]
+    for timetodeath in [4, 8, 10]:
+        pdf = [scipy.stats.poisson.pmf(i, timetodeath) for i in range(0, 500)]
+        pdf = np.array(pdf)
+        corrected = np.empty_like(cum_reported)
+        corrected[0] = 0
+        newinfections = np.diff(cum_reported, prepend=0)
+        for t in range(1, len(newinfections)):
+            corrected[t] = 0
+            for s in range(0, t):
+                corrected[t] = corrected[t] + newinfections[t-s] * pdf[s]
+        corrected = np.cumsum(corrected)
+        corrected = cum_deaths / corrected
+        fig.add_traces(go.Scatter(x=date[imin:], y=corrected[imin:],
+                                  name=str(timetodeath)))
+        res["ttd="+str(timetodeath)] = corrected[-1]
+    fig.update_yaxes(title_text="CFR estimate", tickformat='.2%')
+    plot(fig, filename="../figures/cfr_analysis/" + str(name) + ".html")
+    return res
+
+
 def analyse_cfr(statesum, reffektive, delay, darkrate, cfr, timetodeath, name):
     """Analyse the case fatality rates.
 
@@ -501,7 +533,7 @@ def analyse_cfr(statesum, reffektive, delay, darkrate, cfr, timetodeath, name):
 
     fig1 = make_subplots(rows=3, cols=1, subplot_titles=
                          ("neue Infektionen",
-                          "R effketiv", "Crude Case fatality Rate"))
+                          "R effketiv", "Case fatality Rate"))
     fig1.add_trace(go.Scatter(y=crude_rate[:nmax], mode='lines',
                               name="crude"), row=3, col=1)
     # fig1.add_trace(go.Scatter(y=crude_reported[:nmax], mode='lines',
