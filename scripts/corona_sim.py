@@ -13,13 +13,12 @@ import datetime
 age, agegroup, gender, contacts, dr, hnr, persons = cl.read_campus(
     "../data/population_campus.csv", 1790000)
 
-all_results = []
-all_groupresults = []
+
 for r0 in [2.5]:
     for prob_icu in [0.004]:
         r = contacts
-        r = 1
-        dr = 1
+        #r = 1
+        #dr = 1
         r = r * r0 / np.mean(r)
         cutr = r * 0.01
         infstart = 144
@@ -49,17 +48,17 @@ for r0 in [2.5]:
             persons=persons, com_attack_rate=1.0)
 
         t2 = time.time()
-        results, groupresults = cl.analysestate(state, title=name, day0=day0)
+        results, groupresults = cl.analysestate(state, title=name, day0=day0,
+                                                group=agegroup)
+        cfr = prob_icu * icu_fatality
+        cl.analyse_cfr(statesum, rnow, cfr=cfr, darkrate=1,
+                              timetodeath=mean_duration_icu+mean_days_to_icu,
+                              delay=5, name=name)
         t3 = time.time()
         print("Sim time: " + str(t2-t1) + " Analyse time: " + str(t3-t2))
-        all_results.append(results)
-        all_groupresults.append(groupresults)
-        nmax = np.argmax(np.diff(statesum[7]))
+        results.to_csv("../results/" + name + ".csv")
+        groupresults.to_csv("../results/" + name + ".csv")
 
-all_results = pd.concat(all_results)
-#all_groupresults = pd.concat(all_groupresults)
-all_results.to_csv("../results/results_nrw_age.csv")
-#all_groupresults.to_csv("../results/groupresults_nrw.csv")
-a, b = cl.analyse_cfr(statesum=statesum, cfr=0.002, darkrate=1, timetodeath=20, delay=5)
+
 
 
