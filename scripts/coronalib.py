@@ -1,4 +1,7 @@
 """Corona Library."""
+import time
+import datetime
+import warnings
 import pandas as pd
 import numpy as np
 from scipy.stats import gamma
@@ -6,32 +9,45 @@ import plotly.graph_objects as go
 from plotly.offline import plot
 from plotly.subplots import make_subplots
 import scipy.stats
-import time
-import datetime
-import warnings
+from IPython.display import display, HTML
+
 warnings.filterwarnings("ignore")
 
 
-statdef_en = {0: "not infected", 1: "immun or dead", 2: "infected",
-              3: "identified", 4: "dead (other)", 5: 'hospital',
-              6: 'intensive', 7: 'Covid-19 dead'}
+STATEDEF_EN = {0: "not infected", 1: "immun or dead", 2: "infected",
+               3: "identified", 4: "dead (other)", 5: 'hospital',
+               6: 'intensive', 7: 'Covid-19 dead'}
 
-statdef_de = {0: "nicht infiziert", 1: "immun", 2: "infiziert",
+STATEDEF_DE = {0: "nicht infiziert", 1: "immun", 2: "infiziert",
                3: "identifiziert", 4: "tod (Sonstige)",
                5: 'hospitalisiert', 6: 'ICU', 7: 'tod (Covid-19)'}
 
-statdef = statdef_de
+STATEDEF = STATEDEF_DE
+
+
+def isnotebook():
+    """Check if executed in Jupyter."""
+    try:
+        shell = get_ipython().__class__.__name__
+        if shell == 'ZMQInteractiveShell':
+            return True   # Jupyter notebook or qtconsole
+        elif shell == 'TerminalInteractiveShell':
+            return False  # Terminal running IPython
+        else:
+            return False  # Other type (?)
+    except NameError:
+        return False
 
 
 def infection_profile(mean_serial=7.0, std_serial=3.4, nday=21):
     """Calc the infections profile."""
-    p = mean_serial**2/std_serial**2
-    b = std_serial**2/mean_serial
-    x = np.linspace(0, nday, num=nday+1, dtype=("int"))
-    y = gamma.cdf(x, a=p, scale=b)
+    gamma_a = mean_serial**2/std_serial**2
+    gamma_scale = std_serial**2/mean_serial
+    xval = np.linspace(0, nday, num=nday+1, dtype=("int"))
+    yval = gamma.cdf(xval, a=gamma_a, scale=gamma_scale)
     delay = np.zeros(nday+1)
-    delay[1:(nday+1)] = y[1:(nday+1)] - y[0:nday]
-    return x, y, delay
+    delay[1:(nday+1)] = yval[1:(nday+1)] - yval[0:nday]
+    return xval, yval, delay
 
 
 def makeprofile_plot():
@@ -72,18 +88,17 @@ def makeprofile_plot():
     inf2.write_image("pdf.png")
 
 
-def sim(age, gender, dr, mean_serial=7.0, std_serial=3.4, nday=140, day0icu=20,
-        cutdown=25000, prob_icu=0.005, mean_days_to_icu=12, 
+def sim(age, drate, mean_serial=7.0, std_serial=3.4, nday=140, day0icu=20,
+        cutdown=25000, prob_icu=0.005, mean_days_to_icu=12,
         mean_duration_icu=10, immunt0=0.0, icu_fatality=0.5,
-        long_term_death=False, hnr=None, persons=None, com_attack_rate=0.6,
-        contacts=None, r_mean=1.5, cutr_mean=1.5):
+        long_term_death=False, hnr=None, com_attack_rate=0.6,
+        contacts=None, r_mean=1.5, cutr_mean=1.5, simname="test"):
     """Simulate model.
 
     Parameters:
     -----------
     age : array of length n with the age of each individual
-    gender :  array of length n with the gender of each individual
-    dr :  array of length n with the daily mortality rate of each individual
+    drate :  array of length n with the daily mortality rate of each individual
     mean_serial : mean of the gamma distribution for the infections profile
     std_serial : std of the gamma distribution for the infections profile
     nday : number of days to simulated
@@ -95,8 +110,6 @@ def sim(age, gender, dr, mean_serial=7.0, std_serial=3.4, nday=140, day0icu=20,
     icu_fataliy : percentage with fatal outcome
     long_term_death : Flag to simulate death from long term death rate
     hnr : array of length n with a hausehold number
-    persons :array of length n number of additional persons in
-        household/accomodation
     com_attack_rate : infection probabilty within a community
     contacts : array of length n with contacts per person or None
         if contacts is not None the individual r is proportional to contacts
@@ -117,11 +130,10 @@ def sim(age, gender, dr, mean_serial=7.0, std_serial=3.4, nday=140, day0icu=20,
         days
     infections : array of length nday with the number of infections
     """
-    # start configuation
-    t1 = time.time()
+    # This must be the first line
     args = locals()
     args["mean_age"] = np.mean(age)
-
+    tstart = time.time()
     # Initialize r and cutr
     if contacts is None:
         r = np.ones(shape=age.shape[0]) * r_mean
@@ -135,14 +147,7 @@ def sim(age, gender, dr, mean_serial=7.0, std_serial=3.4, nday=140, day0icu=20,
 
     # Simulation name
     r0aux = np.mean(r)
-    name = "r0=" + str("{:2.2f}".format(r0aux)) +\
-        " prob_ICU=" + str("{:2.5f}".format(prob_icu)) +\
-        " days_to_ICU=" + str("{:2.1f}".format(mean_days_to_icu)) +\
-        " ICU_fat=" + str("{:2.3f}".format(icu_fatality)) +\
-        " ICU_dur=" + str("{:2.1f}".format(mean_duration_icu)) +\
-        " ICU_dur=" + str("{:2.1f}".format(mean_duration_icu)) +\
-        " (akt. Belegung ICU=" + str(day0icu) +\
-        "," + str(datetime.date.today()) + ")"
+    name = simname
 
     n = len(age)
     state = np.zeros(shape=(nday, n), dtype="uint8")
@@ -174,7 +179,7 @@ def sim(age, gender, dr, mean_serial=7.0, std_serial=3.4, nday=140, day0icu=20,
     time_to_icu = np.random.poisson(lam=mean_days_to_icu, size=n)
 
     # individual prob icu
-    ind_prob_icu = dr/np.mean(dr) * prob_icu
+    ind_prob_icu = drate/np.mean(drate) * prob_icu
     # ind_prob_icu = prob_icu
     # print("Mean prob icu:" + str(np.mean(ind_prob_icu)))
 
@@ -192,7 +197,7 @@ def sim(age, gender, dr, mean_serial=7.0, std_serial=3.4, nday=140, day0icu=20,
     # save the original r
     rstart = r
     # start with a high r0 in the burn in phase
-    r =2.5 * r / np.mean(r)
+    r = 2.5 * r / np.mean(r)
     day0 = -1
     burn = True
 
@@ -210,7 +215,7 @@ def sim(age, gender, dr, mean_serial=7.0, std_serial=3.4, nday=140, day0icu=20,
         # unconditional deaths
         if long_term_death:
             rans = np.random.random(size=n)
-            state[i, (rans < dr) & (state[i, :] != 7)] = 4
+            state[i, (rans < drate) & (state[i, :] != 7)] = 4
 
         # Calculate the number of days infected
         days_infected = i - firstdayinfected
@@ -298,16 +303,18 @@ def sim(age, gender, dr, mean_serial=7.0, std_serial=3.4, nday=140, day0icu=20,
     params = params.reset_index()
     params.columns = ["Parameter", "Wert"]
 
-    t2 = time.time()
+    tanalyse = time.time()
     agegroup = (age/10).astype(int)*10
+    print("Simulation time: " + str(tanalyse-tstart))
     results, groupresults = analysestate(state, title=name, day0=day0,
                                          group=agegroup)
+    tcfr = time.time()
     cfr = prob_icu * icu_fatality
     analyse_cfr(statesum, re, cfr=cfr, darkrate=1,
                 timetodeath=mean_duration_icu+mean_days_to_icu,
                 delay=5, name=name, day0=day0)
-    t3 = time.time()
-    print("Sim time: " + str(t2-t1) + " Analyse time: " + str(t3-t2))
+    tend = time.time()
+    display(results)
 
     # Write each dataframe to a different worksheet.
     writer = pd.ExcelWriter("../results/" + name + ".xlsx",
@@ -315,9 +322,8 @@ def sim(age, gender, dr, mean_serial=7.0, std_serial=3.4, nday=140, day0icu=20,
 
     params.to_excel(writer, sheet_name="Parameter", index=False)
     results.to_excel(writer, sheet_name='Ergebnis Übersicht', index=False)
-    groupresults.to_excel(writer, sheet_name='Gruppen nach Tagen', index=
-                          False)
-    ws = writer.sheets["Gruppen nach Tagen"]
+    groupresults.to_excel(writer, sheet_name='Gruppen pro Tag', index=False)
+    ws = writer.sheets["Gruppen pro Tag"]
     workbook = writer.book
     format1 = workbook.add_format({'num_format': '0.000%'})
     ws.set_column('I:M', None, format1)
@@ -326,6 +332,7 @@ def sim(age, gender, dr, mean_serial=7.0, std_serial=3.4, nday=140, day0icu=20,
     writer.save()
 
     return state, statesum, infections, day0, re, params
+
 
 def read_campus(filename, n=1000000):
     """Generate popupulation from campus."""
@@ -383,12 +390,6 @@ def analysestate(state, title="Scenario", group=None, day0=0):
     """Visualize and explore simulation results."""
     colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b',
               '#e377c2', '#7f7f7f', '#bcbd22', '#17becf']
-    # Create figure
-    fig1 = make_subplots(rows=2, cols=2, row_heights=[0.4, 0.6],
-                         subplot_titles=("Ergebnisse", "Zustand",
-                                         "Änderung zum Vortag (Delta)"),
-                         specs=[[{"type": "table", "colspan": 2}, None],
-                                [{"type": "scatter"}, {"type": "scatter"}]])
 
     statesumday = {}
     nmax = 0
@@ -396,7 +397,7 @@ def analysestate(state, title="Scenario", group=None, day0=0):
     lastday = state.shape[0]-1
     n = state.shape[1]
     ngraph = 0
-    for key, value in statdef.items():
+    for key, value in STATEDEF.items():
         statesumday[value] = np.array([np.sum((state[i, :] == key))
                                        for i in range(0, state.shape[0])])
         if max(statesumday[value]) > 0:
@@ -411,35 +412,17 @@ def analysestate(state, title="Scenario", group=None, day0=0):
             resnow["Peakwert %"] = resnow["Peakwert"] / n * 100
             resnow["Endwert"] = statesumday[value][lastday]
             resnow["Endwert %"] = resnow["Endwert"] / n * 100
-            #resnow["Mind. 1 Tag"] = np.sum(np.max(state == key, axis=0))
-            #resnow["Mittelwert Tage/EW"] = np.sum(statesumday[value]) / n
             results[value] = resnow
 
+    fig2 = make_subplots(rows=ngraph, cols=2, column_titles=(
+        "Zustand", "Änderung zum Vortag (Delta)"), shared_xaxes=True)
 
-    fig2 = make_subplots(rows=ngraph, cols=2, column_titles = 
-                         ("Zustand","Änderung zum Vortag (Delta)"),
-                         shared_xaxes=True)
-
-    k = 0 
-    for key, value in statdef.items():
+    k = 0
+    for key, value in STATEDEF.items():
         if max(statesumday[value]) > 0:
             k = k + 1
-            fig1.add_trace(go.Scatter(x=[dw-day0 for dw in range(0, nmax)],
-                                      y=statesumday[value][:nmax],
-                                      mode='lines', name=value,
-                                      legendgroup=value,
-                                      line_color=colors[key]),
-                           row=2, col=1)
             deltastatesum = np.diff(statesumday[value][:nmax],
                                     prepend=statesumday[value][0])
-            fig1.add_trace(go.Scatter(x=[dw-day0 for dw in range(0, nmax)],
-                                      y=deltastatesum,
-                                      mode='lines', name=value,
-                                      legendgroup=value,
-                                      showlegend=False,
-                                      line_color=colors[key]),
-                           row=2, col=2)
-
             fig2.add_trace(go.Scatter(x=[dw-day0 for dw in range(0, nmax)],
                                       y=statesumday[value][:nmax],
                                       mode='lines', name=value,
@@ -462,31 +445,20 @@ def analysestate(state, title="Scenario", group=None, day0=0):
     #    results['Mittelwert Tage/EW'].map('{:,.5f}'.format)
     results.reset_index(inplace=True)
     results.rename(columns={"index": "Zustand"})
-    fig1.add_trace(go.Table(
-        header=dict(values=list(results.columns),
-                    align='center'),
-        cells=dict(values=[results[c] for c in results.columns],
-                   align='right')
-        ), row=1, col=1)
 
-    fig1.update_layout(showlegend=True, title=title, legend_orientation="h",
-                       font=dict(family="Courier New, monospace", size=14))
-    fig1.update_xaxes(title_text="Tag", row=2, col=1)
-    fig1.update_yaxes(title_text="Anzahl", row=2, col=1)
-    fig1.update_xaxes(title_text="Tag", row=2, col=2)
-    fig1.update_yaxes(title_text="Anzahl", row=2, col=2)
-    fig1.update_yaxes(type="log", row=2, col=1)
-
-    fig2.update_layout(showlegend=True, title=title, legend_orientation="h",
-                       font=dict(family="Courier New, monospace", size=14))
+    fig2.update_layout(showlegend=True, title=title, legend_orientation="h")
     fig2.update_xaxes(title_text="Tag", row=ngraph, col=1)
     fig2.update_xaxes(title_text="Tag", row=ngraph, col=2)
+    fig2.update_xaxes(automargin=True)
     for k in range(0, ngraph):
         fig2.update_yaxes(title_text="Anzahl", row=k+1, col=1)
 
-    plot(fig1, filename="../figures/" + title + ".html")
-    fig1.write_image("../figures/" + title + ".png", width=1500, height=1000)
-    plot(fig2, filename="../figures/" + title + "_linear.html")
+    # plot(fig1, filename="../figures/" + title + ".html")
+    # fig1.write_image("../figures/" + title + ".png", width=1500, height=1000)
+    if isnotebook():
+        fig2.show()
+    else:
+        plot(fig2, filename="../figures/" + title + "_linear.html")
 
     nday = state.shape[0]
     groupresults = []
@@ -500,8 +472,8 @@ def analysestate(state, title="Scenario", group=None, day0=0):
                               index=["group"], margins=True,
                               aggfunc="sum", fill_value=0)
             a.reset_index(inplace=True)
-            a.rename(columns=statdef, inplace=True)
-            a[statdef[0]] = a[statdef[0]]
+            a.rename(columns=STATEDEF, inplace=True)
+            a[STATEDEF[0]] = a[STATEDEF[0]]
             a["day"] = i
             a.fillna(0, inplace=True)
             groupresults.append(a)
@@ -549,7 +521,7 @@ def cfr_from_ts(date, cum_reported, cum_deaths, timetodeath, name):
     return res
 
 
-def analyse_cfr(statesum, reffektive, delay, darkrate, cfr, timetodeath, name, 
+def analyse_cfr(statesum, reffektive, delay, darkrate, cfr, timetodeath, name,
                 day0=0):
     """Analyse the case fatality rates.
 
@@ -593,17 +565,14 @@ def analyse_cfr(statesum, reffektive, delay, darkrate, cfr, timetodeath, name,
     corrected2 = statesum[7] / corrected2
 
     crude_rate = statesum[7]/cuminfected
-    crude_reported = statesum[7] / reported
     nmax = np.argmax(statesum[7])
 
-    fig1 = make_subplots(rows=3, cols=1, subplot_titles=
-                         ("neue Infektionen",
-                          "R effketiv", "Case fatality Rate"))
+    fig1 = make_subplots(rows=3, cols=1, subplot_titles=(
+        "neue Infektionen", "R effektiv", "Case fatality Rate"),
+        shared_xaxes=True)
     fig1.add_trace(go.Scatter(x=[dw-day0 for dw in range(0, nmax)],
                               y=crude_rate[:nmax], mode='lines',
                               name="crude"), row=3, col=1)
-    # fig1.add_trace(go.Scatter(y=crude_reported[:nmax], mode='lines',
-    #                          name="crude reported"), row=1, col=1)
     fig1.add_trace(go.Scatter(x=[dw-day0 for dw in range(0, nmax)],
                               y=cfr_real[:nmax], mode='lines',
                               name="real"), row=3, col=1)
@@ -617,12 +586,13 @@ def analyse_cfr(statesum, reffektive, delay, darkrate, cfr, timetodeath, name,
                               y=reffektive[:nmax], mode='lines',
                               name="R effektiv"), row=2, col=1)
 
-    fig1.update_xaxes(title_text="Tag", row=1, col=1)
-    fig1.update_xaxes(title_text="Tag", row=2, col=1)
+    fig1.update_xaxes(title_text="Tag", automargin=True, row=3, col=1)
     fig1.update_yaxes(title_text="CFR", row=3, col=1)
     fig1.update_yaxes(title_text="RE", row=3, col=1)
     fig1.update_yaxes(title_text="Anzahl", row=1, col=1)
-    plot(fig1, filename="../figures/" + name + "_cfr.html")
+    fig1.update_layout(showlegend=True, title=name, legend_orientation="h")
+    if isnotebook():
+        fig1.show()
+    else:
+        plot(fig1, filename="../figures/" + name + "_cfr.html")
     return
-
-
