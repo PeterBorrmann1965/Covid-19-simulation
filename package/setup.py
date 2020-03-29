@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="Covid-19 Simulation",
+    name="covid19sim",
     version="0.1.1",
     author="Dr. Tobias Sproll, Simon Hommel, Dr. Peter Borrmann",
     author_email="covid19@the-quants.com",

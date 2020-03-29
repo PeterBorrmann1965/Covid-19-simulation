@@ -1,0 +1,11 @@
+README.md
+setup.py
+covid19sim/__init__.py
+covid19sim/coronalib.py
+covid19sim/population_germany.csv
+covid19sim/population_household.csv
+covid19sim.egg-info/PKG-INFO
+covid19sim.egg-info/SOURCES.txt
+covid19sim.egg-info/dependency_links.txt
+covid19sim.egg-info/requires.txt
+covid19sim.egg-info/top_level.txt

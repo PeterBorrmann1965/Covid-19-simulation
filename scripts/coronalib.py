@@ -9,12 +9,14 @@ import plotly.graph_objects as go
 from plotly.offline import plot
 from plotly.subplots import make_subplots
 import scipy.stats
-from IPython.display import display, HTML
+from IPython.display import display
+import pkg_resources
+from sklearn.preprocessing import LabelEncoder
 
 warnings.filterwarnings("ignore")
 
 
-STATEDEF_EN = {0: "not infected", 1: "immun or dead", 2: "infected",
+STATEDEF_EN = {0: "not infected", 1: "immun", 2: "infected",
                3: "identified", 4: "dead (other)", 5: 'hospital',
                6: 'intensive', 7: 'Covid-19 dead'}
 
@@ -48,6 +50,26 @@ def infection_profile(mean_serial=7.0, std_serial=3.4, nday=21):
     delay = np.zeros(nday+1)
     delay[1:(nday+1)] = yval[1:(nday+1)] - yval[0:nday]
     return xval, yval, delay
+
+
+def makepop(popname, n=1000000):
+    """Generate population."""
+    if popname == "current":
+        germany = pkg_resources.resource_filename('covid19sim',
+                                                  'population_germany.csv')
+        age, agegroup, gender, family, contacts, dr_day = readpop(
+            germany, n)
+        hnr = None
+        persons = None
+    elif popname == "household":
+        household = pkg_resources.resource_filename('covid19sim',
+                                                    'population_household.csv')
+        age, agegroup, gender, contacts, dr_day, hnr, persons = \
+            read_campus(household, n)
+    else:
+        print("Unknown population")
+        return None, None, None, None, None, None
+    return age, agegroup, gender, contacts, dr_day, hnr, persons
 
 
 def makeprofile_plot():
@@ -97,8 +119,8 @@ def sim(age, drate, mean_serial=7.0, std_serial=3.4, nday=140, day0icu=20,
 
     Parameters:
     -----------
-    age : array of length n with the age of each individual
-    drate :  array of length n with the daily mortality rate of each individual
+    age : array of length n, age of each individual
+    drate :  array of length n, daily mortality rate of each individual
     mean_serial : mean of the gamma distribution for the infections profile
     std_serial : std of the gamma distribution for the infections profile
     nday : number of days to simulated
@@ -109,12 +131,12 @@ def sim(age, drate, mean_serial=7.0, std_serial=3.4, nday=140, day0icu=20,
     immunt0 : percentage immun at t0
     icu_fataliy : percentage with fatal outcome
     long_term_death : Flag to simulate death from long term death rate
-    hnr : array of length n with a hausehold number
+    hnr : array of length n, household number
     com_attack_rate : infection probabilty within a community
-    contacts : array of length n with contacts per person or None
+    contacts : array of length n, number of daily contacts per person or None
         if contacts is not None the individual r is proportional to contacts
-    r_mean : mean r for the population to start with
-    cutr_mean : mean_r forced lockdown
+    r_mean : mean r for the population at simulation start
+    cutr_mean : mean_r at forced lockdown
     cutdown : if the number of occupied icu beds exceeds cutdown the mean r
         is reduced to cut_meanr
 
@@ -124,11 +146,20 @@ def sim(age, drate, mean_serial=7.0, std_serial=3.4, nday=140, day0icu=20,
         0 : not infected
         1 : immun
         2.: infected but not identified
-        3.: infected and identified (not used yet)
-        4 : dead
+        3.: not used
+        4 : dead (long term mortality)
+        5 : not used
+        6 : ICU care
+        7 : dead (Covid-19)
     statesum : array of shape (5, nday) with the count of each individual per
         days
-    infections : array of length nday with the number of infections
+    infections : array of length nday
+        the number of infections
+    day0 : the simualtion day on which the number of icu care patients exceeds
+        for the first time day0icu
+    re :  array of length nday
+        the effective reporoduction number per day
+    params : a copy of all input paramters as a data frame
     """
     # This must be the first line
     args = locals()
@@ -242,9 +273,11 @@ def sim(age, drate, mean_serial=7.0, std_serial=3.4, nday=140, day0icu=20,
         if hnr is not None:
             # The infections risk depends on the time profile
             hnr_risk = hnrinfected[:, imin:i].dot(delay[-len(h):])
+
             # new infections due to community attack
-            rans = np.random.random(size=n)
             hnr_risk = com_attack_rate * hnr_risk
+            # We can reuses the last randoms because people in state 6 and 0
+            # can not overlap
             filt2 = (rans < hnr_risk[hnr]) & (state[i, ] == 0)
             state[i, filt2] = 2
 
@@ -263,7 +296,8 @@ def sim(age, drate, mean_serial=7.0, std_serial=3.4, nday=140, day0icu=20,
         else:
             # infection probabilties by case
             pinf = r * newinf / n
-            rans = np.random.random(size=n)
+            # We can reuses the last randoms because people in state 6 and 0
+            # can not overlap
             filt = (rans < pinf) & (state[i, ] == 0)
             state[i, filt] = 2
 
@@ -453,8 +487,6 @@ def analysestate(state, title="Scenario", group=None, day0=0):
     for k in range(0, ngraph):
         fig2.update_yaxes(title_text="Anzahl", row=k+1, col=1)
 
-    # plot(fig1, filename="../figures/" + title + ".html")
-    # fig1.write_image("../figures/" + title + ".png", width=1500, height=1000)
     if isnotebook():
         fig2.show()
     else:
@@ -466,29 +498,76 @@ def analysestate(state, title="Scenario", group=None, day0=0):
         df = pd.DataFrame({"group": group})
         for i in range(1, nday):
             df["state"] = state[i, :]
-            a = df.groupby(["group", "state"]).agg(n=("state", "count"))
+            a = df.groupby(["group", "state"], sort=False,
+                           ).agg(n=("state", "count")).reset_index()
             a.reset_index(inplace=True)
             a = a.pivot_table(values="n", columns="state",
                               index=["group"], margins=True,
                               aggfunc="sum", fill_value=0)
             a.reset_index(inplace=True)
             a.rename(columns=STATEDEF, inplace=True)
-            a[STATEDEF[0]] = a[STATEDEF[0]]
             a["day"] = i
-            a.fillna(0, inplace=True)
             groupresults.append(a)
 
         groupresults = pd.concat(groupresults)
-    groupresults.fillna(0, inplace=True)
-    groupresults = groupresults[['day', 'group', 'nicht infiziert', 'infiziert'
-                                 , 'immun', 'ICU', 'tod (Covid-19)', 'All']]
-    groupresults.rename(columns={"group": "Gruppe", "day": "Tag", "All":
-                                 "Gesamt"}, inplace=True)
-    for col in ['nicht infiziert', 'infiziert', 'immun', 'ICU',
-                'tod (Covid-19)']:
-        groupresults[col + str(" %")] = groupresults[col] / groupresults["Gesamt"]
+        groupresults.fillna(0, inplace=True)
+        groupresults = groupresults[['day', 'group', 'nicht infiziert',
+                                     'infiziert', 'immun', 'ICU',
+                                     'tod (Covid-19)', 'All']]
+        groupresults.rename(columns={"group": "Gruppe", "day": "Tag", "All":
+                                     "Gesamt"}, inplace=True)
+        for col in ['nicht infiziert', 'infiziert', 'immun', 'ICU',
+                    'tod (Covid-19)']:
+            groupresults[col + str(" %")] = groupresults[col] / groupresults[
+                "Gesamt"]
     return results, groupresults
 
+
+def groupresults(groups, state):
+    """Analyse state by group.
+
+    Parameters
+    ----------
+    groups : dictionary with property names as keys and arrays of length n
+        with the property value of each individual as values
+    state : array of shape nday, n with state values pers day and individual
+
+    Returns
+    -------
+    res : DataFrame with results per group
+    """
+    # number of people with icu care
+    pers_icu = np.max(state == 6, axis=0)
+
+    # days on icu
+    pers_days_icu = np.sum(state == 6, axis=0)
+
+    # covid 19 death
+    pers_death_covid = np.max(state == 7, axis=0)
+
+    # infected
+    pers_infected = np.max(np.isin(state, [2, 3, 5, 6, 7]), axis=0)
+
+    # Create datafram
+    df = pd.DataFrame({"ICU": pers_icu, "ICU Tage": pers_days_icu,
+                       "tod (Covid-19)": pers_death_covid,
+                      "infiziert": pers_infected})
+    for key, value in groups.items():
+        df[key] = value
+
+    res = df.groupby(list(groups.keys())).agg(
+        Anzahl=("infiziert", "count"),
+        ICU_Care=("ICU", "sum"),
+        ICU_Tage=("ICU Tage", "sum"),
+        C19_Tote=("tod (Covid-19)", "sum"),
+        C19_Infizierte=("infiziert", "sum")
+        ).reset_index()
+
+    res["Anteil ICU Care"] = res["ICU_Care"] / res["Anzahl"]
+    res["Anteil c19_Tote"] = res["C19_Tote"] / res["Anzahl"]
+    res["Anteil C19_Infizierte"] = res["C19_Infizierte"] / res["Anzahl"]
+    res["CFR"] = res["C19_Tote"] / res["C19_Infizierte"]
+    return res
 
 def cfr_from_ts(date, cum_reported, cum_deaths, timetodeath, name):
     """Calculate an estimated cfr from timeseries."""
@@ -568,7 +647,7 @@ def analyse_cfr(statesum, reffektive, delay, darkrate, cfr, timetodeath, name,
     nmax = np.argmax(statesum[7])
 
     fig1 = make_subplots(rows=3, cols=1, subplot_titles=(
-        "neue Infektionen", "R effektiv", "Case fatality Rate"),
+        "neue Infektionen", "R effektiv", "Case Fatality Rate"),
         shared_xaxes=True)
     fig1.add_trace(go.Scatter(x=[dw-day0 for dw in range(0, nmax)],
                               y=crude_rate[:nmax], mode='lines',
@@ -588,7 +667,7 @@ def analyse_cfr(statesum, reffektive, delay, darkrate, cfr, timetodeath, name,
 
     fig1.update_xaxes(title_text="Tag", automargin=True, row=3, col=1)
     fig1.update_yaxes(title_text="CFR", row=3, col=1)
-    fig1.update_yaxes(title_text="RE", row=3, col=1)
+    fig1.update_yaxes(title_text="R<sub>e</sub>", row=2, col=1)
     fig1.update_yaxes(title_text="Anzahl", row=1, col=1)
     fig1.update_layout(showlegend=True, title=name, legend_orientation="h")
     if isnotebook():

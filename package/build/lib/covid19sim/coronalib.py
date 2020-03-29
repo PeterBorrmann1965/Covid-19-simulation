@@ -11,11 +11,12 @@ from plotly.subplots import make_subplots
 import scipy.stats
 from IPython.display import display
 import pkg_resources
+from sklearn.preprocessing import LabelEncoder
 
 warnings.filterwarnings("ignore")
 
 
-STATEDEF_EN = {0: "not infected", 1: "immun or dead", 2: "infected",
+STATEDEF_EN = {0: "not infected", 1: "immun", 2: "infected",
                3: "identified", 4: "dead (other)", 5: 'hospital',
                6: 'intensive', 7: 'Covid-19 dead'}
 
@@ -497,29 +498,76 @@ def analysestate(state, title="Scenario", group=None, day0=0):
         df = pd.DataFrame({"group": group})
         for i in range(1, nday):
             df["state"] = state[i, :]
-            a = df.groupby(["group", "state"]).agg(n=("state", "count"))
+            a = df.groupby(["group", "state"], sort=False,
+                           ).agg(n=("state", "count")).reset_index()
             a.reset_index(inplace=True)
             a = a.pivot_table(values="n", columns="state",
                               index=["group"], margins=True,
                               aggfunc="sum", fill_value=0)
             a.reset_index(inplace=True)
             a.rename(columns=STATEDEF, inplace=True)
-            a[STATEDEF[0]] = a[STATEDEF[0]]
             a["day"] = i
-            a.fillna(0, inplace=True)
             groupresults.append(a)
 
         groupresults = pd.concat(groupresults)
-    groupresults.fillna(0, inplace=True)
-    groupresults = groupresults[['day', 'group', 'nicht infiziert', 'infiziert'
-                                 , 'immun', 'ICU', 'tod (Covid-19)', 'All']]
-    groupresults.rename(columns={"group": "Gruppe", "day": "Tag", "All":
-                                 "Gesamt"}, inplace=True)
-    for col in ['nicht infiziert', 'infiziert', 'immun', 'ICU',
-                'tod (Covid-19)']:
-        groupresults[col + str(" %")] = groupresults[col] / groupresults["Gesamt"]
+        groupresults.fillna(0, inplace=True)
+        groupresults = groupresults[['day', 'group', 'nicht infiziert',
+                                     'infiziert', 'immun', 'ICU',
+                                     'tod (Covid-19)', 'All']]
+        groupresults.rename(columns={"group": "Gruppe", "day": "Tag", "All":
+                                     "Gesamt"}, inplace=True)
+        for col in ['nicht infiziert', 'infiziert', 'immun', 'ICU',
+                    'tod (Covid-19)']:
+            groupresults[col + str(" %")] = groupresults[col] / groupresults[
+                "Gesamt"]
     return results, groupresults
 
+
+def groupresults(groups, state):
+    """Analyse state by group.
+
+    Parameters
+    ----------
+    groups : dictionary with property names as keys and arrays of length n
+        with the property value of each individual as values
+    state : array of shape nday, n with state values pers day and individual
+
+    Returns
+    -------
+    res : DataFrame with results per group
+    """
+    # number of people with icu care
+    pers_icu = np.max(state == 6, axis=0)
+
+    # days on icu
+    pers_days_icu = np.sum(state == 6, axis=0)
+
+    # covid 19 death
+    pers_death_covid = np.max(state == 7, axis=0)
+
+    # infected
+    pers_infected = np.max(np.isin(state, [2, 3, 5, 6, 7]), axis=0)
+
+    # Create datafram
+    df = pd.DataFrame({"ICU": pers_icu, "ICU Tage": pers_days_icu,
+                       "tod (Covid-19)": pers_death_covid,
+                      "infiziert": pers_infected})
+    for key, value in groups.items():
+        df[key] = value
+
+    res = df.groupby(list(groups.keys())).agg(
+        Anzahl=("infiziert", "count"),
+        ICU_Care=("ICU", "sum"),
+        ICU_Tage=("ICU Tage", "sum"),
+        C19_Tote=("tod (Covid-19)", "sum"),
+        C19_Infizierte=("infiziert", "sum")
+        ).reset_index()
+
+    res["Anteil ICU Care"] = res["ICU_Care"] / res["Anzahl"]
+    res["Anteil c19_Tote"] = res["C19_Tote"] / res["Anzahl"]
+    res["Anteil C19_Infizierte"] = res["C19_Infizierte"] / res["Anzahl"]
+    res["CFR"] = res["C19_Tote"] / res["C19_Infizierte"]
+    return res
 
 def cfr_from_ts(date, cum_reported, cum_deaths, timetodeath, name):
     """Calculate an estimated cfr from timeseries."""
@@ -599,7 +647,7 @@ def analyse_cfr(statesum, reffektive, delay, darkrate, cfr, timetodeath, name,
     nmax = np.argmax(statesum[7])
 
     fig1 = make_subplots(rows=3, cols=1, subplot_titles=(
-        "neue Infektionen", "R effektiv", "Case fatality Rate"),
+        "neue Infektionen", "R effektiv", "Case Fatality Rate"),
         shared_xaxes=True)
     fig1.add_trace(go.Scatter(x=[dw-day0 for dw in range(0, nmax)],
                               y=crude_rate[:nmax], mode='lines',
@@ -619,7 +667,7 @@ def analyse_cfr(statesum, reffektive, delay, darkrate, cfr, timetodeath, name,
 
     fig1.update_xaxes(title_text="Tag", automargin=True, row=3, col=1)
     fig1.update_yaxes(title_text="CFR", row=3, col=1)
-    fig1.update_yaxes(title_text="RE", row=3, col=1)
+    fig1.update_yaxes(title_text="R<sub>e</sub>", row=2, col=1)
     fig1.update_yaxes(title_text="Anzahl", row=1, col=1)
     fig1.update_layout(showlegend=True, title=name, legend_orientation="h")
     if isnotebook():
