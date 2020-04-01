@@ -9,6 +9,7 @@ Population:
 - Number of individuals by age, gender, and family status for Germany  (Source: Statistisches Bundesamt)
 - Mortality rate of each individual (Source: Statistisches Bundesamt)
 - Average daily contact rate (Source: https://journals.plos.org/plosmedicine/article/file?id=10.1371/journal.pmed.0050074&type=printable)
+- An alternative population is bases on a representative sample with the household size as additional information
 
 The model simulates the daily changes of each individual in the population with the following states: 
 0 - not infected 
@@ -44,9 +45,9 @@ The hospital index should be a quite good indicator for the impact on the health
 * The most prominent effect hat the protection of elderly people. Here to effects play together. The eldely contribute more to the hospitaliy index and on the hand the fast infection and immunization of younger people reduces the infection risk later on. 
 * It must be noted that any action changing contact rate has massive social and economical consequences.
 
-![Infections](https://github.com/PeterBorrmann1965/Covid-19-simulation/blob/master/scripts/infections.png)
+![Infections](https://github.com/PeterBorrmann1965/Covid-19-simulation/blob/master/infections.png)
 
-![Hospital index](https://github.com/PeterBorrmann1965/Covid-19-simulation/blob/master/scripts/hospital_index.png)
+![Hospital index](https://github.com/PeterBorrmann1965/Covid-19-simulation/blob/master/hospital_index.png)
 
 ### Questions
 * What is the optimal schedule to keep the maximum healthcare demand below the maximum capacity while minimizimng the social and financial impact?
