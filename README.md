@@ -1,4 +1,107 @@
 # Covid-19-simulation
+
+## News
+
+codid19sim is now available as a python package:
+
+* Download the latest wheel (https://github.com/PeterBorrmann1965/Covid-19-simulation/blob/master/package/dist/covid19sim-0.1.2-py3-none-any.whl)
+* Install the package:  pip install covid19sim-0.1.2-py3-none-any.whl
+* Run a simulation with your parameters
+
+```python
+"""Simulation of infections for different scenarios."""
+import covid19sim.coronalib as cl
+import pandas as pd 
+import numpy as np
+import plotly.express as px
+```
+
+
+```python
+print(cl.sim.__doc__)
+```
+
+    Simulate model.
+    
+        Parameters:
+        -----------
+        age : array of length n, age of each individual
+        drate :  array of length n, daily mortality rate of each individual
+        mean_serial : mean of the gamma distribution for the infections profile
+        std_serial : std of the gamma distribution for the infections profile
+        nday : number of days to simulated
+        day0icu : number of icu beds at day0 (used to set day0)
+        prob_icu : mean probility, that an infected needs icu care
+        mean_days_to_icu : mean days from infection to icucare
+        mean_duration_icu : mean days on icu
+        immunt0 : percentage immun at t0
+        icu_fataliy : percentage with fatal outcome
+        long_term_death : Flag to simulate death from long term death rate
+        hnr : array of length n, household number
+        com_attack_rate : infection probabilty within a community
+        contacts : array of length n, number of daily contacts per person or None
+            if contacts is not None the individual r is proportional to contacts
+        r_mean : mean r for the population at simulation start
+        rlock_mean : mean_r at forced lockdown
+        lock_icu : if the number of occupied icu beds exceeds lock_icu the mean r
+            is reduced to cut_meanr
+        simname : name of the simulation
+        datadir : directory where all results are saved
+    
+        Returns:
+        --------
+        state : array shape (n,nday) with the state of each indivial on every day
+            0 : not infected
+            1 : immun
+            2.: infected but not identified
+            3.: not used
+            4 : dead (long term mortality)
+            5 : not used
+            6 : ICU care
+            7 : dead (Covid-19)
+        statesum : array of shape (5, nday) with the count of each individual per
+            days
+        infections : array of length nday
+            the number of infections
+        day0 : the simulation day on which the number of icu care patients exceeds
+            for the first time day0icu
+        re :  array of length nday
+            the effective reporoduction number per day
+        params : a copy of all input paramters as a data frame
+        
+
+
+Covid-19 Sim provides two populations:<br>
+"current" : The population is based on the current population (2019) <br>
+"household" : The population is based on a subsample in 2010 but with household numbers and additional persons per household
+
+
+```python
+age, agegroup, gender, contacts, drate, hnr, persons = cl.makepop("household",1000000)
+```
+
+
+```python
+contacts = np.where(persons > 4,0.2,1.0)
+contacts = contacts/np.mean(contacts)
+state, statesum, infections, day0, rnow, args = cl.sim(
+        age, drate, nday=365, lock_icu=120, prob_icu=0.006, day0icu=120,
+        mean_days_to_icu=10, mean_duration_icu=16, mean_serial=7,
+        std_serial=3.4,
+        immunt0=0.0, icu_fatality=0.5, long_term_death=False, hnr=hnr,
+        com_attack_rate=0.8, contacts=contacts, r_mean=3.5,
+        rlock_mean=0.7, simname="Test",
+        datadir="/mnt/wd1/nrw_corona/")
+```
+
+
+```python
+display(cl.groupresults({"Geschlecht":gender,"Alter":agegroup}, state[:(day0)]))
+```
+
+
+
+## Overview
 Simulation of individual an governmental actions and estimation of parameters
 
 The first version of this simulation project is intended to simulate the effects of indiviual of governmental actions to change the daily contact rates. 
