@@ -82,8 +82,24 @@ Auch die Anzahl der Intensivpatienten kann nicht verlässlich zur Einschätzung 
 Als erstes positiver Zeichen kann gesehen werden, dass die Zahl der Toten seit einigen Tagen sowohl in der am stärksten betroffenen Region Lombardei als auch in ganz Italien sinkt.
 
 ### Simulation kurzfristiger Szenarien
+Die folgende Tabelle zeigt abhängig vom Szenario die benötigten ICU-Kapazitäten als Vielfaches der zum Lockdown belegten Kapazitäten. Lesebeispiel: Bei einer Belegung von 500 ICU-Betten zum Lockdowh-Zeitpunkt würden im Szenario R0=3,5 und Rlock=0,9 maximal 5950 Betten (11,9 x 500) 25 Tage nach dem Lockdown notwendig. 
 
+| R0  | Rlock | Peak Tag | Peak/ICU Lock |
+|-----|-------|----------|---------------|
+| 2,5 | 0,7   | 20       | 4,7           |
+| 2,5 | 0,9   | 25       | 7,2           |
+| 2,5 | 1,2   | 112      | 29,5          |
+| 3,5 | 0,7   | 20       | 9,0           |
+| 3,5 | 0,9   | 25       | 11,9          |
+| 3,5 | 1,2   | 99       | 33,8          |
 
+R0 hat einen starken Einfluß auf die benötigte Bettenzahl, wenn Rlock kleiner als 1 ist. Hier kommt der Effekt zum Tragen, dass zum Lockdown-Zeitpunkt bereits deutlich mehr Infizierte vorhanden sind, die in den Folgewochen abgearbeitet werden müssen. 
+
+Die Lockdown-Werte von 0,7 und 0,9 führen zwar immer noch zu einem kurzfristigen Anstieg des ICU Bedarfs um einen Faktor 4,7-11,9, führen vermutlich aber nicht zu einer Überlastung der Kapazitäten. 
+
+Die beiden Szenarien mit Rlock=1.2 sagen eine sehr hohe Maximalbelastung nach erst 3-4 Monaten vorher. Hier bestünde die Hersuforderung, die effektive Reproduktionszahl weiter zu senken und gleichzeitig die Produktivität wieder zu steigern. 
+
+Anmerkung: In Deutschland befindet sich ein Intensivregister zu Covid-19 Patienten im Aufbau (https://www.divi.de/register/kartenansicht). Da sich die Fallzahlen jedoch sowohl durch zusätzliche Patienten als auch durch neue hinzukommende Intensivstationen, die Covid-19-Fälle melden, erhöhen, ist die Zeitentwicklung nicht zuverlässlich einschätzbar. 
 
 
 
