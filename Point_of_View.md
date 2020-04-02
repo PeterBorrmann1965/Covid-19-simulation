@@ -97,7 +97,8 @@ R0 hat einen starken Einfluß auf die benötigte Bettenzahl, wenn Rlock kleiner 
 
 Die Lockdown-Werte von 0,7 und 0,9 führen zwar immer noch zu einem kurzfristigen Anstieg des ICU Bedarfs um einen Faktor 4,7-11,9, führen vermutlich aber nicht zu einer Überlastung der Kapazitäten. 
 
-Die beiden Szenarien mit Rlock=1.2 sagen eine sehr hohe Maximalbelastung nach erst 3-4 Monaten vorher. Hier bestünde die Hersuforderung, die effektive Reproduktionszahl weiter zu senken und gleichzeitig die Produktivität wieder zu steigern. 
+Die beiden Szenarien mit Rlock=1.2 sagen eine sehr hohe Maximalbelastung nach erst 3-4 Monaten vorher. Hier bestünde die Herausforderung, die effektive Reproduktionszahl weiter zu senken und gleichzeitig die Produktivität wieder zu steigern. 
+
 
 Anmerkung: In Deutschland befindet sich ein Intensivregister zu Covid-19 Patienten im Aufbau (https://www.divi.de/register/kartenansicht). Da sich die Fallzahlen jedoch sowohl durch zusätzliche Patienten als auch durch neue hinzukommende Intensivstationen, die Covid-19-Fälle melden, erhöhen, ist die Zeitentwicklung nicht zuverlässlich einschätzbar. 
 
