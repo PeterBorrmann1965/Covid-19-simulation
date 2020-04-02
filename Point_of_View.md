@@ -109,7 +109,7 @@ Die beiden Szenarien mit Rlock=1.2 sagen eine sehr hohe Maximalbelastung nach er
 Anmerkung: In Deutschland befindet sich ein Intensivregister zu Covid-19 Patienten im Aufbau (https://www.divi.de/register/kartenansicht). Da sich die Fallzahlen jedoch sowohl durch zusätzliche Patienten als auch durch neue hinzukommende Intensivstationen, die Covid-19-Fälle melden, erhöhen, ist die Zeitentwicklung nicht zuverlässlich einschätzbar. 
 
 #### Detailergebnisse
-Die Detailergebnisse mit den verwendeten Simualtionsparametern finden Sie [hier](../blob/master/szenarien/kurffrist)
+Die Detailergebnisse mit den verwendeten Simualtionsparametern finden Sie [hier](../master/szenarien/kurffrist).
 
 ![cfr](https://github.com/PeterBorrmann1965/Covid-19-simulation/blob/master/kurzfrist_cfr.svg)
 
