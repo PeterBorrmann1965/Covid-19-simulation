@@ -109,9 +109,13 @@ Die beiden Szenarien mit Rlock=1.2 sagen eine sehr hohe Maximalbelastung nach er
 Anmerkung: In Deutschland befindet sich ein Intensivregister zu Covid-19 Patienten im Aufbau (https://www.divi.de/register/kartenansicht). Da sich die Fallzahlen jedoch sowohl durch zusätzliche Patienten als auch durch neue hinzukommende Intensivstationen, die Covid-19-Fälle melden, erhöhen, ist die Zeitentwicklung nicht zuverlässlich einschätzbar. 
 
 #### Detailergebnisse
-Die Detailergebnisse mit den verwendeten Simulationsparametern finden Sie [hier](https://github.com/PeterBorrmann1965/Covid-19-simulation/tree/master/szenarien/kurzfrist). 
+Die Detailergebnisse mit den verwendeten Simulationsparametern finden Sie [hier](https://github.com/PeterBorrmann1965/Covid-19-simulation/tree/master/szenarien/kurzfrist). Die html-Files enthalten jeweils interaktive Grafiken.
 
+Die folgende Grafik stellt für R0=3,5 und Rlock=0.9 die Entwicklung die zeitliche Entwicklung dar. Tag 1 ist der erste Tag des Lockdowns. In der Simulation werden die tatsächlichen Posivfälle und nicht die gemeldeten Fälle dargestellt. Die Anzahl der Intensivpatienten steigt nach dem Lockdown noch sehr stark an. 
 ![cfr](https://github.com/PeterBorrmann1965/Covid-19-simulation/blob/master/kurzfrist_linear.svg)
+In der folgenden Grafiken sind die neuen Infektionen, die effektive Reproduktionszahl und die Case Fatality Rate dargestellt. Die Kurve "Meldungen" entspricht nicht den wirklichen Meldungen sondern stellt dar, wie sich Meldungen entwickleln würden, wenn alle Infizierten mit einer mittleren Zeitverzögerung von fünf Tagen gemeldet werden würden. 
+
+Bei der Case Fatality Rate ist die blaue Kurve (crude) berechnet, indem die kumulierte Anzahl der Toten durch die kumlierte Anzahl der Infizierten geteilt wird. Die grüne Kurve (korrigiert) berücksichtigt den Zeitverzug zwischen Infektion und Tod und zeigt, dass in der Anfangsphase die Crude Case Fatality Rate eine grobe Unterschätzung darstellt, wenn alle Infizierten identifiziert werden. 
 ![cfr](https://github.com/PeterBorrmann1965/Covid-19-simulation/blob/master/kurzfrist_cfr.svg)
 
 
