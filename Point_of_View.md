@@ -59,6 +59,8 @@ unter Lockdown-Bedingungen in Deutschland unter 1 gefallen ist. Aufgrund möglic
 an Test, verstärkte Tests bei systemrelevanten Bevölkerungsteilen, ...) ist aber auch eine effektive Reproduktionsrate 
 größer als 1 nicht komplett auszuschliessen. 
 
+Wegen der kürzeren Inkubationszeit der Influenza müssen bei einem wirksamen Lockdown die gemeldeten Influenza-Infektionen früher zurückgehen als die Covid-19 Fälle. Laut Bericht des RKI zur KW 13 (21.-27.3.2020) ist dies der Fall (https://influenza.rki.de/Wochenberichte/2019_2020/2020-13.pdf). Die Zahl der gemeldeten Fälle ist in den letzten beiden Wochen stark gesunken: 19.130 (KW11), 10.712 (KW12), 3.528 (KW13). Wegen des saisonal bedingten Abklingens der Grippewelle kann daraus jedoch nur geschlossen werden, dass die Grippemeldungen einer deutlich Veringerung des allgemeinen Infektionsgeschehens nicht entgegenstehen. 
+
 In Großbritanien wurde der Effekt des Lockdowns auf eine Reduktion der Kontakte um ca. 75% geschätzt 
 (https://cmmid.github.io/topics/covid19/current-patterns-transmission/comix-impact-of-physical-distance-measures-on-transmission-in-the-UK.html)
 Es ist zu beachten, dass sich relative Reduktionen nicht 1:1 übertragen lassen und die Kontaktraten unter 
@@ -73,6 +75,16 @@ wie Pflegeheimen hängt der Nachlaufeffekt stark von den lokal getroffenen Schut
 * Medium Case: Re=0.9
 * Worst Case: Re=1.2
 </b>
+
+#### Lockdown Effekt in Italien
+In Italien wurde der Lockdown am 9.3.2020 eingeführt. Tests auf Covid-19 werden in Italien erst bei mittleren bis schweren Symptomen oder sogar post mortem durchgeführt. Wegen begrenzter Testkapzitäten bei gleichzeitig hoher Dunkelziffer ist eine gleichbleibende Anzahl an gemeldeten Neuinfektionen noch kein eindeutiges Indiz dafür, dass der exponentielle Anstieg gestoppt wurde. <br> 
+Auch die Anzahl der Intensivpatienten kann nicht verlässlich zur Einschätzung herangezogen werden, da in einigen Regionen die Kapazitätsgrenzen überschritten wurden und selbst bei sinkenden Zahlen im Bedarf weiterhin Zubau von Kapazitäten notwendig ist.<br>
+Als erstes positiver Zeichen kann gesehen werden, dass die Zahl der Toten seit einigen Tagen sowohl in der am stärksten betroffenen Region Lombardei als auch in ganz Italien sinkt.
+
+### Simulation kurzfristiger Szenarien
+
+
+
 
 
 
