@@ -2,6 +2,9 @@
 
 ## News
 
+### [Short Term Scenarions for the lockdown in Germany (in German)](https://github.com/PeterBorrmann1965/Covid-19-simulation/blob/master/Point_of_View.md)
+
+### Covid19sim as a python package
 codid19sim is now available as a python package:
 
 * Download the latest wheel (https://github.com/PeterBorrmann1965/Covid-19-simulation/blob/master/package/dist/covid19sim-0.1.2-py3-none-any.whl)
