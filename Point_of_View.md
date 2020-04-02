@@ -99,12 +99,11 @@ Die Lockdown-Werte von 0,7 und 0,9 führen zwar immer noch zu einem kurzfristige
 
 Die beiden Szenarien mit Rlock=1.2 sagen eine sehr hohe Maximalbelastung nach erst 3-4 Monaten vorher. Hier bestünde die Herausforderung, die effektive Reproduktionszahl weiter zu senken und gleichzeitig die Produktivität wieder zu steigern. 
 
-<b>Zusammenfassend kann sagen, dass Deutschland kurzfristig unter Lockdown-Bedingungen an einer Überlastung des Gesundheitssystems vorbei kommen könnten. Es kommen hier im Vergleich zu anderen europäischen Ländern mehrere positive Effekte zusammen: 
+<b>Zusammenfassend kann sagen, dass Deutschland kurzfristig unter Lockdown-Bedingungen an einer Überlastung des Gesundheitssystems vorbei kommen könnte. Es kommen hier im Vergleich zu anderen europäischen Ländern mehrere positive Effekte zusammen: 
 * Vergleichweise geringe Kontaktraten in Deutschland führen zu einer geringeren Basisreproduktionszahl. 
-* Durch umfangreichere Tests konnten gerade in der Anfangsphase ein besseres Containment durchgeführt werden. Auch derzeit sind die Positivfälle in vielen Landkreisen noch so gering, dass eine frühzeitige Isolation von Kontaktpersonen möglich ist. 
-* Deutschland hat im Vergleich zu anderen Ländern früher auf die Notbremse getreten. Bei einem Lockdown unter Re=1 kann bereits eine Woche längeres Warten einen Faktor 3 in der Maximalbelastung bedeute (In der Lombardei waren zum Zeitpunkt des Lockdowns bereits 440 Covid-19 Patienten in Intensivbehandlung. Eine Woche zuvor waren es nur 127.).
-* Die Intensivkapazitäten sind in Deutschland vergleichsweise hoch, jedoch verschafft auch eine 3-fache Kapazität bei einem ungebremsten Wachstum von z.B. 20% nur einen zusätzlichen zeitlichen Puffer von ca. 6 Tagen.
+* Durch umfangreichere Tests konnte gerade in der Anfangsphase ein besseres Containment durchgeführt werden. Auch derzeit sind die Positivfälle in vielen Landkreisen noch so gering, dass eine frühzeitige Identifikation und Isolation von Kontaktpersonen möglich ist. 
+* Deutschland hat im Vergleich zu anderen Ländern früher auf die Notbremse getreten. Bei einem Lockdown unter Re=1 kann bereits eine Woche längeres Warten einen Faktor 3 in der Maximalbelastung bedeuten (In der Lombardei waren zum Zeitpunkt des Lockdowns bereits 440 Covid-19 Patienten in Intensivbehandlung. Eine Woche zuvor waren es nur 127.).
+* Die Intensivkapazitäten sind in Deutschland vergleichsweise hoch - jedoch verschafft auch eine 3-fache Kapazität bei einem ungebremsten Wachstum von z.B. 20% pro Tag nur einen zusätzlichen zeitlichen Puffer von ca. 6 Tagen.
 </b>
-
 
 Anmerkung: In Deutschland befindet sich ein Intensivregister zu Covid-19 Patienten im Aufbau (https://www.divi.de/register/kartenansicht). Da sich die Fallzahlen jedoch sowohl durch zusätzliche Patienten als auch durch neue hinzukommende Intensivstationen, die Covid-19-Fälle melden, erhöhen, ist die Zeitentwicklung nicht zuverlässlich einschätzbar. 
