@@ -2,33 +2,32 @@
 
 In Deutschland - wie in den meisten Ländern - stehen derzeit 3 Fragen im Vordergrund: 
 * Reichen <b>kurzfristig</b>  die Krankenhaus- und Intensivkapazitäten für die zu erwartende Welle an Covid-19 Patienten aus?
-* Wie kann ein <b>mittelfridtiges</b> Szenario aussehen, um wieder zu einem geregelten Wirtschaftsleben zurück zu kehren?
-* Welche Einschränkungen werden <b>langfristig</b> bestehen bleiben?
+* Wie kann ein <b>mittelfristiges</b> Szenario aussehen, um wieder zu einem geregelten Wirtschaftsleben zurückzukehren?
+* Welche Einschränkungen werden <b>längerfristig</b> bestehen bleiben?
 
 Aus Modellsicht spielen hier nicht nur die durchschnittlichen Reproduktionsraten in Abhängigkeit von der Zeit eine 
 wesentliche Rolle,  sondern vor allem die individuellen Kontaktraten besonders gefährdeter Gruppen. 
 
 ## Kurzfristige Kapazitäten im Gesundheitssystem 
-Wesentlich für die Abschätzung der kurzfristig zu erwartenden Maximalbelastung ist eine Einschätzung der effektiven
-effektiven Reproduktionsrate vor dem dem von der Bundesregierung und den Ländern am 22.März.2020 beschlossenen Lockdown und 
-aktuellen Wert. <br>
+Wesentlich für die Abschätzung der kurzfristig zu erwartenden Maximalbelastung des Gesundheitssystems ist eine Einschätzung der Reproduktionsrate vor dem Lockdown am 23.03.2020 (R0) und der aktuellen Reproduktionsrate (Re). <br>
 
 ### Einschätzung der Reproduktionsrate R0 vor dem Lockdown
 
 #### Datenlage in Deutschland
 Eine exakte Messung der Reproduktionsrate ist unseres Erachtens nicht möglich. Hier spielen unterschiedliche Faktoren 
 eine Rolle: 
-* Sowohl für positive Tests, Einlieferungen auf Intensivstationen und Todesfälle gibt es Zeitverzüge zum 
-Infektionszeitpunkt von einer bis zu drei oder sogar vier Wochen. Derzeitige Anstiege spiegeln also das 
-Infektionsgeschehen vor Wochen wieder. 
-* Die positiven Fälle hängen von den Testvorgaben (mit Symptomen und Kontakt) und den jeweiligen
-    Testkapazitäten ab. Bei exponentiell steigenden Infektionen ist daher anzunehmen, dass die Dunkelziffer im Zeitverlauf steigt. 
-* Aufgrund der immer noch sehr geringen Fallzahlen gibt es ein großes statistisches Rauschen und zufällige Ereignisse (Superspreading),
+* Für Covid-19-Meldefälle, Intensiv-Fälle und Todesfälle gibt es Zeitverzüge zum 
+    Infektionszeitpunkt von einer bis mehreren Wochen. Derzeitige Anstiege spiegeln also das 
+    Infektionsgeschehen von vor Tagen bzw. vor Wochen wieder. 
+* Die Meldefälle hängen von den Testvorgaben (mit Symptomen und Kontakt) und den jeweiligen
+    Testkapazitäten ab. Bei exponentiell steigenden Infektionsfällen ist daher anzunehmen, 
+    dass die Dunkelziffer im Zeitverlauf steigt. 
+* Aufgrund der immer noch sehr geringen Fallzahlen??? gibt es ein großes statistisches Rauschen und zufällige Ereignisse (Superspreading),
 die sich in deutlich in der Fallzahlen ausgewirkt haben oder noch auswirken (im Nachlauf bei der Zahl der Todesfälle). 
 
-<b>Als groben Bereich sehen wir eine Reproduktionsrate R0 vor dem Lockdown von 2.5 bis 3.5 in Deutschland als realistisch an. </b>
+<b>Für die Basisreproduktionsrate R0 in Deutschland vor dem Lockdown sehen wir einen Bereich von 2.5 bis 3.5 als realistisch an. </b>
 
-#### Vergleich mit anderen europäischen Ländern
+#### Übliche Kontaktraten in der Bevölkerung in Deutschland im Vergleich mit anderen europäischen Ländern
 Laut einer Studie aus dem Jahr 2006 (Quelle: https://journals.plos.org/plosmedicine/article/file?id=10.1371/journal.pmed.0050074&type=printable) 
 sind die mittleren Kontaktraten in Europa sehr unterschiedlich: 
 * Belgien:  11,84
@@ -37,27 +36,26 @@ sind die mittleren Kontaktraten in Europa sehr unterschiedlich:
 * Italien: 19,77
 * Niederlande: 13,85
 * UK: 11,74
-Diese Werte scheinen eng korreliert mit den unterschiedlichen initialen Infektionsdynamiken in den verschiedenen Ländern
-zu sein.<br>
+Diese Werte scheinen eng mit den unterschiedlichen initialen Infektionsdynamiken in den verschiedenen Ländern
+zu korrelieren.<br>
 Unsere Einschätzung ist daher: <b> Deutschland hat im Vergleich zu anderen europäischen Ländern ein deutlich geringere 
 Reproduktionsrate unter uneingeschränkten Lebensbedingungen. </b>
 
 #### Vergleich mit asiatischen Ländern
 Für einen Vergleich der Kontaktraten unter Normalbedingungen liegen uns keine Studiendaten vor, die einen direkten Vergleich
-ermöglichen. Qualitativ kann man aber sagen, dass auch unter Normmalbedigungen in einige asiatischen Ländern wie Japan oder
-Südkorea das Halten von Abstand zum guten Ton gehört und das Tragen vom Masken in dichten Menschenmengen teilweise zum 
-guten Ton gehört - nicht nur um sich selbst sondern auch um anderen zu schützen. <br>
-Unser Einschätzung ist: <b>Sie Reproduktionsrate R0 in Deutschland ist höher als in Ländern wie Japan oder
+ermöglichen. Es ist jedoch davon auszugehen, dass auch unter Normmalbedigungen in einigen asiatischen Ländern wie Japan oder
+Südkorea das Halten von Abstand zum guten Ton gehört??? (gilt nicht für den ÖPNV) und auch das Tragen vom Masken in dichten Menschenmengen sehr häufig praktiziert wird - nicht nur um sich selbst, sondern auch um anderen zu schützen. <br>
+Unser Einschätzung ist: <b>Die Basisreproduktionsrate R0 in Deutschland ist höher als in Ländern wie Japan oder
 Südkorea.</b>
 
-### Einschätzung der Reproduktionsrate R nach dem Lockdown
+### Einschätzung der Reproduktionsrate Re nach dem Lockdown
 
 #### Datenlage in Deutschland
 
-Die aktuelle fallenden Zahlen von neuen Infektionen deuten darauf hin, dass die effektive Reproduktionsrate 
-unter Lockdown-Bedingungen in Deutschland unter 1 gefallen ist. Aufgrund möglicher Verzerrungen (Limitierte Anzahl 
-an Test, verstärkte Tests bei systemrelevanten Bevölkerungsteilen, ...) ist aber auch eine effektive Reproduktionsrate 
-größer als 1 nicht komplett auszuschliessen. 
+Die aktuell fallenden Zahlen von Neu-Infektionen deuten darauf hin, dass die effektive Reproduktionsrate 
+unter Lockdown-Bedingungen in Deutschland unter 1 gefallen sein könnte. Aufgrund möglicher Verzerrungen (limitierte Anzahl 
+an Tests, verstärkte Testungen von systemrelevanten Bevölkerungsteilen, ...) ist aber auch eine effektive Reproduktionsrate 
+größer als 1 nicht komplett auszuschließen. 
 
 Wegen der kürzeren Inkubationszeit der Influenza müssen bei einem wirksamen Lockdown die gemeldeten Influenza-Infektionen früher zurückgehen als die Covid-19 Fälle. Laut Bericht des RKI zur KW 13 (21.-27.3.2020) ist dies der Fall (https://influenza.rki.de/Wochenberichte/2019_2020/2020-13.pdf). Die Zahl der gemeldeten Fälle ist in den letzten beiden Wochen stark gesunken: 19.130 (KW11), 10.712 (KW12), 3.528 (KW13). Wegen des saisonal bedingten Abklingens der Grippewelle kann daraus jedoch nur geschlossen werden, dass die Grippemeldungen einer deutlich Veringerung des allgemeinen Infektionsgeschehens nicht entgegenstehen. 
 
