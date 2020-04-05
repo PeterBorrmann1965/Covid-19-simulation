@@ -45,8 +45,8 @@ Reproduktionsrate unter uneingeschränkten Lebensbedingungen. </b>
 
 #### Vergleich mit asiatischen Ländern
 Für einen Vergleich der Kontaktraten unter Normalbedingungen liegen uns keine Studiendaten vor, die einen direkten Vergleich
-ermöglichen. Es ist jedoch davon auszugehen, dass auch unter Normmalbedigungen in einigen asiatischen Ländern wie Japan oder
-Südkorea das Halten von Abstand zum guten Ton gehört??? (gilt nicht für den ÖPNV) und auch das Tragen vom Masken in dichten Menschenmengen sehr häufig praktiziert wird - nicht nur um sich selbst, sondern auch um anderen zu schützen. <br>
+ermöglichen. Es ist jedoch davon auszugehen, dass auch unter Normmalbedigungen in asiatischen Ländern wie Japan oder
+Südkorea eher kontaktarme Begrüßungsrituale üblich sind und das Tragen vom Masken in dichten Menschenmengen sehr häufig praktiziert wird - nicht nur um sich selbst, sondern auch um andere Menschen zu schützen. <br>
 Unser Einschätzung ist: <b>Die Basisreproduktionsrate R0 in Deutschland ist höher als in Ländern wie Japan oder
 Südkorea.</b>
 
