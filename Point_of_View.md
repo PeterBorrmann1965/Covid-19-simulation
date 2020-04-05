@@ -1,4 +1,4 @@
-# Covid-19-Simulation - Point of View Deutschland (Stand 1.April 2020)
+# Covid-19-Simulation - Point of View Deutschland (Stand 5.April 2020)
 
 In Deutschland - wie in den meisten Ländern - stehen derzeit 3 Fragen im Vordergrund: 
 * Reichen <b>kurzfristig</b>  die Krankenhaus- und Intensivkapazitäten für die zu erwartende Welle an Covid-19 Patienten aus?
@@ -23,11 +23,9 @@ eine Rolle:
     Testkapazitäten ab. Bei exponentiell steigenden Infektionsfällen ist daher anzunehmen, 
     dass die Dunkelziffer im Zeitverlauf steigt. 
 * Aufgrund der immer noch sehr geringen Fallzahlen bei den Toten gibt es ein großes statistisches Rauschen und zufällige Ereignisse (Superspreading).
-* Hinzu kommen deutliche Verzögerungen bei den Meldungen,
+* Hinzu kommen deutliche Verzögerungen bei den Meldungen, die sich in deutlich in der Fallzahlen ausgewirkt haben oder noch auswirken (im Nachlauf bei der Zahl der Todesfälle). 
 
-die sich in deutlich in der Fallzahlen ausgewirkt haben oder noch auswirken (im Nachlauf bei der Zahl der Todesfälle). 
-
-<b>Für die Basisreproduktionsrate R0 in Deutschland vor dem Lockdown sehen wir einen Bereich von 2.5 bis 3.5 als realistisch an. </b>
+Für die <b>Basisreproduktionsrate R in Deutschland vor dem Lockdown sehen wir einen Bereich von 2.0 bis 2.5 </b> als realistisch an. Hierbei ist bereits eingeflossen, dass bereits vor dem Lockdown Schule geschlossen wurden, Großveranstaltungen weitestgehend untersagt wurden und die allgemeine Sensibilisierung der Bevölkerung für Hygiene und Social Distancing bereits eingeleitet war. 
 
 #### Übliche Kontaktraten in der Bevölkerung in Deutschland im Vergleich mit anderen europäischen Ländern
 Laut einer Studie aus dem Jahr 2006 (Quelle: https://journals.plos.org/plosmedicine/article/file?id=10.1371/journal.pmed.0050074&type=printable) 
@@ -70,11 +68,18 @@ Grundsätzlich sehen wir, dass es bei der effektiven Reproduktionsrate deutliche
 Kontaktsperren laufen zunächst Folgeinfektionen in Familien weitestgehend ungehindert weiter. In Gemeinschaftsunterkünften
 wie Pflegeheimen hängt der Nachlaufeffekt stark von den lokal getroffenen Schutzmaßnahmen ab. 
 
+Die aktuelle Einschätzung des Robert Koch Instituts ist, dass die effektive Reproduktionsrate derzeit bei ca. 1 liegt und weiter fallen wird.
+
 <b>Für Deutschland sehen wir daher drei Lockdown-Szenarien: 
 * Best Case: Re=0.7
 * Medium Case: Re=0.9
 * Worst Case: Re=1.2
 </b>
+
+### Lockdown-Effekt in Österreich
+Österreich hat bereits am 13.3.2020 einen Lockdown beschlossen. Zu diesem Zeitpunkt gab es in Österreich einen einzigen bestätigten Covid-19 Todesfall. Die Maßnahmen werden strikter als in Deutschland eingeschätzt. Zudem scheint die Versorgung mit Atemschutzmasken deutlich besser als in Deutschland zu sein. In Österreich zeigen sich bereits deutliche Effekte des Lockdowns. 
+* Die Zahl der gemeldeten täglichen Neuinfektionen sinkt seit dem 28.3.2020 (15 Tage nach Lockdown) von einem Maximum von 1043 am 27.3. auf 282 am 4.4.2020, wobei hier noch Nachmeldungen zu erwarten sind. 
+* Die Zahl der gemeldeten Toten ist seit dem 31.3 (22 Tote) nicht mehr ansteigend.
 
 #### Lockdown-Effekt in Italien
 In Italien wurde der Lockdown am 09.03.2020 eingeführt. Tests auf Covid-19 werden in Italien erst bei mittleren bis schweren Symptomen oder sogar post mortem durchgeführt. Wegen begrenzter Testkapzitäten bei gleichzeitig hoher Dunkelziffer ist eine gleichbleibende Anzahl an gemeldeten Neuinfektionen noch kein eindeutiges Indiz dafür, dass der exponentielle Anstieg gestoppt wurde. <br> 
