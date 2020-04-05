@@ -172,4 +172,5 @@ The hospital index should be a quite good indicator for the impact on the health
 * Dr. Tobias Sproll
 * Simon Hommel
 * Priv.-Doz. Dr. Peter Borrmann
+* Kurt Schubert
 
