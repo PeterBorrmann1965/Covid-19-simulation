@@ -38,7 +38,7 @@ sind die mittleren Kontaktraten in Europa sehr unterschiedlich:
 * UK: 11,74
 Diese Werte scheinen eng mit den unterschiedlichen initialen Infektionsdynamiken in den verschiedenen Ländern
 zu korrelieren.<br>
-Unsere Einschätzung ist daher: <b> Deutschland hat im Vergleich zu anderen europäischen Ländern ein deutlich geringere 
+Unsere Einschätzung ist daher: <b> Deutschland hat im Vergleich zu anderen europäischen Ländern eine deutlich geringere 
 Reproduktionsrate unter uneingeschränkten Lebensbedingungen. </b>
 
 #### Vergleich mit asiatischen Ländern
@@ -65,7 +65,7 @@ Es ist zu beachten, dass sich relative Reduktionen nicht 1:1 übertragen lassen 
 Lockdown-Bedingungen sich in verschiedenen Länder vermutlich annähern. 
 
 Grundsätzlich sehen wir, dass es bei der effektiven Reproduktionsrate deutliche Nachlaufeffekte geben kann. Auch nach 
-Kontaktsperren laufen zunächst Folgeinfektionen in Familien weitesgehend ungehindert weiter. In Gemeinschaftsunterkünften
+Kontaktsperren laufen zunächst Folgeinfektionen in Familien weitestgehend ungehindert weiter. In Gemeinschaftsunterkünften
 wie Pflegeheimen hängt der Nachlaufeffekt stark von den lokal getroffenen Schutzmaßnahmen ab. 
 
 <b>Für Deutschland sehen wir daher drei Lockdown-Szenarien: 
@@ -74,10 +74,10 @@ wie Pflegeheimen hängt der Nachlaufeffekt stark von den lokal getroffenen Schut
 * Worst Case: Re=1.2
 </b>
 
-#### Lockdown Effekt in Italien
-In Italien wurde der Lockdown am 9.3.2020 eingeführt. Tests auf Covid-19 werden in Italien erst bei mittleren bis schweren Symptomen oder sogar post mortem durchgeführt. Wegen begrenzter Testkapzitäten bei gleichzeitig hoher Dunkelziffer ist eine gleichbleibende Anzahl an gemeldeten Neuinfektionen noch kein eindeutiges Indiz dafür, dass der exponentielle Anstieg gestoppt wurde. <br> 
-Auch die Anzahl der Intensivpatienten kann nicht verlässlich zur Einschätzung herangezogen werden, da in einigen Regionen die Kapazitätsgrenzen überschritten wurden und selbst bei sinkenden Zahlen im Bedarf weiterhin Zubau von Kapazitäten notwendig ist.<br>
-Als erstes positiver Zeichen kann gesehen werden, dass die Zahl der Toten seit einigen Tagen sowohl in der am stärksten betroffenen Region Lombardei als auch in ganz Italien sinkt.
+#### Lockdown-Effekt in Italien
+In Italien wurde der Lockdown am 09.03.2020 eingeführt. Tests auf Covid-19 werden in Italien erst bei mittleren bis schweren Symptomen oder sogar post mortem durchgeführt. Wegen begrenzter Testkapzitäten bei gleichzeitig hoher Dunkelziffer ist eine gleichbleibende Anzahl an gemeldeten Neuinfektionen noch kein eindeutiges Indiz dafür, dass der exponentielle Anstieg gestoppt wurde. <br> 
+Auch die Anzahl der Intensivpatienten kann nicht verlässlich zur Einschätzung herangezogen werden, da in einigen Regionen die Kapazitätsgrenzen überschritten wurden und selbst bei sinkenden Zahlen im Bedarf weiterhin ein Ausbau von Kapazitäten notwendig ist.<br>
+Als erstes positives Zeichen kann gesehen werden, dass die Zahl der Covid-19-Toten seit einigen Tagen sowohl in der am stärksten betroffenen Region Lombardei als auch in ganz Italien sinkt.
 
 ### Simulation kurzfristiger Szenarien
 Die folgende Tabelle zeigt abhängig vom Szenario die benötigten ICU-Kapazitäten als Vielfaches der zum Lockdown belegten Kapazitäten. Lesebeispiel: Bei einer Belegung von 500 ICU-Betten zum Lockdowh-Zeitpunkt würden im Szenario R0=3,5 und Rlock=0,9 maximal 5950 Betten (11,9 x 500) 25 Tage nach dem Lockdown notwendig. 
@@ -91,29 +91,29 @@ Die folgende Tabelle zeigt abhängig vom Szenario die benötigten ICU-Kapazität
 | 3,5 | 0,9   | 25       | 11,9          |
 | 3,5 | 1,2   | 99       | 33,8          |
 
-R0 hat einen starken Einfluß auf die benötigte Bettenzahl, wenn Rlock kleiner als 1 ist. Hier kommt der Effekt zum Tragen, dass zum Lockdown-Zeitpunkt bereits deutlich mehr Infizierte vorhanden sind, die in den Folgewochen abgearbeitet werden müssen. 
+R0 hat einen starken Einfluß auf die benötigte Bettenzahl, wenn Rlock kleiner als 1 ist. Hier kommt der Effekt zum Tragen, dass zum Lockdown-Zeitpunkt bereits deutlich mehr Infizierte vorhanden sind, die in den Folgewochen versorgt werden müssen. 
 
-Die Lockdown-Werte von 0,7 und 0,9 führen zwar immer noch zu einem kurzfristigen Anstieg des ICU Bedarfs um einen Faktor 4,7-11,9, führen vermutlich aber nicht zu einer Überlastung der Kapazitäten. 
+Die Lockdown-Werte von 0,7 und 0,9 führen zwar immer noch zu einem kurzfristigen Anstieg des ICU Bedarfs um einen Faktor 4,7-11,9, aber vermutlich nicht zu einer Überlastung der Gesamt-Kapazitäten. 
 
-Die beiden Szenarien mit Rlock=1.2 sagen eine sehr hohe Maximalbelastung nach erst 3-4 Monaten vorher. Hier bestünde die Herausforderung, die effektive Reproduktionszahl weiter zu senken und gleichzeitig die Produktivität wieder zu steigern. 
+Die beiden Szenarien mit Rlock=1.2 sagen eine sehr hohe Maximalbelastung nach erst 3-4 Monaten vorher. Hier bestünde die Herausforderung, die effektive Reproduktionszahl weiter zu senken und gleichzeitig die wirtschaftliche Produktivität wieder zu steigern. 
 
-<b>Zusammenfassend kann sagen, dass Deutschland kurzfristig unter Lockdown-Bedingungen an einer Überlastung des Gesundheitssystems vorbei kommen könnte. Es kommen hier im Vergleich zu anderen europäischen Ländern mehrere positive Effekte zusammen: 
+<b>Zusammenfassend kann davon ausgegangen werden, dass Deutschland kurzfristig unter Lockdown-Bedingungen an einer Überlastung des Gesundheitssystems vorbeikommen könnte. Es kommen hier im Vergleich zu anderen europäischen Ländern mehrere positive Effekte zusammen: 
 * Vergleichweise geringe Kontaktraten in Deutschland führen zu einer geringeren Basisreproduktionszahl. 
-* Durch umfangreichere Tests konnte gerade in der Anfangsphase ein besseres Containment durchgeführt werden. Auch derzeit sind die Positivfälle in vielen Landkreisen noch so gering, dass eine frühzeitige Identifikation und Isolation von Kontaktpersonen möglich ist. 
-* Deutschland hat im Vergleich zu anderen Ländern früher auf die Notbremse getreten. Bei einem Lockdown unter Re=1 kann bereits eine Woche längeres Warten einen Faktor 3 in der Maximalbelastung bedeuten (In der Lombardei waren zum Zeitpunkt des Lockdowns bereits 440 Covid-19 Patienten in Intensivbehandlung. Eine Woche zuvor waren es nur 127.).
-* Die Intensivkapazitäten sind in Deutschland vergleichsweise hoch - jedoch verschafft auch eine 3-fache Kapazität bei einem ungebremsten Wachstum von z.B. 20% pro Tag nur einen zusätzlichen zeitlichen Puffer von ca. 6 Tagen.
+* Durch umfangreichere Tests konnte gerade in der Anfangsphase ein besseres Containment durchgeführt werden. Auch derzeit sind die Positivfälle in vielen Kommunen noch so gering, dass eine frühzeitige Identifikation und Isolation von Kontaktpersonen möglich ist. 
+* Deutschland hat im Vergleich zu vielen anderen Ländern früher umfassende Kontaktsperren eingeführt. Bei einem Lockdown unter Re=1 kann bereits eine Woche längeres Warten einen Faktor 3 in der Maximalbelastung der Intensivstationen bedeuten (In der Lombardei waren zum Zeitpunkt des Lockdowns bereits 440 Covid-19 Patienten in Intensivbehandlung. Eine Woche zuvor waren es nur 127).
+* Die Intensivkapazitäten sind in Deutschland vergleichsweise hoch - jedoch verschafft auch eine 3-fache Kapazität bei einem ungebremsten Wachstum an Infizierten von z.B. 20% pro Tag nur einen zusätzlichen zeitlichen Puffer von ca. 6 Tagen.
 </b>
 
-Anmerkung: In Deutschland befindet sich ein Intensivregister zu Covid-19 Patienten im Aufbau (https://www.divi.de/register/kartenansicht). Da sich die Fallzahlen jedoch sowohl durch zusätzliche Patienten als auch durch neue hinzukommende Intensivstationen, die Covid-19-Fälle melden, erhöhen, ist die Zeitentwicklung nicht zuverlässlich einschätzbar. 
+Anmerkung: In Deutschland befindet sich ein Intensivregister zu Covid-19 Patienten im Aufbau (https://www.divi.de/register/kartenansicht). Da sich die Fallzahlen jedoch sowohl durch zusätzliche Patienten als auch durch neu hinzukommende Intensivstationen, die Covid-19-Fälle melden, erhöhen, ist die Zeitentwicklung nicht zuverlässlich einschätzbar. 
 
-#### Detailergebnisse
+#### Detailergebnisse am Beispiel der Population in Nordrhein-Westfalen
 Die Detailergebnisse mit den verwendeten Simulationsparametern finden Sie [hier](https://github.com/PeterBorrmann1965/Covid-19-simulation/tree/master/szenarien/kurzfrist). Die html-Files enthalten jeweils interaktive Grafiken.
 
-Die folgende Grafik stellt für R0=3,5 und Rlock=0.9 die Entwicklung die zeitliche Entwicklung dar. Tag 1 ist der erste Tag des Lockdowns. In der Simulation werden die tatsächlichen Posivfälle und nicht die gemeldeten Fälle dargestellt. Die Anzahl der Intensivpatienten steigt nach dem Lockdown noch sehr stark an. 
+Die folgende Grafik stellt für R0=3,5 und Rlock=0.9 die zeitliche Entwicklung dar. Tag 1 ist der erste Tag des Lockdowns. In der Simulation werden die tatsächlichen Positivfälle und nicht die gemeldeten Fälle dargestellt. Die Anzahl der Intensivpatienten steigt nach dem Lockdown noch sehr stark an. 
 ![cfr](https://github.com/PeterBorrmann1965/Covid-19-simulation/blob/master/kurzfrist_linear.svg)
-In der folgenden Grafiken sind die neuen Infektionen, die effektive Reproduktionszahl und die Case Fatality Rate dargestellt. Die Kurve "Meldungen" entspricht nicht den wirklichen Meldungen sondern stellt dar, wie sich Meldungen entwickleln würden, wenn alle Infizierten mit einer mittleren Zeitverzögerung von fünf Tagen gemeldet werden würden. 
+In den folgenden Grafiken sind die neuen Infektionen, die effektive Reproduktionszahl und die Case Fatality Rate dargestellt. Die Kurve "Meldungen" entspricht nicht den wirklichen Meldungen sondern stellt dar, wie sich Meldungen entwicklen würden, wenn alle Infizierten mit einer mittleren Zeitverzögerung von fünf Tagen gemeldet werden würden. 
 
-Bei der Case Fatality Rate ist die blaue Kurve (crude) berechnet, indem die kumulierte Anzahl der Toten durch die kumlierte Anzahl der Infizierten geteilt wird. Die grüne Kurve (korrigiert) berücksichtigt den Zeitverzug zwischen Infektion und Tod und zeigt, dass in der Anfangsphase die Crude Case Fatality Rate eine grobe Unterschätzung darstellt, wenn alle Infizierten identifiziert werden. 
+Bei der Case Fatality Rate ist die blaue Kurve (crude) berechnet, indem die kumulierte Anzahl der Toten durch die kumulierte Anzahl der Infizierten geteilt wird. Die grüne Kurve (korrigiert) berücksichtigt den Zeitverzug zwischen Infektion und Tod und zeigt, dass in der Anfangsphase die Crude Case Fatality Rate eine grobe Unterschätzung darstellt, wenn alle Infizierten identifiziert werden. 
 ![cfr](https://github.com/PeterBorrmann1965/Covid-19-simulation/blob/master/kurzfrist_cfr.svg)
 
 
