@@ -22,7 +22,9 @@ eine Rolle:
 * Die Meldefälle hängen von den Testvorgaben (mit Symptomen und Kontakt) und den jeweiligen
     Testkapazitäten ab. Bei exponentiell steigenden Infektionsfällen ist daher anzunehmen, 
     dass die Dunkelziffer im Zeitverlauf steigt. 
-* Aufgrund der immer noch sehr geringen Fallzahlen??? gibt es ein großes statistisches Rauschen und zufällige Ereignisse (Superspreading),
+* Aufgrund der immer noch sehr geringen Fallzahlen bei den Toten gibt es ein großes statistisches Rauschen und zufällige Ereignisse (Superspreading),
+* Hinzu kommen deutliche Verzögerungen bei den Meldungen
+
 die sich in deutlich in der Fallzahlen ausgewirkt haben oder noch auswirken (im Nachlauf bei der Zahl der Todesfälle). 
 
 <b>Für die Basisreproduktionsrate R0 in Deutschland vor dem Lockdown sehen wir einen Bereich von 2.5 bis 3.5 als realistisch an. </b>
