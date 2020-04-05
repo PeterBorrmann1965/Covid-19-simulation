@@ -2,7 +2,7 @@
 
 In Deutschland - wie in den meisten Ländern - stehen derzeit 3 Fragen im Vordergrund: 
 * Reichen <b>kurzfristig</b>  die Krankenhaus- und Intensivkapazitäten für die zu erwartende Welle an Covid-19 Patienten aus?
-* Wie kann ein <b>mittelfritiges</b> Szenario aussehen, um wieder zu einem geregelten Wirtschaftsleben zurück zu kehren?
+* Wie kann ein <b>mittelfridtiges</b> Szenario aussehen, um wieder zu einem geregelten Wirtschaftsleben zurück zu kehren?
 * Welche Einschränkungen werden <b>langfristig</b> bestehen bleiben?
 
 Aus Modellsicht spielen hier nicht nur die durchschnittlichen Reproduktionsraten in Abhängigkeit von der Zeit eine 
