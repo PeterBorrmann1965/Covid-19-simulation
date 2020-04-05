@@ -76,7 +76,7 @@ Die aktuelle Einschätzung des Robert Koch Instituts ist, dass die effektive Rep
 * Worst Case: Re=1.2
 </b>
 
-### Lockdown-Effekt in Österreich
+#### Lockdown-Effekt in Österreich
 Österreich hat bereits am 13.3.2020 einen Lockdown beschlossen. Zu diesem Zeitpunkt gab es in Österreich einen einzigen bestätigten Covid-19 Todesfall. Die Maßnahmen werden strikter als in Deutschland eingeschätzt. Zudem scheint die Versorgung mit Atemschutzmasken deutlich besser als in Deutschland zu sein. In Österreich zeigen sich bereits deutliche Effekte des Lockdowns. 
 * Die Zahl der gemeldeten täglichen Neuinfektionen sinkt seit dem 28.3.2020 (15 Tage nach Lockdown) von einem Maximum von 1043 am 27.3. auf 282 am 4.4.2020, wobei hier noch Nachmeldungen zu erwarten sind. 
 * Die Zahl der gemeldeten Toten ist seit dem 31.3 (22 Tote) nicht mehr ansteigend.
