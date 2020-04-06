@@ -87,6 +87,29 @@ Auch die Anzahl der Intensivpatienten kann nicht verlässlich zur Einschätzung 
 Als erstes positives Zeichen kann gesehen werden, dass die Zahl der Covid-19-Toten seit einigen Tagen sowohl in der am stärksten betroffenen Region Lombardei als auch in ganz Italien sinkt.
 
 ### Simulation kurzfristiger Szenarien
+
+#### Modellparameter und Annahmen
+Unser Modell ist eine Mikrosimulation, d.h. jeder Person wird individuell simuliert. Auf diese Weise können unterschiedliche Kontaktraten und Sterbewahrscheinlichkeiten bei Infektion berücksichtigt werden. Wir haben hierzu zwei Grundannahmen gebildet: 
+1. Die Sterbewahrscheinlichkeit bei Infektion ist proportional zur langfristigen Sterbewahrscheinlichkeit gemäß den Sterbetafeln des statistischen Bundesamtes unter Berücksichtigung von Alter und Geschlecht. 
+2. Die individuellen Kontaktraten sind Altersgruppen-spezifisch. [Quelle]( https://journals.plos.org/plosmedicine/article/file?id=10.1371/journal.pmed.0050074&type=printable)
+
+Die <b>effektiven Reproduktionsraten</b> vor und nach dem Lockdown sind die Simulationsparameter mit dem stärksten Effekt auf die Infektionsdynamik. Hier werden entsprechend den obigen Ausführungen unterschiedliche Szenarie betrachtet. In der Simulation wird die mittlere Repoduktionsrate über die Gesamtpopulation eingestellt. Die individuelle Infektionswahrscheinlichkeit ist proportional zu individuellen Kontaktrate. Bei gleichem mittlerem Re haben die Kontaktraten keine Auswirkung auf die Entwicklung der Gesamtzahl der Infizierten aber auf die Anteile der Infizierten in den unterschiedlichen Altersgruppen. Derzeit sind bei den Infizierten ältere Menschen in Deutschland noch unterdruchschnittlich betroffen. Für mittelfristige Simulationen ist zu erwarten, dass die mittleren Kontaktraten sich abhängig von den jeweiligen beschlossenen Maßnahmen in den Altersgruppen sehr unterschiedlich entwickeln können. 
+
+Die <b>Infected Fatality Rate (IFR)</b> gibt das mittlere Verhältnis zwischen Toten und Infizierten nach Fallabschluss an. Das die Sterberate bei Infektions stark vom Gesundeheitszustand und dem Alter der Infizierten abhängt, hängt die IFR stark von der Zusammensetzung der Infizierten ab. In unserer Simulation wird die IFR so eingestellt, dass sie der mittlereren Sterbewahrscheinlichkeit bei Infektion über die gesamte Bevölkerung entspricht. Die indivuelle IFR ist dabei proportional zur Sterbewahrscheinlichkeit auf Basis der Sterbetafeln des statistischen Bundesamtes. In der Simulation kann die gemessene IFR niedriger oder höher ausfallen, wenn ältere Menschen unter- oder überdurchschnittlich infiziert sind. Wenn alle Menschen infiziert sind, stellt sich genau die als Simulationsparameter verwendete IFR ein. 
+
+Für die Abschätzung der IFR aus den gemeldeten Fälle und den gemeldeten Toten müssen mehrere Faktoren berücksichtigt werden. 
+* Zwischen Infektionszeitpunkt und und Meldezeitpunkt (Tag des Tests) liegen in der Regel mehrere Tage.
+* Nur ein Teil der Infizierten wird durch einen Test erkannt. 
+* Zwischen Infektionszeitpunkt und Todeszeitpunkt gibt es eine erhebliche Verzögerung von 15-25 Tagen
+* Es können in Deutschland mehrere Tage (bis Wochen) vergehen bis ein Infektionsfall oder Todesfall in der Statistik erscheint, d.h. die Todesfälle für einen bestimmten Tag steigen rückwirkend im Zeitverlauf an. 
+
+Die naive Abschätzung der IFR als Quotient der kumierten Toten und der kumulierten gemeldeten Infizierten ist grob falsch. Eine deutlich besser Abschätzung ergibt sich unter Berücksichtigung des Zeitverzugs zwischen Meldung der Infektion und Meldung des Todes. 
+
+
+
+
+
+#### Ergebnisse
 Die folgende Tabelle zeigt abhängig vom Szenario die benötigten ICU-Kapazitäten als Vielfaches der zum Lockdown belegten Kapazitäten. Lesebeispiel: Bei einer Belegung von 500 ICU-Betten zum Lockdowh-Zeitpunkt würden im Szenario R0=3,5 und Rlock=0,9 maximal 5950 Betten (11,9 x 500) 25 Tage nach dem Lockdown notwendig. 
 
 | R0  | Rlock | Peak Tag | Peak/ICU Lock |
