@@ -1,10 +1,10 @@
-GENESIS-Tabelle: 12621-0001
+GENESIS-Tabelle: 12621-000
 Sterbetafel (Periodensterbetafel): Deutschland, Jahre, Geschlecht, Vollendetes Alter;;;;;;;;;;;;;;;
 Sterbetafeln;;;;;;;;;;;;;;;
 Deutschland;;;;;;;;;;;;;;;
 ;;Geschlecht;Geschlecht;Geschlecht;Geschlecht;Geschlecht;Geschlecht;Geschlecht;Geschlecht;Geschlecht;Geschlecht;Geschlecht;Geschlecht;Geschlecht;Geschlecht
-;;m‰nnlich;m‰nnlich;m‰nnlich;m‰nnlich;m‰nnlich;m‰nnlich;m‰nnlich;weiblich;weiblich;weiblich;weiblich;weiblich;weiblich;weiblich
-;;Sterbewahrscheinlichkeit [q(x)];‹berlebenswahrscheinlichkeit [p(x)];‹berlebende [l(x)];Gestorbene [d(x)];Bis zum Alter x+1 durchlebte Jahre [L(x)];Insgesamt noch zu durchlebende Jahre [T(x)];Durchschnittliche Lebenserwartung [e(x)];Sterbewahrscheinlichkeit [q(x)];‹berlebenswahrscheinlichkeit [p(x)];‹berlebende [l(x)];Gestorbene [d(x)];Bis zum Alter x+1 durchlebte Jahre [L(x)];Insgesamt noch zu durchlebende Jahre [T(x)];Durchschnittliche Lebenserwartung [e(x)]
+;;m√§nnlich;m√§nnlich;m√§nnlich;m√§nnlich;m√§nnlich;m√§nnlich;m√§nnlich;weiblich;weiblich;weiblich;weiblich;weiblich;weiblich;weiblich
+;;Sterbewahrscheinlichkeit [q(x)];√úberlebenswahrscheinlichkeit [p(x)];√úberlebende [l(x)];Gestorbene [d(x)];Bis zum Alter x+1 durchlebte Jahre [L(x)];Insgesamt noch zu durchlebende Jahre [T(x)];Durchschnittliche Lebenserwartung [e(x)];Sterbewahrscheinlichkeit [q(x)];√úberlebenswahrscheinlichkeit [p(x)];√úberlebende [l(x)];Gestorbene [d(x)];Bis zum Alter x+1 durchlebte Jahre [L(x)];Insgesamt noch zu durchlebende Jahre [T(x)];Durchschnittliche Lebenserwartung [e(x)]
 ;;Ziffer;Ziffer;Anzahl;Anzahl;Jahre;Jahre;Jahre;Ziffer;Ziffer;Anzahl;Anzahl;Jahre;Jahre;Jahre
 2015/17;0 Jahre;0,00355799;0,99644201;100000;356;99693;7835585;78,36;0,00307816;0,99692184;100000;308;99734;8318492;83,18
 2015/17;1 Jahr;0,00028674;0,99971326;99644;29;99630;7735892;77,64;0,00023480;0,99976520;99692;23;99680;8218758;82,44
@@ -210,14 +210,14 @@ Deutschland;;;;;;;;;;;;;;;
 2016/18;100 Jahre;0,40606396;0,59393604;647;263;515;1178;1,82;0,35983078;0,64016922;1937;697;1588;3998;2,06
 __________
 "q(x) = Sterbewahrscheinlichkeit vom Alter x bis x+1
-p(x) = ‹berlebenswahrscheinlichkeit vom Alter x bis x+1
-l(x) = ‹berlebende im Alter x
+p(x) = √úberlebenswahrscheinlichkeit vom Alter x bis x+1
+l(x) = √úberlebende im Alter x
 d(x) = Gestorbene im Alter x bis unter x+1
-L(x) = Von den ‹berlebenden im Alter x bis zum Alter x+1
+L(x) = Von den √úberlebenden im Alter x bis zum Alter x+1
        durchlebte Jahre
-T(x) = Von den ‹berlebenden im Alter x insgesamt noch
+T(x) = Von den √úberlebenden im Alter x insgesamt noch
        zu durchlebende Jahre
 e(x) = Durchschnittliche Lebenserwartung (von den
-       ‹berlebenden) im Alter x in Jahren"
-© Statistisches Bundesamt (Destatis), 2020
+       √úberlebenden) im Alter x in Jahren"
+¬© Statistisches Bundesamt (Destatis), 2020
 Stand: 24.03.2020 / 08:38:49
