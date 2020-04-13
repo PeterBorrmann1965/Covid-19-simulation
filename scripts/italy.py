@@ -201,7 +201,7 @@ for reg in regionen.denominazione_regione.unique():
     # Update title and height
     fig.update_layout(height=800, width=1200, showlegend=False, title=reg)
     fig.write_image("../figures/test_"+reg+".png")
-    
+
     fig = go.Figure()
     fig.update_layout(height=800, width=1200, showlegend=True, title=reg,
                       legend_orientation="h",
