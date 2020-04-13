@@ -140,7 +140,7 @@ The indivual R can be tweaked, e.g.:
 
 The results contain the state of each individual, which can be analysed for peaks regarding the healthcare system, duration and general social impacts. 
 
-## First scenarios
+## First scenarios (21.3.2020)
 
 The following figure show two base sceanrios with r0 = 2.5 and 5.0 and additional scenarios where the contact rate of people youger than 20 or people older than 60 are cut by a factor 4. We call these actions "school closing" and "elderly" protection". The first figure shows the number of new infections per day with a total population of 1 million. The second figure show the hospital index, which we define as the sum of the base mortality rates (without Covid-19) of all infected people. All infected people are assumed to be recovered or dead 28 days after infection. 
 
