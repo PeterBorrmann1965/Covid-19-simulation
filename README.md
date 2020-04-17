@@ -5,7 +5,7 @@
 ### Covid19sim as a python package
 codid19sim is now available as a python package:
 
-* Download the latest wheel (https://github.com/PeterBorrmann1965/Covid-19-simulation/blob/master/package/dist/covid19sim-0.1.1-py3-none-any.whl)
+* Download the latest wheel (https://github.com/PeterBorrmann1965/Covid-19-simulation/blob/master/package/dist/covid19sim-0.2.1-py3-none-any.whl)
 * Install the package:  pip install covid19sim-0.2.1-py3-none-any.whl
 * Run a simulation with your parameters
 
