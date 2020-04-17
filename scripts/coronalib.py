@@ -176,21 +176,22 @@ def sim(age, drate, mean_serial=7.0, std_serial=3.4, nday=140,
     # Initialize r
     daymin = min(r_change.keys())
     r = r_change[daymin]
+    rmean = np.mean(r)
 
     # Simulation name
     r0aux = np.mean(r)
     name = simname
 
     n = len(age)
-    state = np.zeros(shape=(nday, n), dtype="uint8")
+    state = np.zeros(shape=(n), dtype="int")
     # set ni individuals to infected
     nimmun = int(immunt0*n)
-    state[0, np.random.choice(n, nimmun)] = 1
-    state[0, np.random.choice(n, 20)] = 2
+    state[np.random.choice(n, nimmun)] = 1
+    state[np.random.choice(n, 20)] = 2
 
     nstate = 8
     statesum = np.zeros(shape=(nstate, nday))
-    statesum[:, 0] = np.bincount(state[0, :], minlength=nstate)
+    statesum[:, 0] = np.bincount(state, minlength=nstate)
 
 
     # Precalculate profile infection
@@ -221,9 +222,9 @@ def sim(age, drate, mean_serial=7.0, std_serial=3.4, nday=140,
     rexternal = np.zeros(shape=nday)
     reported = np.zeros(shape=nday)
     cuminfected = np.zeros(shape=nday)
-    infections[0] = np.sum(state[0, :] == 2)
+    infections[0] = np.sum(state == 2)
     firstdayinfected = np.full(shape=n, fill_value=1000, dtype="int")
-    firstdayinfected[state[0, :] == 2] = 0
+    firstdayinfected[state == 2] = 0
 
     firstdayicu = np.full(shape=n, fill_value=1000, dtype="int")
 
@@ -238,9 +239,6 @@ def sim(age, drate, mean_serial=7.0, std_serial=3.4, nday=140,
     x = np.linspace(0, 48, num=49, dtype=("int"))
     x = gamma.cdf(x, a=p, scale=b)
     pdf = x[1:49] - x[0:48]
-
-    infrans = getrans(n, 20)
-    iran = 0
 
     # Precalculate community attack
     if hnr is not None:
@@ -260,8 +258,6 @@ def sim(age, drate, mean_serial=7.0, std_serial=3.4, nday=140,
                                          com_days_to_infection)
 
     for i in range(1, nday):
-        # set state to state day before
-        state[i, :] = state[i-1, :]
 
         # New infections on day i
         imin = max(0, i-28)
@@ -271,42 +267,34 @@ def sim(age, drate, mean_serial=7.0, std_serial=3.4, nday=140,
         # unconditional deaths
         if long_term_death:
             rans = np.random.random(size=n)
-            state[i, (rans < drate) & (state[i, :] != 7)] = 4
+            state[(rans < drate) & (state != 7)] = 4
 
         # Calculate the number of days infected
         days_infected = i - firstdayinfected
 
         # set all infected and identified case with more than 30 days to immun
-        state[i, (days_infected > 28) & (state[i, :] < 4)] = 1
+        state[((days_infected > 28) & (state < 4)) |
+              (time_on_icu == (i - firstdayicu))] = 1
 
         # for infected cases calculate the probability of icu admission
-        filt = (time_to_icu == days_infected) & go_to_icu & (state[i, :] == 2)
-        state[i, filt] = 6
+        filt = (time_to_icu == days_infected) & go_to_icu & (state == 2)
+        state[filt] = 6
         firstdayicu[filt] = i
 
-        # Use the precalculated days to move out from ICU
-        state[i, time_on_icu == (i - firstdayicu)] = 1
-
-        filtdeath = time_to_death == (i - firstdayinfected)
-        state[i, filtdeath & go_dead] = 7
-
-        rans = infrans[iran]
-        iran = iran + 1
-        if iran == 20:
-            iran = 0
-            infrans = getrans(n, 20)
+        state[(time_to_death == days_infected) & go_dead] = 7
 
         # The new infections are mapped to households
         if hnr is not None:
             # Household infections
             filt2 = (com_days_to_infection == (i - firstdayhnr[hnr])) &\
-                (state[i, ] == 0)
+                (state == 0)
             # external infections
-            pinf = r * newinf / n
-            filt1 = (rans < pinf) & (state[i, ] == 0)
+            aux = n / newinf
+            rans = np.random.random(size=n) * aux
+            filt1 = (rans < r) & (state == 0)
 
             filt = filt1 | filt2
-            state[i, filt] = 2
+            state[filt] = 2
 
             # Store the new infections in each household
             newhnr = hnr[filt1]
@@ -314,14 +302,15 @@ def sim(age, drate, mean_serial=7.0, std_serial=3.4, nday=140,
                                            firstdayhnr[newhnr], i)
         else:
             # infection probabilties by case
-            pinf = r * newinf / n
-            filt = (rans < pinf) & (state[i, ] == 0)
-            state[i, filt] = 2
+            aux = n / newinf
+            rans = np.random.random(size=n) * aux
+            filt = (rans < r) & (state == 0)
+            state[filt] = 2
 
         # store first infections day
         firstdayinfected[filt] = i
 
-        rexternal[i] = np.mean(r)
+        rexternal[i] = rmean
 
         # number of new infections
         infections[i] = np.sum(filt)
@@ -330,15 +319,10 @@ def sim(age, drate, mean_serial=7.0, std_serial=3.4, nday=140,
         else:
             re[i] = 0
 
-        statesum[:, i] = np.bincount(state[i, :], minlength=nstate)
+        statesum[:, i] = np.bincount(state, minlength=nstate)
 
-        cuminfected[i] = statesum[1, i] + statesum[2, i] + statesum[7, i] +\
-            statesum[6, i] + statesum[5, i]
-
-        # newinfections
-        newinfections = np.diff(cuminfected, prepend=0)
         for s in range(0, min(i, 35)):
-            reported[i] = reported[i] + newinfections[i-s] * pdf[s] * alpha
+            reported[i] = reported[i] + infections[i-s] * pdf[s] * alpha
 
         # find day0
         if (np.sum(reported) > day0cumrep) and (day0 == -1):
@@ -347,6 +331,8 @@ def sim(age, drate, mean_serial=7.0, std_serial=3.4, nday=140,
         # adjust r
         if (day0 > -1) and ((i-day0) in r_change.keys()):
             r = r_change[i-day0]
+            rmean = np.mean(r)
+
 
     # return only simulation parameter and no populations parameters
     argsnew = {}
@@ -427,7 +413,7 @@ def sim(age, drate, mean_serial=7.0, std_serial=3.4, nday=140,
     writer.save()
     tanalyse = time.time()
     print("Simulation time: " + str(tanalyse-tstart))
-    return state, statesum, infections, day0, re, argsnew, groupresults
+    return statesum, infections, day0, re, argsnew, groupresults
 
 
 def read_campus(filename, n=1000000):
