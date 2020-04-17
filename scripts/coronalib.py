@@ -281,7 +281,7 @@ def sim(age, drate, mean_serial=7.0, std_serial=3.4, nday=140,
         state[filt] = 6
         firstdayicu[filt] = i
 
-        state[(time_to_death == days_infected) & go_dead] = 7
+        state[(time_to_death < days_infected) & go_dead] = 7
 
         # The new infections are mapped to households
         if hnr is not None:
@@ -345,15 +345,11 @@ def sim(age, drate, mean_serial=7.0, std_serial=3.4, nday=140,
 
     agegroup = (age/10).astype(int)*10
 
-    results = analysestate(statesum, day0)
-    display(results)
-
     # Write each dataframe to a different worksheet.
     excelfile = os.path.join(datadir, name + ".xlsx")
     writer = pd.ExcelWriter(excelfile, engine='xlsxwriter')
 
     params.to_excel(writer, sheet_name="Parameter", index=False)
-    results.to_excel(writer, sheet_name='Ergebnis Übersicht', index=False)
 
     groupresults = pd.DataFrame({"Tag": [(x-day0) for x in range(0, nday)]})
     groupresults["Datum"] = [day0date + datetime.timedelta(days=x-day0)
@@ -407,13 +403,29 @@ def sim(age, drate, mean_serial=7.0, std_serial=3.4, nday=140,
         'kum. Tote (Ist)': "IST Tote gesamt"
         }, inplace=True)
 
+    results = {}
+    groupresults["Erwartete neue Tote"] = np.diff(groupresults["Erwartete Tote"],
+                                                  prepend=0)
+    for col in ['Erwartete Neu-Infektionen', 'Erwartete Neu-Meldefälle',
+                'ICU', 'Erwartete neue Tote']:
+        res = {}
+        peakd = np.argmax(groupresults[col])
+        res["Peaktag"] = np.array(groupresults.Datum)[peakd]
+        res["Peakwert"] = np.array(groupresults[col])[peakd]
+        res["Summe"] = np.sum(groupresults[col])
+        results[col] = res
+    results = pd.DataFrame.from_dict(results, orient="index")
+    display(results)
+    results.to_excel(writer, sheet_name='Ergebnisübersicht', index=False)
+
     groupresults = groupresults[groupresults.Datum >=
                                 datetime.date(2020, 3, 1)]
     groupresults.to_excel(writer, sheet_name='Zustand pro Tag', index=False)
+
     writer.save()
     tanalyse = time.time()
     print("Simulation time: " + str(tanalyse-tstart))
-    return statesum, infections, day0, re, argsnew, groupresults
+    return state, statesum, infections, day0, re, argsnew, groupresults
 
 
 def read_campus(filename, n=1000000):
