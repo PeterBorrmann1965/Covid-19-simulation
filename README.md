@@ -5,17 +5,9 @@
 ### Covid19sim as a python package
 codid19sim is now available as a python package:
 
-* Download the latest wheel (https://github.com/PeterBorrmann1965/Covid-19-simulation/blob/master/package/dist/covid19sim-0.1.2-py3-none-any.whl)
-* Install the package:  pip install covid19sim-0.1.2-py3-none-any.whl
+* Download the latest wheel (https://github.com/PeterBorrmann1965/Covid-19-simulation/blob/master/package/dist/covid19sim-0.1.1-py3-none-any.whl)
+* Install the package:  pip install covid19sim-0.2.1-py3-none-any.whl
 * Run a simulation with your parameters
-
-```python
-"""Simulation of infections for different scenarios."""
-import covid19sim.coronalib as cl
-import pandas as pd 
-import numpy as np
-import plotly.express as px
-```
 
 
 ```python
@@ -24,33 +16,34 @@ print(cl.sim.__doc__)
 
     Simulate model.
     
-        Parameters:
-        -----------
+        Parameters
+        ----------
         age : array of length n, age of each individual
         drate :  array of length n, daily mortality rate of each individual
         mean_serial : mean of the gamma distribution for the infections profile
         std_serial : std of the gamma distribution for the infections profile
         nday : number of days to simulated
-        day0icu : number of icu beds at day0 (used to set day0)
+        day0cumrep : number of cumulated reported at day0 (used to set day0)
         prob_icu : mean probility, that an infected needs icu care
         mean_days_to_icu : mean days from infection to icucare
         mean_duration_icu : mean days on icu
         immunt0 : percentage immun at t0
-        icu_fataliy : percentage with fatal outcome
+        ifr : infected fatality rate
         long_term_death : Flag to simulate death from long term death rate
         hnr : array of length n, household number
         com_attack_rate : infection probabilty within a community
-        contacts : array of length n, number of daily contacts per person or None
-            if contacts is not None the individual r is proportional to contacts
-        r_mean : mean r for the population at simulation start
-        rlock_mean : mean_r at forced lockdown
-        lock_icu : if the number of occupied icu beds exceeds lock_icu the mean r
-            is reduced to cut_meanr
         simname : name of the simulation
         datadir : directory where all results are saved
+        realized : dataframe with realized data til now
+        rep_delay : delay between infection and report
+        alpha : factor between infected and reported
+        r_change : dictionary with individual r at change points, keys are the
+            day numbers relative to day0, values are vectors of length n
+            with individual r's
+        day0date : date of day 0
     
-        Returns:
-        --------
+        Returns
+        -------
         state : array shape (n,nday) with the state of each indivial on every day
             0 : not infected
             1 : immun
@@ -69,12 +62,13 @@ print(cl.sim.__doc__)
         re :  array of length nday
             the effective reporoduction number per day
         params : a copy of all input paramters as a data frame
+        results : daily results as a dataframe
         
 
 
 Covid-19 Sim provides two populations:<br>
 "current" : The population is based on the current population (2019) <br>
-"household" : The population is based on a subsample in 2010 but with household numbers and additional persons per household
+"household" : The population is bases on a subsample in 2010 but with household numbers and additional persons per household
 
 
 ```python
@@ -83,21 +77,81 @@ age, agegroup, gender, contacts, drate, hnr, persons = cl.makepop("household",10
 
 
 ```python
-contacts = np.where(persons > 4,0.2,1.0)
-contacts = contacts/np.mean(contacts)
-state, statesum, infections, day0, rnow, args = cl.sim(
-        age, drate, nday=365, lock_icu=120, prob_icu=0.006, day0icu=120,
-        mean_days_to_icu=10, mean_duration_icu=16, mean_serial=7,
-        std_serial=3.4,
-        immunt0=0.0, icu_fatality=0.5, long_term_death=False, hnr=hnr,
-        com_attack_rate=0.8, contacts=contacts, r_mean=3.5,
-        rlock_mean=0.7, simname="Test",
-        datadir="/mnt/wd1/nrw_corona/")
+day0date = datetime.date(2020, 3, 8)
+r_change = {}
+# Intial r0
+r_change[-1] = 5 * np.ones(shape=age.shape[0],dtype="double")
+state, statesum, infections, day0, rnow, args, gr = cl.sim(
+        age, drate, nday=400, prob_icu=0.015, day0cumrep=450,
+        mean_days_to_icu=16, mean_duration_icu=10,
+        mean_time_to_death=20,
+        mean_serial=7.5, std_serial=3.0, immunt0=0.0, ifr=0.003,
+        long_term_death=False, hnr=None, com_attack_rate=0.5,
+        r_change=r_change, simname="Test",
+        datadir=".",
+        realized=None, rep_delay=13, alpha=0.125, day0date=day0date)
 ```
 
 
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Peaktag</th>
+      <th>Peakwert</th>
+      <th>Summe</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Erwartete Neu-Infektionen</th>
+      <td>2020-03-20</td>
+      <td>73728.0</td>
+      <td>1001512.0</td>
+    </tr>
+    <tr>
+      <th>Erwartete Neu-Meldefälle</th>
+      <td>2020-04-02</td>
+      <td>9061.0</td>
+      <td>125183.0</td>
+    </tr>
+    <tr>
+      <th>ICU</th>
+      <td>2020-04-09</td>
+      <td>7573.0</td>
+      <td>148107.0</td>
+    </tr>
+    <tr>
+      <th>Erwartete neue Tote</th>
+      <td>2020-04-10</td>
+      <td>179.0</td>
+      <td>3016.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+    Simulation time: 10.63197922706604
+
+
+
 ```python
-display(cl.groupresults({"Geschlecht":gender,"Alter":agegroup}, state[:(day0)]))
+
 ```
 
 
