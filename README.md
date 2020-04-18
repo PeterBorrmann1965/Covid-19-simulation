@@ -5,9 +5,22 @@
 ### Covid19sim as a python package
 codid19sim is now available as a python package:
 
-* Download the latest wheel (https://github.com/PeterBorrmann1965/Covid-19-simulation/blob/master/package/dist/covid19sim-0.2.1-py3-none-any.whl)
-* Install the package:  pip install covid19sim-0.2.1-py3-none-any.whl
+* Download the latest wheel (https://github.com/PeterBorrmann1965/Covid-19-simulation/blob/master/package/dist/covid19sim-0.2.2-py3-none-any.whl)
+* Install the package:  pip install covid19sim-0.2.2-py3-none-any.whl
 * Run a simulation with your parameters
+
+```python
+"""Simulation of infections for different scenarios."""
+import os
+import covid19sim.coronalib as cl
+import pandas as pd 
+import numpy as np
+import plotly.express as px
+import datetime
+import plotly.graph_objects as go
+from plotly.offline import plot
+from plotly.subplots import make_subplots
+```
 
 
 ```python
@@ -80,13 +93,16 @@ age, agegroup, gender, contacts, drate, hnr, persons = cl.makepop("household",10
 day0date = datetime.date(2020, 3, 8)
 r_change = {}
 # Intial r0
-r_change[-1] = 5 * np.ones(shape=age.shape[0],dtype="double")
+r_change['2020-01-01'] = 3.0 * np.ones(shape=age.shape[0],dtype="double")
+r_change['2020-03-08'] = 1.0 * np.ones(shape=age.shape[0],dtype="double")
+r_change['2020-03-16'] = 0.5 * np.ones(shape=age.shape[0],dtype="double")
+r_change['2020-03-23'] = 0.25 * np.ones(shape=age.shape[0],dtype="double")
 state, statesum, infections, day0, rnow, args, gr = cl.sim(
         age, drate, nday=400, prob_icu=0.015, day0cumrep=450,
         mean_days_to_icu=16, mean_duration_icu=10,
         mean_time_to_death=20,
         mean_serial=7.5, std_serial=3.0, immunt0=0.0, ifr=0.003,
-        long_term_death=False, hnr=None, com_attack_rate=0.5,
+        long_term_death=False, hnr=hnr, com_attack_rate=0.5,
         r_change=r_change, simname="Test",
         datadir=".",
         realized=None, rep_delay=13, alpha=0.125, day0date=day0date)
@@ -114,45 +130,404 @@ state, statesum, infections, day0, rnow, args, gr = cl.sim(
       <th>Peaktag</th>
       <th>Peakwert</th>
       <th>Summe</th>
+      <th>Mittleres Alter</th>
+      <th>Median Alter</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>Erwartete Neu-Infektionen</th>
-      <td>2020-03-20</td>
-      <td>73728.0</td>
-      <td>1001512.0</td>
+      <td>2020-03-16</td>
+      <td>9016.0</td>
+      <td>231508.0</td>
+      <td>41.737149</td>
+      <td>43.0</td>
     </tr>
     <tr>
       <th>Erwartete Neu-Meldefälle</th>
-      <td>2020-04-02</td>
-      <td>9061.0</td>
-      <td>125183.0</td>
+      <td>2020-03-27</td>
+      <td>1078.0</td>
+      <td>28929.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>ICU</th>
-      <td>2020-04-09</td>
-      <td>7573.0</td>
-      <td>148107.0</td>
+      <td>2020-04-02</td>
+      <td>949.0</td>
+      <td>30815.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>Erwartete Neu-Intensiv</th>
+      <td>2020-03-26</td>
+      <td>117.0</td>
+      <td>3119.0</td>
+      <td>77.550497</td>
+      <td>80.0</td>
     </tr>
     <tr>
       <th>Erwartete neue Tote</th>
-      <td>2020-04-10</td>
-      <td>179.0</td>
-      <td>3016.0</td>
+      <td>2020-04-04</td>
+      <td>34.0</td>
+      <td>637.0</td>
+      <td>76.227630</td>
+      <td>79.0</td>
     </tr>
   </tbody>
 </table>
 </div>
 
 
-    Simulation time: 10.63197922706604
+    Simulation time: 16.864463567733765
 
 
 
 ```python
-
+persgroup = np.where(persons>5,">5",persons)
+cl.groupresults({"Personen":persgroup},state)
 ```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Personen</th>
+      <th>Anzahl</th>
+      <th>Tote</th>
+      <th>Infizierte</th>
+      <th>Anteil Tote</th>
+      <th>Anteil Infizierte</th>
+      <th>IFR</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>196897</td>
+      <td>159.0</td>
+      <td>31359.0</td>
+      <td>0.000808</td>
+      <td>0.159266</td>
+      <td>0.005070</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>345462</td>
+      <td>293.0</td>
+      <td>71611.0</td>
+      <td>0.000848</td>
+      <td>0.207291</td>
+      <td>0.004092</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>187437</td>
+      <td>41.0</td>
+      <td>46654.0</td>
+      <td>0.000219</td>
+      <td>0.248905</td>
+      <td>0.000879</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>180944</td>
+      <td>20.0</td>
+      <td>50240.0</td>
+      <td>0.000111</td>
+      <td>0.277655</td>
+      <td>0.000398</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>65360</td>
+      <td>10.0</td>
+      <td>20248.0</td>
+      <td>0.000153</td>
+      <td>0.309792</td>
+      <td>0.000494</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>5</td>
+      <td>15222</td>
+      <td>6.0</td>
+      <td>5191.0</td>
+      <td>0.000394</td>
+      <td>0.341020</td>
+      <td>0.001156</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>&gt;5</td>
+      <td>13760</td>
+      <td>108.0</td>
+      <td>6205.0</td>
+      <td>0.007849</td>
+      <td>0.450945</td>
+      <td>0.017405</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+display(gr)
+```
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Tag</th>
+      <th>Datum</th>
+      <th>Erwartete Neu-Infektionen</th>
+      <th>Erwartete Neu-Meldefälle</th>
+      <th>Erwartete Gesamt-Meldefälle</th>
+      <th>Erwartete Neu-Intensiv</th>
+      <th>Reproduktionszahl</th>
+      <th>R extern</th>
+      <th>Nicht-Infizierte</th>
+      <th>Erwartete Genesene</th>
+      <th>Erwartete akt. Infizierte</th>
+      <th>ICU</th>
+      <th>Erwartete Tote</th>
+      <th>Erwartete neue Tote</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>35</th>
+      <td>-7</td>
+      <td>2020-03-01</td>
+      <td>2090.0</td>
+      <td>23.0</td>
+      <td>124.0</td>
+      <td>1.0</td>
+      <td>4.140041</td>
+      <td>3.00</td>
+      <td>993451.0</td>
+      <td>43.0</td>
+      <td>11582.0</td>
+      <td>4.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>-6</td>
+      <td>2020-03-02</td>
+      <td>2537.0</td>
+      <td>28.0</td>
+      <td>152.0</td>
+      <td>7.0</td>
+      <td>4.128875</td>
+      <td>3.00</td>
+      <td>990914.0</td>
+      <td>51.0</td>
+      <td>14104.0</td>
+      <td>11.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>-5</td>
+      <td>2020-03-03</td>
+      <td>3053.0</td>
+      <td>34.0</td>
+      <td>186.0</td>
+      <td>4.0</td>
+      <td>4.092026</td>
+      <td>3.00</td>
+      <td>987861.0</td>
+      <td>60.0</td>
+      <td>17144.0</td>
+      <td>15.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>-4</td>
+      <td>2020-03-04</td>
+      <td>3637.0</td>
+      <td>42.0</td>
+      <td>228.0</td>
+      <td>3.0</td>
+      <td>4.017317</td>
+      <td>3.00</td>
+      <td>984224.0</td>
+      <td>72.0</td>
+      <td>20767.0</td>
+      <td>17.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>-3</td>
+      <td>2020-03-05</td>
+      <td>4636.0</td>
+      <td>50.0</td>
+      <td>278.0</td>
+      <td>5.0</td>
+      <td>4.215791</td>
+      <td>3.00</td>
+      <td>979588.0</td>
+      <td>86.0</td>
+      <td>25384.0</td>
+      <td>22.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>395</th>
+      <td>353</td>
+      <td>2021-02-24</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>28929.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.25</td>
+      <td>773574.0</td>
+      <td>230871.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>637.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>396</th>
+      <td>354</td>
+      <td>2021-02-25</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>28929.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.25</td>
+      <td>773574.0</td>
+      <td>230871.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>637.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>397</th>
+      <td>355</td>
+      <td>2021-02-26</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>28929.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.25</td>
+      <td>773574.0</td>
+      <td>230871.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>637.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>398</th>
+      <td>356</td>
+      <td>2021-02-27</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>28929.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.25</td>
+      <td>773574.0</td>
+      <td>230871.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>637.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>399</th>
+      <td>357</td>
+      <td>2021-02-28</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>28929.0</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.25</td>
+      <td>773574.0</td>
+      <td>230871.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>637.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>365 rows × 14 columns</p>
+</div>
 
 
 
