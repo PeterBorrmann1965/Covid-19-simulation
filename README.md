@@ -92,7 +92,7 @@ age, agegroup, gender, contacts, drate, hnr, persons = cl.makepop("household",10
 ```python
 day0date = datetime.date(2020, 3, 8)
 r_change = {}
-# Intial r0
+# The simulation is with community attack. Thus r_change is ONLY the external part of the repproduction!
 r_change['2020-01-01'] = 3.0 * np.ones(shape=age.shape[0],dtype="double")
 r_change['2020-03-08'] = 1.0 * np.ones(shape=age.shape[0],dtype="double")
 r_change['2020-03-16'] = 0.5 * np.ones(shape=age.shape[0],dtype="double")
@@ -110,19 +110,7 @@ state, statesum, infections, day0, rnow, args, gr = cl.sim(
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -193,19 +181,7 @@ cl.groupresults({"Personen":persgroup},state)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -303,19 +279,7 @@ display(gr)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
