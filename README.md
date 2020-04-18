@@ -92,7 +92,7 @@ age, agegroup, gender, contacts, drate, hnr, persons = cl.makepop("household",10
 ```python
 day0date = datetime.date(2020, 3, 8)
 r_change = {}
-# The simulation is with community attack. Thus r_change is ONLY the external part of the repproduction!
+# The simulation is with community attack. Thus r_change is ONLY the external part of the reproduction!
 r_change['2020-01-01'] = 3.0 * np.ones(shape=age.shape[0],dtype="double")
 r_change['2020-03-08'] = 1.0 * np.ones(shape=age.shape[0],dtype="double")
 r_change['2020-03-16'] = 0.5 * np.ones(shape=age.shape[0],dtype="double")
