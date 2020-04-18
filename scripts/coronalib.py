@@ -13,7 +13,6 @@ import scipy.stats
 from IPython.display import display
 import pkg_resources
 import os
-from numba import njit, prange
 
 warnings.filterwarnings("ignore")
 
@@ -104,14 +103,6 @@ def makeprofile_plot(mean_serial=7, mean_std=3.4, r0=2.7, re=0.9, isoday=4):
     return
 
 
-@njit(parallel=True)
-def getrans(n,m):
-    x = np.zeros(shape=(m, n))
-    for i in prange(0, m):
-        x[i, :] = np.random.random(n)
-    return x
-
-
 def sim(age, drate, mean_serial=7.0, std_serial=3.4, nday=140,
         day0cumrep=20,
         prob_icu=0.005, mean_days_to_icu=12, mean_time_to_death=17,
@@ -173,6 +164,15 @@ def sim(age, drate, mean_serial=7.0, std_serial=3.4, nday=140,
     args = locals()
     args["mean_age"] = np.mean(age)
     tstart = time.time()
+
+    # replace dates
+    keylist = list(r_change.keys())
+    for key in keylist:
+        newkey = datetime.datetime.strptime(key, "%Y-%m-%d").date()
+        newkey = (newkey - day0date).days
+        r_change[newkey] = r_change[key]
+        del r_change[key]
+
     # Initialize r
     daymin = min(r_change.keys())
     r = r_change[daymin]
@@ -192,7 +192,6 @@ def sim(age, drate, mean_serial=7.0, std_serial=3.4, nday=140,
     nstate = 8
     statesum = np.zeros(shape=(nstate, nday))
     statesum[:, 0] = np.bincount(state, minlength=nstate)
-
 
     # Precalculate profile infection
     p = mean_serial**2/std_serial**2
@@ -220,6 +219,7 @@ def sim(age, drate, mean_serial=7.0, std_serial=3.4, nday=140,
     # initialize arrays
     infections = np.zeros(shape=nday)
     rexternal = np.zeros(shape=nday)
+    newicu = np.zeros(shape=nday)
     reported = np.zeros(shape=nday)
     cuminfected = np.zeros(shape=nday)
     infections[0] = np.sum(state == 2)
@@ -280,6 +280,7 @@ def sim(age, drate, mean_serial=7.0, std_serial=3.4, nday=140,
         filt = (time_to_icu == days_infected) & go_to_icu & (state == 2)
         state[filt] = 6
         firstdayicu[filt] = i
+        newicu[i] = np.sum(filt)
 
         state[(time_to_death < days_infected) & go_dead] = 7
 
@@ -371,6 +372,7 @@ def sim(age, drate, mean_serial=7.0, std_serial=3.4, nday=140,
             reported[t] = reported[t] + newinfections[t-s] * pdf[s]
     groupresults["Meldefälle"] = np.around(reported * alpha)
     groupresults["Meldefälle (kum.)"] = groupresults["Meldefälle"].cumsum()
+    groupresults["Erwartete Neu-Intensiv"] = newicu
 
     groupresults["R effektiv"] = re
     groupresults["R extern"] = rexternal
@@ -406,13 +408,24 @@ def sim(age, drate, mean_serial=7.0, std_serial=3.4, nday=140,
     results = {}
     groupresults["Erwartete neue Tote"] = np.diff(groupresults["Erwartete Tote"],
                                                   prepend=0)
+    
+    wasintensive = firstdayicu < 1000
     for col in ['Erwartete Neu-Infektionen', 'Erwartete Neu-Meldefälle',
-                'ICU', 'Erwartete neue Tote']:
+                'ICU', "Erwartete Neu-Intensiv", 'Erwartete neue Tote']:
         res = {}
         peakd = np.argmax(groupresults[col])
         res["Peaktag"] = np.array(groupresults.Datum)[peakd]
         res["Peakwert"] = np.array(groupresults[col])[peakd]
         res["Summe"] = np.sum(groupresults[col])
+        if col == 'Erwartete Neu-Infektionen':
+            res["Mittleres Alter"] = np.mean(age[state > 0])
+            res["Median Alter"] = np.median(age[state > 0])
+        if col == "Erwartete neue Tote":
+            res["Mittleres Alter"] = np.mean(age[state == 7])
+            res["Median Alter"] = np.median(age[state == 7])
+        if col == "Erwartete Neu-Intensiv":
+            res["Mittleres Alter"] = np.mean(age[wasintensive])
+            res["Median Alter"] = np.median(age[wasintensive])
         results[col] = res
     results = pd.DataFrame.from_dict(results, orient="index")
     display(results)
@@ -512,43 +525,34 @@ def groupresults(groups, state):
     ----------
     groups : dictionary with property names as keys and arrays of length n
         with the property value of each individual as values
-    state : array of shape nday, n with state values pers day and individual
+    state : last state
 
     Returns
     -------
     res : DataFrame with results per group
     """
-    # number of people with icu care
-    pers_icu = np.max(state == 6, axis=0)
-
-    # days on icu
-    pers_days_icu = np.sum(state == 6, axis=0)
 
     # covid 19 death
-    pers_death_covid = np.max(state == 7, axis=0)
+    pers_death_covid = state == 7
 
     # infected
-    pers_infected = np.max(np.isin(state, [2, 3, 5, 6, 7]), axis=0)
+    pers_infected = state > 0
 
     # Create datafram
-    df = pd.DataFrame({"ICU": pers_icu, "ICU Tage": pers_days_icu,
-                       "tod (Covid-19)": pers_death_covid,
+    df = pd.DataFrame({"tod (Covid-19)": pers_death_covid,
                       "infiziert": pers_infected})
     for key, value in groups.items():
         df[key] = value
 
     res = df.groupby(list(groups.keys())).agg(
         Anzahl=("infiziert", "count"),
-        ICU_Care=("ICU", "sum"),
-        ICU_Tage=("ICU Tage", "sum"),
-        C19_Tote=("tod (Covid-19)", "sum"),
-        C19_Infizierte=("infiziert", "sum")
+        Tote=("tod (Covid-19)", "sum"),
+        Infizierte=("infiziert", "sum")
         ).reset_index()
 
-    res["Anteil ICU Care"] = res["ICU_Care"] / res["Anzahl"]
-    res["Anteil c19_Tote"] = res["C19_Tote"] / res["Anzahl"]
-    res["Anteil C19_Infizierte"] = res["C19_Infizierte"] / res["Anzahl"]
-    res["CFR"] = res["C19_Tote"] / res["C19_Infizierte"]
+    res["Anteil Tote"] = res["Tote"] / res["Anzahl"]
+    res["Anteil Infizierte"] = res["Infizierte"] / res["Anzahl"]
+    res["IFR"] = res["Tote"] / res["Infizierte"]
     return res
 
 
