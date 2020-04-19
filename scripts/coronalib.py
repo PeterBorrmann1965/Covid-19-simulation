@@ -127,15 +127,15 @@ def sim(age, drate, mean_serial=7.0, std_serial=3.4, nday=140,
     ifr : infected fatality rate
     long_term_death : Flag to simulate death from long term death rate
     hnr : array of length n, household number
-    com_attack_rate : infection probabilty within a community
+    com_attack_rate : dictionary with infection probabilty within a community.
+        keys are the change dates
     simname : name of the simulation
     datadir : directory where all results are saved
     realized : dataframe with realized data til now
     rep_delay : delay between infection and report
     alpha : factor between infected and reported
     r_change : dictionary with individual r at change points, keys are the
-        day numbers relative to day0, values are vectors of length n
-        with individual r's
+        dates, values are vectors of length n with individual r's
     day0date : date of day 0
 
     Returns
@@ -173,10 +173,20 @@ def sim(age, drate, mean_serial=7.0, std_serial=3.4, nday=140,
         r_change[newkey] = r_change[key]
         del r_change[key]
 
+    keylist = list(com_attack_rate.keys())
+    for key in keylist:
+        newkey = datetime.datetime.strptime(key, "%Y-%m-%d").date()
+        newkey = (newkey - day0date).days
+        com_attack_rate[newkey] = com_attack_rate[key]
+        del com_attack_rate[key]
+
     # Initialize r
     daymin = min(r_change.keys())
     r = r_change[daymin]
     rmean = np.mean(r)
+
+    daymin = min(com_attack_rate.keys())
+    com_attack_now = com_attack_rate[daymin]
 
     # Simulation name
     r0aux = np.mean(r)
@@ -253,9 +263,8 @@ def sim(age, drate, mean_serial=7.0, std_serial=3.4, nday=140,
         x = x / np.sum(x)
         d = np.linspace(0, 27, num=28, dtype=("int"))
         com_days_to_infection = np.random.choice(d, n, p=x)
-        rans = np.random.random(n)
-        com_days_to_infection = np.where(rans < com_attack_rate, 2000,
-                                         com_days_to_infection)
+        ranscom = np.random.random(n)
+
 
     for i in range(1, nday):
 
@@ -287,8 +296,9 @@ def sim(age, drate, mean_serial=7.0, std_serial=3.4, nday=140,
         # The new infections are mapped to households
         if hnr is not None:
             # Household infections
+
             filt2 = (com_days_to_infection == (i - firstdayhnr[hnr])) &\
-                (state == 0)
+                (state == 0) & (ranscom < com_attack_now)
             # external infections
             aux = n / newinf
             rans = np.random.random(size=n) * aux
@@ -333,6 +343,10 @@ def sim(age, drate, mean_serial=7.0, std_serial=3.4, nday=140,
         if (day0 > -1) and ((i-day0) in r_change.keys()):
             r = r_change[i-day0]
             rmean = np.mean(r)
+
+        # change community attack rate
+        if (day0 > -1) and ((i-day0) in com_attack_rate.keys()):
+            com_attack_now = com_attack_rate[i-day0]
 
 
     # return only simulation parameter and no populations parameters
@@ -408,7 +422,7 @@ def sim(age, drate, mean_serial=7.0, std_serial=3.4, nday=140,
     results = {}
     groupresults["Erwartete neue Tote"] = np.diff(groupresults["Erwartete Tote"],
                                                   prepend=0)
-    
+
     wasintensive = firstdayicu < 1000
     for col in ['Erwartete Neu-Infektionen', 'Erwartete Neu-Meldefälle',
                 'ICU', "Erwartete Neu-Intensiv", 'Erwartete neue Tote']:
@@ -674,3 +688,67 @@ def analyse_cfr(statesum, reffektive, delay, darkrate, cfr, timetodeath, name,
                                   height=800)
     # fig1.show()
     return
+
+
+def plotoverview(gr, args):
+    """Plot overview of simulations results."""
+    gr["Wochentag"] = [x.weekday() for x in gr.Datum]
+    gr["WE"] = np.where(gr.Wochentag > 4, "WE", "WT")
+    fig = make_subplots(rows=2, cols=2)
+
+    fig.add_trace(go.Scatter(x=gr["Datum"], y=gr["Erwartete Neu-Meldefälle"],
+                             mode="lines", name="Erwartete Neu-Meldefälle"),
+                  row=1, col=1)
+    fig.add_trace(go.Scatter(x=gr[gr.WE == "WE"]["Datum"],
+                             y=gr[gr.WE == "WE"]["RKI Neu-Meldefälle"],
+                             name="RKI Neu-Meldefälle (WE)",
+                             mode="markers"), row=1, col=1)
+    fig.add_trace(go.Scatter(x=gr[gr.WE == "WT"]["Datum"],
+                             y=gr[gr.WE == "WT"]["RKI Neu-Meldefälle"],
+                             name="RKI Neu-Meldefälle (WT)",
+                             mode="markers"), row=1, col=1)
+
+    fig.add_trace(go.Scatter(x=gr["Datum"], y=gr["Erwartete Gesamt-Meldefälle"],
+                             name="Erwartete Gesamt-Meldefälle",
+                             mode="lines"), row=2, col=1)
+    fig.add_trace(go.Scatter(x=gr["Datum"], y=gr["RKI Gesamt-Meldefälle"],
+                             name="RKI Gesamt-Meldefälle",
+                             mode="lines"), row=2, col=1)
+
+    fig.add_trace(go.Scatter(x=gr["Datum"], y=gr["Erwartete Tote"],
+                             name="Erwartete Tote",
+                             mode="lines"), row=1, col=2)
+    fig.add_trace(go.Scatter(x=gr["Datum"], y=gr["IST Tote gesamt"],
+                             name="Ist Tote gesamt",
+                             mode="lines"), row=1, col=2)
+
+    fig.add_trace(go.Scatter(x=gr["Datum"], y=gr["ICU"],
+                             name="Erwartete Intensiv",
+                             mode="lines"), row=2, col=2)
+    fig.add_trace(go.Scatter(x=gr["Datum"], y=gr["Ist Intensiv"],
+                             name="IST Intensiv",
+                             mode="lines"), row=2, col=2)
+
+    fig.update_layout(legend_orientation="h", title=args["simname"])
+
+    plot(fig, filename=os.path.join(args["datadir"], args["simname"] +
+                                    "_overview.html"),
+         auto_open=False, auto_play=False)
+    fig.show()
+
+    fig = make_subplots(rows=1, cols=1)
+    fig.add_trace(go.Scatter(x=gr["Datum"], y=gr["Reproduktionszahl"],
+                             name="R effektiv",
+                             mode="lines"), row=1, col=1)
+    fig.add_trace(go.Scatter(x=gr["Datum"], y=gr["R extern"],
+                             name="R extern",
+                             mode="lines"), row=1, col=1)
+
+    plot(fig, filename=os.path.join(args["datadir"], args["simname"] +
+                                    "_reproduction.html"),
+         auto_open=False, auto_play=False)
+    fig.show()
+    return
+
+
+
