@@ -69,6 +69,14 @@ nrw = nrw.merge(nrw_tote, left_on="Meldedatum",
 nrw["Tote_kum"] = np.cumsum(nrw.Tote)
 nrw.rename(columns={"Tote_kum": "cumdeath"}, inplace=True)
 
+# transform contacts
+# =============================================================================
+# ncon = 12 * contacts
+# ncon = np.random.poisson(lam=ncon)
+# ncon = ncon /np.mean(ncon)
+# contacts = ncon
+# =============================================================================
+
 
 r_change = {}
 # Intial r0
@@ -92,9 +100,9 @@ state, statesum, infections, day0, rnow, args, gr = cl.sim(
         mean_days_to_icu=16, mean_duration_icu=14,
         mean_time_to_death=21,
         mean_serial=7.5, std_serial=3.0, immunt0=0.0, ifr=0.003,
-        long_term_death=False, hnr=hnr, com_attack_rate=com_attack_rate,
+        long_term_death=False, hnr=None, com_attack_rate=com_attack_rate,
         r_change=r_change, simname="Test",
         datadir="/mnt/wd1/nrw_corona/",
         realized=nrw, rep_delay=13, alpha=0.125, day0date=day0date)
 
-cl.plotoveview(gr, args)
+cl.plotoverview(gr, args)
