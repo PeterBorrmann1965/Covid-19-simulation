@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: covid19sim
-Version: 0.1.1
+Version: 0.3.0
 Summary: Simulation of Covid-19 with individal reproduction and communities
 Home-page: https://github.com/PeterBorrmann1965/Covid-19-simulation
 Author: Dr. Tobias Sproll, Simon Hommel, Dr. Peter Borrmann

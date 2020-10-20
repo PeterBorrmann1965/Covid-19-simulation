@@ -1,0 +1,5 @@
+cp ../scripts/coronalib.py covid19sim
+rm -r dist build
+pip uninstall -y covid19sim
+python setup.py bdist_wheel
+pip install dist/covid19sim*.whl

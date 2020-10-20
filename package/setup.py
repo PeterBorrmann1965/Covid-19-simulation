@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="covid19sim",
-    version="0.1.1",
+    version="0.3.0",
     author="Dr. Tobias Sproll, Simon Hommel, Dr. Peter Borrmann",
     author_email="covid19@the-quants.com",
     description="Simulation of Covid-19 with individal reproduction and communities",
